@@ -3,8 +3,6 @@ title: "C2 - Advanced Learning Algorithms"
 type: docs
 ---
 
-## Advanced Learning Algorithms
-
 In the second course of the Machine Learning Specialization, you will:
 
  - Build and train a neural network with TensorFlow to perform multi-class classification

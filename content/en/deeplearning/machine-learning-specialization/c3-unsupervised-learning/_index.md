@@ -3,9 +3,6 @@ title: "C3 - Unsupervised Learning, Recommenders, Reinforcement Learning"
 type: docs
 ---
 
-
-## Unsupervised Learning, Recommenders, Reinforcement Learning
-
 In the third course of the Machine Learning Specialization, you will:
 
 - Use unsupervised learning techniques for unsupervised learning: including clustering and anomaly detection.

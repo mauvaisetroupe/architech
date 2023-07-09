@@ -1,9 +1,7 @@
 ---
-title: "C1 - Supervised Machine Learning"
+title: "C1 - Supervised Machine Learning : Regression and Classification"
 type: docs
 ---
-
-## Supervised Machine Learning: Regression and Classification
 
 In the first course of the Machine Learning Specialization, you will:
 
