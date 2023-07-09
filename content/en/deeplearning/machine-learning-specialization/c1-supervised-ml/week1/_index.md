@@ -15,15 +15,15 @@ Learning Objectives
 - Implement gradient descent
 - Optimize a regression model using gradient descent
 
-# Overview of Machine Learning
+## Overview of Machine Learning
 
-## Welcome to machine learning!
+### Welcome to machine learning!
 
-## Applications of machine learning
+### Applications of machine learning
 
-# Supervised vs. Unsupervised Machine Learning
+## Supervised vs. Unsupervised Machine Learning
 
-## What is machine learning?
+### What is machine learning?
 
 Here's a definition of what is machine learning that is attributed to Arthur Samuel. 
 
@@ -37,7 +37,7 @@ Samuel wrote a checkers playing program in the 1950s
 The amazing thing about this program was that Arthur Samuel himself wasn't a very good checkers player. 
 His program learned to get better and better at playing checkers because the computer had the patience to play tens of thousands of games against itself
 
-## Supervised learning part 1
+### Supervised learning part 1
 
 Supervised machine learning or more commonly, supervised learning, refers to algorithms that learn x to y or input to output mappings. 
 
@@ -55,7 +55,7 @@ This housing price prediction example is the particular type of supervised learn
 
  > <img src="./images/w01-04-Supervised_learning_part_1/img_2023-01-28_08-29-26.png">
 
-## Supervised learning part 2
+### Supervised learning part 2
 
 Supervised learning algorithms learn to predict input, output or X to Y mapping. 
 Regression algorithms, which is a type of supervised learning algorithm learns to predict numbers out of infinitely many possible numbers. 
@@ -75,7 +75,7 @@ The two major types of supervised learning our regression and classification. In
 
  > <img src="./images/w01-05-Supervised_learning_part_2/img_2023-01-28_08-34-51.png">
 
-## Unsupervised learning part 1
+### Unsupervised learning part 1
 
 Don't let the name uncivilized for you, unsupervised learning is I think just as super as supervised learning
 
@@ -98,7 +98,7 @@ For example, clustering is used in google news, what google news does is every d
 
  > <img src="./images/w01-06-Unsupervised_learning_part_1/img_2023-01-28_10-07-31.png">
 
-## Unsupervised learning part 2
+### Unsupervised learning part 2
 
 Nn supervised learning, the data comes with both inputs x and input labels y, in unsupervised learning, the data comes only with inputs x but not output labels y, and the algorithm has to find some structure or some pattern or something interesting in the data.
 
@@ -110,18 +110,18 @@ Nn supervised learning, the data comes with both inputs x and input labels y, in
 
  > <img src="./images/w01-07-Unsupervised_learning_part_2/img_2023-01-28_10-09-48.png">
 
-## Jupyter Notebooks
+### Jupyter Notebooks
 
-## Python and Jupyter Notebooks
-
-
-# Practice Quiz: Supervised vs unsupervised learning
+### Python and Jupyter Notebooks
 
 
-# Regression Model
+## Practice Quiz: Supervised vs unsupervised learning
 
 
-## Linear regression model part 1
+## Regression Model
+
+
+### Linear regression model part 1
 
  <!-- img src="./images/w01-09-Linear_regression_model_part_1/img_2023-01-28_10-26-26.png" -->
 
@@ -157,7 +157,7 @@ Terminology:
 
  > <img src="./images/w01-09-Linear_regression_model_part_1/img_2023-01-28_10-29-32.png">
 
-## Linear regression model part 2
+### Linear regression model part 2
 
  1. **Training set** in supervised learning includes both the **input features**, and **output targets** are the right answers to the model we'll learn from. 
  1. To train the model, you feed the training set, both the input features and the output targets to your **learning algorithm**.
@@ -168,9 +168,9 @@ Terminology:
 
  > <img src="./images/w01-10-Linear_regression_model_part_2/img_2023-01-28_10-31-08.png">
 
-## Optional lab: Model representation
+### Optional lab: Model representation
 
-## Cost function formula
+### Cost function formula
 
 w and b are called the **parameters** of the model (or **coefficients** or **weights**). In machine learning parameters of the model are the variables you can adjust during training in order to improve the model
 
@@ -187,7 +187,7 @@ This is also called the **squared error cost function**, and it's called this be
  > <img src="./images/w01-11-Cost_function_formula/img_2023-01-28_10-34-00.png">
 
 
-## Cost function intuition
+### Cost function intuition
 
 In order for us to better visualize the cost function J, we work with a simplified version of the linear regression model (b=0). 
 
@@ -213,7 +213,7 @@ For w=0.5, J(0.5)=0.58...
  > <img src="./images/w01-12-Cost_function_intuition/img_2023-01-28_10-37-48.png">
 
 
-## Visualizing the cost function
+### Visualizing the cost function
 
 In the last video, we had temporarily set b to zero in order to simplify the visualizations. Now, let's go back to the original model with both parameters w and b without setting b to be equal to 0.
 
@@ -253,7 +253,7 @@ Function J is at a minimum at the center of this concentric ovals
 
  > <img src="./images/w01-13-Visualizing_the_cost_function/img_2023-01-28_11-08-51.png">
 
-## Visualization examples
+### Visualization examples
 
 w=-0.15 and b=800
 
@@ -263,15 +263,15 @@ w=-0.13 and b=71
 
  > <img src="./images/w01-14-Visualization_examples/img_2023-01-28_11-14-26.png">
 
-## Optional lab: Cost function
+### Optional lab: Cost function
 
 
-# Practice Quiz: Regression Model
+## Practice Quiz: Regression Model
 
 
-# Train the model with gradient descent
+## Train the model with gradient descent
 
-## Gradient descent
+### Gradient descent
 
  Gradient descent is an algorithm to find in systematic way the values of w and b that minimize the cost function.
  Gradient descent is used all over the place in machine learning, not just for linear regression, but for training for example some of the most advanced neural network models, also called deep learning models.
@@ -293,7 +293,7 @@ If you were to run gradient descent this second time, starting just a couple ste
 
 The bottoms of both the first and the second valleys are called **local minima**
 
-## Implementing gradient descent
+### Implementing gradient descent
 
 Attention points :
  - equal sign is the assignment operator
@@ -301,7 +301,7 @@ Attention points :
 
  > <img src="./images/w01-16-Implementing_gradient_descent/img_2023-01-28_11-18-04.png">
 
-## Gradient descent intuition
+### Gradient descent intuition
 
  > <img src="./images/w01-17-Gradient_descent_intuition/img_2023-01-28_11-18-57.png">
 
@@ -309,7 +309,7 @@ Derivative is the slope of the tangente line, and coud be positive or negative (
 
  > <img src="./images/w01-17-Gradient_descent_intuition/img_2023-01-28_11-19-19.png">
 
-## Learning rate
+### Learning rate
 
 If the learning rate is too small, then gradient descents will work, but it will be slow (lot of steps before reaching the minimum)
 If learning rate is set too high, it can cause undesirable divergent behaviour in loss function
@@ -324,7 +324,7 @@ Dericative equals zero at local minimum (slope of tangente line)
 
  > <img src="./images/w01-18-Learning_rate/img_2023-01-28_11-21-26.png">
 
-## Gradient descent for linear regression
+### Gradient descent for linear regression
 
 Gradient descent algorithm and squared error cost function for linear regression 
 
@@ -347,7 +347,7 @@ The technical term for this is that this cost function is a convex function
  > <img src="./images/w01-19-Gradient_descent_for_linear_regression/img_2023-01-28_11-35-01.png">
 
 
-## Running gradient descent
+### Running gradient descent
 
  > <img src="./images/w01-20-Running_gradient_descent/img_2023-01-28_11-36-49.png">
 
@@ -356,8 +356,8 @@ Gradient descent process is called batch gradient descent. The term bashed gradi
  > <img src="./images/w01-20-Running_gradient_descent/img_2023-01-28_11-37-06.png">
 
 
-## Optional lab: Gradient descent
+### Optional lab: Gradient descent
 
-# Practice quiz: Train the model with gradient descent
+## Practice quiz: Train the model with gradient descent
 
 

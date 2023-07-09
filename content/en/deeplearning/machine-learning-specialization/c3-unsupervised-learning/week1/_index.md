@@ -17,15 +17,15 @@ Learning Objectives
 - Implement the function that finds the closest centroids to each point in k-means
 
 
-## Welcome!
+### Welcome!
 
 > <img src="./images/w01-01-Welcome/img_2023-02-07_22-31-22.png">
 
 
 
-# Clustering 
+## Clustering 
 
-## What is clustering?
+### What is clustering?
 
 A clustering algorithm looks at a number of data points and automatically finds data points that are related or similar to each other.
 
@@ -44,7 +44,7 @@ Exemple of applications
 > <img src="./images/w01-02-What_is_clustering/img_2023-02-08_09-10-36.png">
 
 
-## K-means intuition
+### K-means intuition
 
 - STEP 0 : randomly pick two points,which I've shown here as a red cross and the blue cross, at where might be the centers of two different clusters.
 - STEP 1 : Go through each of these points and look at whether it is closer to the red cross or to the blue cross. 
@@ -61,7 +61,7 @@ Keep on repeating these two steps, until ther are no more changes
 > <img src="./images/w01-03-K-means_intuition/img_2023-02-08_09-24-36.png">
 
 
-## K-means algorithm
+### K-means algorithm
 
 When you implement this algorithm, you find that it's actually a little bit more convenient to minimize the squared distance because the cluster centroid with the smallest square distance should be the same as the cluster centroid with the smallest distance. 
 
@@ -81,7 +81,7 @@ K-means is also frequently applied to data sets where the clusters are not that 
 > <img src="./images/w01-04-K-means_algorithm/img_2023-02-08_13-01-47.png">
 
 
-## Optimization objective
+### Optimization objective
 
 The cost function J is a function of :
 - $c^{<1>}$, ... $c^{<m>}$ the indexes of cluster chosen for each point $x^{i}$
@@ -116,7 +116,7 @@ How moving the centroid decreases the average of distances
 
 The distortion cost function should go down or stay the same in the worst case (if it goes up, that means there's a bug in the code)
 
-## Initializing K-means
+### Initializing K-means
 
 The very first step of the K means clustering algorithm, was to choose random locations as the initial guesses for the cluster centroids 
 
@@ -135,7 +135,7 @@ More formally, here is the algorithm if you want to rank multiple times using di
 
 > <img src="./images/w01-06-Initializing_K-means/img_2023-02-08_16-26-11.png">
 
-## Choosing the number of clusters
+### Choosing the number of clusters
 
 There are lots of applications where the data itself does not give a clear indicator for how many clusters there are in it.
 
@@ -155,16 +155,16 @@ Both of these are completely valid and completely fine groupings of the data int
 
 
 
-# Practice Quiz Clustering
+## Practice Quiz Clustering
 
 
 
-# Practice Lab - k-means
+## Practice Lab - k-means
 
 
-# Anomaly detection
+## Anomaly detection
 
-## Finding unusual events
+### Finding unusual events
 
 > <img src="./images/w01-08-Finding_unusual_events/img_2023-02-08_16-54-52.png">
 
@@ -176,7 +176,7 @@ Anomaly detections examples
 
 > <img src="./images/w01-08-Finding_unusual_events/img_2023-02-08_16-59-05.png">
 
-## Gaussian (normal) distribution
+### Gaussian (normal) distribution
 
 
 This curve here shows what is p(x) or the probability of x. 
@@ -195,7 +195,7 @@ How you calculate standard deviation $\sigma$, variance $\sigma^2$ and the mean 
 > <img src="./images/w01-09-Gaussian_normal_distribution/img_2023-02-08_17-45-33.png">
 
 
-## Anomaly detection algorithm
+### Anomaly detection algorithm
 
 We calculate p(x) as the p(x1) x p(x2) X ... , P(xn). If you've taken an advanced class in probability and statistics before, you may recognize that this equation corresponds to assuming that the features x1, x2, ... xm are statistically independent. But this algorithm often works fine even that the features are not actually statistically independent.
 
@@ -209,7 +209,7 @@ Examples
 
 > <img src="./images/w01-10-Anomaly_detection_algorithm/img_2023-02-08_18-19-20.png">
 
-## Developing and evaluating an anomaly detection system
+### Developing and evaluating an anomaly detection system
 
 When you are developing a learning algorithm, making decisions on choosing different features or trying different values of the parameters, is much easier if you have a way of evaluating the learning algorithm, computing a number that tells you if the algorithm got better or worse 
 
@@ -229,7 +229,7 @@ Associated algoritm :
 > <img src="./images/w01-11-Developing_and_evaluating_an_anomaly_detection_system/img_2023-02-08_18-24-41.png">
 
 
-## Anomaly detection vs. supervised learning
+### Anomaly detection vs. supervised learning
 
 When should you use anomaly detection and when should you use supervised learning? The decision is actually quite subtle in some applications.
 
@@ -239,7 +239,7 @@ Other examples
 
 > <img src="./images/w01-12-Anomaly_detection_vs._supervised_learning/img_2023-02-08_20-00-54.png">
 
-## Choosing what features to use
+### Choosing what features to use
 
 Carefully choosing the features, is even more important for anomaly detection, than for supervised learning approaches. 
 
@@ -261,6 +261,6 @@ Other example of creating a new feature with combination of two existing.
 > <img src="./images/w01-13-Choosing_what_features_to_use/img_2023-02-08_20-20-12.png">
 
 
-# Practice Quiz - Anomaly detection
+## Practice Quiz - Anomaly detection
 
-# Practice Lab2 - Anomaly Detection
+## Practice Lab2 - Anomaly Detection

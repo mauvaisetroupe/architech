@@ -13,9 +13,9 @@ Learning Objectives
 - Learn how to use multiple trees, "tree ensembles" such as random forests and boosted trees
 - Learn when to use decision trees or neural networks
 
-# Decision trees
+## Decision trees
 
-## Decision tree model
+### Decision tree model
 
 > <img src="./images/w04-01-Decision_tree_model/img_2023-02-05_19-25-09.png">
 
@@ -33,7 +33,7 @@ Among these different decision trees, some will do better and some will do worse
 
 > <img src="./images/w04-01-Decision_tree_model/img_2023-02-05_19-36-17.png">
 
-## Learning Process
+### Learning Process
 
 One nodes is completely **pure**, when there's no longer a mix of cats and dogs 
 
@@ -58,13 +58,13 @@ We stop if purity improvement is below a threshold, or if number of examples is 
 It could ssem complicated, but these different pieces fit together into a very effective learning algorithm.
 Open source packages can help so in the complicated procedure for making all these decisions, like how do I decide to stop splitting
 
-# Practice quiz: Decision trees
+## Practice quiz: Decision trees
 
 
 
-# Decision trees learning
+## Decision trees learning
 
-## Measuring purity
+### Measuring purity
 
 Entropy is a measure of the impurity of a set of data
 
@@ -78,7 +78,7 @@ Note that :
 
 > <img src="./images/w04-03-Measuring_purity/img_2023-02-07_16-18-08.png">
 
-## Choosing a split: Information Gain
+### Choosing a split: Information Gain
 
 At the root node, we have started off with all 10 examples, with five cats and dogs, and so at the root node, we had $p_1$ equals 5/10
 This formula, is called **information gain**, and it measures the reduction in entropy 
@@ -90,7 +90,7 @@ A more formal definition is:
 > <img src="./images/w04-04-Choosing_a_split_Information_Gain/img_2023-02-07_16-50-46.png">
 
 
-## Putting it together
+### Putting it together
 
 > <img src="./images/w04-05-Putting_it_together/img_2023-02-07_16-53-28.png">
 
@@ -98,7 +98,7 @@ The way we built the right subtree was by, again, building a decision tree on a 
 
 > <img src="./images/w04-05-Putting_it_together/img_2023-02-07_16-55-07.png">
 
-## Using one-hot encoding of categorical features
+### Using one-hot encoding of categorical features
 
 When we have a feature with three possible values instead of just two possible values you can create a three subsets of the data and end up building three sub branches for this tree.
 
@@ -117,7 +117,7 @@ The idea of using one-hot encodings to encode categorical features also works fo
 > <img src="./images/w04-06-Using_one-hot_encoding_of_categorical_features/img_2023-02-07_18-25-40.png">
 
 
-## Continuous valued features
+### Continuous valued features
 
 > <img src="./images/w04-07-Continuous_valued_features/img_2023-02-07_18-32-32.png">
 
@@ -126,7 +126,7 @@ We calculate the entropy for different threshold
 > <img src="./images/w04-07-Continuous_valued_features/img_2023-02-07_18-32-41.png">
 
 
-## Regression Trees (optional)
+### Regression Trees (optional)
 
 > <img src="./images/w04-08-Regression_Trees/img_2023-02-07_18-35-57.png">
 
@@ -135,17 +135,17 @@ We calculate the entropy for different threshold
 > <img src="./images/w04-08-Regression_Trees/img_2023-02-07_18-44-05.png">
 
 
-## Optional Lab: Decision Trees
+### Optional Lab: Decision Trees
 
 
 
-# Practice quiz: Decision tree learning
+## Practice quiz: Decision tree learning
 
 
 
-# Tree ensembles
+## Tree ensembles
 
-## Using multiple decision trees
+### Using multiple decision trees
 
 One of the weaknesses of using a single decision tree is that that decision tree can be highly sensitive to small changes in the data. 
 The fact that changing just one training example causes the algorithm to come up with a different split at the root and therefore a totally different tree, that makes this algorithm just not that robust.
@@ -158,7 +158,7 @@ The majority votes of the predictions among these three trees
 > <img src="./images/w04-09-Using_multiple_decision_trees/img_2023-02-07_21-21-22.png">
 
 
-## Sampling with replacement
+### Sampling with replacement
 
 The term replacement means we choose one token in the bag, put that token back in the bag
 > <img src="./images/w04-10-Sampling_with_replacement/img_2023-02-07_21-29-13.png">
@@ -168,7 +168,7 @@ We build a training set using sampling with replacement
 
 That is part of the sampling with replacement procedure. The process of sampling with replacement, lets you construct a new training set that's a little bit similar to, but also pretty different from your original training set. This is the key building block for building an ensemble of trees.
 
-## Random forest algorithm
+### Random forest algorithm
 
 Typical choice of capital B the number of such trees you built might be around a 100 
 Having built an ensemble of B different trees, these trees all votes on the correct final prediction
@@ -180,7 +180,7 @@ It's not uncommon that for many or even all capital B training sets, you end up 
 > <img src="./images/w04-11-Random_forest_algorithm/img_2023-02-07_21-42-18.png">
 
 
-## XGBoost
+### XGBoost
 
 And one of the innovations in XGBoost is that it also has built in regularization to prevent overfitting.
 
@@ -192,22 +192,22 @@ The details of XGBoost are quite complex to implement, which is why many practit
 
 > <img src="./images/w04-12-XGBoost/img_2023-02-07_21-51-25.png">
 
-## When to use decision trees
+### When to use decision trees
 
 > <img src="./images/w04-13-When_to_use_decision_trees/img_2023-02-07_22-04-53.png">
 
-## Optional Lab: Tree Ensembles
+### Optional Lab: Tree Ensembles
 
 
-# Practice quiz: Tree ensembles
-
-
-
-
-# Practice Lab: Decision Trees
+## Practice quiz: Tree ensembles
 
 
 
 
-# Acknowledgements
+## Practice Lab: Decision Trees
+
+
+
+
+## Acknowledgements
 

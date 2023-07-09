@@ -12,9 +12,9 @@ Learning Objectives
 - Implement logistic regression for binary classification
 - Address overfitting using regularization, to improve model performance
 
-# Classification with logistic regression
+## Classification with logistic regression
 
-## Motivations
+### Motivations
 
 It turns out that linear regression is not a good algorithm for classification problems. Let's take a look at why and this will lead us into a different algorithm called logistic regression. Which is one of the most popular and most widely used learning algorithms today.
 
@@ -43,9 +43,9 @@ The dividing line between two classes is called the decision boundary
 
 
 
-## Optional lab: Classification
+### Optional lab: Classification
 
-## Logistic regression
+### Logistic regression
 
 
 A common example of a sigmoid function is the logistic function shown in the first figure and defined by the formula:
@@ -66,9 +66,9 @@ g(z) is interpreted as a percentage (probability)
 > <img src="./images/w03-02-Logistic_regression/img_2023-01-29_10-16-38.png">
 
 
-## Optional lab: Sigmoid function and logistic regression
+### Optional lab: Sigmoid function and logistic regression
 
-## Decision boundary
+### Decision boundary
 
 Let's take a look at the decision boundary to get a better sense of how logistic regression is computing these predictions.
 Model predicts 1 whenever w.x + b >= 0.
@@ -94,16 +94,16 @@ Thresold is not always 0.5
 
 > <img src="./images/w03-03-Decision_boundary/img_2023-01-29_11-30-40.png">
 
-## Optional lab: Decision boundary
+### Optional lab: Decision boundary
 
 
 
-# Practice quiz: Classification with logistic regression
+## Practice quiz: Classification with logistic regression
 
-
-# Cost function for logistic regression
 
 ## Cost function for logistic regression
+
+### Cost function for logistic regression
 
 > <img src="./images/w03-04-Cost_function_for_logistic_regression/img_2023-01-29_12-00-44.png">
 
@@ -124,9 +124,9 @@ Proving that this function is convex, it's beyond the scope of this cost.
 
 > <img src="./images/w03-04-Cost_function_for_logistic_regression/img_2023-01-29_12-15-29.png">
 
-## Optional lab: Logistic loss
+### Optional lab: Logistic loss
 
-## Simplified Cost Function for Logistic Regression
+### Simplified Cost Function for Logistic Regression
 
 Because y is either zero or one we can write Cost Function equivalently
 
@@ -138,15 +138,15 @@ This cost function has the nice property that it is convex.
 > <img src="./images/w03-05-Simplified_Cost_Function_for_Logistic_Regression/img_2023-01-29_12-28-34.png">
 
 
-## Optional lab: Cost function for logistic regression
+### Optional lab: Cost function for logistic regression
 
 
 
-# Practice quiz: Cost function for logistic regression
+## Practice quiz: Cost function for logistic regression
 
-# Gradient Descent for logistic regression
+## Gradient Descent for logistic regression
 
-## Gradient Descent Implementation
+### Gradient Descent Implementation
 
 To fit the parameters of a logistic regression model, we're going to try to find the values of the parameters w and b that minimize the cost function J of w and b, and we'll again apply gradient descent to do this.
 
@@ -161,23 +161,23 @@ Quite similar with linear regression
 > <img src="./images/w03-06-Gradient_Descent_Implementation/img_2023-01-29_12-38-09.png">
 
 
-## Optional lab: Gradient descent for logistic regression
+### Optional lab: Gradient descent for logistic regression
 
-## Optional lab: Logistic regression with scikit-learn
-
-
-
-
-# Practice quiz: Gradient descent for logistic regression
+### Optional lab: Logistic regression with scikit-learn
 
 
 
-# The problem of overfitting
+
+## Practice quiz: Gradient descent for logistic regression
+
+
 
 ## The problem of overfitting
 
+### The problem of overfitting
 
-### Underfit (first diagramm)
+
+#### Underfit (first diagramm)
 
 Checking learning algorithms for bias based on characteristics such as gender or ethnicity is absolutely critical. But the term bias has a second technical meaning as well, which is the one I'm using here, which is if the algorithm has underfit the data, meaning that it's just not even able to fit the training set that well.
 
@@ -186,11 +186,11 @@ The learning algorithm has a very strong preconception, or we say a very strong 
 
 We'll use the terms underfit and high bias almost interchangeably
 
-### Generalization (second diagramm)
+#### Generalization (second diagramm)
 
 If the learning algorithm work well, even on examples that are not on the training set, that's called generalization. Technically we say that you want your learning algorithm to generalize well, which means to make good predictions even on brand new examples that it has never seen before. 
 
-### Overfit (third diagramm)
+#### Overfit (third diagramm)
 
 Another term for this is that the algorithm has high variance. In machine learning, many people will use the terms over-fit and high-variance almost interchangeably.  The intuition behind overfitting or high-variance is that the algorithm is trying very hard to fit every single training example. It turns out that if your training set were just even a little bit different, then the function that the algorithm fits could end up being totally different. 
 
@@ -202,7 +202,7 @@ Similarly, underfitting and overfitting apply a classification as well.
 > <img src="./images/w03-07-The_problem_of_overfitting/img_2023-01-29_13-26-51.png">
 
 
-## Addressing overfitting
+### Addressing overfitting
 
 Collecting more data
 > <img src="./images/w03-08-Addressing_overfitting/img_2023-01-29_16-05-02.png">
@@ -216,9 +216,9 @@ Reducing the size of the parameters using regularization
 In a nutshell:
 > <img src="./images/w03-08-Addressing_overfitting/img_2023-01-29_16-05-56.png">
 
-## Optional lab: Overfitting
+### Optional lab: Overfitting
 
-## Cost function with regularization
+### Cost function with regularization
 
 If you fit a very high order polynomial, you end up with a curve that over fits the data. 
 So the idea is that if there are smaller values for the parameters, then that's a bit like having a simpler model. 
@@ -249,7 +249,7 @@ So to summarize in this modified cost function, we want to minimize
 > <img src="./images/w03-09-Cost_function_with_regularization/img_2023-01-29_16-34-46.png">
 
 
-## Regularized linear regression
+### Regularized linear regression
 
  Previously the derivative of J with respect to w_j was given by this expression over here, and the derivative respect to b was given by this expression over here. Now that we've added this additional regularization term, the only thing that changes is that the expression for the derivative with respect to w_j ends up with one additional term
 
@@ -268,7 +268,7 @@ Detail calculation on derivative
 > <img src="./images/w03-10-Regularized_linear_regression/img_2023-01-29_17-12-26.png">
 
 
-## Regularized logistic regression
+### Regularized logistic regression
 
 If you want to modify it to use regularization, all you need to do is add to it the following term. 
 
@@ -280,17 +280,17 @@ In fact is the exact same equation that the ones for linear regression, except f
 > <img src="./images/w03-11-Regularized_logistic_regression/img_2023-01-29_17-24-30.png">
 
 
-## Optional lab: Regularization
+### Optional lab: Regularization
 
 
 
 
-# Practice quiz: The problem of overfitting
+## Practice quiz: The problem of overfitting
 
 
 
-# Week 3 practice lab: logistic regression
+## Week 3 practice lab: logistic regression
 
 
 
-# Acknowledgments
+## Acknowledgments

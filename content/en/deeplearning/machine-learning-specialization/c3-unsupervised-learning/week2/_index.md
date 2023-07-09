@@ -9,9 +9,9 @@ Learning Objectives
 - Implement deep learning content based filtering using a neural network in TensorFlow
 - Understand ethical considerations in building recommender systems
 
-# Collaborative filtering
+## Collaborative filtering
 
-## Making recommendations
+### Making recommendations
 
 Recommendations systems are used for online shopping website like Amazon or a movie streaming sites like Netflix.
 For many companies, the economics or the value driven by recommended systems  is very large
@@ -20,7 +20,7 @@ So with this framework for recommended systems one possible way to approach the 
 
 > <img src="./images/w02-01-Making_recommendations/img_2023-02-10_16-17-58.png">
 
-## Using per-item features
+### Using per-item features
 
 
 In a first stage, we are making assumption we have access to features or extra information about the movies such as which movies are romance movies, which movies are action movies
@@ -41,7 +41,7 @@ If we do the same for all user, we sum the cost function over all the $n_u$ user
 > <img src="./images/w02-02-Using_per-item_features/img_2023-02-10_16-20-46.png">
 
 
-## Collaborative filtering algorithm
+### Collaborative filtering algorithm
 
 
 We now assume we don't have any more features qualifying the movies (romance, action, etc)
@@ -79,7 +79,7 @@ We could minimize this cost function J(w, b, x) using gradient descent.
 > <img src="./images/w02-03-Collaborative_filtering_algorithm/img_2023-02-10_16-26-19.png">
 
 
-## Binary labels: favs, likes and clicks
+### Binary labels: favs, likes and clicks
 
 
 Many applications of recommended systems involved binary labels where instead of a user giving you a rating (like instead of stars)
@@ -101,9 +101,9 @@ We go from linear regression to binary classification binary using **cross entro
 > <img src="./images/w02-04-Binary_labels_favs,_likes_and_clicks/img_2023-02-10_16-38-49.png">
 
 
-# Recommender systems implementation detail
+## Recommender systems implementation detail
 
-## Mean normalization
+### Mean normalization
 
 For linear regression, future normalization can help the algorithm run faster (scaling features in order to have same magnitude)
 
@@ -117,7 +117,7 @@ With that modification, by default, algorithm predict the mean of rating on the 
 
 > <img src="./images/w02-05-Mean_normalization/img_2023-02-10_16-58-39.png">
 
-## TensorFlow implementation of collaborative filtering
+### TensorFlow implementation of collaborative filtering
 
 TensorFlow is a tool for building neural network, but TensorFlow can also be very hopeful for building other types of learning algorithms as well like the collaborative filtering algorithm. 
 
@@ -146,7 +146,7 @@ In order to implement the collaborative filtering algorithm TensorFlow, this is 
 
 > <img src="./images/w02-06-TensorFlow_implementation_of_collaborative_filtering/img_2023-02-10_17-40-46.png">
 
-## Finding related items
+### Finding related items
 
 Is quite hard to interpret individualy $x_1^i$, ..., $x_n^i$, saying $x_1$ is an action movie and $x_2$ is as a foreign film and so on. 
 But nonetheless, collectively $x_1$, $x_2$, $x_3$, do convey something about what that movie is like.
@@ -162,9 +162,9 @@ Limitations
 
 
 
-# Content-based filtering
+## Content-based filtering
 
-## Collaborative filtering vs Content-based filtering
+### Collaborative filtering vs Content-based filtering
 
 Content-based filtering differ fron collaborative filtering. The algorithm consists in matching user features with movies features
 
@@ -178,7 +178,7 @@ The problem is that the user and movies vectors don´t have the same size. We ne
 
 > <img src="./images/w02-08-Collaborative_filtering_vs_Content-based_filtering/img_2023-02-10_19-51-50.png">
 
-## Deep learning for content-based filtering
+### Deep learning for content-based filtering
 
 The first neural network is the user network that takes as input the list of features of the user, $x_u$, then using a few layers will output a vector $v_u$ that describes the user. The output layer has 32 units
 
@@ -196,7 +196,7 @@ This can be pre-computed ahead of time, you can run a compute server overnight t
 
 It may be worth spending some time engineering good features for this application because the algorithm can be computationally very expensive to run if you have a large catalog of a lot of different movies you may want to recommend. 
 
-## Recommending from a large catalogue
+### Recommending from a large catalogue
 
 > <img src="./images/w02-10-Recommending_from_a_large_catalogue/img_2023-02-10_23-07-36.png">
 
@@ -217,7 +217,7 @@ Retrieval step trade-off
 
 > <img src="./images/w02-10-Recommending_from_a_large_catalogue/img_2023-02-10_23-09-16.png">
 
-## Ethical use of recommender systems
+### Ethical use of recommender systems
 
 Many websites that are not showing you the most relevant product but the products that will generate the largest profit for the company.
 
@@ -232,7 +232,7 @@ Othe example
 > <img src="./images/w02-11-Ethical_use_of_recommender_systems/img_2023-02-12_07-39-44.png">
 
 
-## TensorFlow implementation of content-based filtering
+### TensorFlow implementation of content-based filtering
 
 We use a sequential model : 
 - one for user
@@ -246,9 +246,9 @@ Next, have the dot product of $V_u$ and $V_m$
 
 
 
-# Principal component analysis
+## Principal component analysis
 
-## Reducing the number of features (optional)
+### Reducing the number of features (optional)
 
 This is an algorithm that is commonly used by data scientists to visualize the data, to figure out what might be going on.
 
@@ -275,7 +275,7 @@ You might find for example that $Z_1$ loosely corresponds to how big is the coun
 > <img src="./images/w02-13-Reducing_the_number_of_features/img_2023-02-12_08-06-43.png">
 
 
-## PCA algorithm (optional)
+### PCA algorithm (optional)
 
 Preprocessing:
 - normalize to have zero-mean
@@ -320,7 +320,7 @@ If zou need to find an approimate point that represents the original coordinates
 > <img src="./images/w02-14-PCA_algorithm/img_2023-02-12_08-32-54.png">
 
 
-## PCA in code (optional)
+### PCA in code (optional)
 
 Here I'm assuming you want two or three axes if you want to visualize the data in 2D or 3D
 

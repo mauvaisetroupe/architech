@@ -15,9 +15,9 @@ Learning Objectives
 - Build a deep Q-learning network
 
 
-# Reinforcement learning
+## Reinforcement learning
 
-## What is Reinforcement learning ?
+### What is Reinforcement learning ?
 
 Reinforcement learning is not widely applied in commercial applications yet today, but is one of the pillars of machine learning. 
 There are a lots of exciting research backing it up and improving it every single day. 
@@ -43,7 +43,7 @@ Applications examples:
 
 > <img src="./images/w03-01-What_is_Reinforcement_Learning/img_2023-02-12_09-54-56.png">
 
-## Mars rover example
+### Mars rover example
 
 We'll develop reinforcement learning using a simplified example inspired by the Mars rover
 
@@ -59,7 +59,7 @@ Formalism of how a reinforcement learning application works:
 
 > <img src="./images/w03-02-Mars_rover_example/img_2023-02-12_10-02-07.png">
 
-## The Return in reinforcement learning
+### The Return in reinforcement learning
 
 Analogy that you might find helpful is if you imagine you have 
 - a five-dollar bill at your feet, 
@@ -92,7 +92,7 @@ The third example is a mixt policy, you go to the left from state 2, 3 and 4, go
 > <img src="./images/w03-03-The_Return_in_reinforcement_learning/img_2023-02-14_18-42-22.png">
 
 
-## Making decisions: Policies in reinforcement learning
+### Making decisions: Policies in reinforcement learning
 
 Differents examples:
 1. always go for the nearer reward
@@ -107,7 +107,7 @@ The goal of reinforcement learning is to find a policy $\pi(s)$ that tells you w
 > <img src="./images/w03-04-Making_decisions_Policies_in_reinforcement_learning/img_2023-02-14_19-00-20.png">
 
 
-## Review of key concepts
+### Review of key concepts
 
 > <img src="./images/w03-05-Review_of_key_concepts/img_2023-02-14_19-02-37.png">
 
@@ -117,9 +117,9 @@ The term Markov in the MDP or Markov decision process refers to that the future 
 
 > <img src="./images/w03-05-Review_of_key_concepts/img_2023-02-14_19-02-52.png">
 
-# State-action value function 
+## State-action value function 
 
-## State-action value function definition
+### State-action value function definition
 
 There's something a little bit strange about this definition because how do we know what is the optimal behavior?
 
@@ -144,11 +144,11 @@ Q function is sometimes also called the **optimal Q function**.
 
 > <img src="./images/w03-06-State-action_value_function_definition/img_2023-02-14_19-08-56.png">
 
-## State-action value function example
+### State-action value function example
 
 > <img src="./images/w03-07-State-action_value_function_example/img_2023-02-14_19-51-59.png">
 
-## Bellman Equations
+### Bellman Equations
 
 Defintion of Bellman Equations
 
@@ -168,7 +168,7 @@ Explanation with example
 > <img src="./images/w03-08-Bellman_Equations/img_2023-02-14_20-11-32.png">
 
 
-## Random (stochastic) environment (Optional)
+### Random (stochastic) environment (Optional)
 
 In some applications, when you take an action, the outcome is not always completely reliable.
 In practice, many robots don't always manage to do exactly what you tell them because of wind blowing, the wheel slipping, etc
@@ -185,9 +185,9 @@ Bellmans equations become :
 > <img src="./images/w03-09-Random_environment/img_2023-02-14_20-32-02.png">
 
 
-# Continuous state space
+## Continuous state space
 
-## Example of continuous state space applications
+### Example of continuous state space applications
 
 
 Example of application of controlling a car or a truck
@@ -208,7 +208,7 @@ For helicopter,
 > <img src="./images/w03-10-Example_of_continuous_state_space_applications/img_2023-02-20_16-04-54.png">
 
 
-## Lunar lander
+### Lunar lander
 
 Action :
 - nothing
@@ -228,7 +228,7 @@ So, in summary, this is the lunar lander proble to solve :
 
 > <img src="./images/w03-11-Lunar_lander/img_2023-02-16_18-38-50.png">
 
-## Learning the state-value function
+### Learning the state-value function
 
 The key idea is that we're going to train a neural network to approximate the state action value function Q(s,a) to pick good actions
 
@@ -283,7 +283,7 @@ Let's see the full algorithm
 
 > <img src="./images/w03-12-Learning_the_state-value_function/img_2023-02-16_18-21-50.png">
 
-## Algorithm refinement: Improved neural network architecture
+### Algorithm refinement: Improved neural network architecture
 
 Instead of computing Q(s,a) for the 4 actions:
 
@@ -294,7 +294,7 @@ We adapt the neural network in oder to compute Q(s,a) for the 4 actions  simulta
 > <img src="./images/w03-13-Algorithm_refinement_Improved_neural_network_architecture/img_2023-02-20_18-31-13.png">
 
 
-## Algorithm refinement: ϵ-greedy policy
+### Algorithm refinement: ϵ-greedy policy
 
 
 When learning how to approximate Q(s,a), we need to take some actions in the lunar lander. How do you pick those actions? The most common way to do so is to use something called an epsilon-greedy policy
@@ -311,7 +311,7 @@ Epsilon is typically decreased over time to shift focus towards exploitation.
 
 Reinforcement learning algorithms, maybe because less mature than supervised learning algorithms, are much more finicky to little choices of hyper parameters, and tuning parameters like epsilon could be frustating compared to tuning a supervised learning algorithm
 
-## Algorithm refinement: Mini-batch and soft updates (optional)
+### Algorithm refinement: Mini-batch and soft updates (optional)
 
 First technique called **mini-batches gradient descent**, can speedup reinforcement learning algorithm but also neural network, linear regression, or logistic regression model. The problem with these algorithm when your dataset is this big (100 million), is that every single step of gradient descent requires computing this average over 100 million examples, and this turns out to be very slow.
 
@@ -339,13 +339,13 @@ The soft update method often causes the reinforcement learning algorithm to conv
 > <img src="./images/w03-15-Algorithm_refinement_Mini-batch_and_soft_updates/img_2023-02-24_20-07-13.png">
 
 
-## The state of reinforcement learning
+### The state of reinforcement learning
 
 > <img src="./images/w03-16-The_state_of_reinforcement_learning/img_2023-02-25_06-22-41.png">
 
 
-# Summary and thank you
-
 ## Summary and thank you
+
+### Summary and thank you
 
 > <img src="./images/w03-17-Summary_and_thank_You/img_2023-02-25_06-31-40.png">

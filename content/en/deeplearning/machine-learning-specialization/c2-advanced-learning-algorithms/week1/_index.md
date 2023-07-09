@@ -17,13 +17,13 @@ Learning Objectives
 - Build a neural network in regular Python code (from scratch) to make predictions.
 - (Optional): Learn how neural networks use parallel processing (vectorization) to make computations faster.
 
-# Neural Networks intuition
+## Neural Networks intuition
 
-## Welcome!
+### Welcome!
 
 > <img src="./images/w01-01-Welcome/img_2023-01-29_19-38-15.png">
 
-## Neurons and the brain
+### Neurons and the brain
 
 > <img src="./images/w01-02-Neurons_and_the_brain/img_2023-01-29_19-43-29.png">
 
@@ -42,7 +42,7 @@ Why now?
 > <img src="./images/w01-02-Neurons_and_the_brain/img_2023-01-29_20-39-15.png">
 
 
-## Demand Prediction
+### Demand Prediction
 
 The term a stands for activation, and it's actually a term from neuroscience, and it refers to how much a neuron is sending a high output to other neurons downstream from it.
 
@@ -107,7 +107,7 @@ When you're building your own neural network, one of the decisions you need to m
 
 > <img src="./images/w01-03-Demand_Prediction/img_2023-01-29_21-02-33.png">
 
-## Example: Recognizing Images
+### Example: Recognizing Images
 
 > <img src="./images/w01-04-Example:_Recognizing_Images/img_2023-01-29_21-47-16.png">
 
@@ -128,18 +128,18 @@ Just for fun, let's see what happens if you were to train this neural network on
 > <img src="./images/w01-04-Example:_Recognizing_Images/img_2023-01-29_21-54-51.png">
 
 
-## Have questions, issues or ideas? Join our Community!
+### Have questions, issues or ideas? Join our Community!
 
 
 
 
-# Practice quiz: Neural networks intuition
+## Practice quiz: Neural networks intuition
 
 
 
-# Neural network model
+## Neural network model
 
-## Neural network layer
+### Neural network layer
 
 The fundamental building block of most modern neural networks is a **layer** of neurons. 
 
@@ -170,7 +170,7 @@ The input to layer 2 is the output of layer 1, (vector 0.3, 0.7, 0.2)
 > <img src="./images/w01-05-Neural_network_layer/img_2023-01-30_16-09-52.png">
 
 
-## More complex neural networks
+### More complex neural networks
 
 Input / Hidden / Output Layers
 > <img src="./images/w01-06-More_complex_neural_networks/img_2023-01-30_16-38-19.png">
@@ -178,7 +178,7 @@ Input / Hidden / Output Layers
 Notation of Activation Layer l, unit j is a<sub>j</sub><sup>[l]</sup> 
 > <img src="./images/w01-06-More_complex_neural_networks/img_2023-01-30_16-40-39.png">
 
-## Inference: making predictions (forward propagation)
+### Inference: making predictions (forward propagation)
 
 Example of handwritten digit recognition. This algorithm makes **inferences** or make predictions
 
@@ -196,17 +196,17 @@ Because this computation goes from left to right, you start from x and compute a
 
 > <img src="./images/w01-07-Inference:_making_predictions_(forward_propagation)/img_2023-01-30_16-46-34.png">
 
-## Neurons and Layers
+### Neurons and Layers
 
 
 
 
-# Practice quiz: Neural network model
+## Practice quiz: Neural network model
 
 
-# TensorFlow implementation
+## TensorFlow implementation
 
-## Inference in Code
+### Inference in Code
 
 TensorFlow is one of the leading frameworks to implementing deep learning algorithms.
 Example illustrate roasting coffee, with two parameters, temperature at which you're heating up the raw coffee beans, as well as the duration
@@ -236,7 +236,7 @@ If we translate previous example, (handwritten digit classification problem)
 > <img src="./images/w01-08-Inference_in_Code/img_2023-01-30_17-56-55.png">
 
 
-## Data in TensorFlow
+### Data in TensorFlow
 
 NumPy was first created and became a standard library for linear algebra and Python. 
 Later the Google brain team created TensorFlow. 
@@ -281,7 +281,7 @@ Same for Layer 2
 
 > <img src="./images/w01-09-Data_in_TensorFlow/img_2023-01-30_18-17-49.png">
 
-## Building a neural network
+### Building a neural network
 
 Seen previously, if you want to do forward propagation
  - you initialize the data X 
@@ -312,24 +312,24 @@ Example of handwritten digit recognition:
 
 > <img src="./images/w01-10-Building_a_neural_network/img_2023-01-30_19-31-39.png">
 
-## Coffee Roasting in Tensorflow
+### Coffee Roasting in Tensorflow
 
 
 
 
-# Practice quiz: TensorFlow implementation
+## Practice quiz: TensorFlow implementation
 
 
 
-# Neural network implemntation in python
-## Forward prop in a single layer
+## Neural network implemntation in python
+### Forward prop in a single layer
 
 With tensorflow or pytorch, we implement neural network with just these five lines of codes
 To really know what the code is actually doing underneath the hood we implement it from scratch in python 
 
 > <img src="./images/w01-11-Forward_prop_in_a_single_layer/img_2023-01-30_19-41-13.png">
 
-## General implementation of forward propagation
+### General implementation of forward propagation
 
 In python, 
 
@@ -351,17 +351,17 @@ array([1, 2])
 
 > <img src="./images/w01-12-General_implementation_of_forward_propagation/img_2023-01-30_19-48-33.png">
 
-## CoffeeRoastingNumPy
+### CoffeeRoastingNumPy
 
 
 
 
-# Practice quiz: Neural network implementation in Python
+## Practice quiz: Neural network implementation in Python
 
 
-# Speculation on artificial general intelligence (AGI)
+## Speculation on artificial general intelligence (AGI)
 
-## Is there a path to AGI?
+### Is there a path to AGI?
 
 > <img src="./images/w01-13-Is_there_a_path_to_AGI/img_2023-01-30_20-08-54.png">
 
@@ -371,25 +371,25 @@ array([1, 2])
 
 I don't know if the brain is really one or a small handful of algorithms, and even if it were, I have no idea, and I don't think anyone knows what the algorithm is, but I still this hope alive, and maybe it is, and maybe we could, through a lot of hard work, someday discover an approximation to it.
 
-# Vectorization (Optional)
+## Vectorization (Optional)
 
-## How neural networks are implemented efficiently
+### How neural networks are implemented efficiently
 
 > <img src="./images/w01-14-How_neural_networks_are_implemented_efficiently/img_2023-01-30_20-20-56.png">
 
-## Matrix multiplication
+### Matrix multiplication
 
 > <img src="./images/w01-15-Matrix_multiplication/img_2023-01-30_20-21-48.png">
 > <img src="./images/w01-15-Matrix_multiplication/img_2023-01-30_20-21-56.png">
 > <img src="./images/w01-15-Matrix_multiplication/img_2023-01-30_20-22-11.png">
 
-## Matrix multiplication rules
+### Matrix multiplication rules
 
 > <img src="./images/w01-16-Matrix_multiplication_rules/img_2023-01-30_20-22-58.png">
 > <img src="./images/w01-16-Matrix_multiplication_rules/img_2023-01-30_20-23-11.png">
 > <img src="./images/w01-16-Matrix_multiplication_rules/img_2023-01-30_20-23-42.png">
 
-## Matrix multiplication code
+### Matrix multiplication code
 
 > <img src="./images/w01-17-Matrix_multiplication_code/img_2023-01-30_20-24-13.png">
 > <img src="./images/w01-17-Matrix_multiplication_code/img_2023-01-30_20-24-29.png">
@@ -397,5 +397,5 @@ I don't know if the brain is really one or a small handful of algorithms, and ev
 
 
 
-# Practice Lab: Neural Networks for Binary Classification
+## Practice Lab: Neural Networks for Binary Classification
 

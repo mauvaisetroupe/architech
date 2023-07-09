@@ -12,9 +12,9 @@ Learning Objectives
 - Use feature scaling, feature engineering, and polynomial regression to improve model training
 - Implement linear regression in code
 
-# Multiple linear regression
+## Multiple linear regression
 
-## Multiple features
+### Multiple features
 
 > <img src="./images/w02-01-Multiple_features/img_2023-01-29_07-39-17.png">
 
@@ -36,7 +36,7 @@ We use row vectors for :
 
 > <img src="./images/w02-01-Multiple_features/img_2023-01-29_07-40-44.png">
 
-## Vectorization part 1
+### Vectorization part 1
 
 Learning how to write vectorized code will allow you to also take advantage of modern numerical linear algebra libraries, as well as maybe even GPU hardware that stands for graphics processing unit
 
@@ -48,7 +48,7 @@ Vectorization actually has two distinct benefits.
  
 > <img src="./images/w02-02-Vectorization_part_1/img_2023-01-29_07-43-53.png">
 
-## Vectorization part 2
+### Vectorization part 2
 
 > <img src="./images/w02-03-Vectorization_part_2/img_2023-01-29_07-44-39.png">
 
@@ -56,9 +56,9 @@ If you have thousands of features and perhaps very large training sets, this typ
 
 > <img src="./images/w02-03-Vectorization_part_2/img_2023-01-29_07-45-17.png">
 
-## Optional lab: Python, NumPy and vectorization
+### Optional lab: Python, NumPy and vectorization
 
-## Gradient descent for multiple linear regression
+### Gradient descent for multiple linear regression
 
 Impact of vectorization for gradient descent algorithm 
 
@@ -73,13 +73,13 @@ Just be aware that some machine learning libraries may use this complicated meth
 
 > <img src="./images/w02-04-Gradient_descent_for_multiple_linear_regression/img_2023-01-29_07-46-41.png">
 
-## Optional Lab: Multiple linear regression
+### Optional Lab: Multiple linear regression
 
-# Practice quiz: Multiple linear regression
+## Practice quiz: Multiple linear regression
 
-# Gradient descent in practice
+## Gradient descent in practice
 
-## Feature scaling part 1
+### Feature scaling part 1
 
 > <img src="./images/w02-05-Feature_scaling_part_1/img_2023-01-29_07-47-33.png">
 
@@ -94,7 +94,7 @@ When the data is not scaled the cost function can be very steep in those dimensi
 
 > <img src="./images/w02-05-Feature_scaling_part_1/img_2023-01-29_07-47-57.png">
 
-## Feature scaling part 2
+### Feature scaling part 2
 
 You can calculate a scale version dividing by the maximum. 
 
@@ -112,7 +112,7 @@ As a rule of thumb, when performing feature scaling, you might want to aim for g
 
 > <img src="./images/w02-06-Feature_scaling_part_2/img_2023-01-29_07-49-32.png">
 
-## Checking gradient descent for convergence
+### Checking gradient descent for convergence
 
 For a succesfull gradientdescent algorithm, one of the key choices is the choice of the learning rate Alpha
 
@@ -123,7 +123,7 @@ If the cost J decreases by less than this number epsilon on one iteration, then 
 
 > <img src="./images/w02-07-Checking_gradient_descent_for_convergence/img_2023-01-29_07-50-24.png">
 
-## Choosing the learning rate
+### Choosing the learning rate
 
 Concretely, if you plot the cost for a number of iterations and notice that the costs sometimes goes up and sometimes goes down, you should take that as a clear sign that gradient descent is not working properly. This could mean that there's a bug in the code. Or sometimes it could mean that your learning rate is too large. 
 
@@ -133,15 +133,15 @@ Try out gradient descents with each value of Alpha being roughly three times big
 
 > <img src="./images/w02-08-Choosing_the_learning_rate/img_2023-01-29_07-51-15.png">
 
-## Optional Lab: Feature scaling and learning rate
+### Optional Lab: Feature scaling and learning rate
 
-## Feature engineering
+### Feature engineering
 
 You may have an intuition that the area of the land is more predictive of the price, than the frontage and depth as separate features. You might define a new feature, x_3, as x_1 times x_2. This new feature x_3 is equal to the area of the plot of land.
 
 > <img src="./images/w02-09-Feature_engineering/img_2023-01-29_07-51-50.png">
 
-## Polynomial regression
+### Polynomial regression
 
 Let's say you have a housing data-set that looks like this, where feature x is the size in square feet. It doesn't look like a straight line fits this data-set very well
 
@@ -161,11 +161,11 @@ Later in the second course in this specialization, you see how you can choose di
 
 > <img src="./images/w02-10-Polynomial_regression/img_2023-01-29_07-54-12.png">
 
-## Optional lab: Feature engineering and Polynomial regression
+### Optional lab: Feature engineering and Polynomial regression
 
-## Optional lab: Linear regression with scikit-learn
+### Optional lab: Linear regression with scikit-learn
 
-# Practice quiz: Gradient descent in practice
+## Practice quiz: Gradient descent in practice
 
-# Week 2 practice lab: Linear regression
+## Week 2 practice lab: Linear regression
 

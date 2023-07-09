@@ -19,9 +19,9 @@ Learning Objectives
 - Learn to include fairness and ethics in your machine learning model development
 - Measure precision and recall to work with skewed (imbalanced) datasets
 
-# Advice for applying machine learning
+## Advice for applying machine learning
 
-## Deciding what to try next
+### Deciding what to try next
 
 
 "I've seen teams sometimes, say six months to build a machine learning system, that I think a more skilled team could have taken or done in just a couple of weeks." The efficiency of how quickly you can get a machine learning system to work well, will depend to a large part on how well you can repeatedly make good decisions 
@@ -34,7 +34,7 @@ Diagnostics can take time to implement, but running them can be a very good use 
 > <img src="./images/w03-01-Deciding_what_to_try_next/img_2023-02-02_23-00-51.png">
 
 
-## Evaluating a model
+### Evaluating a model
 
 In the graph below, we use just a single feature (the size of the house) and we can see the curve is very weakly so we know this parody isn't a good model. But with more features it becomes much harder to plot f() and detect the model is not correct
 
@@ -63,7 +63,7 @@ For classification, you could use the fraction of missclassified to get acceptan
 
 > <img src="./images/w03-02-Evaluating_a_model/img_2023-02-02_23-16-39.png">
 
-## Model selection and training/cross validation/test sets
+### Model selection and training/cross validation/test sets
 
 > <img src="./images/w03-03-Model_selection_and_training_cross_validation_test_sets/img_2023-02-02_23-28-27.png">
 
@@ -106,18 +106,18 @@ This model selection procedure also works for choosing among other types of mode
 
 > <img src="./images/w03-03-Model_selection_and_training_cross_validation_test_sets/img_2023-02-02_23-29-32.png">
 
-## Optional Lab: Model Evaluation and Selection
+### Optional Lab: Model Evaluation and Selection
 
 
 
 
-# Practice quiz: Advice for applying machine learning
+## Practice quiz: Advice for applying machine learning
 
 
 
-# Bias and variance
+## Bias and variance
 
-## Diagnosing bias and variance
+### Diagnosing bias and variance
 
 The typical workflow of developing a machine learning system is that you have an idea and you train the model, and you almost always find that it doesn't work as well as you wish yet. How to decide what to do next in order to improve his performance? Looking at the bias and variance of a learning algorithm gives very good guidance on what to try next
 
@@ -133,7 +133,7 @@ In that case
 
 > <img src="./images/w03-04-Diagnosing_bias_and_variance/img_2023-02-03_10-13-55.png">
 
-## Regularization and bias/variance
+### Regularization and bias/variance
 
 Lambda is the regularization parameter that controls how much we trade-off :
 - keeping the parameters w small versus 
@@ -166,7 +166,7 @@ Now, so far, we've seen that having an high $J_{train}$ is indicative of high bi
 
 But what does these words "high" or "much higher" actually mean? In order to answer the question, we introduce the notion of baseline level of performance.
 
-## Establishing a baseline level of performance
+### Establishing a baseline level of performance
 
 There's a lot of noisy audio where really no one can accurately transcribe what was said because of the noise in the audio. If even a human makes 10.6 percent error, then it seems difficult to expect a learning algorithm to do much better. 
 
@@ -185,7 +185,7 @@ Depending on gap, we habe bias, variance of both issues.
 
 > <img src="./images/w03-06-Establishing_a_baseline_level_of_performance/img_2023-02-03_14-51-44.png">
 
-## Learning curves
+### Learning curves
 
 If model is too simple to be fitting into much data, both of $J_{cv}$ and $J_{train}$ curves tend to flatten after a while.
 
@@ -205,13 +205,13 @@ It is computationally quite expensive to train so many different models using di
 
 "Bias and variance is one of those concepts that takes a short time to learn, but takes a lifetime to master."
 
-## Deciding what to try next revisited
+### Deciding what to try next revisited
 
 
 
 > <img src="./images/w03-08-Deciding_what_to_try_next_revisited/img_2023-02-03_15-27-27.png">
 
-## Bias/variance and neural networks
+### Bias/variance and neural networks
 
 And if you hear machine learning engineers talk about the bias variance tradeoff, they're referring to where if you have too simple a model, you have high bias, too complex a model high variance
 
@@ -235,17 +235,17 @@ In tensorflow :
 > <img src="./images/w03-09-Bias_variance_and_neural_networks/img_2023-02-03_16-51-04.png">
 
 
-## Optional Lab: Diagnosing Bias and Variance
+### Optional Lab: Diagnosing Bias and Variance
 
 
 
-# Practice quiz: Bias and variance
+## Practice quiz: Bias and variance
 
 
 
-# Machine learning development process
+## Machine learning development process
 
-## Iterative loop of ML development
+### Iterative loop of ML development
 
 > <img src="./images/w03-10-Iterative_loop_of_ML_development/img_2023-02-03_17-00-51.png">
 
@@ -266,7 +266,7 @@ Depending of diagnostics, you change the architecture, and continue the loop
 > <img src="./images/w03-10-Iterative_loop_of_ML_development/img_2023-02-03_18-19-28.png">
 
 
-## Error analysis
+### Error analysis
 
 
 The error analysis process just refers to manually looking through these 100 examples and trying to gain insights into where the algorithm is going wrong. Pharmaceutical spam and emails trying to steal passwords or phishing emails seem to be huge problems whereas deliberate misspellings
@@ -289,7 +289,7 @@ Now one limitation of error analysis is that it's much easier to do for problems
 > <img src="./images/w03-11-Error_analysis/img_2023-02-03_18-46-10.png">
 
 
-## Adding data
+### Adding data
 
 Trying to get more data of all types can be slow and expensive. Instead, an alternative way of adding data might be to focus on adding more data of the types where analysis has indicated it might help. 
 
@@ -333,7 +333,7 @@ Algorithm we have access to linear regression, logistic regression, neural netwo
 > <img src="./images/w03-12-Adding_data/img_2023-02-05_09-40-25.png">
 
 
-## Transfer learning: using data from a different task
+### Transfer learning: using data from a different task
 
 
 Let's say you want to recognize the handwritten digits from zero through nine but you don't have that much labeled data of these handwritten digits
@@ -367,7 +367,7 @@ I'd sometimes train neural networks on as few as 50 images that were quite well 
 > <img src="./images/w03-13-Transfer_learning:_using_data_from_a_different_task/img_2023-02-05_10-04-36.png">
 
 
-## Full cycle of a machine learning project
+### Full cycle of a machine learning project
 
 > <img src="./images/w03-14-Full_cycle_of_a_machine_learning_project/img_2023-02-05_10-21-31.png">
 
@@ -377,7 +377,7 @@ This refers to the practice of how to systematically build and deploy and mainta
 > <img src="./images/w03-14-Full_cycle_of_a_machine_learning_project/img_2023-02-05_10-21-46.png">
 
 
-## Fairness, bias, and ethics
+### Fairness, bias, and ethics
 
 > <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-27-43.png">
 
@@ -387,11 +387,11 @@ This refers to the practice of how to systematically build and deploy and mainta
 
 > <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-28-26.png">
 
-# Practice quiz: Machine learning development process
+## Practice quiz: Machine learning development process
 
-# Skewed dataset (Optional)
+## Skewed dataset (Optional)
 
-## Error metrics for skewed datasets
+### Error metrics for skewed datasets
 
 An algorithm that predicts y equals 0 all the time will actually have 99.5 percent accuracy or 0.5 percent error
 
@@ -404,7 +404,7 @@ Computing both precision and recall makes it easier to spot if an algorithm is b
 > <img src="./images/w03-16-Error_metrics_for_skewed_datasets/img_2023-02-05_10-36-16.png">
 
 
-## Trading off precision and recall
+### Trading off precision and recall
 
 By raising this threshold to 0.7, precision is high, but recall is low. 
 With a threshold of 0.3, we decrease precision but increase recalls
@@ -420,4 +420,4 @@ F1 score, and the F1 score is a way of combining P and R precision and recall bu
 
 > <img src="./images/w03-17-Trading_off_precision_and_recall/img_2023-02-05_19-00-07.png">
 
-# Practice Lab: Advice for Applying Machine Learning
+## Practice Lab: Advice for Applying Machine Learning

@@ -17,21 +17,21 @@ Learning Objectives
 - Use the recommended method for implementing multiclass classification in code
 - (Optional): Explain the difference between multi-label and multiclass classification
 
-# Neural network training
+## Neural network training
 
-## TensorFlow implementation
+### TensorFlow implementation
 
 > <img src="./images/w02-01-TensorFlow_implementation/img_2023-01-30_22-15-48.png">
 
-## Training Details
+### Training Details
 
 > <img src="./images/w02-02-Training_Details/img_2023-01-30_22-23-20.png">
 
-### Step 1 - create the model
+#### Step 1 - create the model
 
 > <img src="./images/w02-02-Training_Details/img_2023-01-30_22-23-57.png">
 
-### Step 2 - Loss and Cost functions
+#### Step 2 - Loss and Cost functions
 
 The cost function $J_{W,B}(\vec{X})$  is a function of **all the parameters** into neural network:
 - $W$, that includes matrix $W^{[1]}$, $W^{[2]}$ and $W^{[3]}$ for respectively layer 1, 2 and 3 (could be vectors as neurone one has only one weight $w_1^{[1]}$)
@@ -48,7 +48,7 @@ In TensorFlow, we can use for loss function :
 
 Keras was originally a library that  had developed independently of TensorFlow is actually totally separate project from TensorFlow
  
-### Step 3 - Gradient descent
+#### Step 3 - Gradient descent
 
 To use gradient descent to train the parameters of a neural network, we repeatedly update $w_j^{[l]}$  for every layer $l$ and for every unit $j$
 
@@ -70,12 +70,12 @@ Frameworks
 > <img src="./images/w02-02-Training_Details/img_2023-01-30_22-32-39.png">
 
 
-# Practice quiz: Neural Network Training
+## Practice quiz: Neural Network Training
 
 
-# Activation Functions
+## Activation Functions
 
-## Alternatives to the sigmoid activation
+### Alternatives to the sigmoid activation
 
 Using the sigmoid activation function awareness as a binary number 0, 1
 Maybe awareness should be any non negative number because there can be any non negative value of awareness going from 0 up to very very large numbers
@@ -92,7 +92,7 @@ Here are the most commonly used activation functions:
 > <img src="./images/w02-03-Alternatives_to_the_sigmoid_activation/img_2023-01-31_19-47-11.png">
 
 
-## Choosing activation functions
+### Choosing activation functions
 
 Output Layer:
 - Linear for both negatives and positives values
@@ -113,7 +113,7 @@ Summary
 
 > <img src="./images/w02-04-Choosing_activation_functions/img_2023-01-31_19-56-23.png">
 
-## Why do we need activation functions?
+### Why do we need activation functions?
 
 If we were to use a linear activation function for all of the nodes, the neural network will act as a linear regression
 
@@ -129,14 +129,14 @@ Or alternatively, if we were to still use a linear activation function for all t
 
 > <img src="./images/w02-05-Why_do_we_need_activation_functions/img_2023-01-31_21-17-19.png">
 
-## ReLU activation
+### ReLU activation
 
-# Practice quiz: Activation Functions
+## Practice quiz: Activation Functions
 
 
-# Multiclass classification
+## Multiclass classification
 
-## Multiclass
+### Multiclass
 
 For the handwritten digit classification problems we've looked at so far, we were just trying to distinguish between the handwritten digits 0 and 1. But if you're trying to read protocols or zip codes in an envelope, well, there are actually 10 possible digits you might want to recognize
 
@@ -147,7 +147,7 @@ Another multiclass classification problems, where data set that maybe classified
 
 > <img src="./images/w02-06-Multiclass/img_2023-01-31_21-48-16.png">
 
-## Softmax
+### Softmax
 
 Wikipedia:
 > The softmax function (or normalized exponential function)  converts a vector of K real numbers into a probability distribution of K possible outcomes. It is a generalization of the logistic function to multiple dimensions
@@ -161,7 +161,7 @@ Softmax regression with n equals 2, is equivalent to logistic regression (not pr
 
 > <img src="./images/w02-07-Softmax/img_2023-01-31_22-11-38.png">
 
-## Neural Network with Softmax output
+### Neural Network with Softmax output
 
 Previously, when we were doing handwritten digit recognition with just two classes. 
 We use a new Neural Network with an output layer with one unique neurone or unit.
@@ -177,7 +177,7 @@ Tensorflow implentation (there's a better version of the code that makes tensorf
 > <img src="./images/w02-08-Neural_Network_with_Softmax_output/img_2023-02-01_17-12-29.png">
 
 
-## Improved implementation of softmax
+### Improved implementation of softmax
 
 Computing with intermediate term could create round-off error. 
 
@@ -201,7 +201,7 @@ Full algorithm:
 
 > <img src="./images/w02-09-Improved_implementation_of_softmax/img_2023-02-01_17-29-03.png">
 
-## Classification with multiple outputs (Optional)
+### Classification with multiple outputs (Optional)
 
 Example of multi-label (multi labels possible), that differs from multi-class (only one class possible)
 > <img src="./images/w02-10-Classification_with_multiple_outputs/img_2023-02-01_17-42-01.png">
@@ -210,19 +210,19 @@ Implemented wit output with multiple sigmoid units (neurones)
 > <img src="./images/w02-10-Classification_with_multiple_outputs/img_2023-02-01_17-42-11.png">
 
 
-## Softmax
+### Softmax
 
-## Multiclass
-
-
-
-# Practice quiz: Multiclass Classification
+### Multiclass
 
 
 
-# Additional Neural Network concepts
+## Practice quiz: Multiclass Classification
 
-## Advanced Optimization
+
+
+## Additional Neural Network concepts
+
+### Advanced Optimization
 
 Gradient descent is an optimization algorithm that was the foundation of many algorithms like linear regression, logistic regression and early implementations of neural networks. But there are now some other optimization algorithms for minimizing the cost function, that are even better than gradient descent.
 
@@ -242,7 +242,7 @@ Implementation in tensorflow:
 
 > <img src="./images/w02-11-Advanced_Optimization/img_2023-02-01_17-52-24.png">
 
-## Additional Layer Types
+### Additional Layer Types
 
 
 With dense layer, every neuron in the layer gets its inputs all the activations from the previous layer. 
@@ -262,16 +262,16 @@ Exemple with Electrocardiogram (ECG or EKG)
 > <img src="./images/w02-12-Additional_Layer_Types/img_2023-02-01_18-12-41.png">
 
 
-# Practice quiz: Additional Neural Network Concepts
+## Practice quiz: Additional Neural Network Concepts
 
 
-# Back propagation (Optional)
+## Back propagation (Optional)
 
 Remeinder:
  - Inference is making predictions and itś forward propagation
  - Learning is called in contrast backward propagation or back propagation
 
-## What is a derivative? (Optional)
+### What is a derivative? (Optional)
 
 Example
 
@@ -297,7 +297,7 @@ Derivative Notation
 > <img src="./images/w02-13-What_is_a_derivative/img_2023-02-01_19-13-01.png">
 
 
-## Computation graph (Optional)
+### Computation graph (Optional)
 
 The computation graph is a key idea in deep learning and it's used by programming framework like TensorFlow to automatic compute derivatives for 
 neural networks
@@ -337,7 +337,7 @@ Backprop efficiency
 
 > <img src="./images/w02-14-Computation_graph/img_2023-02-01_20-07-53.png">
 
-## Larger neural network example (Optional)
+### Larger neural network example (Optional)
 
 Many years ago, before the rise of frameworks like tensorflow and pytorch, researchers used to have to manually use calculus to compute the derivatives of the neural networks that they wanted to train. 
 
@@ -349,11 +349,11 @@ In modern program frameworks you can specify forwardprop and have it take care o
 
 > <img src="./images/w02-15-Larger_neural_network_example/img_2023-02-01_22-12-52.png">
 
-## Optional Lab: Derivatives
+### Optional Lab: Derivatives
 
-## Optional Lab: Back propagation
-
-
+### Optional Lab: Back propagation
 
 
-# Practice Lab: Neural Networks for Multiclass classification
+
+
+## Practice Lab: Neural Networks for Multiclass classification
