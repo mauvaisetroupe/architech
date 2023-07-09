@@ -4,7 +4,7 @@ type: docs
 ---
 
 
-# Introduction to deep learning
+## Introduction to deep learning
 
 
 Analyze the major trends driving the rise of deep learning, and give examples of where and how it is applied today.
@@ -17,9 +17,9 @@ Learning Objectives
 
 
 
-# Welcome
-
 ## Welcome
+
+### Welcome
 
 > <img src="./images/w01-01-Welcome/img_2023-03-04_12-26-25.png">
 
@@ -38,9 +38,9 @@ Starting about 100 years ago, the electrification of our society transformed eve
 
 
 
-# Introduction to deep leatning
+## Introduction to deep leatning
 
-## What is a Neural Network?
+### What is a Neural Network?
 
 To predict price of a house as a function of its size, we can use linear regression
 As price cannot be negative, we compose this linear regression with function f(x)=max(0,x) (RELU, rectified linear unit)
@@ -66,7 +66,7 @@ Because every input feature is connected to every one of these circles in the mi
 
 > <img src="./images/w01-02-What_is_a_Neural_Network/img_2023-03-11_08-07-01.png">
 
-## Supervised Learning with Neural Networks
+### Supervised Learning with Neural Networks
 
 There's a lot of hype about neural networks, and perhaps some of that hype is justified. Today, almost all the economic value created by neural networks has been through one type of machine learning, called supervised learning.
 
@@ -87,7 +87,7 @@ Structured vs unstructured data.
 > <img src="./images/w01-03-Supervised_Learning_with_Neural_Networks/img_2023-03-11_08-51-43.png">
 
 
-## Why is Deep Learning taking off?
+### Why is Deep Learning taking off?
 
 Neural network need data and computer performance
 
@@ -99,14 +99,14 @@ The other reason that fast computation is important is that the development cycl
 
 > <img src="./images/w01-04-Why_is_Deep_Learning_taking_off/img_2023-03-11_09-04-15.png">
 
-## About this Course
+### About this Course
 
 > <img src="./images/w01-05-About_this_Course/img_2023-03-11_09-16-06.png">
 
 > <img src="./images/w01-05-About_this_Course/img_2023-03-11_09-16-08.png">
 
 
-# Heroes of Deep Learning
+## Heroes of Deep Learning
 
-## Geoffrey Hinton Interview
+### Geoffrey Hinton Interview
 
