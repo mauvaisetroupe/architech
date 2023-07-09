@@ -56,25 +56,6 @@ anchor = "smart"
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
 #id = "UA-00000000-0"
 
-# Language configuration
-
-[languages]
-[languages.en]
-languageName ="English"
-# Weight used for sorting.
-weight = 1
-[languages.en.params]
-title = "ArchiTech.lu"
-description = "Blog and Articles about IT Architecture"
-
-[languages.fr]
-languageName ="Français"
-contentDir = "content/fr"
-[languages.fr.params]
-title = "ArchiTech.lu"
-description = "Blog at Articles sur l'IT et l'Architecture"
-time_format_default = "02.01.2006"
-time_format_blog = "02.01.2006"
 
 [markup]
   [markup.goldmark]
@@ -95,8 +76,8 @@ time_format_blog = "02.01.2006"
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "The Docsy Authors"
-privacy_policy = "https://policies.google.com/privacy"
+copyright = "The Architect.lu"
+#privacy_policy = "https://policies.google.com/privacy"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -120,9 +101,9 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/mauvaisetroupe/architech"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/google/docsy"
+github_project_repo = "https://github.com/mauvaisetroupe/architech"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -176,37 +157,31 @@ enable = false
 
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
-[[params.links.user]]
-  name = "User mailing list"
-  url = "https://example.org/mail"
-  icon = "fa fa-envelope"
-  desc = "Discussion and help from your fellow users"
-[[params.links.user]]
+#[[params.links.user]]
+#  name ="Twitter"
+#  url = "https://example.org/twitter"
+#  icon = "fab fa-twitter"
+#  desc = "Follow us on Twitter to get the latest news!"
+[[params.links.developer]]
+  name = "GitHub"
+  url = "https://github.com/mauvaisetroupe/architech"
+  icon = "fab fa-github"
+  desc = "Development takes place here!"
+#[[params.links.developer]]
+#  name = "Slack"
+#  url = "https://example.org/slack"
+#  icon = "fab fa-slack"
+#  desc = "Chat with other project developers"
+#[[params.links.developer]]
+#  name = "Developer mailing list"
+#  url = "https://example.org/mail"
+#  icon = "fa fa-envelope"
+#  desc = "Discuss development issues around the project"
+[[params.links.developer]]
   name ="Twitter"
   url = "https://example.org/twitter"
   icon = "fab fa-twitter"
   desc = "Follow us on Twitter to get the latest news!"
-[[params.links.user]]
-  name = "Stack Overflow"
-  url = "https://example.org/stack"
-  icon = "fab fa-stack-overflow"
-  desc = "Practical questions and curated answers"
-# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
-[[params.links.developer]]
-  name = "GitHub"
-  url = "https://github.com/google/docsy"
-  icon = "fab fa-github"
-  desc = "Development takes place here!"
-[[params.links.developer]]
-  name = "Slack"
-  url = "https://example.org/slack"
-  icon = "fab fa-slack"
-  desc = "Chat with other project developers"
-[[params.links.developer]]
-  name = "Developer mailing list"
-  url = "https://example.org/mail"
-  icon = "fa fa-envelope"
-  desc = "Discuss development issues around the project"
 
 # hugo module configuration
 
