@@ -56,7 +56,6 @@ If you have thousands of features and perhaps very large training sets, this typ
 
 > <img src="./images/w02-03-Vectorization_part_2/img_2023-01-29_07-45-17.png">
 
-### Optional lab: Python, NumPy and vectorization
 
 ### Gradient descent for multiple linear regression
 
@@ -73,9 +72,6 @@ Just be aware that some machine learning libraries may use this complicated meth
 
 > <img src="./images/w02-04-Gradient_descent_for_multiple_linear_regression/img_2023-01-29_07-46-41.png">
 
-### Optional Lab: Multiple linear regression
-
-## Practice quiz: Multiple linear regression
 
 ## Gradient descent in practice
 
@@ -133,8 +129,6 @@ Try out gradient descents with each value of Alpha being roughly three times big
 
 > <img src="./images/w02-08-Choosing_the_learning_rate/img_2023-01-29_07-51-15.png">
 
-### Optional Lab: Feature scaling and learning rate
-
 ### Feature engineering
 
 You may have an intuition that the area of the land is more predictive of the price, than the frontage and depth as separate features. You might define a new feature, x_3, as x_1 times x_2. This new feature x_3 is equal to the area of the plot of land.
@@ -161,11 +155,4 @@ Later in the second course in this specialization, you see how you can choose di
 
 > <img src="./images/w02-10-Polynomial_regression/img_2023-01-29_07-54-12.png">
 
-### Optional lab: Feature engineering and Polynomial regression
-
-### Optional lab: Linear regression with scikit-learn
-
-## Practice quiz: Gradient descent in practice
-
-## Week 2 practice lab: Linear regression
 

@@ -58,7 +58,6 @@ We stop if purity improvement is below a threshold, or if number of examples is 
 It could ssem complicated, but these different pieces fit together into a very effective learning algorithm.
 Open source packages can help so in the complicated procedure for making all these decisions, like how do I decide to stop splitting
 
-## Practice quiz: Decision trees
 
 
 
@@ -135,11 +134,9 @@ We calculate the entropy for different threshold
 > <img src="./images/w04-08-Regression_Trees/img_2023-02-07_18-44-05.png">
 
 
-### Optional Lab: Decision Trees
 
 
 
-## Practice quiz: Decision tree learning
 
 
 
@@ -196,15 +193,12 @@ The details of XGBoost are quite complex to implement, which is why many practit
 
 > <img src="./images/w04-13-When_to_use_decision_trees/img_2023-02-07_22-04-53.png">
 
-### Optional Lab: Tree Ensembles
-
-
-## Practice quiz: Tree ensembles
 
 
 
 
-## Practice Lab: Decision Trees
+
+
 
 
 

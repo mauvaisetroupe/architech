@@ -128,15 +128,6 @@ Just for fun, let's see what happens if you were to train this neural network on
 > <img src="./images/w01-04-Example:_Recognizing_Images/img_2023-01-29_21-54-51.png">
 
 
-### Have questions, issues or ideas? Join our Community!
-
-
-
-
-## Practice quiz: Neural networks intuition
-
-
-
 ## Neural network model
 
 ### Neural network layer
@@ -197,11 +188,6 @@ Because this computation goes from left to right, you start from x and compute a
 > <img src="./images/w01-07-Inference:_making_predictions_(forward_propagation)/img_2023-01-30_16-46-34.png">
 
 ### Neurons and Layers
-
-
-
-
-## Practice quiz: Neural network model
 
 
 ## TensorFlow implementation
@@ -316,11 +302,6 @@ Example of handwritten digit recognition:
 
 
 
-
-## Practice quiz: TensorFlow implementation
-
-
-
 ## Neural network implemntation in python
 ### Forward prop in a single layer
 
@@ -353,10 +334,6 @@ array([1, 2])
 
 ### CoffeeRoastingNumPy
 
-
-
-
-## Practice quiz: Neural network implementation in Python
 
 
 ## Speculation on artificial general intelligence (AGI)
@@ -396,6 +373,4 @@ I don't know if the brain is really one or a small handful of algorithms, and ev
 
 
 
-
-## Practice Lab: Neural Networks for Binary Classification
 

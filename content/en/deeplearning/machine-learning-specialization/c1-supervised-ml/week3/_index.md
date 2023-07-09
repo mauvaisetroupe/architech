@@ -43,8 +43,6 @@ The dividing line between two classes is called the decision boundary
 
 
 
-### Optional lab: Classification
-
 ### Logistic regression
 
 
@@ -65,8 +63,6 @@ g(z) is interpreted as a percentage (probability)
 
 > <img src="./images/w03-02-Logistic_regression/img_2023-01-29_10-16-38.png">
 
-
-### Optional lab: Sigmoid function and logistic regression
 
 ### Decision boundary
 
@@ -94,11 +90,7 @@ Thresold is not always 0.5
 
 > <img src="./images/w03-03-Decision_boundary/img_2023-01-29_11-30-40.png">
 
-### Optional lab: Decision boundary
 
-
-
-## Practice quiz: Classification with logistic regression
 
 
 ## Cost function for logistic regression
@@ -124,7 +116,6 @@ Proving that this function is convex, it's beyond the scope of this cost.
 
 > <img src="./images/w03-04-Cost_function_for_logistic_regression/img_2023-01-29_12-15-29.png">
 
-### Optional lab: Logistic loss
 
 ### Simplified Cost Function for Logistic Regression
 
@@ -138,11 +129,7 @@ This cost function has the nice property that it is convex.
 > <img src="./images/w03-05-Simplified_Cost_Function_for_Logistic_Regression/img_2023-01-29_12-28-34.png">
 
 
-### Optional lab: Cost function for logistic regression
 
-
-
-## Practice quiz: Cost function for logistic regression
 
 ## Gradient Descent for logistic regression
 
@@ -159,16 +146,6 @@ When calculating derivatives, we have:
 Quite similar with linear regression
 
 > <img src="./images/w03-06-Gradient_Descent_Implementation/img_2023-01-29_12-38-09.png">
-
-
-### Optional lab: Gradient descent for logistic regression
-
-### Optional lab: Logistic regression with scikit-learn
-
-
-
-
-## Practice quiz: Gradient descent for logistic regression
 
 
 
@@ -216,7 +193,6 @@ Reducing the size of the parameters using regularization
 In a nutshell:
 > <img src="./images/w03-08-Addressing_overfitting/img_2023-01-29_16-05-56.png">
 
-### Optional lab: Overfitting
 
 ### Cost function with regularization
 
@@ -279,18 +255,3 @@ In fact is the exact same equation that the ones for linear regression, except f
 
 > <img src="./images/w03-11-Regularized_logistic_regression/img_2023-01-29_17-24-30.png">
 
-
-### Optional lab: Regularization
-
-
-
-
-## Practice quiz: The problem of overfitting
-
-
-
-## Week 3 practice lab: logistic regression
-
-
-
-## Acknowledgments

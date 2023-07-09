@@ -155,11 +155,9 @@ Both of these are completely valid and completely fine groupings of the data int
 
 
 
-## Practice Quiz Clustering
 
 
 
-## Practice Lab - k-means
 
 
 ## Anomaly detection
@@ -261,6 +259,4 @@ Other example of creating a new feature with combination of two existing.
 > <img src="./images/w01-13-Choosing_what_features_to_use/img_2023-02-08_20-20-12.png">
 
 
-## Practice Quiz - Anomaly detection
 
-## Practice Lab2 - Anomaly Detection

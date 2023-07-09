@@ -106,12 +106,10 @@ This model selection procedure also works for choosing among other types of mode
 
 > <img src="./images/w03-03-Model_selection_and_training_cross_validation_test_sets/img_2023-02-02_23-29-32.png">
 
-### Optional Lab: Model Evaluation and Selection
 
 
 
 
-## Practice quiz: Advice for applying machine learning
 
 
 
@@ -235,11 +233,9 @@ In tensorflow :
 > <img src="./images/w03-09-Bias_variance_and_neural_networks/img_2023-02-03_16-51-04.png">
 
 
-### Optional Lab: Diagnosing Bias and Variance
 
 
 
-## Practice quiz: Bias and variance
 
 
 
@@ -387,7 +383,6 @@ This refers to the practice of how to systematically build and deploy and mainta
 
 > <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-28-26.png">
 
-## Practice quiz: Machine learning development process
 
 ## Skewed dataset (Optional)
 
@@ -420,4 +415,3 @@ F1 score, and the F1 score is a way of combining P and R precision and recall bu
 
 > <img src="./images/w03-17-Trading_off_precision_and_recall/img_2023-02-05_19-00-07.png">
 
-## Practice Lab: Advice for Applying Machine Learning

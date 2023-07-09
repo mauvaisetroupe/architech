@@ -70,8 +70,6 @@ Frameworks
 > <img src="./images/w02-02-Training_Details/img_2023-01-30_22-32-39.png">
 
 
-## Practice quiz: Neural Network Training
-
 
 ## Activation Functions
 
@@ -130,8 +128,6 @@ Or alternatively, if we were to still use a linear activation function for all t
 > <img src="./images/w02-05-Why_do_we_need_activation_functions/img_2023-01-31_21-17-19.png">
 
 ### ReLU activation
-
-## Practice quiz: Activation Functions
 
 
 ## Multiclass classification
@@ -216,8 +212,6 @@ Implemented wit output with multiple sigmoid units (neurones)
 
 
 
-## Practice quiz: Multiclass Classification
-
 
 
 ## Additional Neural Network concepts
@@ -260,9 +254,6 @@ With convolutional layer units looks at only a limited window of the input
 Exemple with Electrocardiogram (ECG or EKG)
 
 > <img src="./images/w02-12-Additional_Layer_Types/img_2023-02-01_18-12-41.png">
-
-
-## Practice quiz: Additional Neural Network Concepts
 
 
 ## Back propagation (Optional)
@@ -349,11 +340,3 @@ In modern program frameworks you can specify forwardprop and have it take care o
 
 > <img src="./images/w02-15-Larger_neural_network_example/img_2023-02-01_22-12-52.png">
 
-### Optional Lab: Derivatives
-
-### Optional Lab: Back propagation
-
-
-
-
-## Practice Lab: Neural Networks for Multiclass classification

@@ -15,11 +15,6 @@ Learning Objectives
 - Implement gradient descent
 - Optimize a regression model using gradient descent
 
-## Overview of Machine Learning
-
-### Welcome to machine learning!
-
-### Applications of machine learning
 
 ## Supervised vs. Unsupervised Machine Learning
 
@@ -110,13 +105,6 @@ Nn supervised learning, the data comes with both inputs x and input labels y, in
 
  > <img src="./images/w01-07-Unsupervised_learning_part_2/img_2023-01-28_10-09-48.png">
 
-### Jupyter Notebooks
-
-### Python and Jupyter Notebooks
-
-
-## Practice Quiz: Supervised vs unsupervised learning
-
 
 ## Regression Model
 
@@ -168,7 +156,6 @@ Terminology:
 
  > <img src="./images/w01-10-Linear_regression_model_part_2/img_2023-01-28_10-31-08.png">
 
-### Optional lab: Model representation
 
 ### Cost function formula
 
@@ -263,11 +250,6 @@ w=-0.13 and b=71
 
  > <img src="./images/w01-14-Visualization_examples/img_2023-01-28_11-14-26.png">
 
-### Optional lab: Cost function
-
-
-## Practice Quiz: Regression Model
-
 
 ## Train the model with gradient descent
 
@@ -356,8 +338,5 @@ Gradient descent process is called batch gradient descent. The term bashed gradi
  > <img src="./images/w01-20-Running_gradient_descent/img_2023-01-28_11-37-06.png">
 
 
-### Optional lab: Gradient descent
-
-## Practice quiz: Train the model with gradient descent
 
 
