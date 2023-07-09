@@ -1,7 +1,7 @@
 ---
 title: Deep Learning
 menu: {main: {weight: 40}}
-weight: 20
+weight: 10
 type: "docs"
 ---
 
