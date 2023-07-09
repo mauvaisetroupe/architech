@@ -1,5 +1,5 @@
-baseURL = "/"
-title = "Goldydocs"
+baseURL = "https://architech.lu/"
+title = "ArchiTech.lu"
 
 # Language settings
 contentDir = "content/en"
@@ -64,26 +64,17 @@ languageName ="English"
 # Weight used for sorting.
 weight = 1
 [languages.en.params]
-title = "Goldydocs"
-description = "A Docsy example site"
+title = "ArchiTech.lu"
+description = "Blog and Articles about IT Architecture"
 
-[languages.no]
-languageName ="Norsk"
-contentDir = "content/no"
-[languages.no.params]
-title = "Goldydocs"
-description = "Docsy er operativsystem for skyen"
+[languages.fr]
+languageName ="Français"
+contentDir = "content/fr"
+[languages.fr.params]
+title = "ArchiTech.lu"
+description = "Blog at Articles sur l'IT et l'Architecture"
 time_format_default = "02.01.2006"
 time_format_blog = "02.01.2006"
-
-[languages.fa]
-languageName ="فارسی"
-contentDir = "content/fa"
-[languages.fa.params]
-title = "اسناد گلدی"
-description = "یک نمونه برای پوسته داکسی"
-time_format_default = "2006.01.02"
-time_format_blog = "2006.01.02"
 
 [markup]
   [markup.goldmark]
@@ -163,7 +154,7 @@ navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
-sidebar_menu_compact = false
+sidebar_menu_compact = true
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 
