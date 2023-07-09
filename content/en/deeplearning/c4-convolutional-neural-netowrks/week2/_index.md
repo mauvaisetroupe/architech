@@ -1,11 +1,7 @@
 ---
 type: docs
 title: "W2 - Deep Convolutional Models: Case Studies"
-permalink: /c4-convolutional-neural-netowrks/week2/
-parent: "C4 - Convolutional Neural Networks"
 ---
-
-## Deep Convolutional Models: Case Studies
 
 
 Discover some powerful practical tricks and methods used in deep CNNs, straight from the research papers, then apply transfer learning to your own deep CNN.

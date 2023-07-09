@@ -1,11 +1,8 @@
 ---
 type: docs
 title: "W1 - Foundations of Convolutional Neural Networks"
-permalink: /c4-convolutional-neural-netowrks/week1/
-parent: "C4 - Convolutional Neural Networks"
 ---
 
-## Foundations of Convolutional Neural Networks
 
 
 Implement the foundational layers of CNNs (pooling, convolutions) and stack them properly in a deep network to solve multi-class image classification problems.

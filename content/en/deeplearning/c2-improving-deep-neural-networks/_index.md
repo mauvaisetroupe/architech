@@ -5,7 +5,6 @@ permalink: /c2-improving-deep-neural-networks/
 has_toc: true
 has_children: true
 ---
-## Course 2 - Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
 
 https://www.coursera.org/learn/deep-neural-network
 

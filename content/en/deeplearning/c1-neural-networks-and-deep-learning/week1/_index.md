@@ -4,9 +4,6 @@ type: docs
 ---
 
 
-## Introduction to deep learning
-
-
 Analyze the major trends driving the rise of deep learning, and give examples of where and how it is applied today.
 
 Learning Objectives

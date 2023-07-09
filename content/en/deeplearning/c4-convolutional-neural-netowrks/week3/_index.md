@@ -1,12 +1,7 @@
 ---
 type: docs
 title: "W3 - Object Detection"
-permalink: /c4-convolutional-neural-netowrks/week3/
-parent: "C4 - Convolutional Neural Networks"
 ---
-
-
-## Object Detection
 
 
 Apply your new knowledge of CNNs to one of the hottest (and most challenging!) fields in computer vision: object detection.

@@ -1,11 +1,7 @@
 ---
 type: docs
 title: "C3 - Structuring Machine Learning Projects"
-permalink: /c3-structuring-ml-projects/
-has_toc: true
-has_children: true
 ---
-## Course 3 - Structuring Machine Learning Projects
 
 https://www.coursera.org/learn/machine-learning-projects
 

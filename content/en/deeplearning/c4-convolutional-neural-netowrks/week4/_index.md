@@ -1,11 +1,8 @@
 ---
 type: docs
 title: "W4 - Special Applications: Face recognition & Neural Style Transfer"
-permalink: /c4-convolutional-neural-netowrks/week4/
-parent: "C4 - Convolutional Neural Networks"
 ---
 
-## Special Applications: Face recognition & Neural Style Transfer
 
 
 Explore how CNNs can be applied to multiple fields, including art generation and face recognition, then implement your own algorithm to generate art and recognize faces!

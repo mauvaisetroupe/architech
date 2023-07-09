@@ -1,12 +1,8 @@
 ---
 type: docs
 title: "C4 - Convolutional Neural Networks"
-permalink: /c4-convolutional-neural-netowrks/
-has_toc: true
-has_children: true
 ---
 
-## Convolutional Neural Networks
 
 In the fourth course of the Deep Learning Specialization, you will understand how computer vision has evolved and become familiar with its exciting applications such as autonomous driving, face recognition, reading radiology images, and more.
 

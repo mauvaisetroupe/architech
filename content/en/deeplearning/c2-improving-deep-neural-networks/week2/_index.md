@@ -3,8 +3,6 @@ title: "W2 - Optimization Algorithms"
 type: docs
 ---
 
-## Optimization Algorithms
-
 
 Develop your deep learning toolbox by adding more advanced optimizations, random minibatching, and learning rate decay scheduling to speed up your models.
 

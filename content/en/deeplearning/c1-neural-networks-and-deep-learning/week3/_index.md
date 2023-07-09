@@ -3,9 +3,6 @@ title: W3 - Shallow Neural Networks
 type: docs
 ---
 
-## Shallow Neural Networks
-
-
 Build a neural network with one hidden layer, using forward propagation and backpropagation.
 
 Learning Objectives

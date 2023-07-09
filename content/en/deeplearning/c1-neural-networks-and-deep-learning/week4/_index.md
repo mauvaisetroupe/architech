@@ -3,8 +3,6 @@ title: W4 - Deep L-layer Neural Network
 type: docs
 ---
 
-## Deep L-layer Neural Network
-{: .no_toc }
 
 Analyze the key computations underlying deep learning, then use them to build and train deep neural networks for computer vision tasks.
 

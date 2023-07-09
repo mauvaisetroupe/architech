@@ -1,11 +1,8 @@
 ---
 type: docs
 title: "W1 - Recurrent Neural Networks"
-permalink: /c5-recurrent-neural-networks/week1/
-parent: "C5 - Sequence Models"
 ---
 
-## Recurrent Neural Networks
 
 
 Discover recurrent neural networks, a type of model that performs extremely well on temporal data, and several of its variants, including LSTMs, GRUs and Bidirectional RNNs,

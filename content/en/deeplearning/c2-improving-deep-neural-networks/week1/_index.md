@@ -3,8 +3,6 @@ title: "W1 - Practical Aspects of Deep Learning"
 type: docs
 
 ---
-## Practical Aspects of Deep Learning
-{: .no_toc }
 
 Discover and experiment with a variety of different initialization methods, apply L2 regularization and dropout to avoid model overfitting, then apply gradient checking to identify errors in a fraud detection model.
 
