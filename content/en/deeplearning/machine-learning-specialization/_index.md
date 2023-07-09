@@ -2,6 +2,8 @@
 title: Machine Learning specialization
 type: "docs"
 weight: 10
+description: >
+  This is my personal notes of https://www.coursera.org/specializations/machine-learning-introduction
 ---
 
 
