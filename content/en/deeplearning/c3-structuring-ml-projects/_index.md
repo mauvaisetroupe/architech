@@ -5,7 +5,7 @@ permalink: /c3-structuring-ml-projects/
 has_toc: true
 has_children: true
 ---
-# Course 3 - Structuring Machine Learning Projects
+## Course 3 - Structuring Machine Learning Projects
 
 https://www.coursera.org/learn/machine-learning-projects
 
@@ -24,7 +24,7 @@ SKILLS YOU WILL GAIN
 - Multi-Task Learning
 - Decision-Making
 
-## [Week 1 - ML strategy](./week1/)
+### [Week 1 - ML strategy](./week1/)
 
 Streamline and optimize your ML production workflow by implementing strategic guidelines for goal-setting and applying human-level performance to help define key priorities.
 
@@ -36,7 +36,7 @@ Learning Objectives
 - Use human-level performance to define key priorities in ML projects
 - Take the correct ML Strategic decision based on observations of performances and dataset
 
-## [Week 2 - ML strategy](./week2/)
+### [Week 2 - ML strategy](./week2/)
 
 Develop time-saving error analysis procedures to evaluate the most worthwhile options to pursue and gain intuition for how to split your data and when to use multi-task, transfer, and end-to-end deep learning.
 

@@ -6,7 +6,7 @@ parent: "C4 - Convolutional Neural Networks"
 ---
 
 
-# Object Detection
+## Object Detection
 
 
 Apply your new knowledge of CNNs to one of the hottest (and most challenging!) fields in computer vision: object detection.
@@ -24,9 +24,9 @@ Learning Objectives
 
 
 
-# Detection Algorithms
+## Detection Algorithms
 
-## Object Localization
+### Object Localization
 
 Different algorithms :
 - Classification: is there a car, yes, no?
@@ -56,7 +56,7 @@ Note that :
 
 > <img src="./images/w03-01-object_localization/img_2023-04-10_09-15-35.png">
 
-## Landmark Detection
+### Landmark Detection
 
 To implement object localization, idea of usear real numbers (rectnagle position and size) is a powerful idea. Landmark detection is the generalization of this idea.
 
@@ -70,7 +70,7 @@ We need obviously labeled images including boring landmarks on the images, that 
 
 > <img src="./images/w03-02-landmark_detection/img_2023-04-10_09-15-53.png">
 
-## Object Detection
+### Object Detection
 
 1. create a training set with cars (cropped image with only the car in the image)
 2. train ConvNet with the cropped images
@@ -92,7 +92,7 @@ Disadvantages :
 
 > <img src="./images/w03-03-object_detection/img_2023-04-10_09-16-15.png">
 
-## Convolutional Implementation of Sliding Windows
+### Convolutional Implementation of Sliding Windows
 
 We've just see that sliding widows algorithm is too slow with bad computational cost. Let's see how to implement it *convolutionnaly*.
 
@@ -113,14 +113,14 @@ The convolutional window allows the share a lot of computation between these 4 C
 > <img src="./images/w03-04-convolutional_implementation_of_sliding_windows/img_2023-04-10_09-16-37.png">
 
 
-#### 14x14x3 image, base image for sliding algorithm
+##### 14x14x3 image, base image for sliding algorithm
 
 > <img src="./images/w03-04-convolutional_implementation_of_sliding_windows/20.png">
 
 - ConvNet for a picture 14x14x3 (the size of our sliding window in the example)
 - to simplify the drawing for this slide, I'm just going to draw the front face of this volume. 
 
-#### 16x16x3 image, 4 sliding windows
+##### 16x16x3 image, 4 sliding windows
 
 > <img src="./images/w03-04-convolutional_implementation_of_sliding_windows/21.png">
 
@@ -138,19 +138,19 @@ Instead, we run convolutional alorithme
 It trurns out that each pixel ou the output corresponds to the windows positions.
 Example for the green ractangle
 
-#### Other example
+##### Other example
 > <img src="./images/w03-04-convolutional_implementation_of_sliding_windows/22.png">
 
 Same explanation on a bigger image
 
-#### Conclusion
+##### Conclusion
 
 - we have impented the sliding windows algorith using only convolutional layers that allow to share a lot of computation and so to decrease the computational cost
 - We haven't yet tackle the scond issue : the bouding box accuracy
 
 > <img src="./images/w03-04-convolutional_implementation_of_sliding_windows/img_2023-04-10_09-16-39.png">
 
-## Bounding Box Predictions
+### Bounding Box Predictions
 
 In the following example, none of the sliding windows match the perfect bounding box.
 
@@ -178,7 +178,7 @@ Detail on how we encode bouding boxes (already discussed)
 
 Warning : Yolo is a very hard paper to read.
 
-## Intersection Over Union
+### Intersection Over Union
 
 How do you tell if your object detection algorithm is working well? Intersection Over Union (IOU) measure the overlap between 2 bounding boxes.
 
@@ -186,7 +186,7 @@ Usually, IOU > 0.5 means a correct martching between the 2 boxes
 
 > <img src="./images/w03-06-intersection_over_union/img_2023-04-10_09-17-13.png">
 
-## Non-max Suppression
+### Non-max Suppression
 
 <!--
 > <img src="./images/w03-07-non-max_suppression/img_2023-04-10_09-17-33.png">
@@ -207,7 +207,7 @@ If classes are used for multiple classes of objects, the compare only boxes with
 
 > <img src="./images/w03-07-non-max_suppression/img_2023-04-10_09-17-40.png">
 
-## Anchor Boxes
+### Anchor Boxes
 
 One of the problems with object detection as you have seen it so far is that each of the grid cells can detect only one object. What if a grid cell wants to detect multiple objects? 
 
@@ -238,13 +238,13 @@ Finally, how do you choose the anchor boxes?
 - choose them by hand or choose maybe five or 10 anchor box shapes that spans a variety of shapes that seems to cover the types of objects you seem to detect
 - more advanced version, an even better way to do this in one of the later YOLO research papers, is to use a K-means algorithm, to group together two types of objects shapes you tend to get
 
-## YOLO Algorithm
+### YOLO Algorithm
 
 > <img src="./images/w03-09-yolo_algorithm/img_2023-04-10_09-18-14.png">
 > <img src="./images/w03-09-yolo_algorithm/img_2023-04-10_09-18-16.png">
 > <img src="./images/w03-09-yolo_algorithm/img_2023-04-10_09-18-18.png">
 
-## Region Proposals (Optional)
+### Region Proposals (Optional)
 
 > <img src="./images/w03-10-region_proposals/img_2023-04-10_09-18-35.png">
 
@@ -252,7 +252,7 @@ Andrew : "So the idea of region proposals has been quite influential in computer
 
 > <img src="./images/w03-10-region_proposals/img_2023-04-10_09-18-37.png">
 
-## Semantic Segmentation with U-Net
+### Semantic Segmentation with U-Net
 
 
 Let's say you're building a self-driving car:
@@ -283,7 +283,7 @@ To make the image bigger you have to know how to implement a **transpose convolu
 
 > <img src="./images/w03-11-semantic_segmentation_with_u-net/img_2023-04-10_09-19-07.png">
 
-## Transpose Convolutions
+### Transpose Convolutions
 
 Normal vs Transpose Convolutions
 
@@ -316,7 +316,7 @@ Pixel #4
 
 > <img src="./images/w03-12-transpose_convolutions/04.png">
 
-## U-Net Architecture Intuition
+### U-Net Architecture Intuition
 
 - we use normal convolutions for the first part of the neural network that compress the image
    - you've lost a lot of spatial information because the dimension is much smaller, 
@@ -328,7 +328,7 @@ Pixel #4
 
 > <img src="./images/w03-13-u-net_architecture_intuition/img_2023-04-10_09-19-14.png">
 
-## U-Net Architecture
+### U-Net Architecture
 
 This is what a U-Net looks like. By the way, is also why it's called a U-Net, because when you draw it like this, it looks a lot like a U.
 

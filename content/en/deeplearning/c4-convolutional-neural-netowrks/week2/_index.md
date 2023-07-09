@@ -5,7 +5,7 @@ permalink: /c4-convolutional-neural-netowrks/week2/
 parent: "C4 - Convolutional Neural Networks"
 ---
 
-# Deep Convolutional Models: Case Studies
+## Deep Convolutional Models: Case Studies
 
 
 Discover some powerful practical tricks and methods used in deep CNNs, straight from the research papers, then apply transfer learning to your own deep CNN.
@@ -21,9 +21,9 @@ Learning Objectives
 
 
 
-# Case Studies
+## Case Studies
 
-## Why look at case studies?
+### Why look at case studies?
 
 
 [Last week](../week1/ we learned about the basic building blocks, such as convolutional layers, pooling layers, and fully connected layers of convnet. 
@@ -44,7 +44,7 @@ After seeing these neural networks, I think you have much better intuition about
 
 > <img src="./images/w02-01-Why_look_at_case_studies/img_2023-04-04_21-35-02.png">
 
-## Classic Networks
+### Classic Networks
 
 The goal of LeNet-5 was to recognize handwritten digits. This neural network architecture is actually quite similar to the last [example you saw last week](../week1/README.md#cnn-example).
 - Paper was written in **1998**, people didn't really use padding, which is why convolutional layer decrease width and height (28x28 -> 14x14 -> 10x10 -> 5x5)
@@ -79,7 +79,7 @@ The second example of a neural network I want to show you is AlexNet, named afte
 
 But next, let's go beyond these classic networks and look at some even more advanced, even more powerful neural network architectures. Let's go onto the next video.
 
-## ResNets
+### ResNets
 
 Very, very deep neural networks are difficult to train, because of vanishing and exploding gradient types of problems.
 
@@ -95,7 +95,7 @@ With normal **plain networks**, because of the vanishing and exploding gradients
 
 > <img src="./images/w02-03-ResNets/img_2023-04-04_21-36-45.png">
 
-## Why ResNets Work?
+### Why ResNets Work?
 
 A residual block is a fundamental building block in deep neural networks, especially in CNNs, that helps to address the vanishing gradient problem **during training**. Let's go through one example that illustrates why ResNets work so well.
 
@@ -125,7 +125,7 @@ Example of a plain network and a associated ResNet,
 
 > <img src="./images/w02-04-Why_ResNets_Work/img_2023-04-04_21-37-00.png">
 
-## Networks in Networks and 1x1 Convolutions
+### Networks in Networks and 1x1 Convolutions
 
 With only one channel, one-by-one convolution doesn't make sense (exemple with 6x6x1)
 
@@ -143,7 +143,7 @@ Example of where one-by-one convolution is useful.
 
 > <img src="./images/w02-05-Networks_in_Networks_and_1x1_Convolutions/img_2023-04-04_21-37-22.png">
 
-## Inception Network Motivation
+### Inception Network Motivation
 
 When designing a layer for a ConvNet, you might have to pick, do you want a 1x3 filter, or 3x3, or 5x5, or do you want a pooling layer? Why should you do them all? And this makes the network architecture more complicated, but it also works remarkably well. 
 
@@ -185,7 +185,7 @@ So to summarize :
 
 Now you might be wondering, does shrinking down the representation size so dramatically, does it hurt the performance of your neural network? It turns out that so long as you implement this bottleneck layer so that within reason, you can shrink down the representation size significantly, and it doesn't seem to hurt the performance, but saves you a lot of computation.
 
-## Inception Network
+### Inception Network
 
 You've already seen all the basic building blocks of the Inception network. Let's see how you can put these building blocks together to build your own Inception network.
 
@@ -213,7 +213,7 @@ The name incpetion network come from thie meme : we need to go deeper
 
 > <img src="./images/w02-07-Inception_Network/img_2023-04-04_21-38-55.png">
 
-## MobileNet
+### MobileNet
 
 You've learned about 
 - the ResNet architecture, 
@@ -265,7 +265,7 @@ Now, something looks wrong with this diagram, doesn't it? Which is that this sho
 
 > <img src="./images/w02-08-MobileNet/img_2023-04-04_21-39-22.png">
 
-## MobileNet Architecture
+### MobileNet Architecture
 
 The idea of MobileNet is everywhere that you previously have used an expensive convolutional operation, you can now instead use a much less expensive depthwise separable convolutional operation.
 
@@ -299,7 +299,7 @@ Detail on MobileNet V2 bottleneck block
 > <img src="./images/w02-09-MobileNet_Architecture/img_2023-04-04_21-39-40.png">
 -->
 
-## EfficientNet
+### EfficientNet
 
 MobileNet V1 and V2 gave you a way to implement a neural network, that is more computationally efficient. But is there a way to tune MobileNet, or some other architecture, to your specific device? 
 
@@ -317,9 +317,9 @@ The key idea behind EfficientNet is to scale up the neural network in a more eff
 Summary on network seeen during week2 
 > <img src="./images/img_2023-04-09_17-20-05.png">
 
-# Practical Advice for Using ConvNets
+## Practical Advice for Using ConvNets
 
-## Using Open-Source Implementation
+### Using Open-Source Implementation
 
 It turns out that a lot of these neural networks are difficult or finicky to replicate because a lot of details about tuning of the hyperparameters such as learning decay and other things that make some difference to the performance.
 
@@ -329,7 +329,7 @@ Example :  https://github.com/KaimingHe/deep-residual-networks (with Caffe frame
 
 One of the advantages of doing so also is that sometimes these networks take a long time to train, and someone else might have used multiple GPUs and a very large dataset to pretrain some of these networks. And that allows you to do transfer learning using these networks 
 
-## Transfer Learning
+### Transfer Learning
 
 The computer vision research community has been pretty good at posting lots of data sets on the Internet : 
  - Image Net, 
@@ -350,7 +350,7 @@ I recommend you go online and download some open-source implementation of a neur
 > <img src="./images/w02-12-Transfer_Learning/img_2023-04-04_21-40-15.png">
 
 
-## Data Augmentation
+### Data Augmentation
 
 Some common data augmentation in computer vision:
 
@@ -373,7 +373,7 @@ Implementing distortions during training:
 
 > <img src="./images/w02-13-Data_Augmentation/img_2023-04-04_21-40-56.png">
 
-## State of Computer Vision
+### State of Computer Vision
 
 Deep learning has been successfully applied to computer vision, natural language processing, speech recognition, online advertising, logistics, many, many, many problems. There are a few things that are unique about the application of deep learning to computer vision, about the status of computer vision.
 

@@ -3,7 +3,7 @@ title: W4 - Deep L-layer Neural Network
 type: docs
 ---
 
-# Deep L-layer Neural Network
+## Deep L-layer Neural Network
 {: .no_toc }
 
 Analyze the key computations underlying deep learning, then use them to build and train deep neural networks for computer vision tasks.
@@ -18,9 +18,9 @@ Learning Objectives
 
 
 
-# Deep L-layer Neural Network
-
 ## Deep L-layer Neural Network
+
+### Deep L-layer Neural Network
 
 Welcome to the fourth week of this course. By now, you've seen 
 - forward propagation and back propagation in the context of a neural network, with a single hidden layer, 
@@ -41,11 +41,11 @@ Notation for deep neural network:
 - $a^{[l]} = g^{[l]}(z^{[l]})$  with g the activation function
 > <img src="./images/w02-01-Deep_L-layer_Neural_Network/img_2023-03-18_09-00-50.png">
 
-## Forward Propagation in a Deep Network
+### Forward Propagation in a Deep Network
 
 > <img src="./images/w02-02-Forward_Propagation_in_a_Deep_Network/img_2023-03-18_09-08-22.png">
 
-## Getting your Matrix Dimensions Right
+### Getting your Matrix Dimensions Right
 
 > <img src="./images/w02-03-Getting_your_Matrix_Dimensions_Right/img_2023-03-18_09-10-01.png">
 
@@ -53,7 +53,7 @@ Notation for deep neural network:
 
 > <img src="./images/w02-03-Getting_your_Matrix_Dimensions_Right/img_2023-03-18_10-14-11.png">
 
-## Why Deep Representations?
+### Why Deep Representations?
 
 > <img src="./images/w02-04-Why_Deep_Representations/img_2023-03-18_10-16-39.png">
 
@@ -61,7 +61,7 @@ Notation for deep neural network:
 
  Now, in addition to this reasons for preferring deep neural networks, to be perfectly honest, I think the other reasons the term deep learning has taken off is just branding. 
 
-## Building Blocks of Deep Neural Networks
+### Building Blocks of Deep Neural Networks
 
 
 In the earlier videos from this week, as well as from the videos from the past several weeks, you've already seen the basic building blocks of forward propagation and back propagation, the key components you need to implement a deep neural network. Let's see how you can put these components together to build your deep net.
@@ -76,7 +76,7 @@ Note that during forward, we cache `Z[l]`, but also `W[l]` and `b[l]`
 
  So you've now seen what are the basic building blocks for implementing a deep neural network. In each layer there's a forward propagation step and there's a corresponding backward propagation step. And has a cache to pass information from one to the other. In the next video, we'll talk about how you can actually implement these building blocks
 
-## Forward and Backward Propagation
+### Forward and Backward Propagation
 
 > <img src="./images/w02-06-Forward_and_Backward_Propagation/img_2023-03-18_14-56-35.png">
 
@@ -91,11 +91,11 @@ In addition to input value, we have cached values :
 
 > <img src="./images/w02-06-Forward_and_Backward_Propagation/img_2023-03-18_15-13-33.png">
 
-## Parameters vs Hyperparameters
+### Parameters vs Hyperparameters
 
 > <img src="./images/w02-07-Parameters_vs_Hyperparameters/img_2023-03-18_15-14-12.png">
 
 > <img src="./images/w02-07-Parameters_vs_Hyperparameters/img_2023-03-18_15-14-14.png">
-## What does this have to do with the brain?
+### What does this have to do with the brain?
 
 > <img src="./images/w02-08-What_does_this_have_to_do_with_the_brain/img_2023-03-18_15-15-04.png">

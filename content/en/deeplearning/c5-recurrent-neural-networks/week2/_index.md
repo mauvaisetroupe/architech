@@ -4,7 +4,7 @@ title: "W2 - Natural Language Processing & Word Embeddings"
 permalink: /c5-recurrent-neural-networks/week2/
 parent: "C5 - Sequence Models"
 ---
-# Natural Language Processing & Word Embeddings
+## Natural Language Processing & Word Embeddings
 
 
 Natural language processing with deep learning is a powerful combination. Using word vector representations and embedding layers, train recurrent neural networks with outstanding performance across a wide variety of applications, including sentiment analysis, named entity recognition and neural machine translation.
@@ -24,9 +24,9 @@ Learning Objectives
 
 
 
-# Introduction to Word Embeddings
+## Introduction to Word Embeddings
 
-## Word Representation
+### Word Representation
 
 NLP (Natural Language Processing) has been revolutionized by deep learning. One of the key ideas is word embeddings, which is a way of representing words that let your algorithms automatically understand analogies like that, man is to woman, as king is to queen.
 
@@ -56,7 +56,7 @@ Won't it be nice if instead of a one-hot presentation we can instead learn a fea
 
 > <img src="./images/w02-02-word_representation/img_2023-05-02_07-56-30.png">
 
-## Using Word Embeddings
+### Using Word Embeddings
 
 Continuing with named entity recognition,
 - with the sentence `Sally Johnson is an orange farmer`, you know that `Sally Johnson` is a person's name rather a company name because you know that `orange farmer` ìs person
@@ -85,7 +85,7 @@ One difference between the face recognition literature and what we do in word em
 
 > <img src="./images/w02-03-using_word_embeddings/img_2023-05-02_07-58-52.png">
 
-## Properties of Word Embeddings
+### Properties of Word Embeddings
 
 One of the most fascinating properties of word embeddings is that they can also help with analogy reasoning.
 
@@ -118,7 +118,7 @@ To compute the similaririty, we can use :
 
 > <img src="./images/w02-04-properties_of_word_embeddings/img_2023-05-02_08-00-21.png">
 
-## Embedding Matrix
+### Embedding Matrix
 
 When you implement an algorithm to learn a word embedding, what you end up learning is an embedding matrix.
 - E is the embedding matrix - shape (300, 10000)
@@ -128,9 +128,9 @@ When you implement an algorithm to learn a word embedding, what you end up learn
 
 > <img src="./images/w02-05-embedding_matrix/img_2023-05-02_08-00-33.png">
 
-# Learning Word Embeddings: Word2vec &amp; GloVe
+## Learning Word Embeddings: Word2vec &amp; GloVe
 
-## Learning Word Embeddings
+### Learning Word Embeddings
 
 - In the history of deep learning, word embeddings algorithms werw relatively complex
 - And then over time, researchers discovered they can use simpler and simpler and simpler algorithms
@@ -172,7 +172,7 @@ Contexts:
 
 > <img src="./images/w02-07-learning_word_embeddings/img_2023-05-02_08-00-51.png">
 
-## Word2Vec
+### Word2Vec
 
 Word2Vec is a simpler and more efficient algorithm to learn embeddings word matrix.
 
@@ -231,7 +231,7 @@ How to sample the context:
 Skip gram model is one technic used to implement Word2Vec. Another is called CBOW (Continous Bag-Of-Words) which takes the surrounding contexts from middle word, and uses the surrounding words to try to predict the middle word
 (inverse of skip-gram)
 
-## Negative Sampling
+### Negative Sampling
 
 The skip-gram train a simple neural network to perform a certain task, but we’re not actually use that neural network for the task (it's useless in itself), it's only a support to learn word embedding matrix. In the **negative samplig algorithm**, we modify the training objective in order to make it run much more efficiently, working in a much bigger training set, with a much better word embeddings learning.
 
@@ -273,7 +273,7 @@ So to summarize :
 
 Now of course, as is the case in other areas of deep learning as well, there are open source implementations. And there are also pre-trained word vectors that others have trained and released online under permissive licenses. And so if you want to get going quickly on a NLP problem, it'd be reasonable to download someone else's word vectors and use that as a starting point.
 
-## GloVe Word Vectors
+### GloVe Word Vectors
 
 Another algorithm that has some momentum in the NLP community is the GloVe (global vectors for word representation) algorithm. This is not used as much as the Word2Vec or the skip-gram models, but it has some enthusiasts. Because in part of its simplicity
 
@@ -309,9 +309,9 @@ One confusing part of this algorithm is, if you look at this equation, it seems 
 
 > <img src="./images/w02-10-glove_word_vectors/img_2023-05-02_08-01-37.png">
 
-# Applications Using Word Embeddings
+## Applications Using Word Embeddings
 
-## Sentiment Classification
+### Sentiment Classification
 
 - Sentiment classification map a text sequence into an integer that represents rating (from 1 to 5)
 - One of the challenges of sentiment classification is you might not have a huge label training set for it.
@@ -333,7 +333,7 @@ One confusing part of this algorithm is, if you look at this equation, it seems 
 
 > <img src="./images/w02-12-sentiment_classification/img_2023-05-02_08-09-45.png">
 
-## Debiasing Word Embeddings
+### Debiasing Word Embeddings
 
 Machine learning and AI algorithms are increasingly trusted to help with, or to make, extremely important decisions. They're influencing everything ranging from college admissions, to the way people find jobs, to loan applications.
 

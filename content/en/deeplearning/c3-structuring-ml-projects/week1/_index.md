@@ -5,7 +5,7 @@ permalink: /c3-structuring-ml-projects/week1/
 parent: "C3 - Structuring Machine Learning Projects"
 ---
 
-# ML Strategy
+## ML Strategy
 
 
 Streamline and optimize your ML production workflow by implementing strategic guidelines for goal-setting and applying human-level performance to help define key priorities.
@@ -20,16 +20,16 @@ Learning Objectives
 
 
 
-# Introduction to ML Strategy
+## Introduction to ML Strategy
 
-## Why ML Strategy
+### Why ML Strategy
 
 There is a lot of ideas for how to improve your deep learning system.
 
 
 > <img src="./images/w01-01-why_ml_strategy/img_2023-03-28_21-13-36.png">
 
-## Orthogonalization
+### Orthogonalization
 
 See pdf notes provided by Courseara : [1-Orthogonalization.pdf](./1-Orthogonalization.pdf)
 
@@ -71,9 +71,9 @@ See pdf notes provided by Courseara : [1-Orthogonalization.pdf](./1-Orthogonaliz
 
 > <img src="./images/w01-02-orthogonalization/img_2023-03-28_21-13-56.png">
 
-# Setting Up your Goal
+## Setting Up your Goal
 
-## Single Number Evaluation Metric
+### Single Number Evaluation Metric
 
 See pdf notes provided by Courseara : [2-Single_number_evaluation_metric-2.pdf](./2-Single_number_evaluation_metric-2.pdf)
 
@@ -94,7 +94,7 @@ Other example. It's very difficult to look at these numbers and quickly decide i
 
 > <img src="./images/w01-03-single_number_evaluation_metric/img_2023-03-28_21-14-14.png">
 
-## Satisficing and Optimizing Metric
+### Satisficing and Optimizing Metric
 
 See pdf notes provided by Courseara : [3-Satisficing_and_optimizing_metric.pdf](./3-Satisficing_and_optimizing_metric.pdf)
 
@@ -114,7 +114,7 @@ More generally :
 
 > <img src="./images/w01-04-satisficing_and_optimizing_metric/img_2023-03-28_21-14-32.png">
 
-## Train/Dev/Test Distributions
+### Train/Dev/Test Distributions
 
 See pdf notes provided by Courseara : [4-Training_development_and_test_distributions.pdf](./4-Training_development_and_test_distributions.pdf)
 
@@ -136,7 +136,7 @@ Choose dev set and test set to reflect data you expect to get in the future and 
 
 > <img src="./images/w01-05-train_dev_test_distributions/img_2023-03-28_21-14-59.png">
 
-## Size of the Dev and Test Sets
+### Size of the Dev and Test Sets
 
 See pdf notes provided by Courseara : [5-Size_of_the_development_and_test_sets.pdf](./5-Size_of_the_development_and_test_sets.pdf)
 
@@ -153,7 +153,7 @@ The guideline is, to set your test set to big enough to give high confidence in 
 
 > <img src="./images/w01-06-size_of_the_dev_and_test_sets/img_2023-03-28_21-15-19.png">
 
-## When to Change Dev/Test Sets and Metrics?
+### When to Change Dev/Test Sets and Metrics?
 
 See pdf notes provided by Courseara : [6-When_to_change_develpment_test_sets_and_metrics.pdf](./6-When_to_change_develpment_test_sets_and_metrics.pdf)
 
@@ -180,9 +180,9 @@ In conclusion, if you are doing well on your metric and dev/test set doesn't cor
 > <img src="./images/w01-07-when_to_change_dev_test_sets_and_metrics/img_2023-03-28_21-15-41.png">
 
 
-# Comparing to Human-level Performance
+## Comparing to Human-level Performance
 
-## Why Human-level Performance?
+### Why Human-level Performance?
 
 See pdf notes provided by Courseara : [7-Why_human_level_performance.pdf](./7-Why_human_level_performance.pdf)
 
@@ -209,7 +209,7 @@ The second reason is that so long as your performance is worse than human level 
 
 > <img src="./images/w01-08-why_human-level_performance/img_2023-03-28_21-15-56.png">
 
-## Avoidable Bias
+### Avoidable Bias
 
 See pdf notes provided by Courseara : [8-Avoidable_bias.pdf](./8-Avoidable_bias.pdf)
 
@@ -230,7 +230,7 @@ Depending on what we think is achievable, with the same training error and dev e
 > <img src="./images/w01-09-avoidable_bias/img_2023-03-28_21-16-11.png">
 -->
 
-## Understanding Human-level Performance
+### Understanding Human-level Performance
 
 See pdf notes provided by Courseara : [9-Understanding_human_level_performance.pdf](./9-Understanding_human_level_performance.pdf)
 
@@ -263,7 +263,7 @@ These techniques will tend to work well until you surpass human-level performanc
 
 > <img src="./images/w01-10-understanding_human-level_performance/img_2023-03-28_21-16-32.png">
 
-## Surpassing Human-level Performance
+### Surpassing Human-level Performance
 
 See pdf notes provided by Courseara : [10-Surpassing_human_level_performance.pdf](./10-Surpassing_human_level_performance.pdf)
 
@@ -276,7 +276,7 @@ And these are not natural perception problems, so these are not computer vision,
 
 > <img src="./images/w01-11-surpassing_human-level_performance/img_2023-03-28_21-16-48.png">
 
-## Improving your Model Performance
+### Improving your Model Performance
 
 See pdf notes provided by Courseara : [11-Improving_your_model_performance.pdf](./11-Improving_your_model_performance.pdf)
 
@@ -291,6 +291,6 @@ Technics to work on avoidable bias and variance reductions.
 > <img src="./images/w01-12-improving_your_model_performance/img_2023-03-28_21-17-02.png">
 
 
-# Heroes of Deep Learning (Optional)
+## Heroes of Deep Learning (Optional)
 
-## Andrej Karpathy Interview
+### Andrej Karpathy Interview

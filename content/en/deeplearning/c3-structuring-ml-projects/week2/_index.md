@@ -5,7 +5,7 @@ permalink: /c3-structuring-ml-projects/week2/
 parent: "C3 - Structuring Machine Learning Projects"
 ---
 
-# ML Strategy
+## ML Strategy
 
 
 Develop time-saving error analysis procedures to evaluate the most worthwhile options to pursue and gain intuition for how to split your data and when to use multi-task, transfer, and end-to-end deep learning.
@@ -16,9 +16,9 @@ Learning Objectives
 
 
 
-# Error Analysis
+## Error Analysis
 
-##  Carrying Out Error Analysis
+###  Carrying Out Error Analysis
 
 If you're trying to get a learning algorithm to do a task that humans can do. And if your learning algorithm is not yet at the performance of a human. Then manually examining mistakes that your algorithm is making, can give you insights into what to do next. This process is called error analysis.
 
@@ -37,7 +37,7 @@ For example, clearly in this example, a lot of the mistakes were made on blurry 
 
 > <img src="./images/w02-01-Carrying_Out_Error_Analysis/img_2023-03-31_11-24-35.png">
 
-##  Cleaning Up Incorrectly Labeled Data
+###  Cleaning Up Incorrectly Labeled Data
 
 Deep learning algorithms are quite robust to **random** errors in the training set
 
@@ -51,7 +51,7 @@ Guidelines :
 
 > <img src="./images/w02-02-Cleaning_Up_Incorrectly_Labeled_Data/img_2023-03-31_11-25-08.png">
 
-##  Build your First System Quickly, then Iterate
+###  Build your First System Quickly, then Iterate
 
 
 See pdf notes provided by Courseara : [1-Build_System_Quickly.pdf](./1-Build_System_Quickly.pdf)
@@ -72,9 +72,9 @@ Guideline
 
 
 
-# Mismatched Training and Dev/Test Set
+## Mismatched Training and Dev/Test Set
 
-##  Training and Testing on Different Distributions
+###  Training and Testing on Different Distributions
 
 See pdf notes provided by Courseara : [2-Training_and_testing_on_different_distributions.pdf](./2-Training_and_testing_on_different_distributions.pdf)
 
@@ -96,7 +96,7 @@ Second exemple with rearview mirror
 
 > <img src="./images/w02-04-Training_and_Testing_on_Different_Distributions/img_2023-03-31_11-25-50.png">
 
-##  Bias and Variance with Mismatched Data Distributions
+###  Bias and Variance with Mismatched Data Distributions
 
 See pdf notes provided by Courseara : [3-Bias_and_variance_with_mismatched_data_distributions.pdf](./3-Bias_and_variance_with_mismatched_data_distributions.pdf)
 
@@ -148,7 +148,7 @@ In red, the key quantities described above, but other table entries can help in 
 
 > <img src="./images/w02-05-Bias_and_Variance_with_Mismatched_Data_Distributions/img_2023-03-31_11-26-06.png">
 
-##  Addressing Data Mismatch
+###  Addressing Data Mismatch
 
 See pdf notes provided by Courseara : [4-Adressing_data_mismatch.pdf](./4-Adressing_data_mismatch.pdf)
 
@@ -168,10 +168,10 @@ Artificial data synthesis example : generated car using computer graphics.
 
 > <img src="./images/w02-06-Addressing_Data_Mismatch/img_2023-03-31_11-26-21.png">
 
-# Learning from Multiple Tasks
+## Learning from Multiple Tasks
 
 
-##  Transfer Learning
+###  Transfer Learning
 
 See pdf notes provided by Courseara : [5-Transfer_Learning.pdf](./5-Transfer_Learning.pdf)
 
@@ -195,7 +195,7 @@ When to use transfer learning
 
 > <img src="./images/w02-07-Transfer_Learning/img_2023-03-31_11-26-33.png">
 
-##  Multi-task Learning
+###  Multi-task Learning
 
 See pdf notes provided by Courseara : [6-Multi_Task_Learning.pdf](./6-Multi_Task_Learning.pdf)
 
@@ -218,9 +218,9 @@ When to use multi-task learning
 > <img src="./images/w02-08-Multi-task_Learning/img_2023-03-31_11-26-48.png">
 
 
-# End-to-end Deep Learning
+## End-to-end Deep Learning
 
-##  What is End-to-end Deep Learning?
+###  What is End-to-end Deep Learning?
 
 See pdf notes provided by Courseara : [7-What_is_end_to_end_deep_learning.pdf](./7-What_is_end_to_end_deep_learning.pdf)
 
@@ -268,7 +268,7 @@ Two more examples:
 
 > <img src="./images/w02-09-What_is_End-to-end_Deep_Learning/img_2023-03-31_11-27-03.png">
 
-##  Whether to use End-to-end Deep Learning
+###  Whether to use End-to-end Deep Learning
 
 See pdf notes provided by Courseara : [8-Whether_to_use_end_to_end_deep_learning.pdf](./8-Whether_to_use_end_to_end_deep_learning.pdf)
 
@@ -299,6 +299,6 @@ So I think what this example illustrates is that you want to use machine learnin
 
 > <img src="./images/w02-10-Whether_to_use_End-to-end_Deep_Learning/img_2023-03-31_11-27-16.png">
 
-# Heroes of Deep Learning (Optional)
+## Heroes of Deep Learning (Optional)
 
-##  Ruslan Salakhutdinov Interview
+###  Ruslan Salakhutdinov Interview

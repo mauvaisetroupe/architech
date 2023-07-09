@@ -5,7 +5,7 @@ permalink: /c5-recurrent-neural-networks/week1/
 parent: "C5 - Sequence Models"
 ---
 
-# Recurrent Neural Networks
+## Recurrent Neural Networks
 
 
 Discover recurrent neural networks, a type of model that performs extremely well on temporal data, and several of its variants, including LSTMs, GRUs and Bidirectional RNNs,
@@ -30,9 +30,9 @@ Learning Objectives
 
 
 
-# Recurrent Neural Networks
+## Recurrent Neural Networks
 
-## Why Sequence Models?
+### Why Sequence Models?
 
 Examples of sequence data
 
@@ -48,7 +48,7 @@ Examples of sequence data
 
 > <img src="./images/w01-01-why_sequence_models/img_2023-04-25_20-50-11.png">
 
-## Notation
+### Notation
 
 We want to find people name in the sentence. This problem is called entity recognition and is used by search engine to index people mentioned in the news articles in the last 24 hours.
 We want the output where (this output representation is not the best one, just for ullustration) :
@@ -85,7 +85,7 @@ We introduce the concept of i-th example :
 > <img src="./images/w01-02-notation/img_2023-04-25_20-51-07.png">
 -->
 
-## Recurrent Neural Network Model
+### Recurrent Neural Network Model
 
 Why not to use a standard network ?
 - Inputs, outputs can be different lengths in different examples
@@ -132,7 +132,7 @@ We can simplify the notation by defining Wa as the horizontal compression of Waa
 
 > <img src="./images/w01-03-recurrent_neural_network_model/img_2023-04-25_20-51-20.png">
 
-## Backpropagation Through Time
+### Backpropagation Through Time
 
 As usual, when you implement this in one of the programming frameworks, often, the programming framework will automatically take care of backpropagation. But I think it's still useful to have a rough sense of how backprop works in RNNs.
 
@@ -149,7 +149,7 @@ In the backpropagation procedure the most significant recursive calculation is t
 
 > <img src="./images/w01-04-backpropagation_through_time/img_2023-04-25_20-51-29.png">
 
-## Different Types of RNNs
+### Different Types of RNNs
 
 So far we have seen only one RNN architecture in which Tx equals TY. In some other problems, they may not equal so we need different architectures.
 
@@ -178,7 +178,7 @@ To summarize:
 
 > <img src="./images/w01-05-different_types_of_RNNS/img_2023-04-25_20-51-47.png">
 
-## Language Model and Sequence Generation
+### Language Model and Sequence Generation
 
 Let's say we want the speech recognition want to predict if a sentence is :
 - The apple and pair salad
@@ -224,7 +224,7 @@ With then define the cost function with the Softmax loss function
 
 > <img src="./images/w01-06-language_model_and_sequence_generation/img_2023-04-25_20-52-01.png">
 
-## Sampling Novel Sequences
+### Sampling Novel Sequences
 
 After you train a sequence model, one of the ways you can informally get a sense of what is learned is to have a sample novel sequences.
 
@@ -266,10 +266,10 @@ Fun examples:
 
 > <img src="./images/w01-07-sampling_novel_sequences/img_2023-04-25_20-52-18.png">
 
-## Vanishing Gradients with RNNs
+### Vanishing Gradients with RNNs
 
 
-#### Vanishing
+##### Vanishing
 
 The problems of the basic RNN algorithm is that it runs into vanishing gradient problems. 
 
@@ -290,7 +290,7 @@ In other words, it can be difficult for the neural network to recognize the need
 - it's difficult for the output to be strongly influenced by an input that was very early in the sequence.
 
 
-#### Exploding
+##### Exploding
 
 Vanishing gradients tends to be the biggest problem with training RNNs. Although when exploding gradients happens it can be catastrophic because the exponentially large gradients can cause your parameters to become so large that your neural network parameters get really messed up. You might often see NaNs (not a number), meaning results of a numerical overflow in your neural network computation
 
@@ -298,7 +298,7 @@ One of the ways solve exploding gradient is to apply gradient clipping means if 
 
 > <img src="./images/w01-08-vanishing_gradients_with_RNNS/img_2023-04-25_20-52-28.png">
 
-## Gated Recurrent Unit (GRU)
+### Gated Recurrent Unit (GRU)
 
 This is a visualization of the RNN unit of the hidden layer of the RNN that will be used to explain the GRU or the gated recurrent unit.
 
@@ -336,7 +336,7 @@ Why not use a simpler version from the previous slides? It turns out that over m
 
 The other common version is called an LSTM, which stands for Long, Short-term Memory, which we'll talk about in the next video. But GRUs and LSTMs are two specific instantiations of this set of ideas that are most commonly used.
 
-## Long Short Term Memory (LSTM)
+### Long Short Term Memory (LSTM)
 
 In the last video, you learn about the GRU, the Gated Recurring Unit and how that can allow you to learn very long range connections in a sequence.
 
@@ -367,7 +367,7 @@ GRU vs. LSTM :
 - LSTM is more powerful and more effective since it has 3 gates instead of 2
 - people today will still use the LSTM as the default first thing to try
 
-## Bidirectional RNN
+### Bidirectional RNN
 
 In the example of the Name entity recognition task, with RNN (GRU, LSTM, ...) the name `Teddy` cannot be learned from `He said`, but can be learned from `bears`.
 BRNNs fixes this issue.
@@ -393,7 +393,7 @@ Example of computation of `ŷ<3>` (yellow arrows) :
 
 The disadvantage of BRNNs is that you need the entire sequence before you can process it: in live speech recognition, you will need to wait for the person to stop talking to take the entire sequence and then make your predictions. So the real time speech recognition applications, there is somewhat more complex models than just using the standard RNN
 
-## Deep RNNs
+### Deep RNNs
 
 - In some problems its useful to stack some RNN layers to make a deeper network
 - `a[l]<t>` for layer `l` and sequence `t`

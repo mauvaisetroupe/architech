@@ -5,7 +5,7 @@ permalink: /c4-convolutional-neural-netowrks/week1/
 parent: "C4 - Convolutional Neural Networks"
 ---
 
-# Foundations of Convolutional Neural Networks
+## Foundations of Convolutional Neural Networks
 
 
 Implement the foundational layers of CNNs (pooling, convolutions) and stack them properly in a deep network to solve multi-class image classification problems.
@@ -26,9 +26,9 @@ Learning Objectives
 
 
 
-# Convolutional Neural Networks
+## Convolutional Neural Networks
 
-## Computer Vision
+### Computer Vision
 
 Computer vision is one of the areas that's been advancing rapidly thanks to deep learning :
 - self-driving cars
@@ -63,7 +63,7 @@ To solve that, you need to implement the **convolution operation**, which is one
 
 > <img src="./images/w01-01-Computer_Vision/img_2023-04-01_09-44-38.png">
 
-## Edge Detection Example
+### Edge Detection Example
 
 The convolution operation is one of the fundamental building blocks of a convolutional neural network.
 For a computer to figure out what are the objects in this picture, the first thing you might do is maybe detect horizontal and vertical edges in the image.
@@ -86,7 +86,7 @@ Dimensions here seem a little bit wrong, that's only because we are working with
 
 > <img src="./images/w01-02-Edge_Detection_Example/img_2023-04-01_09-46-03.png">
 
-## More Edge Detection
+### More Edge Detection
 
 But this particular filter does make a difference between the light to dark versus the dark to light edges. And if you don't care which of these two cases it is, you could take absolute values of this output matrix.
 
@@ -121,7 +121,7 @@ But underlying all these computations is still this convolution operation
 
 > <img src="./images/w01-03-More_Edge_Detection/img_2023-04-01_09-46-26.png">
 
-## Padding
+### Padding
 
 In order to build deep neural networks one modification to the basic convolutional operation that you need to really use is padding.
 
@@ -160,7 +160,7 @@ In computer vision f (size of the filter) is usually odd. Some of the reasons is
 
 > <img src="./images/w01-04-Padding/img_2023-04-01_09-46-41.png">
 
-## Strided Convolutions
+### Strided Convolutions
 
 Stride convolutions is another piece of the basic building block of convolutions as using convolution neural networks.
 The filter must lie entirely within the image or the image plus the padding region.
@@ -185,7 +185,7 @@ By convention, in machine learning, we usually do not bother with this flipping 
 
 > <img src="./images/w01-05-Strided_Convolutions/img_2023-04-01_09-47-00.png">
 
-## Convolutions Over Volume
+### Convolutions Over Volume
 
 We see how convolution works with 2D images, now lets see if we want to convolve 3D images (RGB image)
 
@@ -201,7 +201,7 @@ In other words, what if you want to use multiple filters at the same time.
 
 > <img src="./images/w01-06-Convolutions_Over_Volume/img_2023-04-01_09-47-15.png">
 
-## One Layer of a Convolutional Network
+### One Layer of a Convolutional Network
 
 With 2 filters, we have :
 
@@ -252,7 +252,7 @@ Summary on notation :
 
 > <img src="./images/w01-07-One_Layer_of_a_Convolutional_Network/img_2023-04-01_09-47-29.png">
 
-## Simple Convolutional Network Example
+### Simple Convolutional Network Example
 
 We saw the building blocks of a single layer, of a single convolution layer in the ConvNet.
 Now let's go through a concrete example of a deep convolutional neural network.
@@ -292,7 +292,7 @@ Fortunately pooling layers and fully connected layers are a bit simpler than con
 
 > <img src="./images/w01-08-Simple_Convolutional_Network_Example/img_2023-04-01_09-47-43.png">
 
-## Pooling Layers
+### Pooling Layers
 
 
 One interesting property of max pooling is that it has a set of hyperparameters but it has no parameters to learn. There's actually nothing for gradient descent to learn.
@@ -330,7 +330,7 @@ To summarize :
 
 > <img src="./images/w01-09-Pooling_Layers/img_2023-04-01_09-48-03.png">
 
-## CNN Example
+### CNN Example
 
 Let's look at an example af network to detect handwritten digit numbers in a 32 x 32 x 3 RGB image
 
@@ -369,7 +369,7 @@ Usually, as you go deeper in the network :
 > <img src="./images/w01-10-CNN_Example/img_2023-04-01_09-48-31.png">
 -->
 
-## Why Convolutions?
+### Why Convolutions?
 
 If we compare a standard neural network (fully connected) and convolutional network we have, fo a **small image** (32 x 32 x 3) :
 - 14 millions of parameters for a standard neural network (NN)
@@ -395,6 +395,6 @@ Then you define a cost function similar to what we have seen in the standard NN,
 
 > <img src="./images/w01-11-Why_Convolutions/img_2023-04-01_09-48-49.png">
 
-# Heroes of Deep Learning (Optional)
+## Heroes of Deep Learning (Optional)
 
-## Yann LeCun Interview
+### Yann LeCun Interview

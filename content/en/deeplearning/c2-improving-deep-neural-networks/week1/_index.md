@@ -3,7 +3,7 @@ title: "W1 - Practical Aspects of Deep Learning"
 type: docs
 
 ---
-# Practical Aspects of Deep Learning
+## Practical Aspects of Deep Learning
 {: .no_toc }
 
 Discover and experiment with a variety of different initialization methods, apply L2 regularization and dropout to avoid model overfitting, then apply gradient checking to identify errors in a fraud detection model.
@@ -21,9 +21,9 @@ Learning Objectives
 
 
 
-# Setting up your Machine Learning Application
+## Setting up your Machine Learning Application
 
-##  Train / Dev / Test sets
+###  Train / Dev / Test sets
 
 
 When training a neural network, you have to make a lot of decisions, (how many layers, how many hidden units, ...).
@@ -47,7 +47,7 @@ The rule of thumb I'd encourage you to follow, in this case, is to make sure tha
 > <img src="./images/w01-01-Train_Dev_Test_sets/img_2023-03-19_09-34-13.png">
 
 
-##  Bias / Variance
+###  Bias / Variance
 
 Bias and Variance is one of those concepts that's easily learned but difficult to master. 
 
@@ -62,7 +62,7 @@ What does high bias and high variance look like? Example of classifier that is m
 > <img src="./images/w01-02-Bias_Variance/img_2023-03-19_09-49-19.png">
 
 
-##  Basic Recipe for Machine Learning
+###  Basic Recipe for Machine Learning
 
 If your algorithm has a high bias, you can try 
 - increasing the size of the neural network by adding more layers 
@@ -80,9 +80,9 @@ Training a bigger neural network is a viable option to consider.
 
 > <img src="./images/w01-03-Basic_Recipe_for_Machine_Learning/img_2023-03-19_09-55-29.png">
 
-# Regularizing your Neural Network
+## Regularizing your Neural Network
 
-##  Regularization
+###  Regularization
 
 For logistic regression
 
@@ -99,7 +99,7 @@ L2 regularization is sometimes also called **weight decay** because it's just li
 
 > <img src="./images/w01-04-Regularization/img_2023-03-19_09-56-36.png">
 
-##  Why Regularization Reduces Overfitting?
+###  Why Regularization Reduces Overfitting?
 
 When lambda increases, the weights of matrices W tend to be set closer to zero.
 As a result, this simplified neural network becomes smaller and almost like a logistic regression unit stacked multiple layers deep. The network moves from the overfitting case to the high bias case.
@@ -114,7 +114,7 @@ When lambda is large, the weights of the network are penalized for being too lar
 
 When using regularization in gradient descent, it is important to plot the cost function with the new regularization term, rather than just the old cost function without the regularization term (could have impact of the decreasing of the function)
 
-##  Dropout Regularization
+###  Dropout Regularization
 
 The dropout regularization eliminates randomly some neurons/weights on each iteration based on a probability (ex. 50%) and youtrain this diminished network (Andrew : "could seem crazy, but it's work!")
 
@@ -134,25 +134,25 @@ a3 = np.array([
 )
 keep_prob = 0.8    # 0 <= keep_prob <= 1
 
-# the generated number that are less than 0.8 will be dropped. 80% stay, 20% dropped
+## the generated number that are less than 0.8 will be dropped. 80% stay, 20% dropped
 d3 = np.random.rand(a3.shape[0], a3.shape[1]) 
 #[[0.64317193 0.16611306 0.59219812]
-# [0.98879279 0.23947895 0.69108137]
-# [0.67739204 0.36399884 0.85111087]]
+## [0.98879279 0.23947895 0.69108137]
+## [0.67739204 0.36399884 0.85111087]]
 
 d3 = d3 < keep_prob
 #[[False  True  True]
-# [ True  True  True]
-# [ True  True  True]
-# [ True  True False]]
+## [ True  True  True]
+## [ True  True  True]
+## [ True  True False]]
 
 a3 = np.multiply(a3,d3)   # keep only the values in d3
 #[[0 2 3]
-# [4 5 6]
-# [7 8 9]]
+## [4 5 6]
+## [7 8 9]]
 
-# increase a3 to not reduce the expected value of output
-# (ensures that the expected value of a3 remains the same) - to solve the scaling problem
+## increase a3 to not reduce the expected value of output
+## (ensures that the expected value of a3 remains the same) - to solve the scaling problem
 a3 = a3 / keep_prob 
 
 ```
@@ -167,7 +167,7 @@ Vector d[l] is used for forward and back propagation and is the same for them, b
 
 > <img src="./images/w01-06-Dropout_Regularization/img_2023-03-19_13-53-58.png">
 
-##  Understanding Dropout
+###  Understanding Dropout
 
 
 - A unit can't rely on anyone feature because anyone feature could go away at random
@@ -178,7 +178,7 @@ Vector d[l] is used for forward and back propagation and is the same for them, b
 > <img src="./images/w01-07-Understanding_Dropout/img_2023-03-19_17-00-31.png">
 
 
-##  Other Regularization Methods
+###  Other Regularization Methods
 
 If you are over fitting getting more training data can help, but getting more training data can be expensive and sometimes you just can't get more data. 
 
@@ -200,9 +200,9 @@ Early stopping is a commonly used technique in machine learning to prevent overf
 
 
 
-# Setting Up your Optimization Problem
+## Setting Up your Optimization Problem
 
-##  Normalizing Inputs
+###  Normalizing Inputs
 
 Normalizing the inputs can significantly accelerate the training process of a machine learning model.
 
@@ -221,7 +221,7 @@ Normalizing the inputs is important because it ensures that the cost function is
 > <img src="./images/w01-09-Normalizing_Inputs/img_2023-03-19_17-43-05.png">
 
 
-##  Vanishing / Exploding Gradients
+###  Vanishing / Exploding Gradients
 
 The Vanishing / Exploding gradients occurs when your derivatives become very small (vanishing) or very big (exploding)
 
@@ -235,7 +235,7 @@ And If W < I (Identity matrix) the activation and gradients will vanish.
 
 > <img src="./images/w01-10-Vanishing_Exploding_Gradients/img_2023-03-19_17-54-38.png">
 
-##  Weight Initialization for Deep Networks
+###  Weight Initialization for Deep Networks
 
 A partial solution to the Vanishing / Exploding gradients is the choice of the random initialization of weights. 
 
@@ -263,7 +263,7 @@ Some explanation about variance :
 
 > <img src="./images/w01-11-Weight_Initialization_for_Deep_Networks/img_2023-03-19_17-54-40.png">
 
-##  Numerical Approximation of Gradients
+###  Numerical Approximation of Gradients
 
 Idea is to **numerically** verify the implementation of derivative of a function to detect a bug in the backpropagation implementation.
 
@@ -277,7 +277,7 @@ Two-sided difference formula is much more accurate, ans as ε < 1, O(ε^2) < O(�
 
 > <img src="./images/w01-12-Numerical_Approximation_of_Gradients/img_2023-03-24_22-50-01.png">
 
-##  Gradient Checking
+###  Gradient Checking
 
 - Take ```W[1],b[1],...,W[L],b[L]``` and reshape into a big vector ```θ```
 - Take ```dW[1],db[1],...,dW[L],db[L]``` and reshape into a big vector ```dθ```
@@ -299,11 +299,11 @@ In order to check equality, we use $diff = \lVert d\theta_{approx}-d\theta \rVer
 > <img src="./images/w01-13-Gradient_Checking/img_2023-03-25_08-24-50.png">
 
 
-##  Gradient Checking Implementation Notes
+###  Gradient Checking Implementation Notes
 
 > <img src="./images/w01-14-Gradient_Checking_Implementation_Notes/img_2023-03-25_16-00-29.png">
 
 
-# Heroes of deep learning
+## Heroes of deep learning
 
-##  Yoshua Bengio Interview
+###  Yoshua Bengio Interview

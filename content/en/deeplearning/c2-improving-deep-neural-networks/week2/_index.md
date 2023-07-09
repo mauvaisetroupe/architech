@@ -3,7 +3,7 @@ title: "W2 - Optimization Algorithms"
 type: docs
 ---
 
-# Optimization Algorithms
+## Optimization Algorithms
 
 
 Develop your deep learning toolbox by adding more advanced optimizations, random minibatching, and learning rate decay scheduling to speed up your models.
@@ -15,9 +15,9 @@ Learning Objectives
 
 
 
-# Optimization Algorithms
+## Optimization Algorithms
 
-## Mini-batch Gradient Descent
+### Mini-batch Gradient Descent
 
 Vectorization allows processing a large number of examples relatively quickly. However, even with vectorization, processing large datasets (5,000,000 samples), can still be slow, requiring processing the entire training set before taking one step of gradient descent.
 
@@ -44,7 +44,7 @@ for t = 1:nb_batches
 ```
 > <img src="./images/w02-01-mini-batch_gradient_descent/img_2023-03-25_16-17-59.png">
 
-## Understanding Mini-batch Gradient Descent
+### Understanding Mini-batch Gradient Descent
 
 Unlike the batch gradient descent, the cost function in mini-batch algorithm may not decrease with each step and may exhibit some fluctuations. However, in general, it is expected to decrease over time.
 
@@ -104,7 +104,7 @@ Guidelines for choosing mini-batch size:
 
 > <img src="./images/w02-02-understanding_mini-batch_gradient_descent/img_2023-03-25_16-18-26.png">
 
-## Exponentially Weighted Averages
+### Exponentially Weighted Averages
 
 They are faster than gradient descent. In order to understand those algorithms, we need to be able they use something called **exponentially weighted averages** or **exponentially weighted moving averages** in statistics
 
@@ -120,7 +120,7 @@ If we plot this it will represent averages over about (1 / (1 - β)) entries:
 > <img src="./images/w02-03-exponentially_weighted_averages/img_2023-03-25_16-18-44.png">
 
 
-## Understanding Exponentially Weighted Averages
+### Understanding Exponentially Weighted Averages
 
 If we start with the following 
 - β = 0.90 - red line
@@ -141,7 +141,7 @@ It's really not the most accurate way to compute an average. But the code is mor
 
 > <img src="./images/w02-04-understanding_exponentially_weighted_averages/img_2023-03-25_16-19-15.png">
 
-## Bias Correction in Exponentially Weighted Averages
+### Bias Correction in Exponentially Weighted Averages
 
 Because we implement the exponentially weighted moving average with V0=0, the start of the iteration is inacurate (for β = 0.98, we won't  get the green curve but the purple one) 
 
@@ -160,7 +160,7 @@ $
 > <img src="./images/w02-05-bias_correction_in_exponentially_weighted_averages/img_2023-03-25_16-19-29.png">
 
 
-## Gradient Descent with Momentum
+### Gradient Descent with Momentum
 
 There's an algorithm called momentum, or gradient descent with momentum that almost always works faster than the standard gradient descent algorithm. The basic idea is using an exponentially weighted average of the gradients instead of the gradient itself.
 
@@ -201,7 +201,7 @@ becomes:
 > <img src="./images/w02-06-gradient_descent_with_momentum/img_2023-03-25_16-19-45.png">
 
 
-## RMSprop
+### RMSprop
 
 RMSprop (Root Mean Squared) is another algorithm that has similar effects to gradient descent with momentum and can help to decrease the oscillations in gradient descent (especially in mini batch)
 
@@ -226,7 +226,7 @@ We add ε (about 10^-8) to avoid dividing by zero
 
 > <img src="./images/w02-07-rmsprop/img_2023-03-25_16-20-03.png">
 
-## Adam Optimization Algorithm
+### Adam Optimization Algorithm
 
 Adam (Adaptive Moment Estimation) is basically putting momentum and RMSprop together
 Adam optimization and RMSprop are among the optimization algorithms that worked very well with a lot of NN architectures.
@@ -278,7 +278,7 @@ Hyperparameters for Adam
 > <img src="./images/w02-08-adam_optimization_algorithm/img_2023-03-25_16-20-15.png">
 
 
-## Learning Rate Decay
+### Learning Rate Decay
 
 Mini-batch gradient descent could never really converge.
 
@@ -300,7 +300,7 @@ Other learning rate decay methods
 
 > <img src="./images/w02-09-learning_rate_decay/img_2023-03-25_16-20-31.png">
 
-# The problem of local optima
+## The problem of local optima
 
 In the early days of deep learning, people used to worry a lot about the optimization algorithm getting stuck in bad local optima. But as this theory of deep learning has advanced, our understanding of local optima is also changing
 
@@ -318,6 +318,6 @@ Most points of zero gradients are not local optima (left schema) but instead sad
 > <img src="./images/w02-10-the-problem-of-local-optima/img_2023-03-25_16-20-46.png">
 
 
-## Yuanqing Lin Interview
+### Yuanqing Lin Interview
 
 

@@ -4,7 +4,7 @@ title: "W4 - Transformer Network"
 permalink: /c5-recurrent-neural-networks/week4/
 parent: "C5 - Sequence Models"
 ---
-# Transformer Network
+## Transformer Network
 
 
 Learning Objectives
@@ -20,9 +20,9 @@ Learning Objectives
 
 
 
-# Transformers
+## Transformers
 
-## Transformer Network Intuition
+### Transformer Network Intuition
 
 One of the most exciting developments in deep learning has been the transformer Network, or sometimes called Transformers. This is an architecture that has completely taken the NLP world by storm. And many of the most effective algorithms for NLP today are based on the transformer architecture.
 
@@ -56,7 +56,7 @@ And it turns out that these representations, which will be very rich representat
 
 > <img src="./images/w04-01-Transformer_Network_Intuition/img_2023-05-15_14-50-32.png">
 
-## Self-Attention
+### Self-Attention
 
 
 To use attention with a style more like CNNs, you need to calculate **self-attention**, where you compute **attention-based representations** for each of the words in your input sentence : 
@@ -113,13 +113,13 @@ So what are these query, key and value vectors supposed to do? They come from a 
 
 > <img src="./images/w04-02-Self-Attention/img_2023-05-15_14-50-57.png">
 
-## Multi-Head Attention
+### Multi-Head Attention
 
 Let's jump in and learn about the multi head attention mechanism. The notation gets a little bit complicated, but the thing to keep in mind is basically just a big four loop over the self attention mechanism that you learned about in the last video.
 
 Each time you calculate self attention for a sequence is called a `head`.
 
-### First head
+#### First head
 
 For the sake of intuition, you might find it useful to think of $W_1^Q$, $W_1^K$ and $W_1^V$ as being learned to help ask and answer the question, `what's happening ?` 
 
@@ -127,7 +127,7 @@ We could see on diagram that word `visite` gives the best answer (highlighted bl
 
 > <img src="./images/w04-03-Multi-Head_Attention/img_2023-06-24_11-53-20.png">
 
-### Second head
+#### Second head
 
 $W_2^Q$, $W_2^K$ and $W_2^V$ as being learned to help ask and answer the question, `when ?` 
 
@@ -135,7 +135,7 @@ We could see on diagram that word `septembre` gives the best answer (highlighted
 
 > <img src="./images/w04-03-Multi-Head_Attention/img_2023-06-24_11-54-14.png">
 
-### Third head
+#### Third head
 
 $W_3^Q$, $W_3^K$ and $W_3^V$ as being learned to help ask and answer the question, `who ?` 
 
@@ -143,7 +143,7 @@ We could see on diagram that word `Jane` gives the best answer (highlighted blac
 
 > <img src="./images/w04-03-Multi-Head_Attention/img_2023-06-24_11-54-53.png">
 
-### Multi-head together
+#### Multi-head together
 
 In the literature, the number of heads is usually represented by the lower case letter `h`.
 
@@ -163,9 +163,9 @@ In the next slide, we use the following formalism to represent all the component
 > <img src="./images/w04-03-Multi-Head_Attention/img_2023-06-24_16-38-03.png">
 
 
-## Transformer Network
+### Transformer Network
 
-### Encoder
+#### Encoder
 
 You've learned about self attention, you've learned about multi headed attention. Let's put it all together to build a transformer network.
 
@@ -179,7 +179,7 @@ This layer then produces a matrix that can be passed into a **feed forward neura
 
 So after, maybe about six times through this block, we will then feed the output of the encoder into a decoder block. 
 
-### Decoder
+#### Decoder
 
 The decoders block's job is output the English translation.
 
@@ -194,13 +194,13 @@ This decoder block is also going to be repeated N times, maybe 6 times where you
 
 > <img src="./images/w04-04-Transformer_Network/img_2023-06-24_17-26-02.png">
 
-### Connecting Encoder and Decoder
+#### Connecting Encoder and Decoder
 
 > <img src="./images/w04-04-Transformer_Network/img_2023-06-24_17-27-34.png">
 
 But beyond these main ideas, there are a few extra bells and whistles to transform it. Let me brief these steps through these extra bells and whistles that makes the transformer network work even better.
 
-#### Positional encoding of the input
+##### Positional encoding of the input
 
 If you recall the self attention equations, there's nothing that indicates the position of a word. Is this word, the first word in the sentence, in the middle of the last word in the sentence. But the position within the sentence can be extremely important to translation. 
 
@@ -217,20 +217,20 @@ The position encoding is unique for each word
 
 In addition to adding these position encodings to the embeddings, you'd also pass them through the network with **residual connections**. These residual connections are similar to those you previously seen in the [resNet](../../c4-convolutional-neural-netowrks/week2/#resnets). And their purpose in this case is to pass along positional information through the entire architecture.
 
-#### Add and norm
+##### Add and norm
 
 In addition to positional encoding, the transformer network also uses a layer very similar to a [batch norm](../../c2-improving-deep-neural-networks/week3/#why-does-batch-norm-work). 
 
 That is very similar to the batch norm layer that you're already familiar with. For the purpose of this video, don't worry about the differences. Think of it as playing a role very similar to the batch norm and just helps speed up learning. 
 
-#### Output Linear and softmax layer
+##### Output Linear and softmax layer
 
 And finally for the output of the decoder block, there's actually also a linear and then a softmax layer to predict the next word one word at a time.
 
 
 > <img src="./images/w04-04-Transformer_Network/img_2023-05-15_14-51-16.png">
 
-### Masked multi-head attention
+#### Masked multi-head attention
 
 In case you read the literature on the transformer network, you may also hear something called the **masked multi-head attention**. We should only draw it over here. Mast multi -head attention is important only during the training process 
 
@@ -247,9 +247,9 @@ In other words, all that masked multi-head attention does is repeatedly pretends
 Since the paper attention is all you need came out, there have been many other iterations of this model such as BERT or DistilBERT, which you get to explore yourself this week.
 
 
-# Conclusion
+## Conclusion
 
-## Conclusion and Thank You!
+### Conclusion and Thank You!
 
 > <img src="./images/w04-05-Conclusion_and_Thank_You/img_2023-05-15_14-54-08.png">
 > <img src="./images/w04-05-Conclusion_and_Thank_You/img_2023-05-15_14-54-27.png">

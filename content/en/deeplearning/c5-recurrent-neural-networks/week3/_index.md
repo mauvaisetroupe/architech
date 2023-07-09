@@ -4,7 +4,7 @@ title: "W3 - Sequence Models & Attention Mechanism"
 permalink: /c5-recurrent-neural-networks/week3/
 parent: "C5 - Sequence Models"
 ---
-# Sequence Models & Attention Mechanism
+## Sequence Models & Attention Mechanism
 
 
 Augment your sequence models using an attention mechanism, an algorithm that helps your model decide where to focus its attention given a sequence of inputs. Then, explore speech recognition and how to deal with audio data.
@@ -23,9 +23,9 @@ Learning Objectives
 
 
 
-# Various Sequence To Sequence Architectures
+## Various Sequence To Sequence Architectures
 
-##  Basic Models
+###  Basic Models
 
 In this week, we work on sequence-to-sequence models, which are useful for everything from machine translation to speech recognition.
 
@@ -60,7 +60,7 @@ One of the key differences is you don't want to randomly choose in translation, 
 
 Let's see in the next video how you go about generating that.
 
-##  Picking the Most Likely Sentence
+###  Picking the Most Likely Sentence
 
 The machine translation is very similar to a **conditional language model**.
 
@@ -112,7 +112,7 @@ So, to summarize:
 - but the set of all English sentences of a certain length is too large to exhaustively enumerate
 - So, we have to resort to a search algorithm
 
-##  Beam Search
+###  Beam Search
 
 Let's just try Beam Search using our running example of the French sentence, `"Jane visite l'Afrique en Septembre"`. Hopefully being translated into, `"Jane, visits Africa in September"`.
 
@@ -155,7 +155,7 @@ We implment step 3, similary at step 2
 
 > <img src="./images/w03-03-beam_search/img_2023-05-10_17-38-05.png">
 
-##  Refinements to Beam Search
+###  Refinements to Beam Search
 
 - Beam search consists to maximize the probability P(y<sup>&lt;1&gt;</sup>&nbsp;| x) * P(y<sup>&lt;2&gt;</sup>&nbsp;| x, y<sup>&lt;1&gt;</sup>) * ... * P(y<sup>&lt;t&gt;</sup>&nbsp;| x, y<sup>&lt;y(t-1)&gt;</sup>) (formalized in a mathematical language below)
 - But multiplying a lot of numbers less than 1 will result in a very tiny number, which can result in numerical underflow
@@ -183,7 +183,7 @@ Unlike exact search algorithms like BFS (Breadth First Search) or DFS (Depth Fir
 
 > <img src="./images/w03-04-refinements_to_beam_search/img_2023-05-10_17-38-19.png">
 
-##  Error Analysis in Beam Search
+###  Error Analysis in Beam Search
 
 We already seen in [Error analysis](../../c3-structuring-ml-projects/week2/README.md#error-analysis) in "Structuring Machine Learning Projects" course.
 
@@ -226,7 +226,7 @@ So the error analysis process looks as follows. You go through the development s
 
 > <img src="./images/w03-05-error_analysis_in_beam_search/img_2023-05-10_17-38-34.png">
 
-##  Bleu Score (Optional)
+###  Bleu Score (Optional)
 
 How do you evaluate a machine translation system if there are multiple equally good answers?
 
@@ -266,7 +266,7 @@ In practice, few people would implement a BLEU score from scratch. There are ope
 
 Today, BLEU score is used to evaluate many systems that generate text, such as machine translation systems, as well as image captioning systems.
 
-##  Attention Model Intuition
+###  Attention Model Intuition
 
 For most of this week, you've been using a **Encoder-Decoder** architecture for machine translation (one RNN reads in a sentence and then different RNN outputs a sentence). There's a modification to this called the **Attention Model**, that makes all this work much better.
 
@@ -306,13 +306,13 @@ The Attention Model which translates maybe a bit more like humans might, looking
 
 > <img src="./images/w03-07-attention_model_intuition/img_2023-05-10_17-39-00.png">
 
-##  Attention Model
+###  Attention Model
 
 Attention model allows a neural network to pay attention to only part of an input sentence while it's generating a translation, much like a human translator might.
 
 Let's now formalize that intuition into the exact details of how you would implement an attention model
 
-### Time 1 - Encoder 
+#### Time 1 - Encoder 
 
 Assuming an input sentence, a bidirectional RNN (bidirectional GRU or more commonly a bidirectional LSTM) is used to compute features for each word. The features from both forward and backward occurrences are concatenated into a feature vector for each time step. A forward-only RNN generates the translation, considering a context vector influenced by attention parameters.
 
@@ -322,7 +322,7 @@ And then to simplify the notation going forwards at every time step, even though
 
 > <img src="./images/w03-08-attention_model/img_2023-06-23_11-42-50.png">
 
-### Decoder s<1>
+#### Decoder s<1>
 
 Next, we have our forward only single direction RNN with state `S` to generate the translation. 
 `S<1>` generates `y<1>` with the context `c<1>` denoted `c` that depends on the attention parameters `α<1,1>`, `α<1,2>`... that tells us how much the context would depend on the activations we're getting from the different time steps. 
@@ -335,7 +335,7 @@ The context is the sum of the features from the different time steps weighted by
 
 `α<t,t'>` is the amount of attention that's `y<t>` should pay to `a<t'>`. So in other words, when you're generating the t-th output words, how much you should be paying attention to the t'-th input word
 
-### Decoder s<2>
+#### Decoder s<2>
 
 So that's one step of generating the output and then at the next time step, you generate the second output (in green below)
 
@@ -377,9 +377,9 @@ Two examples :
 
 > <img src="./images/w03-08-attention_model/img_2023-05-10_17-39-11.png">
 
-# Speech Recognition - Audio Data
+## Speech Recognition - Audio Data
 
-##  Speech Recognition
+###  Speech Recognition
 
 So, what is the speech recognition problem? You're given an audio clip, and your job is to automatically find a text transcript
 If you plot an audio clip :
@@ -408,7 +408,7 @@ Note that `space` anf `blank` is different
 
 > <img src="./images/w03-09-speech_recognition/img_2023-05-10_17-39-22.png">
 
-##  Trigger Word Detection
+###  Trigger Word Detection
 
 The literature on trigger detection algorithm is still evolving so there isn't wide consensus yet on what's the best algorithm for triggered word detection. So I'm just going to show you one example of an algorithm you can use :
 

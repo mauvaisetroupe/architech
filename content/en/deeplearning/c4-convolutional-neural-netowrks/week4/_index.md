@@ -5,7 +5,7 @@ permalink: /c4-convolutional-neural-netowrks/week4/
 parent: "C4 - Convolutional Neural Networks"
 ---
 
-# Special Applications: Face recognition & Neural Style Transfer
+## Special Applications: Face recognition & Neural Style Transfer
 
 
 Explore how CNNs can be applied to multiple fields, including art generation and face recognition, then implement your own algorithm to generate art and recognize faces!
@@ -24,9 +24,9 @@ Learning Objectives
 
 
 
-# Face Recognition
+## Face Recognition
 
-## What is Face Recognition?
+### What is Face Recognition?
 
 - Face verification 
     - Output whether the input image is that of the claimed person
@@ -41,7 +41,7 @@ What we do in the next few videos is
 
 > <img src="./images/w04-01-what_is_face_recognition/img_2023-04-14_22-06-18.png">
 
-## One Shot Learning
+### One Shot Learning
 
 One of the challenges of face recognition is that you need to solve the one-shot learning problem (you need to be able to recognize a person given just one single image)
 
@@ -61,7 +61,7 @@ So instead, to make this work, what you're going to do instead is learn a simila
 
 > <img src="./images/w04-02-one_shot_learning/img_2023-04-14_22-07-19.png">
 
-## Siamese Network
+### Siamese Network
 
 The job of the function d, which you learned about in the last video, is to input two faces and tell you how similar or how different they are. A good way to do this is to use a Siamese network
 
@@ -78,7 +78,7 @@ We train the neural network so that if two pictures, xi and xj, are of the same 
 
 > <img src="./images/w04-03-siamese_network/img_2023-04-14_22-07-35.png">
 
-## Triplet Loss
+### Triplet Loss
 
 One way to learn the parameters of the neural network, so that it gives you a good encoding for your pictures of faces, is to define and apply gradient descent on the triplet loss function. 
 
@@ -110,7 +110,7 @@ Fortunately, some of these companies have trained these large networks and poste
 
 > <img src="./images/w04-04-triplet_loss/img_2023-04-14_22-07-51.png">
 
-## Face Verification and Binary Classification
+### Face Verification and Binary Classification
 
 The Triplet Loss is one good way to learn the parameters of a continent for face recognition. There's another way to learn these parameters. 
 
@@ -132,9 +132,9 @@ For training the network, we need to prepare pairs, with output (0 or 1)
 
 > <img src="./images/w04-05-face_verification_and_binary_classification/img_2023-04-14_22-08-02.png">
 
-# Neural Style Transfer
+## Neural Style Transfer
 
-## What is Neural Style Transfer?
+### What is Neural Style Transfer?
 
 Notation :
 - C for Content image
@@ -147,7 +147,7 @@ In order to implement Neural Style Transfer, you need to look at the features ex
 - the shallow 
 - and the deeper layers of a ConvNet
 
-## What are deep ConvNets learning?
+### What are deep ConvNets learning?
 
 Lets say you've trained a ConvNet, this is an AlexNet like network, and you want to visualize what the hidden units in different layers are computing. 
 
@@ -192,7 +192,7 @@ Layer 5, even more sophisticated things
 
 > <img src="./images/w04-07-what_are_deep_convnets_learning/img_2023-04-14_22-08-44.png">
 
-## Cost Function
+### Cost Function
 
 $J(G) = \alpha * J_{content}(C, G) + \beta * J_{style}(S, G)$ :
 - first part (content component) measures how similar is the contents of the generated image G to the content of the content image C
@@ -204,7 +204,7 @@ Algorithm to train the network :
 
 > <img src="./images/w04-08-cost_function/img_2023-04-14_22-08-57.png">
 
-## Content Cost Function
+### Content Cost Function
 
 We use a specific hidden layer l to compute the content part of the cost function. Usually, choose some layer in the middle, neither too shallow nor too dee. If l is to be small (like layer 1), we will force the network to get similar output to the original content image.
 
@@ -213,7 +213,7 @@ We define $J_{content}(C,G)$ as the element-wise difference between these hidden
 
 > <img src="./images/w04-09-content_cost_function/img_2023-04-14_22-09-07.png">
 
-## Style Cost Function
+### Style Cost Function
 
 We chosen some layer L to define the measure of the style of an image, and we're going to ask how correlated are the activations across different channels.
 
@@ -257,7 +257,7 @@ Definition of Frobenius norm
 > <img src="./images/w04-10-style_cost_function/02.png">
 
 
-## 1D and 3D Generalizations
+### 1D and 3D Generalizations
 
 We have used the Conv nets for images which are 2D. But ConvNets can also apply to 1D data and 3D data.
 

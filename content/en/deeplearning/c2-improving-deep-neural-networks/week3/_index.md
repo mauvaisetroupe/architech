@@ -3,7 +3,7 @@ type: docs
 title: "W3 - Hyperparameter Tuning, Batch Normalization and Programming Frameworks"
 ---
 
-# Hyperparameter Tuning, Batch Normalization and Programming Frameworks
+## Hyperparameter Tuning, Batch Normalization and Programming Frameworks
 
 
 Explore TensorFlow, a deep learning framework that allows you to build neural networks quickly and easily, then train a neural network on a TensorFlow dataset.
@@ -20,9 +20,9 @@ Learning Objectives
 
 
 
-# Hyperparameter Tuning
+## Hyperparameter Tuning
 
-## Tuning Process
+### Tuning Process
 
 Hyperparameters importance are (for Andrew Ng):
 
@@ -72,7 +72,7 @@ You can use **coarse to fine** sampling scheme.
 
 > <img src="./images/w03-01-tuning_process/img_2023-03-26_11-08-14.png">
 
-## Using an Appropriate Scale to pick Hyperparameters
+### Using an Appropriate Scale to pick Hyperparameters
 
 Sampling at random doesn't mean sampling uniformly at random, over the range of valid values. Instead, it's important to pick the appropriate scale on which to explore the hyperparameters.
 
@@ -113,7 +113,7 @@ Why having a log scale for a range between 0.9 and 0.999 in case of weighted ave
 
 > <img src="./images/w03-02-using_an_appropriate_scale_to_pick_hyperparameters/img_2023-03-26_11-23-20.png">
 
-## Hyperparameters Tuning in Practice: Pandas vs. Caviar
+### Hyperparameters Tuning in Practice: Pandas vs. Caviar
 
 Intuitions about hyperparameter settings from one DL area may or may not transfer to a different one.
 Even if you work on just one problem, you might have found a good setting for the hyperparameters and kept on developing your algorithm, or maybe seen your data gradually change over the course of several months, or maybe just upgraded servers in your data center. And because of those changes, the best setting of your hyperparameters can get stale.
@@ -127,9 +127,9 @@ Strategy depends on if you have enough computational capacity to train a lot of 
 > <img src="./images/w03-03-hyperparameters_tuning_in_practice_pandas_vs_caviar/img_2023-03-26_11-23-40.png">
 
 
-# Batch Normalization
+## Batch Normalization
 
-## Normalizing Activations in a Network
+### Normalizing Activations in a Network
 
 In the rise of deep learning, one of the most important ideas has been an algorithm called batch normalization, created by two researchers, Sergey Ioffe and Christian Szegedy. Batch normalization makes your hyperparameter search problem much easier and your neural network much more robust. The choice of hyperparameters is a much bigger range of hyperparameters that work well, and will also enable you to much more easily train even very deep networks.
 
@@ -162,7 +162,7 @@ Note: if gamma = sqrt(variance + epsilon) and beta = mean then Z_tilde[i] = z[i]
 
 > <img src="./images/w03-04-normalizing_activations_in_a_network/img_2023-03-26_11-23-55.png">
 
-## Fitting Batch Norm into a Neural Network
+### Fitting Batch Norm into a Neural Network
 
 Neural network has now following variables :
 - W[1], b[1], ..., W[L], b[L],
@@ -191,7 +191,7 @@ So, let's put all together and describe how you can implement gradient descent u
 
 > <img src="./images/w03-05-fitting_batch_norm_into_a_neural_network/img_2023-03-26_23-30-57.png">
 
-## Why does Batch Norm work?
+### Why does Batch Norm work?
 
 First intuition. Normalizing input features X, to take on a similar range of values speeds up learning. So batch normalization is doing a similar thing for values in hidden units.
 
@@ -220,7 +220,7 @@ Don't rely on batch normalization as a regularization. It's intended for normali
 
 > <img src="./images/w03-06-why_does_batch_norm_work/img_2023-03-26_11-25-43.png">
 
-## Batch Norm at Test Time
+### Batch Norm at Test Time
 
 When we train a network with Batch normalization, we compute the mean and the variance of the mini-batch. But when testing we might need to process examples one at a time.
 
@@ -229,9 +229,9 @@ You could in theory run your whole training set through your final network to ge
 > <img src="./images/w03-07-batch_norm_at_test_time/img_2023-03-27_19-12-18.png">
 
 
-# Multi-class Classification
+## Multi-class Classification
 
-## Softmax Regression
+### Softmax Regression
 
 There are a generalization of logistic regression called Softmax regression that is used for multiclass classification/regression.
 
@@ -261,7 +261,7 @@ Some examples of multi-class classification that is a generalization of binary c
 
 > <img src="./images/w03-08-softmax_regression/img_2023-03-26_11-26-45.png">
 
-## Training a Softmax Classifier
+### Training a Softmax Classifier
 
 - The Softmax name came from softening the values and not harding them like hard max (1 for max, 0 for others)
 - Softmax generalizes logistic regeression to C classes 
@@ -290,9 +290,9 @@ When using a deep learning program frameworks, usually you just need to focus on
 
 > <img src="./images/w03-09-training_a_softmax_classifier/img_2023-03-27_19-14-54.png">
 
-# Introduction to Programming Frameworks
+## Introduction to Programming Frameworks
 
-## Deep Learning Frameworks
+### Deep Learning Frameworks
 
 We've learned to implement deep learning algorithms more or less from scratch using Python and NumPY. Fortunately, there are now many good deep learning software frameworks that can help you implement these models. 
 
@@ -300,7 +300,7 @@ Each of these frameworks has a dedicated user and developer community and I thin
 
 > <img src="./images/w03-10-deep_learning_frameworks/img_2023-03-26_11-27-37.png">
 
-## TensorFlow
+### TensorFlow
 
 As a motivating problem, let's say that you have some cost function J that you want to minimize. For this example, I'm going to use this highly simple cost function, J(w) = w^2 - 10w + 25.
 
