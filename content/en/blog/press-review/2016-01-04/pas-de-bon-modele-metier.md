@@ -35,6 +35,7 @@ DDD, livre de Eric Evans :
 
 ## Comment bien construire ce modèle métier?
 
+Construire un modèle métier c'est compliqué :
 - En voulant répondre à tous les besoins, on a répondu à aucun besoin
 - Il n’y a pas un modèle, il y a des modèles
 
