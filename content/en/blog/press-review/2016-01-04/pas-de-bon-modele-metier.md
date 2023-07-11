@@ -1,7 +1,12 @@
 ---
 date: 2016-01-04
 title: Il n'y a pas de bon modèle métier
+tags: [Architecture, DDD, Devoxx]
+categories: [French, Conference Review]
 ---
+
+Devoxx 2012 - Grégory Weinbach - Il n y a pas de bon modèle métier
+
 
 On vous le répète : une application répond bien aux besoins de ses utilisateurs si elle reflète bien leur métier. Les approches du développement orientées Utilisateur sont d'ailleurs faites pour ça : le DDD d'Eric Evans comme le BDD de Dan North concentrent leurs efforts sur la modélisation du "Coeur du Domaine".
 En pratique, comment faire un "bon" Modèle Métier ?
