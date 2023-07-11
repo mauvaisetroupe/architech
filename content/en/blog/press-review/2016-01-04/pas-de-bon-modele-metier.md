@@ -32,3 +32,22 @@ DDD, livre de Eric Evans :
     - quand on modélise, on code 
 - Le modèle et le code partagent un langage comme, ubiquitous language, partagé entre les utilisateurs, les concepteurs, les développeurs
 - c’est un vrai modèle objet (donnée, structure, comportement)
+
+## Comment bien construire ce modèle métier?
+
+- En voulant répondre à tous les besoins, on a répondu à aucun besoin
+- Il n’y a pas un modèle, il y a des modèles
+
+Eric Evans, sur son bouquin insiste sur un point, la notion de contexte
+
+- Un modèle n’est valable que dans un contexte donné
+- C’est un point de vue métier
+- C’est qui est difficile et important, c’est identifier ces contextes
+- Mais aussi de bien les cerner les frontière (context boundaries)
+- Un livre qui passe de l’éditeur à l’imprimeur, il doit y avoir quelques informations qui passent d’un contexte à l’autre (souvent, à part l’identifiant, il y en a très peu)
+- On doit donc être capable de traduire une partie des informations qui sont visible dans un contexte vers un autre contexte, grâce à une translation map translation map = transcodification basé sur un partage d’identité
+- Donc première chose à faire identifier les contexte et définir les limites et comment on va passer de l’un à l’autre
+- Pour simplifier, un contexte = 1 domaine
+
+[Mes notes en pdf](/blog/il-n-y-a-pas-de-bon-modele-metier.pdf).
+
