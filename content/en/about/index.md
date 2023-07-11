@@ -14,21 +14,28 @@ A site about IT and Architecture
 
 {{% blocks/lead %}}
 
-ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy)
-
+## I’m Lionel Coquin, an IT architect with over 20 years of experience in Luxembourg.
 
 {{% /blocks/lead %}}
 
 {{% blocks/section %}}
-
-# This is another section
-{.text-center}
-
+ArchiTech.lu is my [blog and article platform](../blog/) where I share my continuous learning journey
+{.text-center .fs-2}
 {{% /blocks/section %}}
 
 {{% blocks/section %}}
+On ArchiTech.lu, in addition to other content, you will find my notes specifically from the two Coursera specializations I completed: [Machine Learning](../deeplearning/machine-learning-specialization/) and [Deep Learning](../deeplearning/deep-learning-specialization/).
+{.text-center .fs-3}
+{{% /blocks/section %}}
 
-# This is another section
-{.text-center}
 
+{{% blocks/section %}}
+ArchiTech.lu also hosts the documentation for an Application Dependency Mapping Tool called [EADesignIT](../ea-design-it/) that I developed as a side project. EADesignIT simplifies application management and facilitates the description of functional flows between applications through Excel file imports. It automatically generates diagrams in PlantUML or Draw.io.
+{.text-center .fs-3}
+{{% /blocks/section %}}
+
+
+{{% blocks/section %}}
+ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy)
+{.text-center .fs-3}
 {{% /blocks/section %}}
