@@ -36,6 +36,6 @@ ArchiTech.lu also hosts the documentation for an Application Dependency Mapping 
 
 
 {{% blocks/section %}}
-ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy)
+ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy). Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 {.text-center .fs-3}
 {{% /blocks/section %}}
