@@ -9,4 +9,4 @@ Le sujet récurrent dans l’IT : si on est senior avec 6 ans d’expérience, q
 
 https://www.youtube.com/watch?app=desktop&v=X5MYKj1C2qM
 
-![dev senior](/blog/press-review/2022-04-20/dev-senior.png)
+![dev senior](/blog/2022/2022-04-20/dev-senior.png)

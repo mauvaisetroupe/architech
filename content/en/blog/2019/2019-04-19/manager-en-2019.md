@@ -45,7 +45,7 @@ La difficulté réside dans le fait que chaque individu est différent, et il es
 
 En tant que manager, votre rôle principal est d'assumer la responsabilité de l'organisation et de la cohésion de votre équipe, tout comme un guide de haute montagne lors d'une expédition. Vous êtes le garant de la réussite collective et de l'atteinte des objectifs fixés.
 
-![Un guide](/blog/press-review/2019-04-19/guide.png)
+![Un guide](/blog/2019/2019-04-19/guide.png)
 
 Pour cela, vous devez veiller à ce que chaque membre de l'équipe puisse exprimer ses talents techniques dans un cadre de travail harmonieux. Vous n'avez pas besoin d'être un expert dans tous les domaines techniques, mais vous devez être en mesure de reconnaître les compétences de chaque membre de l'équipe et de les mettre à profit de manière efficace.
 
@@ -53,7 +53,7 @@ Pour cela, vous devez veiller à ce que chaque membre de l'équipe puisse exprim
 
 Il est une bonne idée pour les profils techniques de se lancer dans des rôles de management, mais il est important de comprendre que cela nécessite un apprentissage. Le management peut être appris à travers des livres, des formations et des rencontres. Il existe même des livres spécifiques sur la gestion d'équipes techniques, tels que "The Manager's Path" de Camille Fournier, qui offre des conseils clairs et pratiques sur les attentes et les enjeux spécifiques liés au management d'équipes techniques.
 
-![manager patssh](/blog/press-review/2019-04-19/manager-path.png)
+![manager patssh](/blog/2019/2019-04-19/manager-path.png)
 
 
 Il est crucial de reconnaître que le rôle de manager diffère de celui de contributeur individuel ou de leader technique. Chaque position a ses attentes et ses responsabilités spécifiques, et il est essentiel de comprendre ces différences pour réussir en tant que manager.

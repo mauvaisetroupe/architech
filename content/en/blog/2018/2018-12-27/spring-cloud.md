@@ -24,7 +24,7 @@ Hystrix is a latency and fault tolerance library designed to handle the resilien
 Feign is a declarative web service client developed by Netflix and integrated into the Spring Cloud ecosystem. It simplifies the development of RESTful clients by allowing you to define interfaces and automatically generating the implementation code for making HTTP requests. Feign integrates seamlessly with Ribbon and Eureka, leveraging the load balancing and service discovery capabilities provided by these components. With Feign, you can write clean and concise code for interacting with other microservices in a declarative manner, reducing boilerplate code and improving productivity.
 
 
-![spring-cloud-architexture](/blog/press-review/2018-12-27/spring-cloud.png)
+![spring-cloud-architexture](/blog/2018/2018-12-27/spring-cloud.png)
 
 These three components, Ribbon, Hystrix, and Feign, are essential parts of the Spring Cloud ecosystem. They work together to enhance the resilience, scalability, and communication between microservices in a distributed system. By leveraging these components, you can build robust and fault-tolerant microservice architectures.
 

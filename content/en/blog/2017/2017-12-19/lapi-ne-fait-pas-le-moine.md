@@ -36,7 +36,7 @@ Du coup,
 -  on fait des API, parce que c’est un modèle efficace et rapide de développer (peu de métrique cela dit sur ce point, même si le speaker y croit)
 - mais un peu comme de la SOA, sans pousser les services vers l’extérieur.
 
-![alt_text](/blog/press-review/2017-12-19/image0.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image0.png "image_tooltip")
 
 
 ## API : Définition
@@ -44,7 +44,7 @@ Du coup,
 La définition de wikipedia est trop IT. Chez Octo on donne cette définition : **Industrialisation du processus des ressources de l’entreprise sur le web**
 
 
-![alt_text](/blog/press-review/2017-12-19/image1.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image1.png "image_tooltip")
 
 
 
@@ -68,7 +68,7 @@ La définition de wikipedia est trop IT. Chez Octo on donne cette définition : 
 API = au cœur de l’architecture aujourd’hui
 
 
-![alt_text](/blog/press-review/2017-12-19/image2.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image2.png "image_tooltip")
  (les chiffres sont tirés de facebook)
 
 
@@ -101,7 +101,7 @@ On rencontre souvent dans les entreprises des services, ou microservices. Mais p
 - Entre le SI et les consommateurs
 
 
-![alt_text](/blog/press-review/2017-12-19/image3.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image3.png "image_tooltip")
 
 
 API mangement couvre les features suivantes :
@@ -119,7 +119,7 @@ API mangement couvre les features suivantes :
 
 
 
-![alt_text](/blog/press-review/2017-12-19/image4.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image4.png "image_tooltip")
 
 
 - « Buildez,  craftez votre API » => valeur ajoutée
@@ -128,27 +128,27 @@ API mangement couvre les features suivantes :
 
 ## Architecture Big Picture : de la SOA en SOAP à la WOA
 
-![alt_text](/blog/press-review/2017-12-19/image5.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image5.png "image_tooltip")
 
 ## Patterns d’intégration – fAçADE OR NOT FAçADE
 
 ### Façade API monolithique (ESB)
 
-![alt_text](/blog/press-review/2017-12-19/image6.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image6.png "image_tooltip")
 - ESB amélioré ou API management, c’est souvent la même chose, API construite par cette brique
 - Pas préconisé (performance, ...)
 
-![alt_text](/blog/press-review/2017-12-19/image8.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image8.png "image_tooltip")
 
 
 ### Services / Microservices API 
 
-![alt_text](/blog/press-review/2017-12-19/image7.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image7.png "image_tooltip")
 - Vu chez nos clients, préconisé
 - Cela ne veut pas dire qu’il n’y a pas de façade, si pas possible de le faire directement dans backend, on fait une petite façade (c’est du code, c’est ça la différence)
 - Par contre pas au début directement, car cela signifie que tous les gens du back font du REST. On commence par MVP...
 
-![alt_text](/blog/press-review/2017-12-19/image9.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image9.png "image_tooltip")
 
 
 [https://blog.octo.com/strategie-d-architecture-api/#bigpic](https://blog.octo.com/strategie-d-architecture-api/#bigpic)
@@ -179,7 +179,7 @@ Le point organisationnel est crucial : les squad, petites équipes agiles, auto-
 
 ## Take Away
 
-![alt_text](/blog/press-review/2017-12-19/image10.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image10.png "image_tooltip")
 
 
 ## Sécuriser son API en 30 minutes
@@ -226,7 +226,7 @@ Pour les applications publiques
 
 
 
-![alt_text](/blog/press-review/2017-12-19/image11.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image11.png "image_tooltip")
 
 
  
@@ -237,7 +237,7 @@ Pour les applications publiques
 C’est le flux par défaut ; autorisation tripartite
 
 
-![alt_text](/blog/press-review/2017-12-19/image12.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image12.png "image_tooltip")
  
 
 
@@ -246,7 +246,7 @@ C’est le flux par défaut ; autorisation tripartite
 
 
 
-![alt_text](/blog/press-review/2017-12-19/image13.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image13.png "image_tooltip")
  
 
 
@@ -258,7 +258,7 @@ L’application voit tout, il faut lui faire confiance !
 
 
 
-![alt_text](/blog/press-review/2017-12-19/image14.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image14.png "image_tooltip")
  
 
 
@@ -308,7 +308,7 @@ Pour info, France Connect de l’administration française utilise Openid connec
 
 
 
-![alt_text](/blog/press-review/2017-12-19/image15.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image15.png "image_tooltip")
 
 - Ambition de servir de moyen de connexion (avoir un bouton « se connecter avec Linxo »)
 - Développement basé sur une customisation de Kong (un API manager open source www.getkong.org/) 
@@ -327,7 +327,7 @@ Pour info, France Connect de l’administration française utilise Openid connec
 
 
 
-![alt_text](/blog/press-review/2017-12-19/image16.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image16.png "image_tooltip")
 
 
 - C’est en PROD, le portail pour les développeurs qui voudraient utiliser l’API est ici :[ http://developers.axa-assistance.com](http://developers.axa-assistance.com/)
@@ -348,10 +348,10 @@ Pour info, France Connect de l’administration française utilise Openid connec
 - API entraîne un problème des identités différentes dans différents référentiels ; **<span style="text-decoration:underline;">il faut de l’IAM</span>** ; sans cela, on ne peut pas faire grand-chose
 - API-fier son SI c’est long !
 
-![alt_text](/blog/press-review/2017-12-19/image17.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image17.png "image_tooltip")
 
 
-![alt_text](/blog/press-review/2017-12-19/image18.png "image_tooltip")
+![alt_text](/blog/2017/2017-12-19/image18.png "image_tooltip")
 
 
 ## 7 convictions sur l’API
