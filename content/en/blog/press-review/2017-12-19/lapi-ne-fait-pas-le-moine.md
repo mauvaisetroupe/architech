@@ -36,6 +36,8 @@ Du coup,
 -  on fait des API, parce que c’est un modèle efficace et rapide de développer (peu de métrique cela dit sur ce point, même si le speaker y croit)
 - mais un peu comme de la SOA, sans pousser les services vers l’extérieur.
 
+![alt_text](/blog/press-review/2017-12-19/image0.png "image_tooltip")
+
 
 ## API : Définition
 
