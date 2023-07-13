@@ -61,9 +61,9 @@ Here is my cheat sheet
 - Lock to one AZ (even if multi-attach io1/io2)
 - Root ESB deleted by default (can be unchecked), other attached volumes are not deleted
 
-![](Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.001.png)
+![](/blog/2021/2021-07-02/Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.001.png)
 
-![](Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.002.png)
+![](/blog/2021/2021-07-02/Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.002.png)
 ### **ESB Raid configuration**
 - RAID 0 = performance
 - RAID 1 = fault tolerance
@@ -237,11 +237,11 @@ Here is my cheat sheet
   - SNS
   - Lambda
 
-![](Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.003.png)
+![](/blog/2021/2021-07-02/Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.003.png)
 
 
 ### **S3 storage classes**
-![](Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.004.png)
+![](/blog/2021/2021-07-02/Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.004.png)
 ## **Section 15: CloudFront & AWS Global Accelerator**
 ### **CloudFront**
 - Content Delivery Network (CDN)
@@ -264,7 +264,7 @@ Here is my cheat sheet
 - Need CLI or AWS OpsHub
 - Cannot import directly in Glacier
 
-![](Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.005.png)
+![](/blog/2021/2021-07-02/Aspose.Words.f84f645a-6092-4b88-8d17-039622955d5c.005.png)
 ### **Storage Gateway Overview**
 - For hybrid cloud (see locally an AWS file)
 - Only for S3
