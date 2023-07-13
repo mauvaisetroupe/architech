@@ -156,7 +156,7 @@ Côté People, on descend les gens qui travaillainet sur le système de reco, po
 On investit assez lourdement sur cette Data Infrastructure as a Platform sur 4 axes
 #### Self-Serve Data Infra
 
-> <img src="./img_2023-07-13_19-23-19.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-23-19.png">
 
 En repo Git avec la CI/CD au dessus sur lequel les DEV viennent déposer des ficheirs déscriptif de l'infrastructure Data qu'ils veulent créér (généralement des topics Kafka) : 
 - Topologie (flux d'événmenets, job queue, buffer)
@@ -168,7 +168,7 @@ En repo Git avec la CI/CD au dessus sur lequel les DEV viennent déposer des fic
 - l'équipe propriétaire
 - la lsite des producteurs et consummers au sens applicatif du terme
 
-> <img src="./img_2023-07-13_19-22-59.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-22-59.png">
 
 - Cela passe par un validateur qui vérifie que la conf est déployable mais aussi qu'elle respecte les normes de namimg...
 - la CD va aller provisionner 
@@ -179,7 +179,7 @@ En repo Git avec la CI/CD au dessus sur lequel les DEV viennent déposer des fic
     - provisionne le bucket S3
     - provisionne les schéma Athena (outl qui permet de faire du SQL on top du Data Lake S3)
 
-> <img src="./img_2023-07-13_19-23-03.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-23-03.png">
 
 Très positif car :
 - automatise des choses sans valeur ajouté
@@ -187,28 +187,28 @@ Très positif car :
 
 #### Data Discovery
 
-> <img src="./img_2023-07-13_19-23-52.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-23-52.png">
 
 On a créé un outil de data discovery, un search interne avec qui agrège l'ensemble des sources. Pour le PO ou Data Scientist d'aller trouver les sources pour analyses sur leus domaines métier, soit pour explorer ce qu'ils pourraient utiliser pour construire des modèles
 
-> <img src="./img_2023-07-13_19-24-16.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-24-16.png">
 
 #### Data Quality Monitoring
 
-> <img src="./img_2023-07-13_19-24-20.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-24-20.png">
 
 On a fait aussi un petit tooling de monitoring de la data quality. Assez simple, petit consummer kafka sur lequel on charge des règles métier, des tests métiers, qu'on va jouer sur les événments et qui envoie des metrics dans Datadog
 
 Permet d'avoir ce genre de dashboard sur les topics. souvent en mode contract testing pour venir tester les assumptions sur les flux qu'on vient consommer des autres équipes
 
-> <img src="./img_2023-07-13_19-24-48.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-24-48.png">
 
 #### MLOPS
 
 Dernier axe sur lequel on  investit encore beaucoup
 MLOPS = le DEVOPS du ML
 
-> <img src="./img_2023-07-13_19-46-22.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-46-22.png">
 
 1. Les Data Engineers (DE) qui s'occupe de fetcher, de faire les premières analyses sur les jeux de données et de les fournir au Data Scietist (DS)
 2. Les DS explore dessus, crée un modèle
@@ -216,7 +216,7 @@ MLOPS = le DEVOPS du ML
 
 Que moyennement satisfaisant car les DS sont assez loin de l'infra, des pipelines, ...on sépare l'OPS des gens qui écrivent la logique . La boucle de feedback n'est pas terrible
 
-> <img src="./img_2023-07-13_19-25-11.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-25-11.png">
 
 L'idée c'est de les rapprocher. 
 
@@ -230,15 +230,15 @@ Pour cela :
 - on a ajouté à la partie CI/CD qui suit la gestion du code des pipeline une facon de suivre le verionning du dataset, des modèles, et des stats au dessus (on voit l'évolution des stats du modèle dans le temps depuis la période d'expérimentation)
 - on a un peu rationnaliser l'accès au feature. Une feature est un KPI qui sert d'entrée à un modèle (je vais recevoir des caillous de DS dans la salle...) au moment du training et aussi potentiellement au moment du service. L'idée du Feature Store c'est que plutôt que de réinventer à chaque fois, on les centralise dans une soltion qui permet de les serbir à la fois en synchrone et en batch 
 
-> <img src="./img_2023-07-13_19-26-04.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_19-26-04.png">
 
 
 ## Ce qu'il reste à faire
 
-> <img src="./img_2023-07-13_21-00-10.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_21-00-10.png">
 
-> <img src="./img_2023-07-13_21-00-20.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_21-00-20.png">
 
-> <img src="./img_2023-07-13_21-00-28.png">
+> <img src="/blog/2022/2022-04-20/img_2023-07-13_21-00-28.png">
 
 
