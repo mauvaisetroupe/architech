@@ -7,6 +7,8 @@ Conférence Devoxx 2022
 D'un hack au datamesh, l'évolution du data engineering... (Simon Maurin et Stéphanie Baltus-Bergamo) 
 chez leboncoin.fr
 
+https://youtu.be/ZJCOdBpwjQc
+
 ## 2006, le script shell
 
 2006, shell script qui envoie un emial au gems dumarketing qui font un copie/coller dans un Excel
@@ -88,7 +90,7 @@ L'architecture devient cela :
 > <img src="/blog/2022/2022-04-20/img_2023-07-13_18-44-14.png">
 
 
-# 2018, la direction veut un retour sur investissement
+## 2018, la direction veut un retour sur investissement
 
 On se fait rattraper par la direction qui veut de l'IA, de la valeur ajoutée... (service de recommandation d'annonces)
 
@@ -107,7 +109,7 @@ On ajoute un autre microservice sur kunernetes monitoré sur datadog et envoie d
 
 > <img src="/blog/2022/2022-04-20/img_2023-07-13_18-51-58.png">
 
-# 2019, Data Mesh
+## 2019, Data Mesh
 
 On se fait une fois de plus rattrapé par l'organisation.
 Les effctifs ont doublé, les features teams permettent de gérer cela, mais au noveau Data on est resté en équipe centralisé (et ne sont donc pas scalable et deviennent bottleneck)
@@ -130,21 +132,113 @@ Elle propose un contre modèle, qui propose de décentraliser cette approche (l'
 
 - Il faut remettre les compétences data engineering et le code de date à enginering dans les features team, pas de coupure technologique, et faire du Domain Driven Design de bout en bout. Les features  teams chez nous opèrent les services, applicatifs, les APIs, les flux d'events mais aussi les pipelines et les dataset
 qui sont construits on top (qui peuvent être considérés comme des interfaces vers les autres équipes)
-- cela sáppuie sur deux éléments
+- cela s'appuie sur deux éléments
     - un socle standard qui permet l'intéropabilité (en haut)
     - une plateforme (en bas) qui en gros permet de servir toute la partie infre aui est un peu lourde à mettre en place (flux kafka, bucket S3, cluster Spark à la demande, l'orchestration)
 
 
 > <img src="/blog/2022/2022-04-20/img_2023-07-13_19-03-53.png">
 
+### Global governance and open standards
+
+
 Le socle standard du haut, on l'a presque avec nos règles sur la facon de gérer nos interfaces au desssus du bus d'events, il suffit de les porter jusqu'au Data Lake (S3 et batch)
 
 > <img src="/blog/2022/2022-04-20/img_2023-07-13_19-16-19.png">
 
+### Côté people
+
 Côté People, on descend les gens qui travaillainet sur le système de reco, pour en faire une vraie feature team, et on injecte des data engineers dans les équipes qui ont des vrais besoin (on ne peut pas faire de big bang). Et les data engineers qui restent centralisés construisent la data Infra as a platform 
 
 
+### Investissement sur la Data Infrastructure as a Platform.
+
+On investit assez lourdement sur cette Data Infrastructure as a Platform sur 4 axes
+#### Self-Serve Data Infra
+
+> <img src="./img_2023-07-13_19-23-19.png">
+
+En repo Git avec la CI/CD au dessus sur lequel les DEV viennent déposer des ficheirs déscriptif de l'infrastructure Data qu'ils veulent créér (généralement des topics Kafka) : 
+- Topologie (flux d'événmenets, job queue, buffer)
+- T-shirt sizing
+- Scope (public/privé)
+- stratégie d'encoding si nécessaire et les schémas
+- info sur la criticité des infos personnelles qu'il y a dans le flux
+- le domaine auquel le flux se rattache
+- l'équipe propriétaire
+- la lsite des producteurs et consummers au sens applicatif du terme
+
+> <img src="./img_2023-07-13_19-22-59.png">
+
+- Cela passe par un validateur qui vérifie que la conf est déployable mais aussi qu'elle respecte les normes de namimg...
+- la CD va aller provisionner 
+    - les topics kafka
+    - schema dans registry
+    - secrets des applicatifs
+    - trigger l'archiver pour qu'il vienne archiver ce topic pour qu'il arrive sur S3
+    - provisionne le bucket S3
+    - provisionne les schéma Athena (outl qui permet de faire du SQL on top du Data Lake S3)
+
+> <img src="./img_2023-07-13_19-23-03.png">
+
+Très positif car :
+- automatise des choses sans valeur ajouté
+- renforce les standards (nommage, etc..)
+
+#### Data Discovery
+
+> <img src="./img_2023-07-13_19-23-52.png">
+
+On a créé un outil de data discovery, un search interne avec qui agrège l'ensemble des sources. Pour le PO ou Data Scientist d'aller trouver les sources pour analyses sur leus domaines métier, soit pour explorer ce qu'ils pourraient utiliser pour construire des modèles
+
+> <img src="./img_2023-07-13_19-24-16.png">
+
+#### Data Quality Monitoring
+
+> <img src="./img_2023-07-13_19-24-20.png">
+
+On a fait aussi un petit tooling de monitoring de la data quality. Assez simple, petit consummer kafka sur lequel on charge des règles métier, des tests métiers, qu'on va jouer sur les événments et qui envoie des metrics dans Datadog
+
+Permet d'avoir ce genre de dashboard sur les topics. souvent en mode contract testing pour venir tester les assumptions sur les flux qu'on vient consommer des autres équipes
+
+> <img src="./img_2023-07-13_19-24-48.png">
+
+#### MLOPS
+
+Dernier axe sur lequel on  investit encore beaucoup
+MLOPS = le DEVOPS du ML
+
+> <img src="./img_2023-07-13_19-46-22.png">
+
+1. Les Data Engineers (DE) qui s'occupe de fetcher, de faire les premières analyses sur les jeux de données et de les fournir au Data Scietist (DS)
+2. Les DS explore dessus, crée un modèle
+3. le modèle créé, ils le redonne au DE ou à des ML Enginner (pareil chez leboncoin) qui écrivent le pipeline qui fait que le modèle se maintient en vie et continue de se déployer
+
+Que moyennement satisfaisant car les DS sont assez loin de l'infra, des pipelines, ...on sépare l'OPS des gens qui écrivent la logique . La boucle de feedback n'est pas terrible
+
+> <img src="./img_2023-07-13_19-25-11.png">
+
+L'idée c'est de les rapprocher. 
+
+- On commence la phase d'expérimentation par l'écriture de la piepleine constuits par les DE et les DS qui travaillent ensemble
+- la CI/cD déploie automatiquement (dès qu'ils sont "un peu sec")
+
+On a durant le cycle d'experimemtation le même process que ensuite pendant le déploiement récurrent du modèle (on est plus près des contrainte qu'on va trouver en PROD)
+
+Pour cela :
+- On a des pipeleines sur étagère (skeletons)
+- on a ajouté à la partie CI/CD qui suit la gestion du code des pipeline une facon de suivre le verionning du dataset, des modèles, et des stats au dessus (on voit l'évolution des stats du modèle dans le temps depuis la période d'expérimentation)
+- on a un peu rationnaliser l'accès au feature. Une feature est un KPI qui sert d'entrée à un modèle (je vais recevoir des caillous de DS dans la salle...) au moment du training et aussi potentiellement au moment du service. L'idée du Feature Store c'est que plutôt que de réinventer à chaque fois, on les centralise dans une soltion qui permet de les serbir à la fois en synchrone et en batch 
+
+> <img src="./img_2023-07-13_19-26-04.png">
 
 
+## Ce qu'il reste à faire
+
+> <img src="./img_2023-07-13_21-00-10.png">
+
+> <img src="./img_2023-07-13_21-00-20.png">
+
+> <img src="./img_2023-07-13_21-00-28.png">
 
 
