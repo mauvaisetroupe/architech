@@ -1,7 +1,7 @@
 ---
 title: "Interview sur le darwinisme numérique avec Didier Girard"
 date: 2022-02-17
-tags: [Digital transformation, Career Path]
+tags: [Digital transformation, Career Path, Cast Codeurs]
 categories: [French, Podcast Review]
 ---
 

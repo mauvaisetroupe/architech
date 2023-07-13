@@ -1,9 +1,11 @@
 ---
-title: "Electro Monkeys - La donnée en pratique avec Aurélien Allienne"
+title: "La donnée en pratique avec Aurélien Allienne"
 date: 2022-04-20
-tags: [Architecture, Data]
+tags: [Architecture, Data, Electro Monkeys]
 categories: [French, Podcast Review]
 ---
+
+Electro Monkeys - La donnée en pratique avec Aurélien Allienne
 
 Ces dernières années, on fait vraiment grand cas de la donnée. Mais ne vous êtes-vous jamais demandé de quoi était faite la donnée, ou en d'autres termes : qu'est-ce qui constitue la donnée ? Une fois les data points établis, que faire de la donnée ? Est-ce qu'elle est stockée, transformée, manipulée ou analysée ? Et si oui comment, par qui et à quelle fin ?
 

@@ -1,7 +1,7 @@
 ---
-title: "Electro Monkeys - Team Topologies"
+title: "Team Topologies"
 date: 2023-02-21
-tags: [Organization, DevOps]
+tags: [Organization, DevOps, Electro Monkeys ]
 categories: [French, Podcast Review]
 ---
 

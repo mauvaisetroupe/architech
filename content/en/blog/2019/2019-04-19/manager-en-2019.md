@@ -1,5 +1,5 @@
 ---
-title: "Devoxx 2019 - Être ou ne pas être manager en 2019 "
+title: "Être ou ne pas être manager en 2019 "
 date: 2019-04-19
 tags: [Career Path, Devoxx]
 categories: [French, Conference Review]
