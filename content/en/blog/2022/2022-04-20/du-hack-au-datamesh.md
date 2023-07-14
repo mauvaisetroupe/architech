@@ -1,7 +1,7 @@
 ---
 title : D'un hack au datamesh, l'évolution du data engineering... 
 date: 2022-04-20
-tags: [Architecture, Data Engineering, Data Mesh, Devoxx]
+tags: [Architecture, Data Engineering, Datamesh, Data, Devoxx]
 categories: [French, Conference Review]
 ---
 
