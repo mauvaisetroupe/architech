@@ -171,7 +171,7 @@ On retrouve aujourd'hui 3 patterns.
 - Cela bouge très vite, il faut se former sans tomber dans le buzzword (datamesh c'est biem, mais pas pour tout et c'est encore récent). La data ressembel au javascript il y a quelques années avec des librairies qui apparaissent tout le temps
 
 ## Se lancer dans la data
-- pas une voie royale
+- il n'y a pas une voie royale
 - aujourd'hui la data, c'est beaucoup de python, de SQL et une tête bien faite, accessible à tous les développeurs
 - le cloud, les librairies de processing, cela s'apprend sur le tas
 - lorsqu'on a compris qhe le traitement pouvait être distribué, le reste c'est de l'adaptation de ce qu'on sait faire 
