@@ -2,7 +2,7 @@
 title: Architech.lu
 ---
 
-{{< blocks/cover title="Welcome to ArchiTech.lu" image_anchor="bottom " height="auto" >}}
+{{< blocks/cover title="Welcome to ArchiTech.lu" image_anchor="bottom " height="full" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/deeplearning">
   My Deep Learning notes <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
@@ -16,9 +16,12 @@ title: Architech.lu
 
 {{% blocks/lead color="primary" %}}
 
-Hey there, I'm Lionel Coquin, an IT architect with over 20 years of experience in Luxembourg. 
+I'm Lionel Coquin, an IT architect with over 20 years of experience in Luxembourg. 
 
-Welcome to ArchiTech.lu, my blog and article platform where I share my continuous learning journey with you. Here, you'll find insights, discoveries, and practical knowledge I've gained throughout my career.
+Welcome to ArchiTech.lu, my blog and article platform where I share my continuous learning journey with you. 
+
+
+<!-- Here, you'll find insights, discoveries, and practical knowledge I've gained throughout my career. -->
 
 <!-- ArchiTech.lu is your ultimate destination for exploring the cutting-edge world of IT architecture, deep learning, and machine learning. As an IT architect, I'm passionate about staying ahead of the curve and continuously expanding my expertise. Through this platform, I aim to empower individuals, businesses, and organizations by sharing the latest trends and best practices in IT architecture. -->
 <!-- 
@@ -56,6 +59,11 @@ Find me on github
 {{% blocks/feature icon="fab fa-twitter" title="Follow me on Twitter!" url="https://twitter.com/mauvaisetroupe" %}}
 For announcement of latest features etc.
 {{% /blocks/feature %}}
+
+
+
+ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy). Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+{.text-center .fs-6}
 
 
 {{% /blocks/section %}}
