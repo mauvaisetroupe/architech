@@ -29,6 +29,25 @@ Common points between the Machine Learning Specialization and the Deep Learning 
 - Both specializations are offered by Coursera, a leading online learning platform.
 - Both specializations cover the use of Python for machine learning (especially [Numpy](https://numpy.org) and [Tensorflow](https://www.tensorflow.org/))
 
+
+Machine Learning Specialization groups 3 lessons:
+{{< children page="machine-learning-specialization" >}}
+
+Deep Learning Specialization groups 5 lessons:
+{{< children page="deep-learning-specialization" >}}
+
+There is an overlap between the two specializations, or more specifically, the Machine Learning specialization provides more detailed explanations in certain sections compared to the Deep Learning specialization. This is  the case for the following points: 
+
+|Concept|Machine Learning|Deep Learning|
+|-|-|-|
+|Gradient Descent|[here](./machine-learning-specialization/c1-supervised-ml/week1/#gradient-descent)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#gradient-descent)|
+|Computation Graph|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#computation-graph-optional)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#computation-graph)|
+|Forward Propagation|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week1/#inference-making-predictions-forward-propagation)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/)|
+|Back Propagation Intuition |[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#back-propagation-optional)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#backpropagation-intuition-optional)|
+|Activation functions|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#choosing-activation-functions)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#activation-functions)|
+|Why do you need Non-Linear Activation Functions|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#why-do-we-need-activation-functions)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#why-do-you-need-non-linear-activation-functions)|
+|Vectorization|[here](./machine-learning-specialization/c1-supervised-ml/week2/#vectorization-part-1)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#vectorization)|
+
 ## Andrew Ng
 
 Andrew Ng is a pioneering figure in machine learning. His career includes co-founding Google Brain, where he advanced AI research, and Stanford University's AI Lab. 

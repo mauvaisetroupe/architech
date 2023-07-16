@@ -1,0 +1,10 @@
+{{- $pageSlug := .Get "page" -}}
+{{- $currentPage := .Page.Site.GetPage $pageSlug -}}
+
+{{- if $currentPage -}}
+  <ul>
+  {{- range $currentPage.Pages -}}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{- end -}}
+  </ul>
+{{- end -}}

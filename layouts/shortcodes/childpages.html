@@ -1,0 +1,40 @@
+{{ $level := .Get "level" }}
+{{ if not $level }}
+  {{ $level = 3 }} <!-- Default level: 3 -->
+{{ end }}
+
+
+{{ $level = int $level}}
+<ul>
+  {{ range .Site.Pages }}
+    {{ if eq .Parent $.Page }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ $parent := . }}
+        {{ $level1 := sub $level 1 }}
+        {{ if gt $level1 0 }}
+          <ul>
+            {{ range .Site.Pages }}
+              {{ if eq .Parent $parent }}
+                <li>
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  {{ $parent2 := . }}
+                  {{ $level2 := sub $level1 1 }}
+                  {{ if gt $level2 0 }}
+                    <ul>
+                      {{ range .Site.Pages }}
+                        {{ if eq .Parent $parent2 }}
+                          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+      </li>
+    {{ end }}
+  {{ end }}
+</ul>

@@ -1,5 +1,5 @@
 ---
-title: "C2 - Advanced Learning Algorithms"
+title: "C2 - Advanced Learning Algorithms (Neural Networks and Decision Trees)"
 type: docs
 ---
 
