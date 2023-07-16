@@ -8,9 +8,11 @@ type: "docs"
 
 ## Notes from Coursera Specializations
 
-In this section of the website, you'll find my detailed notes and insights from the Coursera specializations I completed: [Machine Learning](./machine-learning-specialization/) and [Deep Learning](./deep-learning-specialization/). 
+In this section of the website, you'll find my detailed notes and insights from the Coursera specializations I completed:
+- Coursera Machine Learning Specialization: https://www.coursera.org/specializations/machine-learning
+- Coursera Deep Learning Specialization: https://www.coursera.org/specializations/deep-learning
 
-These specializations have been instrumental in expanding my knowledge and understanding of these exciting fields.
+These specializations have greatly helped me learn and understand more about these exciting fields.
 
 
 ## Machine Learning Specialization vs. Deep Learning Specialization on Coursera
@@ -26,10 +28,6 @@ Common points between the Machine Learning Specialization and the Deep Learning 
 - Both specializations are self-paced and can be completed at your own pace.
 - Both specializations are offered by Coursera, a leading online learning platform.
 - Both specializations cover the use of Python for machine learning (especially [Numpy](https://numpy.org) and [Tensorflow](https://www.tensorflow.org/))
-
-Where to find them : 
-- Coursera Machine Learning Specialization: https://www.coursera.org/specializations/machine-learning
-- Coursera Deep Learning Specialization: https://www.coursera.org/specializations/deep-learning
 
 ## Andrew Ng
 
