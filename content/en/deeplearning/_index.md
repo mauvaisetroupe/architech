@@ -40,13 +40,13 @@ There is an overlap between the two specializations, or more specifically, the M
 
 |Concept|Machine Learning|Deep Learning|
 |-|-|-|
-|Gradient Descent|[here](./machine-learning-specialization/c1-supervised-ml/week1/#gradient-descent)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#gradient-descent)|
-|Computation Graph|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#computation-graph-optional)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#computation-graph)|
-|Forward Propagation|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week1/#inference-making-predictions-forward-propagation)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/)|
-|Back Propagation Intuition |[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#back-propagation-optional)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#backpropagation-intuition-optional)|
-|Activation functions|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#choosing-activation-functions)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#activation-functions)|
-|Why do you need Non-Linear Activation Functions|[here](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#why-do-we-need-activation-functions)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#why-do-you-need-non-linear-activation-functions)|
-|Vectorization|[here](./machine-learning-specialization/c1-supervised-ml/week2/#vectorization-part-1)|[here](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#vectorization)|
+|Gradient Descent|[c1-supervised-ml/week1](./machine-learning-specialization/c1-supervised-ml/week1/#gradient-descent)|[c1-neural-networks-and-deep-learning/week2](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#gradient-descent)|
+|Vectorization|[c1-supervised-ml/week2](./machine-learning-specialization/c1-supervised-ml/week2/#vectorization-part-1)|[c1-neural-networks-and-deep-learning/week2](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#vectorization)|
+|Forward Propagation|[c2-advanced-learning-algorithms/week1](./machine-learning-specialization/c2-advanced-learning-algorithms/week1/#inference-making-predictions-forward-propagation)|[c1-neural-networks-and-deep-learning/week3](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/)|
+|Computation Graph|[c2-advanced-learning-algorithms/week2](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#computation-graph-optional)|[c1-neural-networks-and-deep-learning/week2](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week2/#computation-graph)|
+|Back Propagation Intuition |[c2-advanced-learning-algorithms/week2](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#back-propagation-optional)|[c1-neural-networks-and-deep-learning/week3](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#backpropagation-intuition-optional)|
+|Activation functions|[c2-advanced-learning-algorithms/week2/](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#choosing-activation-functions)|[c1-neural-networks-and-deep-learning/week3](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#activation-functions)|
+|Why Non-Linear Activation|[c2-advanced-learning-algorithms/week2/](./machine-learning-specialization/c2-advanced-learning-algorithms/week2/#why-do-we-need-activation-functions)|[c1-neural-networks-and-deep-learning/week3](./deep-learning-specialization/c1-neural-networks-and-deep-learning/week3/#why-do-you-need-non-linear-activation-functions)|
 
 ## Andrew Ng
 
