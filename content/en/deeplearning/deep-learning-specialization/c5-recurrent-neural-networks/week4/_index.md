@@ -240,6 +240,16 @@ Let's say your data set has the correct french to English translation, `Jane Vis
 
 In other words, all that masked multi-head attention does is repeatedly pretends that the network had perfectly translated the first few words and hides the remaining words to see if, given a perfect first part of the translation, the neural network can predict the next word in the sequence accurately.
 
+> From assignment
+
+There are two types of masks that are useful when building your Transformer network: the padding mask and the look-ahead mask :
+- Padding masks are used to mask out padding tokens in the input sequence. Padding tokens are typically used to pad the sequence to a fixed length, and they do not contain any semantic information. Masking out padding tokens prevents the model from attending to them, which can improve the efficiency of the model and prevent it from learning spurious correlations.
+- Look-ahead masks are used to prevent the decoder from attending to future tokens in the input sequence. This is important because the decoder should only be able to attend to tokens that have already been generated. Masking out future tokens prevents the decoder from "cheating" by looking at the target sequence before it has been generated.
+
+
+
+
+
 Since the paper attention is all you need came out, there have been many other iterations of this model such as BERT or DistilBERT, which you get to explore yourself this week.
 
 
