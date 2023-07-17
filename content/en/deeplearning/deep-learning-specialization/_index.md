@@ -3,12 +3,9 @@ title: Deep Learning Specialization
 type: "docs"
 weight: 20
 description: >
-  This is my personal notes of https://mauvaisetroupe.github.io/deep-learning-specialization-coursera
+  This is my personal notes of https://www.coursera.org/specializations/deep-learning
 
 ---
-
-
-Please visit :  https://mauvaisetroupe.github.io/deep-learning-specialization-coursera
 
 
 # deep-learning-specialization-coursera

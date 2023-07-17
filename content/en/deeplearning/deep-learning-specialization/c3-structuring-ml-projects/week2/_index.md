@@ -172,7 +172,7 @@ Artificial data synthesis example : generated car using computer graphics.
 
 See pdf notes provided by Courseara : [5-Transfer_Learning.pdf](./5-Transfer_Learning.pdf)
 
-Also see : https://github.com/mauvaisetroupe/machine-learning-specialization-coursera/tree/main/c2-advanced-learning-algorithms/week3#transfer-learning-using-data-from-a-different-task
+Also see [Transfer Learning on Machine Learning Specialization](../../../machine-learning-specialization/c2-advanced-learning-algorithms/week3/#transfer-learning-using-data-from-a-different-task)
 
 Transfer learning refers to using the neural network knowledge for another application.
 

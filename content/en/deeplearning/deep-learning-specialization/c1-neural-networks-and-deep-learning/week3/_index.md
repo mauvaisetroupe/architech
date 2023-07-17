@@ -71,7 +71,8 @@ Instead of implementing a loop on differents training example, we build a matrix
 
 ### Activation Functions
 
-Also see : https://github.com/mauvaisetroupe/machine-learning-specialization-coursera/blob/main/c2-advanced-learning-algorithms/week2/README.md#choosing-activation-functions
+[Cf. Choosing activation functions on Machine Learning Specialization](../../../machine-learning-specialization/c2-advanced-learning-algorithms/week2/#choosing-activation-functions)
+
 
 In the previous examples, we used sigmoid function. Sigmoid function is called an **activation function**.
 
@@ -90,7 +91,8 @@ Rules of thumb for choosing activation functions :
 
 ### Why do you need Non-Linear Activation Functions?
 
-https://github.com/mauvaisetroupe/machine-learning-specialization-coursera/blob/main/c2-advanced-learning-algorithms/week2/README.md#why-do-we-need-activation-functions
+[Cf. Activation Functions on Machine Learning Specialization](../../../machine-learning-specialization/c2-advanced-learning-algorithms/week2/#why-do-we-need-activation-functions)
+
 
 > <img src="./images/w03-07-Why_do_you_need_Non-Linear_Activation_Functions/img_2023-03-13_22-23-56.png">s
 
@@ -111,7 +113,7 @@ Technically, derivative not defined in zero, but for algorithm, could consider g
 
 ### Backpropagation Intuition (Optional)
 
-This slide for logistic regression explained here : https://github.com/mauvaisetroupe/deep-learning-specialization-coursera/tree/main/c1-neural-networks-and-deep-learning/week2#logistic-regression-gradient-descent
+[Cf. Logistic Regression Gradient Descent](../week2/#logistic-regression-gradient-descent)
 
 > <img src="./images/w03-10-Backpropagation_Intuition/img_2023-03-15_07-02-17.png">
 
@@ -119,12 +121,14 @@ We have exactly the same calculus for a neural network with two layers :
 
 > <img src="./images/w03-10-Backpropagation_Intuition/img_2023-03-15_07-02-20.png">
 
-Explanation of matrix usage to compute over all training examples (stacking them into a matrix) is here : https://github.com/mauvaisetroupe/deep-learning-specialization-coursera/tree/main/c1-neural-networks-and-deep-learning/week3#explanation-for-vectorized-implementation
+Explanation of matrix usage to compute over all training examples (stacking them into a matrix) is [here](#explanation-for-vectorized-implementation)
+
 
 > <img src="./images/w03-10-Backpropagation_Intuition/img_2023-03-15_09-15-43.png">
 
 
-We've seen here the gradient decsent algorith here : https://github.com/mauvaisetroupe/deep-learning-specialization-coursera/tree/main/c1-neural-networks-and-deep-learning/week2#vectorizing-logistic-regressions-gradient-output
+We've seen here the [gradient decsent algorith](../week2/#vectorizing-logistic-regressions-gradient-output)
+
 
 > <img src="./images/w03-10-Backpropagation_Intuition/img_2023-03-15_12-13-43.png">
 

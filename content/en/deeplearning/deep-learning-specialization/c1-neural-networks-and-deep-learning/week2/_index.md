@@ -95,7 +95,9 @@ Loss function is defined to a single train example. **Cost function** is for the
 
 ### Gradient Descent
 
-https://github.com/mauvaisetroupe/machine-learning-specialization-coursera/blob/main/c1-supervised-ML-regression-and-classification/week1/README.md#gradient-descent
+[Cf. gradient descent on Machine Learning Specialization](../../../machine-learning-specialization/c1-supervised-ml/week1/#gradient-descent)
+
+
 
 > <img src="./images/w02-04-Gradient_Descent/img_2023-03-11_15-31-29.png">
 
@@ -117,14 +119,16 @@ Inthe code, by convention we use **dw** and **db**
 
 ### Computation Graph
 
-https://github.com/mauvaisetroupe/machine-learning-specialization-coursera/blob/c1e3ee9a248c4dfa2c129fc1d5bd7d5b64b71f78/c2-advanced-learning-algorithms/week2/README.md#computation-graph-optional
+[Cf. Computation Graph on Machine Learning Specialization](../../../machine-learning-specialization/c2-advanced-learning-algorithms/week2/#computation-graph-optional)
+
 
 > <img src="./images/w02-07-Computation_Graph/img_2023-03-11_15-47-28.png">
 
 
 ### Derivatives with a Computation Graph
 
-https://github.com/mauvaisetroupe/machine-learning-specialization-coursera/blob/c1e3ee9a248c4dfa2c129fc1d5bd7d5b64b71f78/c2-advanced-learning-algorithms/week2/README.md#computation-graph-optional
+[Cf. Computation Graph on Machine Learning Specialization](../../../machine-learning-specialization/c2-advanced-learning-algorithms/week2/#computation-graph-optional)
+
 
 <!--
 > <img src="./images/w02-08-Derivatives_with_a_Computation_Graph/img_2023-03-11_15-49-21.png">
