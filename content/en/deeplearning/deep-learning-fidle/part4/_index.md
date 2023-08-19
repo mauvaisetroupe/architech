@@ -354,24 +354,6 @@ if torch.cuda.is_available():
 ```
 
 
-### 
-
-#### Tensorflow
-
-```python
-```
-
-#### Pytorch
-
-```python
-```
-
-
-
-
-
-
-
 <!-- 
 
 ## Seq 08 :  "Attention Is All You Need", quand les Transformers changent la donne (HB,NC)
