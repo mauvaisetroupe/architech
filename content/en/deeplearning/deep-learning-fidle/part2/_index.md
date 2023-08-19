@@ -25,8 +25,32 @@ A noter que lorsqu'on parle des réseau actuels, on parle du nombre de paramètr
 
 
 
-- Session de live coding :
-    - Recognizing handwritten numbers (implemented via DNN on previous sequence, now done with CNN). Le résultat est meilleur en CNN vs DNN (accuracy 98% vs. 95%)
+#### Session de live coding
+
+- Recognizing handwritten numbers (implemented via DNN on [previous sequence](../part1#data-and-neurons), now done with CNN)
+- Le résultat est meilleur en CNN vs DNN (accuracy 98% vs. 95%)
+
+
+```python
+model = keras.models.Sequential()
+
+model.add( keras.layers.Input((28,28,1)) )
+
+model.add( keras.layers.Conv2D(8, (3,3),  activation='relu') )
+model.add( keras.layers.MaxPooling2D((2,2)))
+model.add( keras.layers.Dropout(0.2))
+
+model.add( keras.layers.Conv2D(16, (3,3), activation='relu') )
+model.add( keras.layers.MaxPooling2D((2,2)))
+model.add( keras.layers.Dropout(0.2))
+
+model.add( keras.layers.Flatten()) 
+model.add( keras.layers.Dense(100, activation='relu'))
+model.add( keras.layers.Dropout(0.5))
+
+model.add( keras.layers.Dense(10, activation='softmax'))
+```
+
 - A propos des GPU :
     - cela aide pour les CNN car le GPU c'est beaucoup de threads, très parallélisable, donc sur un couche du CNN on peut distribuer chaque "kernel" ou filtre
     - Pour Imagenet (1000 classes, 1.000.000 d'images):
