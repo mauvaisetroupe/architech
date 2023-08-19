@@ -67,6 +67,51 @@ output, memory_state, carry_state = lstm(inputs)
     - [LSTM](/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week1/#long-short-term-memory-lstm)
     - [Different Types of RNNs](/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week1/#different-types-of-rnns) (OneToOne, OneToMany,... )
 
+
+
+
+#### Session de live coding :
+
+##### Prediction of a 2D ladybug trajectory with a RNN
+
+```python
+# Train generator, to genarate sequences fron the global sequence (total of the position)
+from tensorflow.keras.preprocessing.sequence import TimeseriesGenerator
+train_generator = TimeseriesGenerator(x_train, x_train, length=sequence_len,  batch_size=batch_size)
+test_generato
+```
+
+```python
+# Create the model with sequential
+model = keras.models.Sequential()
+model.add( keras.layers.InputLayer(input_shape=(sequence_len, features_len)) )
+# GRU with 200 units, return_sequences=False we only want the last position (sequence to vector)
+model.add( keras.layers.GRU(200, return_sequences=False, activation='relu') )
+# GRU output is a vector of 200 positions (because 200 units), we add Dense layer of 2 (x,y)
+model.add( keras.layers.Dense(features_len) )
+
+```
+
+```python
+batch_size  = 512
+epochs      =  16
+# We pass the generator to fit method
+history = model.fit(  x_train, y_train,
+                      batch_size      = batch_size,
+                      epochs          = epochs,
+                      verbose         = fit_verbosity,
+                      validation_data = (x_test, y_test))
+
+```
+
+##### Guess what the weather will be like !
+
+- SYNOP meteorological data, can be found on : https://public.opendatasoft.com  
+- panda (qui est l'excel en ligne de commande), permet de faire de l'interpolation pour les données manquantes
+
+> <img src="./images/img_2023-08-19_15-04-11.png">
+
+
 <!-- ### Seq 07 :  Un détour par PyTorch
 
 ### Seq 08 :  "Attention Is All You Need", quand les Transformers changent la donne (HB,NC)
