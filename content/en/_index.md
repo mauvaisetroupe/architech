@@ -51,7 +51,7 @@ Find me on  LinkedIn
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
+{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/mauvaisetroupe" %}}
 Find me on github
 {{% /blocks/feature %}}
 
