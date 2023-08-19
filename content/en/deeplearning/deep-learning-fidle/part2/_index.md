@@ -3,7 +3,7 @@ type: docs
 title: "02. Les réseaux convolutifs"
 ---
 
-### Seq 02 :  Réseaux convolutifs, partie 1
+## Seq 02 :  Réseaux convolutifs, partie 1
 
 Comparaison intéressante du nombre de neurones selon les espèces
 A noter que lorsqu'on parle des réseau actuels, on parle du nombre de paramètres qui est plus le nombre de connexions entre les neurones, et non pas le nombre de neurones. Ainsi un modèle NLP de 150 milliards de paramètres, c'est 1000 fois moins que le nombre de synapses du cerveau humain, et donc le DL aujourd'hui c'est plus la souris ou l'insecte
@@ -25,7 +25,7 @@ A noter que lorsqu'on parle des réseau actuels, on parle du nombre de paramètr
 
 
 
-#### Session de live coding
+### Session de live coding
 
 - Recognizing handwritten numbers (implemented via DNN on [previous sequence](../part1#data-and-neurons), now done with CNN)
 - Le résultat est meilleur en CNN vs DNN (accuracy 98% vs. 95%)
@@ -60,7 +60,7 @@ model.add( keras.layers.Dense(10, activation='softmax'))
     - CNN est parfait pour image, parole
     - aujourd'hui, les Transformers savent tout faire, mais il leur faut beaucoup de données en input (gros dataset)
 
-### Seq 03 :  Réseaux convolutifs, partie 2
+## Seq 03 :  Réseaux convolutifs, partie 2
 
 - Cas pratique, dans un vrai cas, dans le vrai monde avec le German Traffic Sign Recognition Benchmark (GTSRB) : 50,000 photos, 40 classes
     - GTSRB1 :Data analysis and creation of a usable dataset
@@ -85,7 +85,7 @@ model.add( keras.layers.Dense(10, activation='softmax'))
 
 
 
-### Seq 04 :  Démystifier les outils mathématiques
+## Seq 04 :  Démystifier les outils mathématiques
 
 - Transformation de la représentation des données
     - Définition de la convolution

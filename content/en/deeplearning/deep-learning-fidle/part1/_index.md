@@ -4,9 +4,9 @@ title: "01. Introduction et concepts de base"
 ---
 
 
-### Seq 01 :  Contexte et historique, de la régression linéaire aux réseaux de neurones.
+## Seq 01 :  Contexte et historique, de la régression linéaire aux réseaux de neurones.
 
-#### Introduction Context, tools and ressources
+### Introduction Context, tools and ressources
 
 The Fourth Paradigm: Data-Intensive Scientific Discovery
 > <img src="./images/2023-08-17-18_30_27.png">
@@ -22,7 +22,7 @@ Les différents type de Machine Learning
 
 > <img src="./images/2023-08-17-18_41_01.png">
 
-#### From the linear regression to the first neuron
+### From the linear regression to the first neuron
 
 Explication de la notion de
 - Linear regression
@@ -33,9 +33,9 @@ Notion expliquée dans la formation [Machine Learning de Coursera](/deeplearning
 
 Une comparaison intéressante pour parler de l'Overfiting (surapprentissage) : plus un étudiant bosse ses exercices, mieux il saura les faire. Mais que ce passe-t-il avec les exercices de l'examen? La solution est donc de ne pas avoir une apprentissage trop poussé sur les exercices d’entraînement et/ou d'augmenter le nombre d’exercices de la phase d’entraînement.
 
-#### Neurones in controversy
+### Neurones in controversy
 
-##### Connectionnism vs Symbolic
+#### Connectionnism vs Symbolic
 
 Dualité de la définition de líntelligence :
 - Ability to perceive or infer information, and to retain it as knowledge to be applied towards adaptive behaviors within an environment or context ([Wikipedia](https://en.wikipedia.org/wiki/Intellilgence))
@@ -43,7 +43,7 @@ Dualité de la définition de líntelligence :
 
 > <img src="./images/2023-08-17-19_19_00.png">
 
-##### Historic evolution
+#### Historic evolution
 
 Ces deux approches ne sont pas incompatibles, et ces deux approches de l'intelligence donnent en informatique de très bons résultats, mais néanmoins voilà il y a quand même une forme de concurrence entre les deux.
 
@@ -81,7 +81,7 @@ Publication de référence : https://www.cairn.info/revue-reseaux-2018-5-page-17
 > <img src="./images/2023-08-17-19_23_00.png">
 
 
-#### Data and neurons
+### Data and neurons
 
 Session de live coding :
 - Wine quality prediction with a Dense Network (Regression with DNN)
