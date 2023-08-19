@@ -85,7 +85,26 @@ Publication de référence : https://www.cairn.info/revue-reseaux-2018-5-page-17
 
 Session de live coding :
 - Wine quality prediction with a Dense Network (Regression with DNN)
-- Recognizing handwritten numbers (Simple classification with DNN)
+
+
+- Recognizing handwritten numbers (Simple classification with DNN, will we implemented in CNN in [next sequence](../part2/#session-de-live-coding))
+```python
+hidden1     = 100
+hidden2     = 100
+
+model = keras.Sequential([
+    keras.layers.Input((28,28)),
+    keras.layers.Flatten(),
+    keras.layers.Dense( hidden1, activation='relu'),
+    keras.layers.Dense( hidden2, activation='relu'),
+    keras.layers.Dense( 10,      activation='softmax')
+])
+
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+```
+
 
 A noter que le second use case est basé sur le fameux MNIST (Modified National Institute of Standards and Technology) directement intégré dans Keras
 
