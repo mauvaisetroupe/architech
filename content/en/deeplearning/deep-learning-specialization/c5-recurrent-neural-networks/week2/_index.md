@@ -27,7 +27,7 @@ Learning Objectives
 
 NLP (Natural Language Processing) has been revolutionized by deep learning. One of the key ideas is word embeddings, which is a way of representing words that let your algorithms automatically understand analogies like that, man is to woman, as king is to queen.
 
-- [Previously](../week1/README.md#notation), we use one-hot representation and vocabulary to encode words.
+- [Previously](../week1#notation), we use one-hot representation and vocabulary to encode words.
 - we use $O_{5391}$ to denote the one-hot vector with `1` in position `5391` (and `0` elseweher)
 - One of the weaknesses of this representation is that it treats each word as a thing in itself, and that it does not allow an algorithm to find common senses
     - even if algorithm has learned `I want a glass of orange juice`, algorithm cannot complete `I want a glass of apple ...` because there is no specific proximity between apple and orange (disatnce is the same between any pair of vectors)
