@@ -20,11 +20,55 @@ title: "03. Les réseaux récurrents"
 
 ### Données creuses / textuelles (Embedding)
 
+How to feed a neural network with text ?
+- « I've never seen a movie like this before. »
+- How to build a descriptor for this kind of data (text, DNA, ...)?
+
+#### Solution 1 : one hot vector
+
+> <img src="./images/img_2023-08-20_09-51-36.png">
+
+> <img src="./images/img_2023-08-20_09-51-57.png">
+
+#### Solution 2 : Using embedding
+
+> <img src="./images/img_2023-08-20_10-00-44.png">
+
+##### Contextual embedding - Keras
+
+Pour par exemple avoir une représentation dense spécialisée dans la critique de cinéma, car construit avec un jeu d'entrainement dédié
+
+> <img src="./images/img_2023-08-20_10-07-01.png">
+
+> <img src="./images/img_2023-08-20_10-10-52.png">
+
+##### Global embedding
+
+> <img src="./images/img_2023-08-20_10-13-01.png">
+
+> <img src="./images/img_2023-08-20_10-13-04.png">
+
+> <img src="./images/img_2023-08-20_10-13-07.png">
+
+> <img src="./images/img_2023-08-20_10-13-09.png">
+
+
+
+Références dans Coursera :
 - notion de vecteur creux ou [one-hot encoding](/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week1/#notation )
 - [Word Embedding](/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week2/#using-word-embeddings)
-- Live coding
-    - Guess whether a film review is positive or not based on the analysis of the text, using One-Hot encoding
-    - Guess whether a film review is positive or not based on the analysis of the text, using embedding.
+
+
+#### Live coding
+
+Guess whether a film review is positive or not based on the analysis of the text (from IMDB)
+- http://ai.stanford.edu/~amaas/data/sentiment/
+- Embeded in keras : https://www.tensorflow.org/api_docs/python/tf/keras/datasets
+
+Deux versions:
+- Guess whether a film review is positive or not based on the analysis of the text, using One-Hot encoding
+- Guess whether a film review is positive or not based on the analysis of the text, using Keras-embedding.
+
 
 ## Seq 06 :  Quand les données sont des séquences, les réseaux récurrents (RNN)
 
