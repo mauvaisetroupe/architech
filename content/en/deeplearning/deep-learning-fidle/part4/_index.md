@@ -6,6 +6,10 @@ title: "04. PyTorch"
 
 ## Seq 07 :  Un détour par PyTorch
 
+> <img src="./images/img_2023-08-19_18-10-44.png">
+
+> <img src="./images/img_2023-08-19_18-10-52.png">
+
 
 ### DNN - Define and compile the model 
 
@@ -354,30 +358,58 @@ if torch.cuda.is_available():
 ```
 
 
-<!-- 
+### Changer et adapter une architecture
 
-## Seq 08 :  "Attention Is All You Need", quand les Transformers changent la donne (HB,NC)
+You can construct a model with random weights by calling its constructor:
 
-## Seq 09 :  Travailler avec des données structurées : Graph Neural Network(GNN)
+```python
+import torchvision.models as models
+resnet18 = models.resnet18()
+alexnet = models.alexnet()
+vgg16 = models.vgg16()
+squeezenet = models.squeezenet1_0()
+densenet = models.densenet161()
+inception = models.inception_v3()
+googlenet = models.googlenet()
+shufflenet = models.shufflenet_v2_x1_0()
+mobilenet = models.mobilenet_v2()
+resnext50_32x4d = models.resnext50_32x4d()
+wide_resnet50_2 = models.wide_resnet50_2()
+mnasnet = models.mnasnet1_0()
+```
 
-## Seq 10 : Autoencodeur (AE) : un exemple d'apprentissage "self supervised"
+We provide pre-trained models, using the PyTorch torch.utils.model_zoo. These can be constructed by passing pretrained=True:
 
-## Seq 11 : Variational Autoencoder (VAE) : apprentissage "self supervised"
+```python
+import torchvision.models as models
+resnet18 = models.resnet18(pretrained=True)
+alexnet = models.alexnet(pretrained=True)
+squeezenet = models.squeezenet1_0(pretrained=True)
+vgg16 = models.vgg16(pretrained=True)
+densenet = models.densenet161(pretrained=True)
+inception = models.inception_v3(pretrained=True)
+googlenet = models.googlenet(pretrained=True)
+shufflenet = models.shufflenet_v2_x1_0(pretrained=True)
+mobilenet = models.mobilenet_v2(pretrained=True)
+resnext50_32x4d = models.resnext50_32x4d(pretrained=True)
+wide_resnet50_2 = models.wide_resnet50_2(pretrained=True)
+mnasnet = models.mnasnet1_0(pretrained=True)
+```
 
-## Seq 12 : Revue de projets Fidle Intégrée à la future journée Deep Learning pour la Science
+Besoin d’adapter la première et dernière couche si par exemple (MNIST)
+- Les entrées n’ont qu’un canal
+- Les sorties sont en dimension 10
 
-## Seq 13 : Generative Adversarial Networks (GAN)!
+> <img src="./images/img_2023-08-20_08-17-17.png">
 
-## Seq 14 : Diffusion model, text to image (HB,NC,MS)
+> <img src="./images/img_2023-08-20_08-17-22.png">
 
-## Seq 15 -  AI, droit, société et éthique (LR, BC, ...)
+> <img src="./images/img_2023-08-20_08-17-24.png">
 
-## Seq 16 : Apprendre plus vite et moins cher, optimiser l’apprentissage (BC,LH)
+> <img src="./images/img_2023-08-20_08-17-26.png">
 
-## Seq 17 :  Passer à la vitesse supérieure : l’accélération matérielle (BC,LH)
+### Conclusion
 
-## Seq 18 :  Tactiques et stratégies du Deep Reinforcement Learning
+> <img src="./images/img_2023-08-20_08-19-43.png">
 
-## Seq 19 :  Des neurones pour la physique, les physics-informed neural networks (PINNS)
 
-## Seq 20 :  Journée Deep Learning pour la Science - JDLS2023 -->
