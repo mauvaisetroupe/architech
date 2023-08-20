@@ -1,1 +1,1 @@
-rclone sync  --progress public/ ovh:architech/
+rclone sync --checksum --progress public/ ovh:architech/
