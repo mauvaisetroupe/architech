@@ -247,6 +247,42 @@ Mais le decoder n'est pas le m6eme que celui de GPT
 
 ### Le Pré-entraînement
 
+Le NLP offre diverses applications telles que la question-réponse, l'inférence de paraphrases, l'analyse grammaticale, la classification, et plus encore. Bien que ces tâches diffèrent, les modèles sous-jacents restent similaires pour différentes langues. Plutôt que d'effectuer des entraînements distincts pour chaque langue, il est plus efficace d'apprendre une fois pour toutes et d'adapter ensuite. Cela économise du temps, de l'argent et de l'énergie. L'objectif est d'utiliser ces connaissances pour diverses tâches linguistiques et d'optimiser les ressources.
+
+> <img src="./images/img_2023-08-20_13-46-24.png">
+
+#### Pré-entrainement de GPT
+
+- Le pré-entraînement de GPT implique la prédiction du mot suivant dans une phrase, sans accéder à la séquence entière (puisque masquée). On identifie le mot le plus proche dans le dictionnaire.  
+
+> <img src="./images/img_2023-08-20_13-48-08.png">
+
+#### Pré-entrainement de BERT
+
+- Pour BERT, la prédiction du mot suivant est trop simple, car la phrase complète est accessible. 
+- Avec Bert, on masque aléatoirement certains mots et tentons de les deviner. 
+- Les mots masqués sont remplacés par un token spécial appelé `mask`
+- Approximativement 15% des mots étaient originellement masqués dans l'article de Berthe, incluant parfois des mots non masqués (80% du temps), d'autres mots aléatoires (10% du temps) ou les mots originaux (10% du temps). Cela empêche le modèle de se focaliser uniquement sur le masque, l'incitant à prédire une variété de mots cachés.
+
+> <img src="./images/img_2023-08-20_14-00-55.png">
+
+
+Avec BERT, une deuxième méthode d'entraînement a été introduite, notamment dans l'article original de 2019. Cette approche, appelée "Next Sentence Prediction" (prédiction de la phrase suivante), consiste à prendre deux phrases au hasard. La première a une probabilité de 50% d'être suivie par la deuxième phrase qui lui succède, tandis que dans les autres 50% des cas, la deuxième phrase est choisie de manière indépendante. Les deux phrases sont ensuite introduites dans le modèle Transformer, séparées par un token spécifique, le "token séparateur". Cet objectif complète le premier, où les mots sont masqués, et concerne également les tokens de la deuxième phrase.
+
+> <img src="./images/img_2023-08-20_14-01-01.png">
+
+Ce second objectif a été supprimé car il dégradait les performances et ajoutait de la confusion.
+
+> <img src="./images/img_2023-08-20_14-01-04.png">
+
+#### Quelques remarques
+
+Il est essentiel de souligner que le pré-entraînement joue un rôle aussi crucial que l'architecture des Transformers. Initialement, les Transformers sont pré-entraînés avec des tâches fondamentales, puis affinés pour des tâches spécifiques. Leur succès résulte de cette combinaison entre l'architecture des Transformers et le processus de pré-entraînement.
+
+Lorsque nous parlons d'apprentissage supervisé, il convient plutôt de se référer à l'apprentissage auto-supervisé. Cette approche intelligente élimine le problème des labels inhérent à l'apprentissage supervisé. Il suffit d'avoir du texte ou d'autres données  (comme par exemple pour la génération de molécules sur base d'un laboratoire qui avait une grosse base de donnée) 
+
+C'est remarquable de constater que cette approche rappelle l'apprentissage chez les humains. Dans le langage, par exemple, nous apprenons en écoutant et en observant notre environnement. Cette méthodologie reflète notre apprentissage fondamental, basé sur l'observation de notre entourage. Finalement, la composante supervisée de notre apprentissage est relativement minimale par rapport à la vaste étendue de l'apprentissage que nous acquérons de notre environnement quotidien.
+
 ### Fine-Tuning
 
 ### Vision Transformer
