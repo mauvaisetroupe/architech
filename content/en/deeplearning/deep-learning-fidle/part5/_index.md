@@ -285,7 +285,77 @@ C'est remarquable de constater que cette approche rappelle l'apprentissage chez 
 
 ### Fine-Tuning
 
+- le transformer a été entrainé avec son pre-processing, le changer c'est donc compliqué
+- on change principalement la couche de prédiction (head)
+
+> <img src="./images/img_2023-08-20_14-13-27.png">
+
+#### Exemple, sur les commentaires d'IMDB. 
+
+Ces commentaires IMDB varient entre positifs, négatifs et neutres: 
+- Notre approche consiste à exploiter un modèle pré-entraîné tel que BERT (dont la tâche est juste de retrouver les mots cachés)
+- Dans cette démarche, nous prenons le modèle tel qu'il est, en utilisant spécifiquement le premier vecteur de la séquence, qui correspond au vecteur `CLS` (classification token). 
+- Ce vecteur est ensuite introduit dans un réseau dense, comportant une ou deux couches, par exemple. Le réseau produit trois scores en sortie, correspondant aux trois classes : positif, négatif et neutre. 
+- En fin de compte, ces scores subissent une opération softmax pour obtenir les probabilités respectives associées à chaque classe.
+
+> <img src="./images/img_2023-08-20_14-23-18.png">
+
+#### Prompting
+
+Valable que pour les très gros modèles, et les modèles génératifs (GPT3, Bloom)
+
+Le "prompting" exploite la capacité de ces modèles génératifs à produire des mots pour accomplir différentes tâches, en plus de la génération de texte. Prenons l'exemple de la classification de commentaires. Imaginons un ensemble de données comprenant des critiques et leurs étiquettes (positif, neutre, négatif). Pour utiliser cette approche, nous pouvons fournir au modèle Transformer une entrée telle que "la critique est" suivie d'un espace, et laisser le modèle générer le mot suivant. Ce mot généré pourrait être "positive", "neutre" ou "négative". Ainsi, le modèle pré-entraîné qui a été conçu pour générer du texte est maintenant exploité pour réaliser une tâche de classification.
+
+> <img src="./images/img_2023-08-20_14-24-19.png">
+
+On peut généraliser cela, dès qu'on a en entrée du texte, on y mettant un template pour obtenir des réponses (classification des commentaires IMDB, toxixité de certaines matières...)
+
+On peut aussi obtenir un modèle qui fait des résumés, en lui demandant : "résume ..."
+
+> <img src="./images/img_2023-08-20_14-24-21.png">
+
+Quelques exemples. Il y a tout une ingénieurie autour du prompting...
+
+> <img src="./images/img_2023-08-20_14-24-23.png">
+
+
 ### Vision Transformer
+
+> <img src="./images/img_2023-08-20_14-39-58.png">
+
+- imageGPT, un simple flatten pour passer de 2d à du 1d
+- et cela marche!
+
+> <img src="./images/img_2023-08-20_14-40-01.png">
+
+- Visual Transformer, on découpe l'image en "patch" et on fait un prétraitement (sorte d'embedding)
+- ce qui est très intéressant c'est qu'on a vraiment une une représentation visuelle de ce que fait l'attention 
+- on retrouve vraiment le terme d'attention, le réseau focalise sur une partie de l'image qui lui parait pertinente
+
+> <img src="./images/img_2023-08-20_14-40-03.png">
+
+L'attention axiale est une technique qui divise une séquence en rangées et colonnes, puis applique l'attention de manière séparée le long de ces deux axes pour optimiser les calculs d'attention dans les modèles Transformer
+
+> <img src="./images/img_2023-08-20_14-40-06.png">
+
+
+Papers:
+- Attention Is All You Need (https://arxiv.org/abs/1706.03762)
+- BERT (https://arxiv.org/abs/1810.04805)
+- GPT (https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
+- GPT3 (https://arxiv.org/abs/2005.14165)
+- T5 (https://arxiv.org/abs/1910.10683)
+- BLOOM (https://arxiv.org/abs/2211.05100)
+- Foundation Models (https://arxiv.org/abs/2108.07258)
+
+Book :
+- Natural Language Processing With Transformers: Building Language Applications With Hugging Face
+
+### Live coding
+- Seulement sur calculateur, ou éventuellement une partei sur PC gaming (et encore...)
+- 3 versions, PyTorch, PyTorch lightning, et Tensorflow
+- utilisation d'une librairie "transformers" de hugging face, pas seulement un zoo de modèles pré-entrainemés mais aussi une biblio python qui permet de faire facilement des Transformers  
+- A partir d'un DistilBERT pré-entrainé
 
 <!-- 
 
