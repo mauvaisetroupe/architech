@@ -7,6 +7,8 @@ description : Introduction to Graph Neural Network (GNN)
 
 ## Seq 09 :  Travailler avec des données structurées : Graph Neural Network(GNN)
 
+https://www.youtube.com/watch?v=3OQdq8gXbFE&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=10
+
 ### Introduction au GNN
 
 En machine learning (pour par exemple les CNN), un process très classique 

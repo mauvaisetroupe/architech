@@ -5,6 +5,8 @@ title: "02. Les réseaux convolutifs"
 
 ## Seq 02 :  Réseaux convolutifs, partie 1
 
+https://www.youtube.com/watch?v=S8gCPOIFYfM&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=3
+
 Comparaison intéressante du nombre de neurones selon les espèces
 A noter que lorsqu'on parle des réseau actuels, on parle du nombre de paramètres qui est plus le nombre de connexions entre les neurones, et non pas le nombre de neurones. Ainsi un modèle NLP de 150 milliards de paramètres, c'est 1000 fois moins que le nombre de synapses du cerveau humain, et donc le DL aujourd'hui c'est plus la souris ou l'insecte
 
@@ -62,6 +64,8 @@ model.add( keras.layers.Dense(10, activation='softmax'))
 
 ## Seq 03 :  Réseaux convolutifs, partie 2
 
+https://www.youtube.com/watch?v=Y_-dLWSiMjM&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=4
+
 - Cas pratique, dans un vrai cas, dans le vrai monde avec le German Traffic Sign Recognition Benchmark (GTSRB) : 50,000 photos, 40 classes
     - GTSRB1 :Data analysis and creation of a usable dataset
         - on met les 50.000 images dans un seul fichier H5 (éviter les accès fichiers)
@@ -86,6 +90,8 @@ model.add( keras.layers.Dense(10, activation='softmax'))
 
 
 ## Seq 04 :  Démystifier les outils mathématiques
+
+https://www.youtube.com/watch?v=Eqs_AeZvdRs&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=5
 
 - Transformation de la représentation des données
     - Définition de la convolution

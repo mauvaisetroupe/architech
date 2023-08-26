@@ -8,6 +8,7 @@ description : >
 
 ## Seq 10 : Réseaux autoencodeurs
 
+https://www.youtube.com/watch?v=rGz_NavEMmM&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=11
 
 ### Apprentissage "self supervised"
 
@@ -131,7 +132,62 @@ ae = keras.Model(inputs,outputs, name="ae")
 ae.compile(optimizer=keras.optimizers.Adam(), loss='binary_crossentropy')
 ```
 
+#### Train and Predict
+
+```python
+# ---- Callback : Images
+#
+fidle.utils.mkdir( run_dir + '/images')
+filename = run_dir + '/images/image-{epoch:03d}-{i:02d}.jpg'
+callback_images = ImagesCallback(filename, x=clean_test[:5], encoder=encoder,decoder=decoder)
+
+# ---- Callback : Best model
+#
+fidle.utils.mkdir( run_dir + '/models')
+filename = run_dir + '/models/best_model.h5'
+callback_bestmodel = tf.keras.callbacks.ModelCheckpoint(filepath=filename, verbose=0, save_best_only=True)
+
+# ---- Callback tensorboard
+#
+logdir = run_dir + '/logs'
+callback_tensorboard = TensorBoard(log_dir=logdir, histogram_freq=1)
+
+# callbacks_list = [callback_images, callback_bestmodel, callback_tensorboard]
+callbacks_list = [callback_images, callback_bestmodel]
+```
+
+```python
+history = ae.fit(noisy_train, clean_train,
+                 batch_size      = batch_size,
+                 epochs          = epochs,
+                 verbose         = fit_verbosity,
+                 validation_data = (noisy_test, clean_test),
+                 callbacks       = callbacks_list  )
+
+```
+
+```python
+denoised_test = model.predict(noisy_test)
+```
+
 > <img src="./images/img_2023-08-26_07-54-40.png">
+
+
+#### Looking atthe latent space
+
+- on prend l'encodeur
+- on fait une prediction juste à travers l'encodeur
+
+```python
+encoder=model.get_layer('encoder')
+z = encoder.predict(x_show)
+```
+
+- on choisit 2 axes parmis les 10 et on affiche un graphe 2D avec les points
+- on remarque que "naturellement", les points se regroupent dans l'espace latent (clusterisation)
+
+> <img src="./images/img_2023-08-26_08-19-19.png">
+
 
 
 ### Exemple 2 : Dual output  (debruiteur + classifieur)
@@ -139,26 +195,26 @@ ae.compile(optimizer=keras.optimizers.Adam(), loss='binary_crossentropy')
 ### Exemple 3 : Dual output +Inception
 
 
+## Seq 11 : Variational Autoencoder (VAE) : apprentissage "self supervised"
+
 
 <!--
 
 
-## Seq ### : Variational Autoencoder (VAE) : apprentissage "self supervised"
+## Seq 12 : Revue de projets Fidle Intégrée à la future journée Deep Learning pour la Science
 
-## Seq ### : Revue de projets Fidle Intégrée à la future journée Deep Learning pour la Science
-
-## Seq ### : Generative Adversarial Networks (GAN)!
+## Seq 13 : Generative Adversarial Networks (GAN)!
 
 ## Seq 14 : Diffusion model, text to image (HB,NC,MS)
 
-## Seq ### -  AI, droit, société et éthique (LR, BC, ...)
+## Seq 15 -  AI, droit, société et éthique (LR, BC, ...)
 
-## Seq ### : Apprendre plus vite et moins cher, optimiser l’apprentissage (BC,LH)
+## Seq 16 : Apprendre plus vite et moins cher, optimiser l’apprentissage (BC,LH)
 
-## Seq ### :  Passer à la vitesse supérieure : l’accélération matérielle (BC,LH)
+## Seq 17 :  Passer à la vitesse supérieure : l’accélération matérielle (BC,LH)
 
-## Seq ### :  Tactiques et stratégies du Deep Reinforcement Learning
+## Seq 18 :  Tactiques et stratégies du Deep Reinforcement Learning
 
 ## Seq 19 :  Des neurones pour la physique, les physics-informed neural networks (PINNS)
 
-## Seq ### :  Journée Deep Learning pour la Science - JDLS### -->
+## Seq 20 :  Journée Deep Learning pour la Science - JDLS### -->

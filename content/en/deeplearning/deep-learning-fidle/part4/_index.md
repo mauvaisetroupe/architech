@@ -6,6 +6,8 @@ title: "04. PyTorch"
 
 ## Seq 07 :  Un détour par PyTorch
 
+https://www.youtube.com/watch?v=brktdGzMHN8&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=8
+
 > <img src="./images/img_2023-08-19_18-10-44.png">
 
 > <img src="./images/img_2023-08-19_18-10-52.png">

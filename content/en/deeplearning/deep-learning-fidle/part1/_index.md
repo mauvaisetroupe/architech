@@ -6,6 +6,7 @@ title: "01. Introduction et concepts de base"
 
 ## Seq 01 :  Contexte et historique, de la régression linéaire aux réseaux de neurones.
 
+https://www.youtube.com/watch?v=aJHB9TadgAg&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=2
 ### Introduction Context, tools and ressources
 
 The Fourth Paradigm: Data-Intensive Scientific Discovery

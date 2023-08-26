@@ -5,6 +5,8 @@ title: "03. Les réseaux récurrents"
 
 ## Seq 05 :  Stratégies d'évaluation des modèles et Données creuses et de type textuelles (Embedding)
 
+https://www.youtube.com/watch?v=_zpguGC19UM&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=6
+
 ### Stratégies d'évaluation des modèles
 
 - Introduction d'un set de donnée de validation en plus du set de test et de training
@@ -71,6 +73,8 @@ Deux versions:
 
 
 ## Seq 06 :  Quand les données sont des séquences, les réseaux récurrents (RNN)
+
+https://www.youtube.com/watch?v=naCCxqMD13o&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=7
 
 - Neurone récurrent (unit)
 

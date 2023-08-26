@@ -5,9 +5,11 @@ title: "05. Transformers"
 
 ## Seq 08 :  "Attention Is All You Need"
 
+https://www.youtube.com/watch?v=L3DGgzIbKz4&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=9
 
-/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week3/#attention-model-intuition
-/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week4/
+
+- [Coursera - Attention Model Intuition ](/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week3/#attention-model-intuition)
+- [Coursera - Transformer Network](/deeplearning/deep-learning-specialization/c5-recurrent-neural-networks/week4/)
 
 
 ### Quand les Transformers changent la donne (HB,NC)
