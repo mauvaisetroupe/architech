@@ -191,11 +191,126 @@ z = encoder.predict(x_show)
 
 
 ### Exemple 2 : Dual output  (debruiteur + classifieur)
+- Objective :
+    - Using an uniq model for denoising and classifing
+    - Implement a dual output model
+    - Understand the Keras functional API
+- Dataset :
+    - MNIST
+
+
+> <img src="./images/img_2023-08-26_08-38-57.png">
+
+#### Encodeur
+
+```python
+inputs    = keras.Input(shape=(28, 28, 1))
+x         = layers.Conv2D(32, 3, activation="relu", strides=2, padding="same")(inputs)
+x         = layers.Conv2D(64, 3, activation="relu", strides=2, padding="same")(x)
+x         = layers.Flatten()(x)
+x         = layers.Dense(16, activation="relu")(x)
+z         = layers.Dense(latent_dim)(x)
+encoder = keras.Model(inputs, z, name="encoder")
+
+```
+
+#### Decoder
+
+```python
+inputs  = keras.Input(shape=(latent_dim,))
+x       = layers.Dense(7 * 7 * 64, activation="relu")(inputs)
+x       = layers.Reshape((7, 7, 64))(x)
+x       = layers.Conv2DTranspose(64, 3, activation="relu", strides=2, padding="same")(x)
+x       = layers.Conv2DTranspose(32, 3, activation="relu", strides=2, padding="same")(x)
+outputs = layers.Conv2DTranspose(1, 3, activation="sigmoid", padding="same")(x)
+
+decoder = keras.Model(inputs, outputs, name="decoder")
+# decoder.summary()
+```
+
+#### AE
+```python
+inputs    = keras.Input(shape=(28, 28, 1))
+
+latents   = encoder(inputs)
+outputs   = decoder(latents)
+
+ae = keras.Model(inputs,outputs, name='ae')
+```
+#### CNN
+
+```python
+hidden1     = 100
+hidden2     = 100
+
+inputs    = keras.Input(shape=(28, 28, 1))
+
+x         = keras.layers.Conv2D(8, (3,3),  activation='relu')(inputs)
+x         = keras.layers.MaxPooling2D((2,2))(x)
+x         = keras.layers.Dropout(0.2)(x)
+
+x         = keras.layers.Conv2D(16, (3,3), activation='relu')(x)
+x         = keras.layers.MaxPooling2D((2,2))(x)
+x         = keras.layers.Dropout(0.2)(x)
+
+x         = keras.layers.Flatten()(x)
+x         = keras.layers.Dense(100, activation='relu')(x)
+x         = keras.layers.Dropout(0.5)(x)
+
+outputs   = keras.layers.Dense(10, activation='softmax')(x)
+
+cnn       = keras.Model(inputs, outputs, name='cnn')
+```
+
+#### Final model
+
+```python
+inputs    = keras.Input(shape=(28, 28, 1))
+
+denoised = ae(inputs)
+classcat = cnn(inputs)
+
+model = keras.Model(inputs, [denoised, classcat])
+
+model.compile(optimizer='rmsprop', 
+              loss={'ae':'binary_crossentropy', 'cnn':'sparse_categorical_crossentropy'},
+              loss_weights=[1,1],
+              metrics={'cnn':'accuracy'} )
+```
 
 ### Exemple 3 : Dual output +Inception
+- Objective :
+    - Adding an inception part to our previous model
+    - Understand the Keras functional API
+- Dataset :
+    - MNIST
+
+```python
+inputs    = keras.Input(shape=(28, 28, 1))
+
+denoised = ae(inputs)
+
+branch_1 = cnn1(inputs)
+branch_2 = cnn2(inputs)
+
+x        = keras.layers.concatenate([branch_1,branch_2], axis=1)
+
+classcat = keras.layers.Dense(10, activation='softmax', name='cnn')(x)
+
+
+model = keras.Model(inputs, [denoised, classcat])
+
+model.compile(optimizer='rmsprop', 
+              loss={'ae':'binary_crossentropy', 'cnn':'sparse_categorical_crossentropy'},
+              loss_weights=[1,1],
+              metrics={'cnn':'accuracy'} )
+```
 
 
 ## Seq 11 : Variational Autoencoder (VAE) : apprentissage "self supervised"
+
+https://www.youtube.com/watch?v=m7tQeKw7N2k&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=12
+
 
 
 <!--
