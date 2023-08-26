@@ -38,6 +38,9 @@ model.compile(optimizer='adam',
 
 #### Tensorflow Functional API
 
+- L'API fonctionnelle de Keras permet d'avoir de [multiple entrées/sorties](/deeplearning/deep-learning-fidle/part7/#lapi-fonctionnelle-de-keras)
+
+
 ```python
 import tensorflow as tf
 from tensorflow import keras
