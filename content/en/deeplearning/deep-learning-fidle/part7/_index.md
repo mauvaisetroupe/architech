@@ -285,6 +285,9 @@ model.compile(optimizer='rmsprop',
 - Dataset :
     - MNIST
 
+> <img src="./images/img_2023-08-26_08-44-08.png">
+
+
 ```python
 inputs    = keras.Input(shape=(28, 28, 1))
 
