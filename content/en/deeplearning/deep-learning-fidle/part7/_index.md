@@ -287,6 +287,7 @@ model.compile(optimizer='rmsprop',
 
 > <img src="./images/img_2023-08-26_08-44-08.png">
 
+On ajoutant un "second expert", un autre classifier, on augmente la précision du modèle de facon significative par rapport à l'exercice précédent.
 
 ```python
 inputs    = keras.Input(shape=(28, 28, 1))
