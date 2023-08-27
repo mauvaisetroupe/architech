@@ -315,6 +315,9 @@ model.compile(optimizer='rmsprop',
 
 https://www.youtube.com/watch?v=m7tQeKw7N2k&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--6b_&index=12
 
+Les VAE sont une évolution des autoencodeurs, dans laquelle on va guider la projection des données au sein de l'espace latent, de manière à pouvoir étudier et utiliser celui-ci. L'apprentissage pourra cette fois être totalement non supervisé.
+
+
 
 
 <!--
