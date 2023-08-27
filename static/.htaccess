@@ -1,3 +1,9 @@
 RewriteEngine On
+
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://architech.lu//$1 [R,L]
+RewriteRule ^(.*)$ https://architech.lu/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^www\.architech\.lu
+RewriteRule ^(.*)$ https://architech.lu/$1 [R,L]
+
+
