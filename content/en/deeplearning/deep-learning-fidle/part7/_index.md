@@ -317,6 +317,210 @@ https://www.youtube.com/watch?v=m7tQeKw7N2k&list=PLlI0-qAzf2Sa6agSVFbrrzyfNkU5--
 
 Les VAE sont une évolution des autoencodeurs, dans laquelle on va guider la projection des données au sein de l'espace latent, de manière à pouvoir étudier et utiliser celui-ci. L'apprentissage pourra cette fois être totalement non supervisé.
 
+On a vu précédemment que les autoencodeur utilisaient un espace latent. Et que les données, une fois passées par l'encodeur, se retrouvent projeter dans cet espace latent, en se regroupant de façon naturelle (phénomène de clustering), mais sans contrôle de ce clustering
+
+> <img src="./images/img_2023-08-29_17-39-24.png">
+
+La particularité des VAEs est de s'intéresser à ce qui se passe dans l'espace latent (projection dans un autre monde, imaginaire, avant de revenir dans notre monde), et de faire maîtriser la clusterisation.
+
+
+
+
+CF WWWWWWWWWWWWWWHHHHHHHHHHHHHHHHHATSAPP
+
+On va faire une projection dans ce qu'on appelle un espace probabiliste.
+
+1. **Projection** : sur base de l'information de départ, on ne va pas projeter directement un point, on va générer la **moyenne** et la **variance** qui décrivent la distribution de probabilité de la représentation dans l'espace latent (ici présentation en 2D, mais en n-dimension)
+2. **Random Sampling** : on sait donc que le point est projeté dans ce nuage de points (distribution probabiliste). On pioche un point dans ce nuage de point
+3. **Up sampling**:  on reconstruit l'image de départ grâce au décodeur
+
+Le modèle est entraîner pour avoir μ (moyenne) et σ (écart type)  pour que lorsqu'on pioche dans ce nuage de point, on retrouve l'image d'origine.
+
+> <img src="./images/img_2023-08-29_17-39-32.png">
+
+
+La fonction de perte (loss) est un deux partie :
+- **Reconstruction loss** : une artie classique qui calcul la différence entre l'output prédit et l'output attendu
+- **Kullback-Leibler** (ici version simplifiée) : elle permet de calculer la distance entre deux distribution, afin de permettre (distribution de droite, de limiter l'éparpillement des projections)
+
+> <img src="./images/img_2023-08-29_17-39-37.png">
+
+
+Exemple dans le cas suivant:
+- à droite, on ne maîtrise pas la distribution, k1 est trop lourd ce qu favorise la reconstruction
+- à gauche, k2 est trop grand, la distribution est maîtrisée, mais la reconstruction n'est pas bonne
+- k1 et k2 sont des hyper-paramètres
+
+> <img src="./images/img_2023-08-29_17-39-51.png">
+
+
+- Deux exemples de représentation équilibrées :
+
+> <img src="./images/img_2023-08-29_17-39-56.png">
+
+- Puisque l'espace est correctement centrée, on peut choisir des points pour faire un quadrillage pour parcourir l'espace latent
+- pour chaque point on peut construire l'image obtenu par l'encodeur (c'est réellement un espace de dimension 2, il ne nous manque pas de dimension pour reconstruite)
+- on peut voir comment par exemple on passe du 0 (bleu) au 6 (rose)
+- on peut se "promener" et "générer" de la donnée (le génératif est un use case de l'espace du VAE, mais d'autres réseaux sont plus efficaces aujourd'hui)
+- l'autre usage reste le clustering
+
+> <img src="./images/img_2023-08-29_17-39-58.png">
+
+
+### Notebooks VAE1
+
+- Objectives :
+    - implementating a VAE, using Keras functionel API and model subclass, using real Python !
+- Dataset :
+    - MNIST
+
+> <img src="./images/img_2023-08-29_17-40-02.png">
+
+
+#### Implémentation 1 : VAE using Keras functional API - SamplingLayer & VariationalLossLayer
+
+##### Encoder
+```python
+inputs    = keras.Input(shape=(28, 28, 1))
+x         = layers.Conv2D(32, 3, strides=1, padding="same", activation="relu")(inputs)
+x         = layers.Conv2D(64, 3, strides=2, padding="same", activation="relu")(x)
+x         = layers.Conv2D(64, 3, strides=2, padding="same", activation="relu")(x)
+x         = layers.Conv2D(64, 3, strides=1, padding="same", activation="relu")(x)
+x         = layers.Flatten()(x)
+x         = layers.Dense(16, activation="relu")(x)
+
+z_mean    = layers.Dense(latent_dim, name="z_mean")(x)
+z_log_var = layers.Dense(latent_dim, name="z_log_var")(x)
+z         = SamplingLayer()([z_mean, z_log_var])
+
+encoder = keras.Model(inputs, [z_mean, z_log_var, z], name="encoder")
+# encoder.summary()
+```
+
+##### Decoder
+
+```python
+inputs  = keras.Input(shape=(latent_dim,))
+x       = layers.Dense(7 * 7 * 64, activation="relu")(inputs)
+x       = layers.Reshape((7, 7, 64))(x)
+x       = layers.Conv2DTranspose(64, 3, strides=1, padding="same", activation="relu")(x)
+x       = layers.Conv2DTranspose(64, 3, strides=2, padding="same", activation="relu")(x)
+x       = layers.Conv2DTranspose(32, 3, strides=2, padding="same", activation="relu")(x)
+outputs = layers.Conv2DTranspose(1,  3, padding="same", activation="sigmoid")(x)
+
+decoder = keras.Model(inputs, outputs, name="decoder")
+# decoder.summary()
+```
+
+
+
+##### VAE
+
+We will calculate the loss with a specific layer: VariationalLossLayer 
+
+```python
+inputs = keras.Input(shape=(28, 28, 1))
+
+z_mean, z_log_var, z = encoder(inputs)
+outputs              = decoder(z)
+
+outputs = VariationalLossLayer(loss_weights=loss_weights)([inputs, z_mean, z_log_var, outputs])
+
+vae=keras.Model(inputs,outputs)
+
+vae.compile(optimizer='adam', loss=None)
+```
+
+Ici on programme 2 layers custom dans Keras (très simple) :
+
+###### SamplingLayer
+
+```python
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from IPython.display import display,Markdown
+
+# Note : https://keras.io/guides/making_new_layers_and_models_via_subclassing/
+
+class SamplingLayer(keras.layers.Layer):
+    '''A custom layer that receive (z_mean, z_var) and sample a z vector'''
+
+    def call(self, inputs):
+        
+        z_mean, z_log_var = inputs
+        
+        batch_size = tf.shape(z_mean)[0]
+        latent_dim = tf.shape(z_mean)[1]
+        
+        epsilon = tf.keras.backend.random_normal(shape=(batch_size, latent_dim))
+        z = z_mean + tf.exp(0.5 * z_log_var) * epsilon
+        
+        return z
+```
+
+###### VariationalLossLayer
+
+```python
+import numpy as np
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from IPython.display import display,Markdown
+
+# Note : https://keras.io/guides/making_new_layers_and_models_via_subclassing/
+
+class VariationalLossLayer(keras.layers.Layer):
+   
+    def __init__(self, loss_weights=[3,7]):
+        super().__init__()
+        self.k1 = loss_weights[0]
+        self.k2 = loss_weights[1]
+
+
+    def call(self, inputs):
+        
+        # ---- Retrieve inputs
+        #
+        x, z_mean, z_log_var, y = inputs
+        
+        # ---- Compute : reconstruction loss
+        #
+        r_loss  = tf.reduce_mean( keras.losses.binary_crossentropy(x,y) ) * self.k1
+        #
+        # ---- Compute : kl_loss
+        #
+        kl_loss = 1 + z_log_var - tf.square(z_mean) - tf.exp(z_log_var)
+        kl_loss = -tf.reduce_mean(kl_loss) * self.k2
+        
+        # ---- Add loss
+        #
+        loss = r_loss + kl_loss
+        self.add_loss(loss)
+        
+        # ---- Keep metrics
+        #
+        self.add_metric(loss,   aggregation='mean',name='loss')
+        self.add_metric(r_loss, aggregation='mean',name='r_loss')
+        self.add_metric(kl_loss,aggregation='mean',name='kl_loss')
+        return y
+
+    
+    def get_config(self):
+        return {'loss_weights':[self.k1,self.k2]}
+```
+
+
+
+#### Implémentation 2 : VAE using Keras subclass - SamplingLayer & VAE
+
+On fabrique directement un modèle VAE plutôt que d'ajouter une couche Loss comme précédemment
+
+> <img src="./images/img_2023-08-29_17-40-06.png">
+
+
+
 
 
 
