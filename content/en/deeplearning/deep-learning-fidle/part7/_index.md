@@ -42,7 +42,7 @@ L'objectif est de conserver les éléments essentiels de l'information tout au l
 
 Dans l'exemple et le TP de ce cours:
 - on part d'une image intacte 
-- on la bruite les image grâce à la méthode `randon_noise` de [scikit-image](https://scikit-image.org/)
+- on la bruite les image grâce à la méthode `random_noise` de [scikit-image](https://scikit-image.org/)
 
 
 
@@ -173,7 +173,7 @@ denoised_test = model.predict(noisy_test)
 > <img src="./images/img_2023-08-26_07-54-40.png">
 
 
-#### Looking atthe latent space
+#### Looking at the latent space
 
 - on prend l'encodeur
 - on fait une prediction juste à travers l'encodeur
@@ -188,6 +188,7 @@ z = encoder.predict(x_show)
 
 > <img src="./images/img_2023-08-26_08-19-19.png">
 
+L'utilisation du terme "espace latent" pour désigner cet aspect du modèle provient du fait que ces variables cachées ou latentes ne sont pas directement observées, mais elles sont liées aux données observées par les opérations d'encodage et de décodage du modèle. L'espace latent peut être vu comme un espace abstrait où les caractéristiques essentielles sont capturées de manière comprimée, permettant ainsi une meilleure modélisation, une génération de données et une exploration des propriétés des données d'origine.
 
 
 ### Exemple 2 : Dual output  (debruiteur + classifieur)
@@ -323,10 +324,6 @@ On a vu précédemment que les autoencodeur utilisaient un espace latent. Et que
 
 La particularité des VAEs est de s'intéresser à ce qui se passe dans l'espace latent (projection dans un autre monde, imaginaire, avant de revenir dans notre monde), et de faire maîtriser la clusterisation.
 
-
-
-
-CF WWWWWWWWWWWWWWHHHHHHHHHHHHHHHHHATSAPP
 
 On va faire une projection dans ce qu'on appelle un espace probabiliste.
 
