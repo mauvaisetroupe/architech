@@ -276,7 +276,7 @@ Language can have very long-term dependencies:
 
 It turns out that the basic RNN we've seen so far is not very good at capturing very long-term dependencies.
 
-We've seen the [vanishing gradient](../../c2-improving-deep-neural-networks/week1/README.md#vanishing--exploding-gradients) for standard neuronal network. For very deep neural network (100 years or even much deeper), you would carry out forward prop from left to right and then backprop. The gradient from the output has a very hard time propagating back to affect the weights the computations of the earlier layers.
+We've seen the [vanishing gradient](../../c2-improving-deep-neural-networks/week1#vanishing--exploding-gradients) for standard neuronal network. For very deep neural network (100 years or even much deeper), you would carry out forward prop from left to right and then backprop. The gradient from the output has a very hard time propagating back to affect the weights the computations of the earlier layers.
 
 In the context of a recurrent neural network (RNN), there is a problem that is similar. The forward propagation goes from left to right, and the backpropagation goes from right to left. 
 

@@ -134,11 +134,11 @@ For simplification, we take :
 
 So this procedure allows you to implement gradient descent without computing this derivative term df/dw 
 
-This is a very powerful feature of TensorFlow called [Auto Diff](../../c2-advanced-learning-algorithms/week2/README.md#larger-neural-network-example-optional). And some other machine learning packages like pytorch also support Auto Diff
+This is a very powerful feature of TensorFlow called [Auto Diff](../../c2-advanced-learning-algorithms/week2#larger-neural-network-example-optional). And some other machine learning packages like pytorch also support Auto Diff
 
 Sometimes you hear people call this Auto Grad. The technically correct term is Auto Diff, and Auto Grad is actually the name of the specific software package for doing automatic differentiation
 
-You can also use a more powerful optimization algorithm, like the [adam optimization algorithm](../../c2-advanced-learning-algorithms/week2/README.md#advanced-optimization)
+You can also use a more powerful optimization algorithm, like the [adam optimization algorithm](../../c2-advanced-learning-algorithms/week2#advanced-optimization)
 
 > <img src="./images/w02-06-TensorFlow_implementation_of_collaborative_filtering/img_2023-02-10_17-39-35.png">
 
@@ -281,7 +281,7 @@ Preprocessing:
 - normalize to have zero-mean
 - feature scaling
 
-See [feature scaling](../../c1-supervised-ML-regression-and-classification/week2/README.md#feature-scaling-part-2)
+See [feature scaling](../../c1-supervised-ml/week2#feature-scaling-part-2)
 
 > <img src="./images/w02-14-PCA_algorithm/img_2023-02-12_08-20-43.png">
 

@@ -72,7 +72,7 @@ It's less useful for Language modeling, Machine translation
 
 > <img src="./images/w02-03-using_word_embeddings/img_2023-05-02_07-58-49.png">
 
-Finally, word embeddings has a interesting relationship to the face encoding ideas that you learned during convolutional neural networks course. In the [Siamese network architecture](../../c4-convolutional-neural-netowrks/week4/README.md#siamese-network) we a 128 dimensional representation for different faces. And then you can compare these encodings in order to figure out if these two pictures are of the same face.
+Finally, word embeddings has a interesting relationship to the face encoding ideas that you learned during convolutional neural networks course. In the [Siamese network architecture](../../c4-convolutional-neural-netowrks/week4#siamese-network) we a 128 dimensional representation for different faces. And then you can compare these encodings in order to figure out if these two pictures are of the same face.
 
 The words encoding and embedding mean fairly similar things. So in the face recognition literature, people also use the term encoding to refer to these vectors, f(x(i)) and f(x(j)).
 

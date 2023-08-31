@@ -12,7 +12,7 @@ Find below the mapping between Excel column names and Entities field names
 
 ## Applications
 
-This mapping concerns import for [Application via Excel](./samples/applications.xlsx)
+This mapping concerns import for [Application via Excel](/eadesignit-samples/applications.xlsx)
 
 | Excel Column Name            | FlowImport setter | Application setters
 |------------------------------|----------------|-------|
@@ -25,7 +25,7 @@ This mapping concerns import for [Application via Excel](./samples/applications.
 
 ## Landscape, Functional flow, Interfaces 
 
-This mapping concerns import [Landscape via Excel](./samples/Invest_And_Securities_Landscape.xlsx)
+This mapping concerns import [Landscape via Excel](/eadesignit-samples/Invest_And_Securities_Landscape.xlsx)
 
 
 | Excel Column Name            | FlowImport setter            | functionalFlow setter | FlowInterface setters | DataFlow  |
@@ -53,12 +53,12 @@ This mapping concerns import [Landscape via Excel](./samples/Invest_And_Securiti
 
 ## Data flow, Data Flow Items
 
-This mapping concerns import [Data & Data Items via Excel](./samples/data-data-item.xlsx)
+This mapping concerns import [Data & Data Items via Excel](/eadesignit-samples/data-data-item.xlsx)
 
 // TODO
 
 ## Capabilities & Mapping Capabilities/Applications
 
- This mapping concerns import [Capabilities & sub-capabilities](./samples/capabilities.xlsx) and [Mapping between Capabilities & Applications](./samples/capabilities-applications.xlsx)
+ This mapping concerns import [Capabilities & sub-capabilities](/eadesignit-samples/capabilities.xlsx) and [Mapping between Capabilities & Applications](/eadesignit-samples/capabilities-applications.xlsx)
 
  // TODO

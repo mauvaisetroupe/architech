@@ -131,7 +131,7 @@ Strategy depends on if you have enough computational capacity to train a lot of 
 
 In the rise of deep learning, one of the most important ideas has been an algorithm called batch normalization, created by two researchers, Sergey Ioffe and Christian Szegedy. Batch normalization makes your hyperparameter search problem much easier and your neural network much more robust. The choice of hyperparameters is a much bigger range of hyperparameters that work well, and will also enable you to much more easily train even very deep networks.
 
-We previously see [how to normalize input](../week1/README.md/#normalizing-inputs)
+We previously see [how to normalize input](../week1#normalizing-inputs)
 
 
 What batch norm does is it applies that normalization process not just to the input layer, but to the values in some hidden layer in the neural network. We want to normalize A[l] to train W[l+1], b[l+1] faster.

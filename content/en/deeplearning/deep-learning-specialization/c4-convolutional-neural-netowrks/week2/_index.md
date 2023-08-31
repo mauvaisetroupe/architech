@@ -22,7 +22,7 @@ Learning Objectives
 ### Why look at case studies?
 
 
-[Last week](../week1/ we learned about the basic building blocks, such as convolutional layers, pooling layers, and fully connected layers of convnet. 
+[Last week](../week1) we learned about the basic building blocks, such as convolutional layers, pooling layers, and fully connected layers of convnet. 
 
 In the past few years, a lot of computer vision research has been done to put together these basic building blocks to form effective convolutional neural networks. 
 
@@ -42,7 +42,7 @@ After seeing these neural networks, I think you have much better intuition about
 
 ### Classic Networks
 
-The goal of LeNet-5 was to recognize handwritten digits. This neural network architecture is actually quite similar to the last [example you saw last week](../week1/README.md#cnn-example).
+The goal of LeNet-5 was to recognize handwritten digits. This neural network architecture is actually quite similar to the last [example you saw last week](../week1#cnn-example).
 - Paper was written in **1998**, people didn't really use padding, which is why convolutional layer decrease width and height (28x28 -> 14x14 -> 10x10 -> 5x5)
 - The number of channels does increase.
 - A modern version of this neural network, we'll use a softmax layer with a 10 way classification output. Although back then, LeNet-5 actually use a different classifier at the output layer, one that's useless today.

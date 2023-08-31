@@ -25,7 +25,7 @@ For the same reason, offering an API over the database to add custom process/too
 
 # Data model
 
-If you want to know if EADesignIt is appropriate in your context, the most important aspect is to know if the data model could meet your requirements. To achieve this, please read the [description of data model](./metamodel/metamodel-model.md). 
+If you want to know if EADesignIt is appropriate in your context, the most important aspect is to know if the data model could meet your requirements. To achieve this, please read the [description of data model](./metamodel/metamodel-model). 
 
 # Diagramming or not diagramming?
 
@@ -59,4 +59,4 @@ You can find a [demo on Heroku platform](https://ea-design-it.herokuapp.com/).
 
 This application is build with Java, Spring Boot and VueJS.
 
-It's based on JHipster to generate all entities. Please refer to [documentation](./jhipster/jhipster.md).
+It's based on JHipster to generate all entities. Please refer to [documentation](./jhipster/jhipster).
