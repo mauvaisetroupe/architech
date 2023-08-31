@@ -73,7 +73,7 @@ anchor = "smart"
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
-section = ["HTML", "print", "RSS"]
+section = ["HTML"]
 
 [params]
 copyright = "The Architect.lu"
@@ -98,7 +98,7 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://example.com"
+url_latest_version = "https://architech.lu/"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/mauvaisetroupe/architech"
@@ -179,11 +179,11 @@ enable = false
 #  url = "https://example.org/mail"
 #  icon = "fa fa-envelope"
 #  desc = "Discuss development issues around the project"
-[[params.links.developer]]
-  name ="Twitter"
-  url = "https://example.org/twitter"
-  icon = "fab fa-twitter"
-  desc = "Follow us on Twitter to get the latest news!"
+# [[params.links.developer]]
+#   name ="Twitter"
+#   url = "https://example.org/twitter"
+#   icon = "fab fa-twitter"
+#   desc = "Follow us on Twitter to get the latest news!"
 
 # hugo module configuration
 
