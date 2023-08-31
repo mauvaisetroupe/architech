@@ -519,25 +519,3 @@ On fabrique directement un modèle VAE plutôt que d'ajouter une couche Loss com
 
 
 
-
-
-<!--
-
-
-## Seq 12 : Revue de projets Fidle Intégrée à la future journée Deep Learning pour la Science
-
-## Seq 13 : Generative Adversarial Networks (GAN)!
-
-## Seq 14 : Diffusion model, text to image (HB,NC,MS)
-
-## Seq 15 -  AI, droit, société et éthique (LR, BC, ...)
-
-## Seq 16 : Apprendre plus vite et moins cher, optimiser l’apprentissage (BC,LH)
-
-## Seq 17 :  Passer à la vitesse supérieure : l’accélération matérielle (BC,LH)
-
-## Seq 18 :  Tactiques et stratégies du Deep Reinforcement Learning
-
-## Seq 19 :  Des neurones pour la physique, les physics-informed neural networks (PINNS)
-
-## Seq 20 :  Journée Deep Learning pour la Science - JDLS### -->
