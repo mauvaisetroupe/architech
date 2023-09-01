@@ -45,6 +45,6 @@ With the opiniated choice described above (an interface is a pipeline between a 
 
 ![interfaces by technology interface](../jpg/interfaces.jpg)
 
-Information concerning frequency, format and other mentioned in option one are stored at [Data Flow](./metamodel-data-flow) level.
+Information concerning frequency, format and other mentioned in option one are stored at [Data Flow](../metamodel-data-flow) level.
 
 
