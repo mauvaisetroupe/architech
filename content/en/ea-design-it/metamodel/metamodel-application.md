@@ -34,11 +34,11 @@ In the above web banking example, from DEV & IT-OPS teams perspective, web banki
 Application and Application Components can be mapped to **Application Component**
 An application is composed of Application Component. This is usually modeled with an **Application Structure Viewpoint**
 
-<span>Archimate 3.1</span>{: .label .label-blue } There is no definition of Application
+<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> There is no definition of Application
 
-<span>Archimate 3.1</span>{: .label .label-blue } An application component represents an encapsulation of application functionality aligned to implementation structure, which is modular and replaceable.
+<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> An application component represents an encapsulation of application functionality aligned to implementation structure, which is modular and replaceable.
 
-<span>Archimate 2.1</span>{: .label .label-blue } An application component is defined as a modular, deployable, and replaceable part of a software system that encapsulates its behavior and data and exposes these through a set of interfaces.
+<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> An application component is defined as a modular, deployable, and replaceable part of a software system that encapsulates its behavior and data and exposes these through a set of interfaces.
 
 
 ![landscape archimate](../jpg/applications.jpg)

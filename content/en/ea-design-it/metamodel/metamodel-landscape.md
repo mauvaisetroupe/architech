@@ -19,11 +19,17 @@ This first version of the tool implement a unique ViewPoint : **Application Land
 
 ## Example
 
-A Landscape is a set of [Functional Flow](../metamodel-functional-flow/) that together gives for example a big picture of specific domain.
+A landscape is essentially a collection of [Applications](../metamodel-application/) and the interactions between these applications. It provides a comprehensive view of the applications in a specific domain or area, along with the relationships and connections between them. This view serves as a holistic representation of how different software components work together within that domain.
+
+[Functional Flow](../metamodel-functional-flow/), on the other hand, can be thought of as use cases that are typically represented using sequence diagrams. They describe how specific functions or processes are carried out within the landscape. Functional flows provide a detailed and step-by-step depiction of how applications interact and work together to achieve a particular task or goal.
+
+In a more extensive perspective,  a landscape can be considered as the sum of all functional flows within a functional domain. Put differently, Landscape consolidates and integrates all the interactions, applications, and functional flows, offering a comprehensive overview that encompasses and includes all interactions and processes occurring within the landscape.
 
 ![landscape](../png/landscape.png)
 
-In this example, Landscape in composed of 3 Functional Flows : <span>**S01**</span>{: .bg-yellow-000 }, **S02** et **S03**
+In this example, Landscape in composed of 3 Functional Flows : <mark style="background-color: yellow"><b>S01</b></mark>, **S02** et **S03**
+
+
 
 ![landscape as set of flows](../png/landscape-flows.png)
 
@@ -31,11 +37,11 @@ In this example, Landscape in composed of 3 Functional Flows : <span>**S01**</sp
 
 An application landscape is typically an **Application Cooperation Viewpoint**.
 
-<span>Archimate 3.1</span>{: .label .label-blue } **Architecture View** - A representation of a system from the perspective of a related set of concerns. 
+<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> **Architecture View** - A representation of a system from the perspective of a related set of concerns. 
 
-<span>Archimate 3.1</span>{: .label .label-blue } **Architecture Viewpoint** - A specification of the conventions for a particular kind of architecture view. 
+<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> **Architecture Viewpoint** - A specification of the conventions for a particular kind of architecture view. 
 
-<span>Archimate 3.1</span>{: .label .label-blue } The **Application Cooperation Viewpoint** describes the relationships between application components in terms of the information flows between them, or in terms of the services they offer and use. This viewpoint is typically used to create an overview of the application landscape of an organization.
+<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> The **Application Cooperation Viewpoint** describes the relationships between application components in terms of the information flows between them, or in terms of the services they offer and use. This viewpoint is typically used to create an overview of the application landscape of an organization.
 
 Application Cooperation Viewpoint used the following elements:
  - Application Components

@@ -6,8 +6,6 @@ weight: 30
 # parent: MetaModel
 ---
 
-# Functional Flow
-
 ## Teminology 
 
 In the context of a **Landscape**, a Functional Flow represents a functional information exchange between two or more applications
@@ -24,7 +22,6 @@ It is composed of 3 steps :
 - Core Banking Sysetm confirm the reception of prices to the Trading Platform
 
 ![landscape as set of flows](../png/flow.png)
-
 
 
 ![landscape as set of flows](../png/flow-steps.png)

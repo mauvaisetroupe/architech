@@ -6,8 +6,6 @@ weight: 40
 # parent: MetaModel
 ---
 
-# Interfaces
-
 ## Teminology 
 
 Interface is a "pipeline" between two [Applications](../metamodel-application/) and it's fully defined by :
