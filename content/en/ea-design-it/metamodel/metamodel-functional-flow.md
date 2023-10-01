@@ -10,23 +10,44 @@ weight: 30
 
 In the context of a **Landscape**, a Functional Flow represents a functional information exchange between two or more applications
 
-FunctionalFlow is a list of **steps**, each step leverages on an [Interface](../metamodel-interface)
 
 ## Example
 
-**S.01** is FunctionalFlow that describes interactions between applications for "Instruments Prices Feeding".
+**GEN.002** is FunctionalFlow that describes interactions between applications to execute a Customer offboarding. **GEN.002** is part of the [Onboarding Landscape](../metamodel-landscape/)
 
-It is composed of 3 steps :
-- Securities Partner send prices to Trading Platfom via the Security Master File
-- Trading Platform synchronize the prices to the Core Banking Sysetm
-- Core Banking Sysetm confirm the reception of prices to the Trading Platform
+### Sequence Diagram
 
-![landscape as set of flows](../png/flow.png)
+Functional Flow can be thought of as use cases that are typically represented using **sequence diagrams**. They describe how specific functions or processes are carried out within the landscape. 
 
 
-![landscape as set of flows](../png/flow-steps.png)
+![Functional Flow as a set of steps](../png/flow.png)
 
-# Mapping with Archimate specification
+Functional flows provide a detailed and step-by-step depiction of how applications interact and work together to achieve a particular task or goal.
+
+### Functional Flow as a sequence of steps provided by Interfaces
+
+**GEN.002** FunctionalFlow is composed of many **steps** :
+- <mark style="background-color: yellow">Request Account Closure</mark>
+- Initiate Account Closure
+- Account Closure Request
+- ...
+
+![Functional Flow as a set of steps](../png/flow-steps.png)
+
+FunctionalFlow is a list of **steps**, each step leverages on an [Interface](../metamodel-interface). Interface is a “pipeline” between two Applications.
+
+
+### Application Cooperation Diagram
+
+
+Functional Flow is mainly thought as a use case described with a **sequence diagram**. Another representation is a **Archimate Application Cooperation Viewpoint**. 
+
+![Functional Flow as a set of steps](../png/flow-conponents.png)
+
+
+> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Interface](../metamodel-interface)
+
+## Mapping with Archimate specification
 
 Basically, a Functional Flow is a subset of Landscape, representing a specific usage of a part of the landscape in a specific functional use case.
 
@@ -34,3 +55,6 @@ Like Landscape, a Functional Flow is typically an **Application Cooperation View
 
 ![landscape archimate](../jpg/functional-flow.jpg)
 
+## What's next ?
+
+> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Interface](../metamodel-interface)

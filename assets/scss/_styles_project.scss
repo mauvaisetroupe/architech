@@ -9,3 +9,9 @@ h3, .h3 {
     font-size: calc(1.325rem + 0.9vw);
     font-weight: 500;
 }
+
+.td-max-width-on-larger-screens {
+    @include media-breakpoint-up(lg) {
+        max-width: 90%;
+    }
+}

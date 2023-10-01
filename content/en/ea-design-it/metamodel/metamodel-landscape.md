@@ -1,7 +1,7 @@
 ---
 title: "Landscape"
 type: docs
-weight: 10
+weight: 20
 # permalink: /metamodel/landscape/
 # nav_order: 1
 # parent: MetaModel
@@ -27,11 +27,11 @@ In a more extensive perspective,  a landscape can be considered as the sum of al
 
 ![landscape](../png/landscape.png)
 
-In this example, Landscape in composed of 3 Functional Flows : <mark style="background-color: yellow"><b>S01</b></mark>, **S02** et **S03**
-
-
+In this example, Landscape in composed of 2 Functional Flows :  **GEN.001** and <mark style="background-color: yellow"><b>GEN.002</b></mark>.
 
 ![landscape as set of flows](../png/landscape-flows.png)
+
+> **NEXT** : If you want to continue to dicover the metamodel, see what is a [Functional Flow](../metamodel-functional-flow/).
 
 ## Mapping with Archimate specification
 
@@ -50,3 +50,7 @@ Application Cooperation Viewpoint used the following elements:
 ![landscape archimate](../jpg/landscape.jpg)
 
 Interesting post with some additional information could be read [here](https://bizzdesign.com/blog/practical-archimate-viewpoints-for-the-application-layer/)
+
+## What's next ?
+
+> **NEXT** : If you want to continue to dicover the metamodel, see what is a [Functional Flow](../metamodel-functional-flow/).

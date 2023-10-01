@@ -12,10 +12,9 @@ weight: 20
 This application is tool to model application architecture building diagrams to document applications and interactions between applications (data flows).
 
 EADesignIt helps architects to document their assets, including:
+- Application and Application Component
+- Landscape
+- Functional Flow
+- and Interface 
 
-- Applications,
-- Application Components,
-- Interfaces,
-- Functional Flows,
-- Data Flows,
-- and Applications Capabilities.
+> NOTE : Let's start by defining the terms [Application and Application Component](./metamodel-application) in the context of software development:
