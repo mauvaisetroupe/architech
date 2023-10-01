@@ -12,55 +12,52 @@ weight: 30
 
 Find below the mapping between Excel column names and Entities field names
 
+> see a full example here (https://github.com/mauvaisetroupe/ea-design-it/tree/main/docs/excel-import/samples)
+
 ## Applications
 
-This mapping concerns import for [Application via Excel](/eadesignit-samples/applications.xlsx)
+This mapping concerns import for Application via Excel
 
-| Excel Column Name            | FlowImport setter | Application setters
-|------------------------------|----------------|-------|
-| application.id               | setIdFromExcel | setId |
-| application.name             | setName        | setName |
-| application.description      | setDescription | setDescription |
-| application.comment          | setComment     | setComment  |
-| application.type             | setType        | setType |
+
+| Excel Column Name       | Application Entity |
+|-------------------------|--------------------|
+| application.id          | id                 |
+| (No direct mapping)     | alias              |
+| application.name        | name               |
+| application.description | description        |
+| application.comment     | comment            |
+| application.documentation| documentationURL  |
+| (No direct mapping)     | startDate          |
+| (No direct mapping)     | endDate            |
+| application.type        | applicationType    |
+| software.type           | softwareType       |
+| application.nickname    | nickname           |
+| owner                   | owner              |
+| it.owner                | itOwner            |
+| business.owner          | businessOwner      |
+| application.category.*  | categories         |
+| application.technology.*| technologies        |
+| externalID.*            | externalIDS        |
+
 
 
 ## Landscape, Functional flow, Interfaces 
 
-This mapping concerns import [Landscape via Excel](/eadesignit-samples/Invest_And_Securities_Landscape.xlsx)
+This mapping concerns import Landscape via Excel
 
 
-| Excel Column Name            | FlowImport setter            | functionalFlow setter | FlowInterface setters | DataFlow  |
-|------------------------------|------------------------------|-----------------------|-----------------------|-----------|
-| Id flow                      | setIdFlowFromExcel           |                       | setId | |
-| Alias flow                   | setFlowAlias                 | setId                 | | |
-| Source Element               | setSourceElement             |                       | setSource | |
-| Target Element               | setTargetElement             |                       | setTarget | |
-| Description                  | setDescription               | setDescription        | | |
-| Integration pattern          | setIntegrationPattern        |                       | setProtocol | |
-| Frequency                    | setFrequency                 |                       | | |
-| Format                       | setFormat                    |                       | | |
-| Swagger                      | setSwagger                   |                       | | |
-| Blueprint From Source        | setSourceURLDocumentation    |                       | | |
-| Blueprint From Target        | setTargetURLDocumentation    |                       | | |
-| Status Blueprint From Source | setSourceDocumentationStatus |                       | | |
-| Status Blueprint From Target | setTargetDocumentationStatus |                       | | |
-| Status flow                  | setFlowStatus                | setStatus             | | |
-| Comment                      | setComment                   | setComment            | | |
+| Excel Column Name            | FunctionalFlow Entity| FlowInterface Entity  | FunctionalFlowStep Entity |
+|------------------------------|----------------------|-----------------------|-----------------------|
+| Id flow                      |                      | alias                 |                       |
+| Alias flow                   | alias                |                       |                       |
+| Source Element               |                      | source.name or sourceComponent.name |         |
+| Target Element               |                      | target.name or targetComponent.name |         |
+| Description                  | description          |                       |                       |
+| StepDescription              |                      |                       | description           |
+| Integration pattern          |                      | protocol              |                       |
+| Frequency                    |                      |                       |                       |
+| Format                       |                      |                       |                       |
+| Status flow                  | status               |                       |                       |
+| Comment                      | comment              |                       |                       |
 
 
-| Excel FileName    | FlowImport setter  | Object setters               |
-|-------------------|--------------------|------------------------------|
-| file name         |                    | landscapeView.setDiagramName | 
-
-## Data flow, Data Flow Items
-
-This mapping concerns import [Data & Data Items via Excel](/eadesignit-samples/data-data-item.xlsx)
-
-// TODO
-
-## Capabilities & Mapping Capabilities/Applications
-
- This mapping concerns import [Capabilities & sub-capabilities](/eadesignit-samples/capabilities.xlsx) and [Mapping between Capabilities & Applications](/eadesignit-samples/capabilities-applications.xlsx)
-
- // TODO
