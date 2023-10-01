@@ -26,8 +26,6 @@ This mapping concerns import for Application via Excel
 | application.description | description        |
 | application.comment     | comment            |
 | application.documentation| documentationURL  |
-| (No direct mapping)     | startDate          |
-| (No direct mapping)     | endDate            |
 | application.type        | applicationType    |
 | software.type           | softwareType       |
 | application.nickname    | nickname           |
