@@ -21,7 +21,7 @@ For the same reason, offering an API over the database to add custom processes/t
 
 # Data model
 
-If you want to know if **EADesignIt** is appropriate for your context, the most important aspect is to know if the data model could meet your requirements. To achieve this, please read the [description of data model](./metamodel/metamodel-model/). 
+If you want to know if **EADesignIt** is appropriate for your context, the most important aspect is to know if the data model could meet your requirements. To achieve this, please read the [description of data model](../metamodel/). 
 
 You can also consult the [JDL file](https://github.com/mauvaisetroupe/ea-design-it/blob/main/jhipster-jdl-metamodel.jdl) for a more accurate and detailed view of the entities and their relationships (you can use [jdl studio](https://start.jhipster.tech/jdl-studio/) and import the JDL file).
 

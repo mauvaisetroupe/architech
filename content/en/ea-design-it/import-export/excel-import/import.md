@@ -32,7 +32,7 @@ Excel file contains many different worksheets with all you need to start explori
 > <img src="../excel-summary.png">
 
 
-PLease see [Getting started section](./ea-design-it/getting-started/) for more detail to start using EADesignIT.
+PLease see [Getting started section](/ea-design-it/getting-started/) for more detail to start using EADesignIT.
 
 
 
