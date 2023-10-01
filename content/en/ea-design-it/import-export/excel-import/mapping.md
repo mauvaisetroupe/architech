@@ -21,8 +21,7 @@ This mapping concerns import for Application via Excel
 
 | Excel Column Name       | Application Entity |
 |-------------------------|--------------------|
-| application.id          | id                 |
-| (No direct mapping)     | alias              |
+| application.id          | alias              |
 | application.name        | name               |
 | application.description | description        |
 | application.comment     | comment            |
@@ -36,7 +35,7 @@ This mapping concerns import for Application via Excel
 | it.owner                | itOwner            |
 | business.owner          | businessOwner      |
 | application.category.*  | categories         |
-| application.technology.*| technologies        |
+| application.technology.*| technologies       |
 | externalID.*            | externalIDS        |
 
 
