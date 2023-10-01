@@ -1,6 +1,8 @@
 ---
 title: "Excel column mapping"
 type: docs
+weight: 30
+
 # permalink: /excel-mapping/
 # parent: Excel import/export
 # nav_order: 3

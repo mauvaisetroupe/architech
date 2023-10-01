@@ -1,40 +1,42 @@
 ---
 title: "Excel Import"
 type: docs
+weight: 10
+
 # permalink: /import/
 # parent: Excel import/export
 # nav_order: 1
 ---
 
-# Import Excel - Templates & Samples
-
 A convenient way to populate your database is importing your landscape via Excel File.
 
-Here an example/templates of files for :
- - importing [Application via Excel](/eadesignit-samples/applications.xlsx)  - sheet named "*Application*"
- - importing [Landscape via Excel](/eadesignit-samples/Invest_And_Securities_Landscape.xlsx) - sheet named "*Message_Flow*"
- - importing [Data & Data Items via Excel](/eadesignit-samples/data-data-item.xlsx) - sheet named "*Data*" and "*DataItem*"
- - importing [Capabilities & sub-capabilities](/eadesignit-samples/capabilities.xlsx) - sheet named "*Capabilities*"
- - importing [Mapping between Capabilities & Applications](/eadesignit-samples/capabilities-applications.xlsx) - all sheets with a name "*ADD_XXX*"
+A full synthetic data set (generated with chatgpt) is provided here : 
+
+> https://github.com/mauvaisetroupe/ea-design-it/tree/main/docs/excel-import/samples
+
 
 # How to import
-## How to find the URLs?
 
-If you have enough access, you will have different links to import Excel files on the Home page.
+Import :
+1. Import External System Excel file
+1. Import Applications Excel file
+1. Import Application Components Excel file
+1. Import Multiple Landscapes Excel file
+1. Import Capabilities Excel file
+1. Import Applications/Capabilities mapping Excel file 
 
-![Export Excel](./selection_002.png)
+> <img src="/ea-design-it/getting-started/img_2023-09-30_23-20-49.png">
 
-> Importing en Excel file requires **ROLE_WRITE** access
+Excel file contains many different worksheets with all you need to start exploring EADesignIt.
 
-## Import an existing Landscape
-
-For importing an existing Landscape, you should first delete the existing Landscape, then import it via the new Excel file. 
-
-![Export Excel](./delete-landscape.png)
-
-<br/>
-> Deleting a entity requires **ROLE_HARD_DELETE** access
+> <img src="../excel-summary.png">
 
 
-**During Landscape deletion, orhpan entities (FunctionalFlow, Interface, DataFlow, DataFlowItem) not used in another landscape will be deleted.** 
+PLease see [Getting started section](./ea-design-it/getting-started/) for more detail to start using EADesignIT.
+
+
+
+> PLease note that :
+> - Deleting a entity requires **ROLE_HARD_DELETE** access
+> - **During Landscape deletion, orhpan entities (FunctionalFlow, Interface, DataFlow, DataFlowItem) not used in another landscape will be deleted.** 
 
