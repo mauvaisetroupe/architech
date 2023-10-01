@@ -11,7 +11,7 @@ In the second course of the Machine Learning Specialization, you will:
 
 It provides a broad introduction to modern machine learning, including supervised learning (multiple linear regression, logistic regression, neural networks, and decision trees), unsupervised learning (clustering, dimensionality reduction, recommender systems), and some of the best practices used in Silicon Valley for artificial intelligence and machine learning innovation (evaluating and tuning models, taking a data-centric approach to improving performance, and more.)
 
-### [Week 1 - Neural Networks](./week1)
+### [Week 1 - Neural Networks](./week1/)
 
 This week, you'll learn about neural networks and how to use them for classification tasks. You'll use the TensorFlow framework to build a neural network with just a few lines of code. Then, dive deeper by learning how to code up your own neural network in Python, "from scratch". Optionally, you can learn more about how neural network computations are implemented efficiently using parallel processing (vectorization).
 
@@ -26,7 +26,7 @@ Learning Objectives
 - Build a neural network in regular Python code (from scratch) to make predictions.
 - (Optional): Learn how neural networks use parallel processing (vectorization) to make computations faster.
 
-### [Week 2 - Neural Networks Training](./week2)
+### [Week 2 - Neural Networks Training](./week2/)
 
 This week, you'll learn how to train your model in TensorFlow, and also learn about other important activation functions (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to multiclass classification (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the Adam optimizer, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
 
@@ -41,7 +41,7 @@ Learning Objectives
 - Use the recommended method for implementing multiclass classification in code
 - (Optional): Explain the difference between multi-label and multiclass classification
 
-### [Week 3 - Advice for applying machine learning](./week3)
+### [Week 3 - Advice for applying machine learning](./week3/)
 
 This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data.
 

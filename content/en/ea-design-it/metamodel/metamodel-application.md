@@ -46,4 +46,4 @@ An application is composed of Application Component. This is usually modeled wit
 
 ## What's next ?
 
-> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Landscape](../metamodel-landscape)
+> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Landscape](../metamodel-landscape/)

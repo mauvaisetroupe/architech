@@ -43,7 +43,7 @@ In the first course of the Machine Learning Specialization, you will:
 - Build machine learning models in Python using popular machine learning libraries NumPy and scikit-learn.
 - Build and train supervised machine learning models for prediction and binary classification tasks, including linear regression and logistic regression
 
-#### [Week 1: Introduction to Machine Learning](./c1-supervised-ml/week1)
+#### [Week 1: Introduction to Machine Learning](./c1-supervised-ml/week1/)
 
 Welcome to the Machine Learning Specialization! You're joining millions of others who have taken either this or the original course, which led to the founding of Coursera, and has helped millions of other learners, like you, take a look at the exciting world of machine learning!
 
@@ -57,7 +57,7 @@ Learning Objectives
 - Implement gradient descent
 - Optimize a regression model using gradient descent
 
-#### [Week 2: Regression with multiple input variables](./c1-supervised-ml/week2)
+#### [Week 2: Regression with multiple input variables](./c1-supervised-ml/week2/)
 
 This week, you'll extend linear regression to handle multiple input features. You'll also learn some methods for improving your model's training and performance, such as vectorization, feature scaling, feature engineering and polynomial regression. At the end of the week, you'll get to practice implementing linear regression in code.
 
@@ -66,7 +66,7 @@ Learning Objectives
 - Use feature scaling, feature engineering, and polynomial regression to improve model training
 - Implement linear regression in code
 
-#### [Week 3: Classification](./c1-supervised-ml/week3)
+#### [Week 3: Classification](./c1-supervised-ml/week3/)
 
 This week, you'll learn the other type of supervised learning, classification. You'll learn how to predict categories using the logistic regression model. You'll learn about the problem of overfitting, and how to handle this problem with a method called regularization. You'll get to practice implementing logistic regression with regularization at the end of this week!
 
@@ -76,7 +76,7 @@ Learning Objectives
 - Address overfitting using regularization, to improve model performance
 
 
-### [Advanced Learning Algorithms](./c2-advanced-learning-algorithms)
+### [Advanced Learning Algorithms](./c2-advanced-learning-algorithms/)
 
 In the second course of the Machine Learning Specialization, you will:
 
@@ -85,7 +85,7 @@ In the second course of the Machine Learning Specialization, you will:
 - Build and use decision trees and tree ensemble methods, including random forests and boosted trees
 
 
-#### [Week 1 - Neural Networks](./c2-advanced-learning-algorithms/week1)
+#### [Week 1 - Neural Networks](./c2-advanced-learning-algorithms/week1/)
 
 This week, you'll learn about neural networks and how to use them for classification tasks. You'll use the TensorFlow framework to build a neural network with just a few lines of code. Then, dive deeper by learning how to code up your own neural network in Python, "from scratch". Optionally, you can learn more about how neural network computations are implemented efficiently using parallel processing (vectorization).
 
@@ -100,7 +100,7 @@ Learning Objectives
 - Build a neural network in regular Python code (from scratch) to make predictions.
 - (Optional): Learn how neural networks use parallel processing (vectorization) to make computations faster.
 
-#### [Week 2 - Neural Networks Training](./c2-advanced-learning-algorithms/week2)
+#### [Week 2 - Neural Networks Training](./c2-advanced-learning-algorithms/week2/)
 
 This week, you'll learn how to train your model in TensorFlow, and also learn about other important activation functions (besides the sigmoid function), and where to use each type in a neural network. You'll also learn how to go beyond binary classification to multiclass classification (3 or more categories). Multiclass classification will introduce you to a new activation function and a new loss function. Optionally, you can also learn about the difference between multiclass classification and multi-label classification. You'll learn about the Adam optimizer, and why it's an improvement upon regular gradient descent for neural network training. Finally, you will get a brief introduction to other layer types besides the one you've seen thus far.
 
@@ -115,7 +115,7 @@ Learning Objectives
 - Use the recommended method for implementing multiclass classification in code
 - (Optional): Explain the difference between multi-label and multiclass classification
 
-#### [Week 3 - Advice for applying machine learning](./c2-advanced-learning-algorithms/week3)
+#### [Week 3 - Advice for applying machine learning](./c2-advanced-learning-algorithms/week3/)
 
 This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data.
 
@@ -144,7 +144,7 @@ Learning Objectives
 - Learn how to use multiple trees, "tree ensembles" such as random forests and boosted trees
 - Learn when to use decision trees or neural networks
 
-###  [Unsupervised Learning, Recommenders, Reinforcement Learning](./c3-unsupervised-learning)
+###  [Unsupervised Learning, Recommenders, Reinforcement Learning](./c3-unsupervised-learning/)
 
 In the third course of the Machine Learning Specialization, you will:
 
@@ -152,7 +152,7 @@ In the third course of the Machine Learning Specialization, you will:
 - Build recommender systems with a collaborative filtering approach and a content-based deep learning method.
 - Build a deep reinforcement learning model.
 
-#### [Week 1 - Unsupervised learning](./c3-unsupervised-learning/week1)
+#### [Week 1 - Unsupervised learning](./c3-unsupervised-learning/week1/)
 
 This week, you will learn two key unsupervised learning algorithms: clustering and anomaly detection
 
@@ -167,14 +167,14 @@ Learning Objectives
 - Implement the function that finds the closest centroids to each point in k-means
 
 
-#### [Week 2 - Recommender systems](./c3-unsupervised-learning/week2)
+#### [Week 2 - Recommender systems](./c3-unsupervised-learning/week2/)
 
 Learning Objectives
 - Implement collaborative filtering recommender systems in TensorFlow
 - Implement deep learning content based filtering using a neural network in TensorFlow
 - Understand ethical considerations in building recommender systems
 
-#### [Week 3 - Reinforcement learning](./c3-unsupervised-learning/week3)
+#### [Week 3 - Reinforcement learning](./c3-unsupervised-learning/week3/)
 
 This week, you will learn about reinforcement learning, and build a deep Q-learning neural network in order to land a virtual lunar lander on Mars!
 

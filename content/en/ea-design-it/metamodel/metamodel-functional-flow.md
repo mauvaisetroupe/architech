@@ -34,7 +34,7 @@ Functional flows provide a detailed and step-by-step depiction of how applicatio
 
 ![Functional Flow as a set of steps](../png/flow-steps.png)
 
-FunctionalFlow is a list of **steps**, each step leverages on an [Interface](../metamodel-interface). Interface is a “pipeline” between two Applications.
+FunctionalFlow is a list of **steps**, each step leverages on an [Interface](../metamodel-interface/). Interface is a “pipeline” between two Applications.
 
 
 ### Application Cooperation Diagram
@@ -45,7 +45,7 @@ Functional Flow is mainly thought as a use case described with a **sequence diag
 ![Functional Flow as a set of steps](../png/flow-conponents.png)
 
 
-> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Interface](../metamodel-interface)
+> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Interface](../metamodel-interface/)
 
 ## Mapping with Archimate specification
 
@@ -57,4 +57,4 @@ Like Landscape, a Functional Flow is typically an **Application Cooperation View
 
 ## What's next ?
 
-> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Interface](../metamodel-interface)
+> **NEXT** : If you want to continue to dicover the metamodel, see what is an [Interface](../metamodel-interface/)

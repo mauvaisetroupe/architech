@@ -54,4 +54,4 @@ DesignIT allows you to seamlessly import data from Excel files. Follow these ste
 
 ## What's next ?
 
-> **NEXT** : Start read about the meta-model : [Applications and Application Components](../metamodel/metamodel-application)
+> **NEXT** : Start read about the meta-model : [Applications and Application Components](../metamodel/metamodel-application/)

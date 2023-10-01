@@ -17,4 +17,4 @@ EADesignIt helps architects to document their assets, including:
 - Functional Flow
 - and Interface 
 
-> NOTE : Let's start by defining the terms [Application and Application Component](./metamodel-application) in the context of software development:
+> NOTE : Let's start by defining the terms [Application and Application Component](./metamodel-application/) in the context of software development:

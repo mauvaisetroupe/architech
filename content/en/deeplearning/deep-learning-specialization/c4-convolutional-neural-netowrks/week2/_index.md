@@ -22,7 +22,7 @@ Learning Objectives
 ### Why look at case studies?
 
 
-[Last week](../week1) we learned about the basic building blocks, such as convolutional layers, pooling layers, and fully connected layers of convnet. 
+[Last week](../week1/) we learned about the basic building blocks, such as convolutional layers, pooling layers, and fully connected layers of convnet. 
 
 In the past few years, a lot of computer vision research has been done to put together these basic building blocks to form effective convolutional neural networks. 
 

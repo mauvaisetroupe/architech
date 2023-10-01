@@ -19,7 +19,7 @@ On the other hand, an **Interface** could be used to implement different **Funct
 
 Interface has a unique owner (a DEVOPS team that develop & opearate the integration)
 
-Data that go through an Interface piepeline is named [Data Flow](../metamodel-data-flow)
+Data that go through an Interface piepeline is named [Data Flow](../metamodel-data-flow/)
 
 ## Example 
 
@@ -43,6 +43,6 @@ With the opiniated choice described above (an interface is a pipeline between a 
 
 ![interfaces by technology interface](../jpg/interfaces.jpg)
 
-Information concerning frequency, format and other mentioned in option one are stored at [Data Flow](../metamodel-data-flow) level.
+Information concerning frequency, format and other mentioned in option one are stored at [Data Flow](../metamodel-data-flow/) level.
 
 

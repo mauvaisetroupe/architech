@@ -20,7 +20,7 @@ Typically, a DataFlow is implemented by one of the many data carriers, including
 
 A DataFlow belongs to a distinct Interface, hence Interfaces and related DataFlows share the same owner. 
 
-Usually, a DataFlow corresponds directly to one technical element like e.g. a particular event stream. This element can be modeled with a [Data Flow Item](../metamodel-data-flow-item). However, it may happen that a second level of description is needed for your data exchange. An example would be if it happens that different types of events are carried in a single event stream. For this cases, a one-to-many relationship has been provided to [Data Flow Item](../metamodel-data-flow-item). 
+Usually, a DataFlow corresponds directly to one technical element like e.g. a particular event stream. This element can be modeled with a [Data Flow Item](../metamodel-data-flow-item/). However, it may happen that a second level of description is needed for your data exchange. An example would be if it happens that different types of events are carried in a single event stream. For this cases, a one-to-many relationship has been provided to [Data Flow Item](../metamodel-data-flow-item/). 
 
 
 ## Example

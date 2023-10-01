@@ -30,7 +30,7 @@ Explication de la notion de
 - Gradient descent
 - Logistic regression
 
-Notion expliquée dans la formation [Machine Learning de Coursera](/deeplearning/machine-learning-specialization/c1-supervised-ml/week1).
+Notion expliquée dans la formation [Machine Learning de Coursera](/deeplearning/machine-learning-specialization/c1-supervised-ml/week1/).
 
 Une comparaison intéressante pour parler de l'Overfiting (surapprentissage) : plus un étudiant bosse ses exercices, mieux il saura les faire. Mais que ce passe-t-il avec les exercices de l'examen? La solution est donc de ne pas avoir une apprentissage trop poussé sur les exercices d’entraînement et/ou d'augmenter le nombre d’exercices de la phase d’entraînement.
 
