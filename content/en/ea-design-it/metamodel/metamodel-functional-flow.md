@@ -51,7 +51,9 @@ Functional Flow is mainly thought as a use case described with a **sequence diag
 
 Basically, a Functional Flow is a subset of Landscape, representing a specific usage of a part of the landscape in a specific functional use case.
 
-Like Landscape, a Functional Flow is typically an **Application Cooperation Viewpoint**.
+> <span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> 
+>
+> Like Landscape, a Functional Flow is typically an **Application Cooperation Viewpoint**.
 
 ![landscape archimate](../jpg/functional-flow.jpg)
 

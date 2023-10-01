@@ -40,7 +40,9 @@ Interface TRAD.006 is implemented with a DataFlowItem (typically a topic in a st
 
 A Data Flow is modeled with a Archimate **Data Object.**
 
-<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> A data object represents data structured for automated processing.
+> <span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> 
+>
+> A data object represents data structured for automated processing.
 
 Data Flow could appear on **Application Cooperation Viewpoint** :
 

@@ -29,7 +29,8 @@ Data flow (topic /EVT/CUSTOMER) is used by two Data Flow Item (typically Kafka E
 
 # Mapping with Archimate specification
 
-<span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> A Data Flow Item is modeled with a Archimate Data Object.
-There is an aggregation or composition relationship between Dat Flow and Data Flow Items
+> <span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> 
+> - A Data Flow Item is modeled with a Archimate Data Object.
+> - There is an aggregation or composition relationship between Dat Flow and Data Flow Items
 
 ![Data Flow](../jpg/data-flow-item.jpg)
