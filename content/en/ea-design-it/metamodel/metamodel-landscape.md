@@ -43,6 +43,19 @@ An application landscape is typically an **Application Cooperation Viewpoint**.
 
 <span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> The **Application Cooperation Viewpoint** describes the relationships between application components in terms of the information flows between them, or in terms of the services they offer and use. This viewpoint is typically used to create an overview of the application landscape of an organization.
 
+This viewpoint can be static or dynamic:
+- In a **static context**, it displays application services and accessed data. 
+- In a **dynamic context**, it models behavioral dependencies using flows. 
+
+> **EADesignIt is used to model the dynamic version of this viewpoint, without the application service concept for simplified diagrams**, useful for illustrating end-to-end data flows across many applications.
+
+When dealing with the dynamic application cooperation viewpoint and the use of flow relationships, it's important to establish a convention that dictates the number of flow relationships permissible between applications: 
+- You can choose between adding **one flow relationship for each data object**, which provides details like exchange frequency but may result in cluttered diagrams, 
+- Or opt for **one flow relationship per technology interface**, which offers a clearer big-picture view
+
+> EADesignIT unequivocally embraces the second option by introducing the concept of [Interface](../metamodel-interface/) to denote this singular relationship between two applications, specifically for a given technology.
+
+
 Application Cooperation Viewpoint used the following elements:
  - Application Components
  - Flow Relationship 
