@@ -182,7 +182,7 @@ Unlike exact search algorithms like BFS (Breadth First Search) or DFS (Depth Fir
 
 ###  Error Analysis in Beam Search
 
-We already seen in [Error analysis](../../c3-structuring-ml-projects/week2#error-analysis) in "Structuring Machine Learning Projects" course.
+We already seen in [Error analysis](../../c3-structuring-ml-projects/week2/#error-analysis) in "Structuring Machine Learning Projects" course.
 
 Beam search is an approximate search algorithm, also called a heuristic search algorithm. And so it doesn't always output the most likely sentence.
 
@@ -288,8 +288,8 @@ The Attention Model which translates maybe a bit more like humans might, looking
 
 > <img src="./images/w03-07-attention_model_intuition/img_2023-05-10_17-38-58.png">
 
-- We use a [Bidirectional RNN](../week1#bidirectional-rnn) to encode the French sentence to translate
-- We use another [RNN](../week1#recurrent-neural-network-model) to generate the English translations
+- We use a [Bidirectional RNN](../week1/#bidirectional-rnn) to encode the French sentence to translate
+- We use another [RNN](../week1/#recurrent-neural-network-model) to generate the English translations
 - We define **attention weights** that explain how much you should pay attention to this each French words when translating:
     - `α<1,1>`  denote how much should you be paying attention to this first French word when generating the first english words
     - `α<1,2>`  denote how much should you be paying attention to this 2nd French word when generating the first english words

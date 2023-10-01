@@ -71,7 +71,7 @@ Dans l'exemple et le TP de ce cours:
 > <img src="./images/img_2023-08-26_07-15-42.png">
 
 
-Remarque : L'architecture convolution + transposed convolution se retrouve ici : [Semantic Segmentation with U-Net](/deeplearning/deep-learning-specialization/c4-convolutional-neural-netowrks/week3#semantic-segmentation-with-u-net) (sans l'aspect self-supervised)
+Remarque : L'architecture convolution + transposed convolution se retrouve ici : [Semantic Segmentation with U-Net](/deeplearning/deep-learning-specialization/c4-convolutional-neural-netowrks/week3/#semantic-segmentation-with-u-net) (sans l'aspect self-supervised)
 
 ### L'API fonctionnelle de Keras
 
