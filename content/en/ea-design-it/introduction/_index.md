@@ -58,3 +58,7 @@ It's based on JHipster to generate all entities. Please refer to [documentation]
 ## Run the Application
 
 A more convenient approach is to utilize a Docker image. You can find the image at the following URL: [Docker Image](https://hub.docker.com/repository/docker/mauvaisetroupe/ea-design-it/).
+
+## What's next ?
+
+> **NEXT** : If you want to continue explore EADesigntIt : [Getting started section](./ea-design-it/getting-started/).

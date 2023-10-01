@@ -52,4 +52,6 @@ DesignIT allows you to seamlessly import data from Excel files. Follow these ste
 
 ### Explore EADesignIt
 
-Start read about the model : [Landscapes](../metamodel/metamodel-landscape)
+## What's next ?
+
+> **NEXT** : Start read about the meta-model : [Applications and Application Components](../metamodel/metamodel-application)
