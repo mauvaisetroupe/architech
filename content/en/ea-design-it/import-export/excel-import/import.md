@@ -25,7 +25,7 @@ Import :
 1. Import Capabilities Excel file
 1. Import Applications/Capabilities mapping Excel file 
 
-> <img src="/ea-design-it/getting-started/img_2023-09-30_23-20-49.png">
+> <img src="../import.png">
 
 Excel file contains many different worksheets with all you need to start exploring EADesignIt.
 
