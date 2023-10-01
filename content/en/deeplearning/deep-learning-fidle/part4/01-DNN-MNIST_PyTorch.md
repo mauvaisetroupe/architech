@@ -275,5 +275,3 @@ fidle.scrawler.confusion_matrix(np_y_test,np_y_pred_label, range(10))
     </ul>
 </div>
 
----
-<img width="80px" src="../fidle/img/00-Fidle-logo-01.svg"></img>
