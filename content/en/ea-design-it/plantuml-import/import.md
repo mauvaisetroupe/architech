@@ -5,7 +5,7 @@ type: docs
 weight: 40
 ---
 
-# Import Plantuml - FunctionalFlow
+## Import Plantuml - FunctionalFlow
 
 A convenient way to import a Functional Flow is using plantuml
 You can describe your Functional Flow as a Sequence Diagarm

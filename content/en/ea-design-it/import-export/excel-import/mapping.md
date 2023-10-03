@@ -8,13 +8,13 @@ weight: 30
 # nav_order: 3
 ---
 
-# Mapping Excel / Data Model
+## Mapping Excel / Data Model
 
 Find below the mapping between Excel column names and Entities field names
 
 > see a full example here (https://github.com/mauvaisetroupe/ea-design-it/tree/main/docs/excel-import/samples)
 
-## Applications
+### Applications
 
 This mapping concerns import for Application via Excel
 
@@ -38,7 +38,7 @@ This mapping concerns import for Application via Excel
 
 
 
-## Landscape, Functional flow, Interfaces 
+### Landscape, Functional flow, Interfaces 
 
 This mapping concerns import Landscape via Excel
 

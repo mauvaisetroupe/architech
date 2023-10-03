@@ -7,7 +7,7 @@ weight: 30
 # has_children: true
 ---
 
-# Excel as Golden source?!?
+## Excel as Golden source?!?
 
 As it's both possible to import and export a Landscape (with Functional Flows and Interfaces) via an Excel file, the mechanism is ready if you want to consider Excel as your "golden source".
 

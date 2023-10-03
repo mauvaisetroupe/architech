@@ -8,7 +8,6 @@ weight: 20
 # has_children: true
 ---
 
-# Data Model - Introduction
 This application is tool to model application architecture building diagrams to document applications and interactions between applications (data flows).
 
 EADesignIt helps architects to document their assets, including:

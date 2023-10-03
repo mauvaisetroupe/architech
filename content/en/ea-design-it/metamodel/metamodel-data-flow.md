@@ -36,7 +36,7 @@ Interface TRAD.006 is implemented with a DataFlowItem (typically a topic in a st
  
 ![Interface and its Data Flows](../png/dataflow2.png)
 
-# Mapping with Archimate specification
+## Mapping with Archimate specification
 
 A Data Flow is modeled with a Archimate **Data Object.**
 

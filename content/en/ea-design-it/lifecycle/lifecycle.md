@@ -5,7 +5,7 @@ title: Lifecycle
 weight: 50
 ---
 
-# Landscape As-Is, Landscape To-Be
+## Landscape As-Is, Landscape To-Be
 
 <span class="fs-2">Implemented</span>{: .label .label-green }
 The start date of validity (easy) and the end date of validity (much more difficult to estimate) of the life cycle of each object can be entered.

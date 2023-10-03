@@ -31,7 +31,7 @@ trough two different Interfaces:
 
 ![interface view](../png/interfaces.png)
 
-# Mapping with Archimate specification
+## Mapping with Archimate specification
 
 > <span style="background-color: blue; color: white; font-weight: bold">Archimate 3.1</span> 
 >

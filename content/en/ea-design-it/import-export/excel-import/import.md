@@ -8,6 +8,9 @@ weight: 10
 # nav_order: 1
 ---
 
+
+## Populate your database with a Excel file
+
 A convenient way to populate your database is importing your landscape via Excel File.
 
 A full synthetic data set (generated with chatgpt) is provided here : 
@@ -15,7 +18,7 @@ A full synthetic data set (generated with chatgpt) is provided here :
 > https://github.com/mauvaisetroupe/ea-design-it/tree/main/docs/excel-import/samples
 
 
-# How to import
+## How to import
 
 Import :
 1. Import External System Excel file

@@ -12,7 +12,7 @@ Ces 3 épisodes des [Cast Codeurs](https://lescastcodeurs.com) sont un échange 
 
 Une série stratégique, pas technique, sur une vision du monde, des sociétés, des individus.
 
-### Les Darwinisme numérique, c'est quoi ? (podcast #1)
+## Les Darwinisme numérique, c'est quoi ? (podcast #1)
 
 Suite à un article dans l'opinion sur le [cloud souverain](https://www.lopinion.fr/economie/le-cloud-souverain-est-necessaire-le-cloud-de-confiance-indispensable-pour-y-parvenir-la-tribune-de-didier-girard), Didier a eu beaucoup de réactions. S'en suit une réflexion et il s'approprie rapidement un terme qui existe depuis longtemps : le **darwinisme numérique**
 
@@ -29,7 +29,7 @@ Le darwinisme, ce n'est pas l'espèce la plus forte qu iva survivre, c'est celle
 
 Il y a un vrai sujet de puissance financière (le rôle des GAFA est indéniable) et il y a ce phénomène de **Winner-Takes-All**. Un acteur arrive est il prend le marché. Sans doute lié au fait que les biens immatériels sont faciles à remplacer (facile de changer de réseau social) et qu'un moyen d'y parvenir et d'investir, investir, jusqu'à prendre le marché.
 
-### Les nations (podcast #1)
+## Les nations (podcast #1)
 
 C'est un sujet clivant, mais Didier considère le numérique comme une ressources. Les nations doivent être indépendantes sur leurs ressources pur être moins dépendantes et donc plus résilientes (Israel est une nation très numérique, en Roumanie beaucoup d'investissements dans le numérique). Une nation peut émerger en jouant la carte du numérique.
 
@@ -41,7 +41,7 @@ La souveraineté, c'est 4 axes (on peut y aller avec des transitions):
 - le hardware, il faut des processeurs (l'Europe veut redévelopper la production en Europe, ce sont des milliards)
 - le software qui va sur le hardware
 
-### Les entreprises (podcast #2)
+## Les entreprises (podcast #2)
 
 Dans l'aire du numérique, il y a une nouvelle génération d'entreprise Fintch, RetailTech, EduTech, ... Tous les secteurs de l'économie sont touchés. Comment les entreprises doivent s'approprier la resource numérique abordable pour se développer.
 
@@ -51,7 +51,7 @@ L'internet n'était pas suffisant. Une start-up devait utiliser une partie de so
 
 Une Tech-Company, c'est une entreprise tech qui fait de la banque, de l'assurance, ... mais c'est avant tout une entreprise tech. Mais c'est avant tout un mindset. Toutes ces sociétés qui sont nées avec internet et qui ont survécu ont des points communs, la capacité d'adaptation. Les facteurs de succès?
 
-#### Le mouvement
+### Le mouvement
 
 Chacun de nos choix doit nous rendre compatible avec le futur, pas avec le passé. Aujourd'hui on doit s'en moquer d'être compatible avec Internet Explorer. Depuis Chrome la question est de savoir si on va être compatible avec la prochaine version (on laisse certains sur le bord de la route...).
 
@@ -61,7 +61,7 @@ Plus une société est **process-isée**, plus il est difficile de bouger. On s'
 
 Ce n'est pas forcément agréable, mais on n'a pas le choix...
 
-#### La vitesse
+### La vitesse
 
 Il faut être capable de décider rapidement, plus le owner est décentralisé, plus on est rapide.
 
@@ -71,11 +71,11 @@ Objectif production. Cela ne sert à rien de faire du beau code s'il ne va pas e
 
 Cela posent beaucoup de questions sur la formation des gens, voir comment faire pour que socialement il n'y ait pas des gens sur les rond-points (allusion gilets jaunes).
 
-#### L'ambition
+### L'ambition
 
 Le principe **Winner-Takes-All** fait que les entreprises sont très ambitieuses.
 
-#### L'efficacité
+### L'efficacité
 
 Il faut automatiser le plus possible :
 - l'automatisation apporte  de la confiance
@@ -85,7 +85,7 @@ Il faut automatiser le plus possible :
 
 **Coopération vs. Possession**. Propriété collective du code (par l'équipe), mais c'est aussi le cas pour les documents (on n'envoie plus le document par e-mail, on le met au milieu dans un système collaboratif). C'est aussi le cas pour la donnée, les gens se sentaient historiquement owner de la données, n'avaient pas envie de la partager (c'est une des raisons de l'échec des datawarehouse) par peur de perdre quelque chose.
 
-### Les modèles organisationnels (podcast #3)
+## Les modèles organisationnels (podcast #3)
 
 Le manager n'est pas le chef de projet. Mon manager ne doit pas être la personne avec qui je travaille au quotidien. Cela doit être mon coach de carrière. Un changement de carrière peut aller contre l'intérêt de mon chef de projet.
 
@@ -111,7 +111,7 @@ Les Tecch-Company ont plus d'ingénieur que les entreprise traditionnelles. Avec
 
 > Derrière chaque crise il y a une opportunité
 
-### les individus
+## les individus
 
 Un développeur Cobol peut perdre (ou retrouver) très rapidement son employabilité. L'entreprise peut offrir un écosystème pour entretenir l'employabilité de ses collaborateurs, mais c'est avant tout un travail au niveau de chaque individu.
 
