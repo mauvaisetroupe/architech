@@ -144,6 +144,16 @@ This error occurs if you have not installed the `go` programming language on you
 See this [section](https://www.docsy.dev/docs/get-started/docsy-as-module/installation-prerequisites/#install-go-language) of the user guide for instructions on how to install `go`.
 
 
+```
+Start building sites … 
+hugo v0.120.3-a4892a07b41b7b3f1f143140ee4ec0a9a5cf3970+extended linux/amd64 BuildDate=2023-11-01T17:57:00Z VendorInfo=snap:0.120.3
+Total in 10660 ms
+Error: error building site: POSTCSS: failed to transform "scss/main.css" (text/css): sh: 1: postcss: Exec format error
+```
+
+lionel@lionel-TM1701:~/Downloads$ sudo apt install ./hugo_extended_0.120.3_linux-amd64.deb 
+Use deb package instead of snap version
+
 [alternate dashboard]: https://app.netlify.com/sites/goldydocs/deploys
 [deploys]: https://app.netlify.com/sites/docsy-example/deploys
 [Docsy user guide]: https://docsy.dev/docs
