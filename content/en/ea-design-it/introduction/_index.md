@@ -61,4 +61,4 @@ A more convenient approach is to utilize a Docker image. You can find the image 
 
 ## What's next ?
 
-> **NEXT** : If you want to continue explore EADesigntIt : [Getting started section](../getting-started/).
+> **NEXT** : Read about the [associated methodology](../methodology/).

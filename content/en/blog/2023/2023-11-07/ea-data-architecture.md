@@ -1,6 +1,6 @@
 ---
 title: "Enterprise Data Architecture"
-date: 2023-02-21
+date: 2023-11-07
 tags: [Architecture, Data]
 categories: [English]
 ---
