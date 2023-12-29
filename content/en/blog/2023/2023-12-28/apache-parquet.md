@@ -58,55 +58,6 @@ Data is stored column by column:
   - Ideal for data warehouses and analytical databases.
   - Well-suited for OLAP (Online Analytical Processing) systems where analytics and aggregations are common.
 
-
-
-## Predicate and Projection Pushdown
-
-When working with big data systems and databases, "predicate pushdown" and "projection pushdown" concepts play a crucial role in optimizing data queries and improving performance
-
-
-### What are Predicate and Projection?
-
-- **Predicate:** In the world of databases, a predicate is a condition or criteria used to filter data. For example, if you want to retrieve only the rows where the "status" column is equal to "completed," the condition "status = 'completed'" is your predicate.
-
-- **Projection:** Projection, on the other hand, is about selecting specific columns from a table rather than retrieving all of them. It's like choosing which pieces of information you want from a dataset.
-
-```SQL
-SELECT FirstName, LastName
-FROM Employee
-WHERE Department = 'Sales';
-```
-
-In this query, we have both projection and predicate:
-- The projection (`SELECT FirstName, LastName`) specifies the desired columns, 
-- and the predicate (`WHERE Department = 'Sales'`) filters the rows based on the specified condition. 
-
-
-### Pushdown: Optimizing Queries
-
-Pushdown is all about moving operations as close to the data as possible, reducing the amount of data that needs to be processed elsewhere. When we talk about predicate and projection pushdown, we mean pushing the filtering and selecting operations closer to the source of the data.
-
-#### Predicate Pushdown:
-
-Imagine you have a massive dataset, and you want to retrieve only the rows where the "date" column is after January 1, 2023. Instead of fetching all the data and then filtering it in your application, predicate pushdown allows the query engine to push the condition "date > '2023-01-01'" directly to the data source.
-
-Benefits of Predicate Pushdown:
-- Reduces the amount of data transferred.
-- Saves processing time by filtering data at the source.
-
-#### Projection Pushdown:
-
-Now, let's say you have a dataset with many columns, but you're only interested in the "name" and "price" columns. Instead of pulling all the columns and then discarding the ones you don't need, projection pushdown allows the query engine to request only the specified columns from the data source.
-
-Benefits of Projection Pushdown:
-- Minimizes data transfer by fetching only the necessary columns.
-- Optimizes query performance by reducing the volume of data processed.
-
-#### Putting it Together:
-
-When you combine predicate and projection pushdown, you're telling your query engine to be smart about fetching and processing data. It's like sending a tailored request to the data source, saying, "Give me only what I need, and filter it before sending."
-
-
 ## Apache Parquet: A Columnar Storage Format
 
 Apache Parquet is an open-source columnar storage format designed for efficient storage and processing of big data. It has gained popularity in the big data ecosystem, especially in conjunction with processing frameworks like Apache Spark and Apache Hive
@@ -146,9 +97,51 @@ Column chunks are composed of pages, which are the basic unit of storage within 
 ![columed-based storage](/blog/2023/2023-12-28/apache-parquet-parquet-format-03.drawio.png)
 
 
-## Parquet characteristis
+## Predicate and Projection Pushdown
 
-### Apache Parquet and Pushdown
+When working with big data systems and databases, "predicate pushdown" and "projection pushdown" concepts play a crucial role in optimizing data queries and improving performance
+
+
+### What are Predicate and Projection?
+
+- **Predicate:** In the world of databases, a predicate is a condition or criteria used to filter data. For example, if you want to retrieve only the rows where the "status" column is equal to "completed," the condition "status = 'completed'" is your predicate.
+
+- **Projection:** Projection, on the other hand, is about selecting specific columns from a table rather than retrieving all of them. It's like choosing which pieces of information you want from a dataset.
+
+```SQL
+SELECT FirstName, LastName
+FROM Employee
+WHERE Department = 'Sales';
+```
+
+In this query, we have both projection and predicate:
+- The projection (`SELECT FirstName, LastName`) specifies the desired columns, 
+- and the predicate (`WHERE Department = 'Sales'`) filters the rows based on the specified condition. 
+
+
+### Pushdown: Optimizing Queries
+
+Pushdown is all about moving operations as close to the data as possible, reducing the amount of data that needs to be processed elsewhere. When we talk about predicate and projection pushdown, we mean pushing the filtering and selecting operations closer to the source of the data.
+
+### Predicate Pushdown
+
+Imagine you have a massive dataset, and you want to retrieve only the rows where the "date" column is after January 1, 2023. Instead of fetching all the data and then filtering it in your application, predicate pushdown allows the query engine to push the condition "date > '2023-01-01'" directly to the data source.
+
+> Benefits of Predicate Pushdown:
+> - Reduces the amount of data transferred.
+> - Saves processing time by filtering data at the source.
+
+### Projection Pushdown
+
+Now, let's say you have a dataset with many columns, but you're only interested in the "name" and "price" columns. Instead of pulling all the columns and then discarding the ones you don't need, projection pushdown allows the query engine to request only the specified columns from the data source.
+
+> Benefits of Projection Pushdown:
+> - Minimizes data transfer by fetching only the necessary columns.
+> - Optimizes query performance by reducing the volume of data processed.
+
+### Parquet Projection & Predicate Pushdowns
+
+When you combine predicate and projection pushdown, you're telling your query engine to be smart about fetching and processing data. It's like sending a tailored request to the data source, saying, **"Give me only what I need, and filter it before sending."**
 
 In Parquet, the ingenious organization of data into row groups, column chunks, and pages sets the stage for highly efficient projection and predicate pushdowns. 
 
@@ -158,7 +151,7 @@ Simultaneously, predicate pushdown leverages the characteristics of row groups a
 
 These structural elements in the Parquet format not only optimizes storage but fundamentally empowers query engines to intelligently and selectively fetch the data required for analytical queries, resulting in substantial performance improvements.
 
-### Parquet Advantages
+## Conclusion - Parquet Advantages
 
 #### Storage Efficiency
 Parquet's columnar storage minimizes storage space by compressing and encoding similar data values together. This compression is particularly effective for analytics workloads where only a subset of columns is frequently accessed.
