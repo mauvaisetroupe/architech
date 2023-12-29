@@ -6,12 +6,6 @@ date: 2023-12-28
 categories: [English]
 ---
 
-
-
-Certainly! I'll use a more explicit and real-life example for the blog post:
-
----
-
 ## Row-Based vs. Column-Based Storage
 
 Data storage plays a crucial role in the world of databases and data processing. One fundamental distinction lies in how data is organized within the storage system, and this can be broadly categorized into row-based and column-based storage. In this blog post, we'll explore the key differences between these two storage approaches.
