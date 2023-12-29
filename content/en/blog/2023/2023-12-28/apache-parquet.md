@@ -151,6 +151,52 @@ Simultaneously, predicate pushdown leverages the characteristics of row groups a
 
 These structural elements in the Parquet format not only optimizes storage but fundamentally empowers query engines to intelligently and selectively fetch the data required for analytical queries, resulting in substantial performance improvements.
 
+
+## Parquet metadata 
+
+There are three types of metadata: 
+- file metadata, 
+- column (chunk) metadata 
+- page header metadata.
+
+
+![parquet metadatas](/blog/2023/2023-12-28/apache-parquet-parquet-format-04.drawio.png)
+
+
+- File Metadata
+  - Contains high-level information about the Parquet file, such as the schema, version, and compression settings.
+  - Enables quick inspection of the file's overall structure without parsing the entire data.
+- Column Metadata
+  - Specific to each column within a Row Group.
+  - Includes information like column name, data type, encoding used, and statistics.
+  - Enables efficient column pruning and optimization during query execution.
+
+### Schema Evolution
+
+- Parquet supports schema evolution, allowing for changes to the schema over time without requiring modification of existing data files.
+- New columns can be added, and existing columns can be renamed or have their data types changed.
+
+### Statistics
+
+- Per-column statistics provide valuable insights into the data distribution and characteristics.
+- Statistics include min and max values, null counts, and other metrics.
+- Aid in query optimization by allowing engines to skip irrelevant data during execution.
+
+### Compression Information
+
+- Metadata includes details about the compression algorithms applied to each column.
+- Different columns may use different compression methods based on their data characteristics.
+
+### Compatibility
+
+- Parquet metadata ensures compatibility across different systems and tools that support the Parquet format.
+- Users can rely on consistent metadata interpretation across various analytics platforms.
+
+### Optimization Opportunities
+
+- The metadata structure enables optimization opportunities such as predicate pushdown and efficient query planning.
+- Engines can leverage metadata to make informed decisions about which data to read and which columns to skip.
+
 ## Conclusion - Parquet Advantages
 
 #### Storage Efficiency
