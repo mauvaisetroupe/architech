@@ -1,6 +1,6 @@
 ---
 title: "La donnée en pratique avec Aurélien Allienne"
-date: 2022-04-20
+date: 2022-05-22
 tags: [Architecture, Data, Datamesh, Data lake, Lakehouse, Electro Monkeys]
 categories: [French, Podcast Review]
 ---
