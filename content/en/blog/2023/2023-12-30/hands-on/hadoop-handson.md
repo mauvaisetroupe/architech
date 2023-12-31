@@ -80,7 +80,7 @@ docker-compose up -d
 
 [http://localhost:50070](http://localhost:50070)
 
-![Alt text](/blog/2023/2023-12-30/hadoop-web-ui.png)
+> ![Hadoop Web UI](/blog/2023/2023-12-30/hands-on/hadoop-web-ui.png)
 
 
 ## Create a new database with Employee table

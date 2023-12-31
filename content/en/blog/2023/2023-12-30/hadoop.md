@@ -85,6 +85,41 @@ Le modèle de données de Hive organise les données de la manière suivante :
 - Partitions, des sous-répertoire
 - Buckets, des fichiers
 
+Dans Hive, la base de données est considérée comme un catalogue ou un espace de noms pour les tables.
+
+Au sein d'une base de données particulière, les données dans les tables sont sérialisées, et chaque table a un répertoire HDFS correspondant. 
+
+Chaque table peut être subdivisée en partitions qui déterminent comment les données sont distribuées au sein de sous-répertoires du répertoire de la table. 
+
+Les données au sein des partitions peuvent être encore divisées en buckets.
+
+#### Partitions
+
+Pour créer une partition dans Hive, on peut utiliser la clause `PARTITIONED BY` lors de la création d'une table. 
+
+```sql
+-- Création de la table avec une partition par département
+CREATE TABLE employee (
+    emp_id INT,
+    emp_name STRING,
+    emp_salary DOUBLE
+)
+PARTITIONED BY (emp_department STRING);
+
+-- Insertion de données dans la table avec spécification de la partition
+INSERT INTO TABLE employee PARTITION (emp_department='IT') VALUES
+    (1, 'John Doe', 50000.0),
+    (4, 'Alice Brown', 70000.0);
+
+INSERT INTO TABLE employee PARTITION (emp_department='HR') VALUES
+    (2, 'Jane Smith', 60000.0);
+
+-- Autres insertions dans d'autres partitions...
+```
+
+Cela créera une structure de répertoires dans le système de fichiers Hadoop, où chaque département aura son propre sous-répertoire sous le répertoire principal de la table. Cela permettra d'optimiser les requêtes qui filtrent ou agrègent des données basées sur le département.
+
+
 ## Hive Hands-on
 
 Want to try ? [How to do a Hive hands-on using Docker]({{< ref "./hands-on/hadoop-handson.md" >}})
@@ -104,5 +139,5 @@ Want to try ? [How to do a Hive hands-on using Docker]({{< ref "./hands-on/hadoo
 #### Sources
 - https://hadoop.apache.org/
 - https://cwiki.apache.org/confluence/display/hive/design
-- https://www.youtube.com/watch?v=7zYOKI6xTgo&list=PLlFvk4v0wHXAJvIuahEGosanT4HocmOLv&index=1&ab_channel=SNINEHSIDIMOHAMED
+- [Youtube big data playlist](https://www.youtube.com/playlist?list=PLlFvk4v0wHXAJvIuahEGosanT4HocmOLv)
 
