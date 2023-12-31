@@ -96,7 +96,7 @@ Beeline version 2.3.2 by Apache Hive
 
 ```
 
-#### Create new database
+#### Create new database and table
 
 ```bash
 0: jdbc:hive2://localhost:10000> CREATE DATABASE IF NOT EXISTS company_data;
@@ -140,4 +140,28 @@ SELECT * FROM employee;
 
 ```
 
+#### Create Partitions
+
+```sql
+-- Création de la table avec une partition par département
+CREATE TABLE employee2 (
+    emp_id INT,
+    emp_name STRING,
+    emp_salary DOUBLE
+)
+PARTITIONED BY (emp_department STRING);
+
+-- Insertion de données dans la table avec spécification de la partition
+INSERT INTO TABLE employee2 PARTITION (emp_department='IT') VALUES
+    (1, 'John Doe', 50000.0),
+    (4, 'Alice Brown', 70000.0);
+
+INSERT INTO TABLE employee2 PARTITION (emp_department='HR') VALUES
+    (2, 'Jane Smith', 60000.0);
+
+```
+
+This will create a directory structure in the Hadoop file system, where each department will have its own subdirectory under the main directory of the table. This enables optimization of queries that filter or aggregate data based on the department.
+
+> ![Hadoop Web UI - Partitions](/blog/2023/2023-12-30/hadoo-web-ui-partitions.png)
 

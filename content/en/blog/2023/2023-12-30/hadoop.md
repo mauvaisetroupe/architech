@@ -99,7 +99,7 @@ Pour créer une partition dans Hive, on peut utiliser la clause `PARTITIONED BY`
 
 ```sql
 -- Création de la table avec une partition par département
-CREATE TABLE employee (
+CREATE TABLE employee2 (
     emp_id INT,
     emp_name STRING,
     emp_salary DOUBLE
@@ -107,11 +107,11 @@ CREATE TABLE employee (
 PARTITIONED BY (emp_department STRING);
 
 -- Insertion de données dans la table avec spécification de la partition
-INSERT INTO TABLE employee PARTITION (emp_department='IT') VALUES
+INSERT INTO TABLE employee2 PARTITION (emp_department='IT') VALUES
     (1, 'John Doe', 50000.0),
     (4, 'Alice Brown', 70000.0);
 
-INSERT INTO TABLE employee PARTITION (emp_department='HR') VALUES
+INSERT INTO TABLE employee2 PARTITION (emp_department='HR') VALUES
     (2, 'Jane Smith', 60000.0);
 
 -- Autres insertions dans d'autres partitions...
@@ -119,6 +119,7 @@ INSERT INTO TABLE employee PARTITION (emp_department='HR') VALUES
 
 Cela créera une structure de répertoires dans le système de fichiers Hadoop, où chaque département aura son propre sous-répertoire sous le répertoire principal de la table. Cela permettra d'optimiser les requêtes qui filtrent ou agrègent des données basées sur le département.
 
+> ![Hadoop Web UI - Partitions](/blog/2023/2023-12-30/hadoo-web-ui-partitions.png)
 
 ## Hive Hands-on
 
