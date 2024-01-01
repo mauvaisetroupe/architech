@@ -121,6 +121,29 @@ Cela créera une structure de répertoires dans le système de fichiers Hadoop, 
 
 > ![Hadoop Web UI - Partitions](/blog/2023/2023-12-30/hadoo-web-ui-partitions.png)
 
+#### Bucket
+
+À l'intérieur de chaque partition, les données peuvent être divisées en buckets en fonction du hachage d'une colonne spécifiée dans la table. Ce processus est appelé le "bucketing".
+
+```SQL
+-- Création de la table avec partition et buckets
+CREATE TABLE employee3 (
+    emp_id INT,
+    emp_name STRING,
+    emp_salary DOUBLE
+)
+PARTITIONED BY (emp_department STRING)
+CLUSTERED BY (emp_id) INTO 4 BUCKETS;
+
+-- Insertion de données dans la table avec spécification de la partition et du bucket
+INSERT INTO TABLE employee3 PARTITION (emp_department='IT') VALUES (1, 'John Doe', 50000.0);
+INSERT INTO TABLE employee3 PARTITION (emp_department='HR') VALUES (2, 'Jane Smith', 60000.0);
+-- Et ainsi de suite...
+
+-- Requête qui exploite les partitions et les buckets
+SELECT * FROM employee3 WHERE emp_department='IT' TABLESAMPLE(BUCKET 1 OUT OF 4 ON emp_id);
+```
+
 ## Hive Hands-on
 
 Want to try ? [How to do a Hive hands-on using Docker]({{< ref "./hands-on/hadoop-handson.md" >}})
