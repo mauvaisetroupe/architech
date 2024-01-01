@@ -1,5 +1,5 @@
 ---
-title: "Apache Hadoop and Hive hands-on"
+title: "Apache Hive hands-on"
 tags: [Architecture, Data, Lakehouse, Hadoop]
 date: 2023-12-30
 categories: [English]

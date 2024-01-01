@@ -156,7 +156,9 @@ SELECT * FROM employee3 WHERE emp_department='IT' TABLESAMPLE(BUCKET 1 OUT OF 4 
 
 ## Hive Hands-on
 
-Want to try ? [How to do a Hive hands-on using Docker]({{< ref "./hands-on/hadoop-handson.md" >}})
+Want to try ? 
+- [How to do a implement MapReduce in Jave using Docker]({{< ref "./hands-on/mapreduce-hands-on.md" >}})
+- [How to do a Hive hands-on using Docker]({{< ref "./hands-on/hive-hands-on.md" >}})
 
 
 
