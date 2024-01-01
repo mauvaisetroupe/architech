@@ -165,3 +165,17 @@ This will create a directory structure in the Hadoop file system, where each dep
 
 > ![Hadoop Web UI - Partitions](/blog/2023/2023-12-30/hadoo-web-ui-partitions.png)
 
+#### Other commands
+
+```bash
+# copy file in hdfs
+hadoop fs -copyFromLocal localfile.csv /user/hadoop/hdfspath/
+```
+
+```bash
+-- If the file is on HDFS
+LOAD DATA INPATH '/path/to/yourfile.csv' INTO TABLE your_table;
+
+-- If the file is on the local file system (not recommended for large files)
+LOAD DATA LOCAL INPATH '/path/to/yourfile.csv' INTO TABLE your_table;
+```
