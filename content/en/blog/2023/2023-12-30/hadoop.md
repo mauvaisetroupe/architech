@@ -42,6 +42,16 @@ Cette architecture maître-esclave assure la séparation des responsabilités en
 
 [YARN](https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html) est le gestionnaire de ressources de Hadoop. Il alloue les ressources nécessaires aux applications en cours d'exécution sur le cluster, assurant ainsi une utilisation efficace des ressources  (cpu, memory, disk, network) 
 
+### Autres composants
+
+#### Apache Sqoop
+
+Apache Sqoop est un outil open-source qui facilite le transfert bidirectionnel de données entre Hadoop et des bases de données relationnelles. Il propose des connecteurs pour différentes bases de données, s'intègre avec l'écosystème Hadoop (Hive, HBase, etc.) et gère les détails d'accès aux données, permettant ainsi un échange efficace de données entre les environnements relationnel et distribué.
+
+#### HBase
+
+HBase est une base de données NoSQL distribuée et évolutive, intégrée à l'écosystème Hadoop. Elle utilise un modèle de données clé-valeur, stocke ses données sur HDFS, offre un accès rapide aux données, et est adaptée aux cas d'utilisation nécessitant une faible latence pour les opérations de recherche, notamment pour des données non structurées ou semi-structurées.
+
 
 ## Hive : Simplifier l'Analyse des Données avec le Langage SQL
 
