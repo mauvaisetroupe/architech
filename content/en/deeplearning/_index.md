@@ -1,6 +1,6 @@
 ---
 title: Deep Learning
-menu: {main: {weight: 40}}
+menu: {main: {weight: 40, name: "ML/DL"}}
 weight: 10
 type: "docs"
 ---

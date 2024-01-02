@@ -4,6 +4,9 @@ title: "Apache Parquet"
 tags: [Architecture, Data, Lakehouse, Hadoop]
 date: 2023-12-28
 categories: [English]
+type: docs
+weight: 70
+
 ---
 
 ## Row-Based vs. Column-Based Storage
@@ -16,7 +19,7 @@ In row-based storage, data is organized and stored row by row. Each record, cons
 
 Let's illustrate this with an example of a hypothetical "Employee" table:
 
-![row-based storage](/blog/2023/2023-12-28/apache-parquet-row-based.drawio.png)
+![row-based storage](./apache-parquet-row-based.drawio.png)
 
 
 Data is stored line by line :
@@ -40,7 +43,7 @@ In column-based storage, data is organized and stored column by column. Each col
 
 Here's an example of the same "Employee" table stored in a columnar format:
 
-![columed-based storage](/blog/2023/2023-12-28/apache-parquet-column-based.drawio.png)
+![columed-based storage](./apache-parquet-column-based.drawio.png)
 
 
 Data is stored column by column:
@@ -73,7 +76,7 @@ One key optimization in the Parquet format is the concept of "**row group**" :
   - **Optimized I/O Operations:** By organizing data into row groups, Parquet minimizes I/O operations when reading specific portions of the dataset.
 
 
-![columed-based storage](/blog/2023/2023-12-28/apache-parquet-parquet-format-01.drawio.png)
+![columed-based storage](./apache-parquet-parquet-format-01.drawio.png)
 
 
 ### Column Chunks
@@ -83,7 +86,7 @@ Within each row group, columns are further divided into column chunks.
 - It represents the columnar storage format in Parquet.
 - Each column chunk has its own metadata, including encoding and compression information.
 
-![columed-based storage](/blog/2023/2023-12-28/apache-parquet-parquet-format-02.drawio.png)
+![columed-based storage](./apache-parquet-parquet-format-02.drawio.png)
 
 ###  Pages:
 
@@ -94,7 +97,7 @@ Column chunks are composed of pages, which are the basic unit of storage within 
 
 **Row groups**, **column chunks**, and **pages** work together to structure and optimize the storage and retrieval of data in the Parquet format. The hierarchy ensures efficient parallel processing, storage optimization, and improved query performance, making Parquet well-suited for analytics workloads.
 
-![columed-based storage](/blog/2023/2023-12-28/apache-parquet-parquet-format-03.drawio.png)
+![columed-based storage](./apache-parquet-parquet-format-03.drawio.png)
 
 
 ## Predicate and Projection Pushdown
@@ -160,7 +163,7 @@ There are three types of metadata:
 - page header metadata.
 
 
-![parquet metadatas](/blog/2023/2023-12-28/apache-parquet-parquet-format-04.drawio.png)
+![parquet metadatas](./apache-parquet-parquet-format-04.drawio.png)
 
 
 - File Metadata

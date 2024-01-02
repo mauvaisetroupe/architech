@@ -2,7 +2,9 @@
 title: "Apache Hadoop and Hive"
 tags: [Architecture, Data, Lakehouse, Hadoop]
 date: 2023-12-30
-categories: [English]
+categories: [French]
+type: docs
+weight: 10
 ---
 
 
@@ -13,7 +15,7 @@ Hadoop, un écosystème de logiciels open source, a révolutionné la manière d
 
 [Hadoop](https://hadoop.apache.org/) est un framework puissant conçu pour le stockage et le traitement distribué de données massives. Il a été initialement développé par Apache Software Foundation et est largement utilisé dans des applications nécessitant une manipulation efficace de données à grande échelle.
 
-![Hadoop ECosystem](/blog/2023/2023-12-30/01-hadoop-ecosystem.png)
+![Hadoop ECosystem](./01-hadoop-ecosystem.png)
 
 ### Hadoop Distributed File System (HDFS)
 
@@ -65,7 +67,7 @@ HBase est une base de données NoSQL distribuée et évolutive, intégrée à l'
 - Hive utilise un langage SQL-like appelé HiveQL ou **HQL** pour permettre aux analystes et aux développeurs de tirer des insights des données sans avoir besoin de compétences approfondies en programmation.
 - Il stocke les schémas dans une base de donnée relationnelle **Hive Metastore**, mais les données traitées sont stockées dans HDFS
 
-![Hive Exceution](/blog/2023/2023-12-30/hadoop-hive-execution.drawio.png)
+![Hive Exceution](./hadoop-hive-execution.drawio.png)
 
 
 ### Hive Metastore
@@ -88,7 +90,7 @@ Par défaut, le Metastore utilise **Apache Derby**, qui est une base de données
 
 Dans un data warehouse traditionnel, multi dimensionnel (modèle en étoile ou flocon) basé sur des cubes de données, certaines requ6etes peuvent prnedre des heures voire des jours. Grâce à son modèle de donnée distribué, Hive et Hadoop répondent à ce besoin
 
-![Hadoop ECosystem](/blog/2023/2023-12-30/hadoop-data-model.drawio.png)
+![Hadoop ECosystem](./hadoop-data-model.drawio.png)
 
 Le modèle de données de Hive organise les données de la manière suivante :
 - Tables, ce sont les namesapce pour les tables
@@ -129,7 +131,7 @@ INSERT INTO TABLE employee2 PARTITION (emp_department='HR') VALUES
 
 Cela créera une structure de répertoires dans le système de fichiers Hadoop, où chaque département aura son propre sous-répertoire sous le répertoire principal de la table. Cela permettra d'optimiser les requêtes qui filtrent ou agrègent des données basées sur le département.
 
-> ![Hadoop Web UI - Partitions](/blog/2023/2023-12-30/hadoo-web-ui-partitions.png)
+> ![Hadoop Web UI - Partitions](./hadoo-web-ui-partitions.png)
 
 #### Bucket
 
@@ -157,8 +159,9 @@ SELECT * FROM employee3 WHERE emp_department='IT' TABLESAMPLE(BUCKET 1 OUT OF 4 
 ## Hive Hands-on
 
 Want to try ? 
-- [How to do a implement MapReduce in Jave using Docker]({{< ref "./hands-on/mapreduce-hands-on.md" >}})
-- [How to do a Hive hands-on using Docker]({{< ref "./hands-on/hive-hands-on.md" >}})
+- [How to installl Hadoop & Hive using Docker](./01-docker-install//)
+- [How to do a implement MapReduce in Java](./02-mapreduce-hands-on/)
+- [How to create a database and tables in Hive](./03-hive-hands-on/)
 
 
 
