@@ -28,14 +28,16 @@ More details on [Apache Spak website](https://spark.apache.org/)
 
 ## Why Spark: A Brief History
 
-In the realm of big data processing, traditional tools faced challenges in handling massive datasets efficiently. Hadoop's MapReduce framework emerged as a solution, but its batch processing nature posed limitations for real-time analytics. Enter Apache Spark, conceived in response to the shortcomings of MapReduce. Spark introduced Resilient Distributed Datasets (RDDs), a fault-tolerant data structure, and leveraged in-memory processing to significantly boost performance. This innovation marked the beginning of a new era in big data processing.
+In the realm of big data processing, traditional tools faced challenges in handling massive datasets efficiently. Hadoop's MapReduce framework emerged as a solution, but its batch processing nature posed limitations for real-time analytics. Enter Apache Spark, conceived in response to the shortcomings of MapReduce. 
+
+Spark introduced Resilient Distributed Datasets (RDDs), a fault-tolerant data structure, and leveraged in-memory processing to significantly boost performance. This innovation marked the beginning of a new era in big data processing.
 
 #### Significant dates
 
-- Spark was conceived in 2009 by Matei Zaharia during his doctoral studies at the University of California, Berkeley. Originally developed to accelerate processing in Hadoop systems, Spark's developers highlighted its speed in task execution compared to MapReduce.
+- Spark was conceived in 2009 by Matei Zaharia, originally developed to accelerate processing in Hadoop systems (compared to MapReduce)
 - In 2013, Spark was handed over to the Apache Foundation, becoming one of its most active projects.
-- In 2014, Spark achieved a significant milestone by winning the Daytona GraySort Contest, a competition to sort 100 terabytes of data as quickly as possible. Spark accomplished this using 206 machines, demonstrating three times the speed of Hadoop, which had used 2100 machines. Spark's efficiency was showcased by being three times faster while utilizing approximately 10 times fewer machines.
-- Today, contributions to Spark's development come from a diverse range of contributors, with around 200 different companies involved, including Intel, Facebook, IBM, SyFantasy, and Netflix. Since 2015, the number of contributors has surpassed 1,000.
+- In 2014, Spark achieved a significant milestone by winning the Daytona GraySort Contest, a competition to sort 100 terabytes of data as quickly as possible
+- Today, contributions to Spark's development come from around 200 different companies (Intel, Facebook, IBM, Netflix...)
 
 More detail in [wikipedia](https://fr.wikipedia.org/wiki/Apache_Spark).
 
@@ -53,23 +55,32 @@ Apache Spark is a unified analytics engine for large-scale data processing. It p
 
 ### Spark Librairies/Modules
 
+You can find Spark libraries from [Spark website](https://spark.apache.org/) through the "Libraries menu"
+
+![Spark component](./spark-4-librairies.png)
+
+Below a brief summary of the 4 libraries.
+
 ![Spark component](./spark-spark-components-02.drawio.png)
 
-#### Spark SQL
-
-Spark SQL provides a programming interface for structured data using SQL queries. It introduces DataFrames and Datasets, allowing users to seamlessly blend SQL queries with Spark programs, making data manipulation more intuitive.
-
-#### Spark Streaming
-
+{{< cardpane >}}
+{{< card header="Spark SQL" >}}
+<p>Spark SQL provides a programming interface for structured data using SQL queries. It introduces DataFrames and Datasets, allowing users to seamlessly blend SQL queries with Spark programs, making data manipulation more intuitive.</p>
+<p>Spark SQL not only supports the <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual">HiveQL</a> syntax but also integrates with <a href="https://cwiki.apache.org/confluence/display/hive/serde"> Hive SerDes</a>  and <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF">UDFs</a>, allowing you to effortlessly tap into existing Hive warehouses. </p>
+{{< /card >}}
+{{< card header="Spark Streaming" >}}
 For real-time data processing, Spark Streaming allows the ingestion and processing of live data streams. This component is crucial for applications requiring low-latency processing, such as fraud detection and monitoring.
+{{< /card >}}
+{{< /cardpane >}}
 
-#### MLlib (Machine Learning Library)
-
+{{< cardpane >}}
+{{< card header="MLlib (Machine Learning Library)" >}}
 Spark's MLlib is a comprehensive machine learning library that supports various algorithms and tools for scalable machine learning. It caters to diverse use cases, from classification and regression to clustering and collaborative filtering.
-
-#### GraphX
-
+{{< /card >}}
+{{< card header="GraphX" >}}
 GraphX is Spark's graph processing library, designed for analyzing and processing graph-structured data. It's invaluable for applications like social network analysis and fraud detection, where relationships among data points are crucial.
+{{< /card >}}
+{{< /cardpane >}}
 
 ### CLuster management type
 
@@ -94,18 +105,21 @@ Spark can create [distributed datasets](https://spark.apache.org/docs/3.5.0/rdd-
 
 ![Spark component](./spark-spark-components-04.drawio.png)
 
-### All Together
+### Spark components architecture
 
-If we put API, Libraries, External storage systems and Cluster Manageent together, we have the following global conceptual architecture
+If we put API, Libraries, External storage systems and Cluster Manageent together, we have the following global conceptual architecture schema:
 
 ![Spark component](./spark-spark-components.drawio.png)
 
 
-## Resilient Distributed Datasets (RDDs)
+## Focus on RDD, DataFrames and Dataset 
 
+> Since version 2.0, the former interface, Resilient Distributed Dataset (RDD), has been replaced by Datasets. Dataset, which is strongly-typed like an RDD, come with richer optimizations. Source [Spark Quick Start](https://spark.apache.org/docs/latest/quick-start.html) 
 
+![Spark component](./spark-programming-guides.png)
 
+See [Spark Shell hands-on for more details](./02-spark-shell/)
 
-### Sources
+#### Sources
 - https://spark.apache.org/
 - https://fr.wikipedia.org/wiki/Apache_Spark
