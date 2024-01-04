@@ -41,6 +41,20 @@ Spark introduced Resilient Distributed Datasets (RDDs), a fault-tolerant data st
 
 More detail in [wikipedia](https://fr.wikipedia.org/wiki/Apache_Spark).
 
+#### Features and vision evolution
+
+
+![Spark Evolution](./spark-spark-evolution.drawio.png)
+
+
+- **Spark 0.x** : The early stages of Spark marked a significant advancement with a framework exclusively based on Scala and MapReduce APIs, surpassing the limitations of Hadoop. Despite an application at a higher level, the use of RDDs remained intricate, requiring advanced manipulation.
+- **Spark 1.x** : The transition to Spark 1.x introduced DataFrames with bindings to Python and integration of generated SQL, reducing dependence on RDDs and simplifying programming in MapReduce.
+- **Spark 2.x** : Version 2 of Spark unified the framework with the introduction of DataFrame APIs and full SQL integration, further facilitating the data transformation process.
+- **Spark 3.x** : In Spark 3.x, the transition for data scientists from pandas to Spark was initially hindered by Scala's orientation. To address this, the Koalas framework, originally developed by Databricks, was integrated into Spark 3.2. Koalas is now an integral part of PySpark, enabling users to reuse existing code and simplifying the transition to a distributed environment. Spark 3.x also introduced notable improvements such as Adaptive Query Tuning, Kubernetes deployment, and SQL ANSI compliance, streamlining the framework's usage to a higher level.
+
+More details in this [French Devoxxed conference](https://www.youtube.com/watch?v=YK_tli-jDPs).
+
+
 ## Spark Components: An Overview
 
 ### Spark Core
@@ -123,3 +137,4 @@ See [Spark Shell hands-on for more details](./02-spark-shell/)
 #### Sources
 - https://spark.apache.org/
 - https://fr.wikipedia.org/wiki/Apache_Spark
+- https://www.youtube.com/watch?v=YK_tli-jDPs&ab_channel=DevoxxFR
