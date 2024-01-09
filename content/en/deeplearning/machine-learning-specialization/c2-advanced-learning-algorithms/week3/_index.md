@@ -350,17 +350,17 @@ These two steps are called :
 - fine tuning where you take the parameters that you had initialized or gotten from supervised pre-training and then run gradient descent further to fine tune the weights to suit the specific application
 
 
-> <img src="./images/w03-13-Transfer_learning:_using_data_from_a_different_task/img_2023-02-05_10-04-13.png">
+> <img src="./images/w03-13-Transfer_learning_using_data_from_a_different_task/img_2023-02-05_10-04-13.png">
 
 Learning on detecting lots of different images (dogs, car, etc), you're teaching the neural network to detect edges, corners, and basic shapes. This is useful for many other computer vision tasks
 
-> <img src="./images/w03-13-Transfer_learning:_using_data_from_a_different_task/img_2023-02-05_10-04-24.png">
+> <img src="./images/w03-13-Transfer_learning_using_data_from_a_different_task/img_2023-02-05_10-04-24.png">
 
 I'd sometimes train neural networks on as few as 50 images that were quite well using this technique, when it has already been pre-trained on a much larger dataset. 
 
 **GPT-3** or BERTs or neural networks pre-trained on ImageNet, are actually examples of neural networks that they have someone else's pre-trained on a very large image datasets or text dataset, they can then be fine tuned on other applications 
 
-> <img src="./images/w03-13-Transfer_learning:_using_data_from_a_different_task/img_2023-02-05_10-04-36.png">
+> <img src="./images/w03-13-Transfer_learning_using_data_from_a_different_task/img_2023-02-05_10-04-36.png">
 
 
 ### Full cycle of a machine learning project
@@ -375,13 +375,13 @@ This refers to the practice of how to systematically build and deploy and mainta
 
 ### Fairness, bias, and ethics
 
-> <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-27-43.png">
+> <img src="./images/w03-15-Fairness_bias_and_ethics/img_2023-02-05_10-27-43.png">
 
-> <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-27-47.png">
+> <img src="./images/w03-15-Fairness_bias_and_ethics/img_2023-02-05_10-27-47.png">
 
-> <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-28-09.png">
+> <img src="./images/w03-15-Fairness_bias_and_ethics/img_2023-02-05_10-28-09.png">
 
-> <img src="./images/w03-15-Fairness,_bias,_and_ethics/img_2023-02-05_10-28-26.png">
+> <img src="./images/w03-15-Fairness_bias_and_ethics/img_2023-02-05_10-28-26.png">
 
 
 ## Skewed dataset (Optional)
