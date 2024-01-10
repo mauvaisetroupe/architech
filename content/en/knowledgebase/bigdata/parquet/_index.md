@@ -5,7 +5,7 @@ tags: [Architecture, Data, Lakehouse, Hadoop]
 date: 2023-12-28
 categories: [English]
 type: docs
-weight: 70
+weight: 30
 
 ---
 
