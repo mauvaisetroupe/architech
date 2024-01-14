@@ -20,7 +20,7 @@ This initial implementation, which is still live, was complemented by a much mor
 We coud try to draw the 5 big area in the historey in data warehousing. Please note that these periods and technologies are generalized and may not reflect the exact adoption patterns for every organization
 
 
-### (01) - Data warehouse
+### 01. Data warehouse
 
 ![data hitory timeline](from-dwh-to-lakehouse-history-01.drawio.png)
 
@@ -43,7 +43,7 @@ Despite advancements, data warehouses, originally tailored for structured data a
 - modern projects integrating machine learning, IoT data, and real-time streams reveal their inefficiency in handling unstructured data
 - proprietary systems tied to data warehouses contribute to complexities, hindering smooth migrations and leaving companies with closed, challenging-to-leave systems (vendor lock effect)
 
-### (02) The Era of Big Data:
+### 02. The Era of Big Data
 
 ![data hitory timeline](from-dwh-to-lakehouse-history-02.drawio.png)
 
@@ -66,7 +66,7 @@ James Dixon, then chief technology officer at Pentaho, coined the term "Data Lak
 
 Historically, managing Hadoop clusters posed complexity, but this challenge has diminished, thanks to managed services offered by cloud service providers. Currently, there's a proliferation of managed services centered around Spark, notably through platforms like Databricks. These services significantly simplify the deployment and management of Spark clusters, marking a notable shift in the data management landscape.
 
-###  (03) Evolution of Datawarehouse with massive adoption of the cloud
+###  03. Datawarehouse & the cloud
 
 Over time, evolution has led to the emergence of new, more efficient databases. 
 
@@ -87,7 +87,7 @@ Over time, evolution has led to the emergence of new, more efficient databases.
 
 Overall, the emphasis has been on elasticity in the cloud and improved performance. An despite these advancements, data warehouses remain primarily focused on Business Intelligence (BI) access, thereby presenting certain inherent limitations associated with this orientation (only for structured data, not implemented machine learning, IoT data, and real-time data streams, ...)
 
-### (04) Data Lakes in the cloud
+### 04. Data Lakes & the cloud
 
 As technology advanced, the need to manage various types of data, including unstructured and semi-structured information, also increased. This marked the beginning or at least the consolidation of the era of data lakes, where organizations could store large amounts of raw and unprocessed data in its native format.
 
@@ -110,7 +110,7 @@ Technologies like Apache Hadoop already lay the groundwork for scalable storage 
 Currently, there is a proliferation of managed services around Spark, with platforms such as Databricks, AWS EMR... These services significantly simplify the deployment and management of [Apache Spark](../spark/) clusters.
 
 
-### (04) Data Swamp
+### 04. Data Swamp
 
 Implementing a data lake can be a complex endeavor, and several challenges may contribute to its failure or lead to it being referred to as a "data swamp." 
 
@@ -131,7 +131,7 @@ Here are some common reasons
 
 In short, if data is not linked together, and if there are no metadata, a data lake can quickly transform into a data swamp.
 
-### (05) Lakehouse paradigm
+### 05. Lakehouse paradigm
 
 When examining **data lakes** (primarily based on managed Spark and blob storage like AWS S3), they address certain challenges, but with some limitations
 
@@ -173,5 +173,6 @@ Today, organizations find themselves in a dynamic data landscape where tradition
 
 ![data hitory timeline](from-dwh-to-lakehouse-history-05-bis.drawio.png)
 
+If you want to know more detail about [Lakehouse, Iceberg & Delta](../lakehouse-iceberg-delta/).
 
 The evolution of data management technologies continues...
