@@ -175,4 +175,13 @@ Today, organizations find themselves in a dynamic data landscape where tradition
 
 If you want to know more detail about [Lakehouse, Iceberg & Delta](../lakehouse-iceberg-delta/).
 
+
+#### Logical Datawarehouse
+
+An alternative or complementary strategy to the Data Lakehouse concept is data virtualization, as suggested in a [blog post by Denodo](https://www.datamanagementblog.com/data-lakehouse-myth/).
+
+The challenge with the Data Lakehouse concept lies in its attempt to serve as the singular centralized repository for all enterprise data. However, not only has this proven to be ultimately unattainable, but it is also considered inadvisable.
+
+A more effective approach, termed the "connect" principle, advocates leaving the data in its respective locations, establishing logical connections as needed, and presenting a unified view of the information to consumers without the necessity of physically relocating any data. When applying the "connect" principle to the conventional, physically-based data warehouse, the result is a transformation of the traditional data warehouse into a logical data warehouse.
+
 The evolution of data management technologies continues...
