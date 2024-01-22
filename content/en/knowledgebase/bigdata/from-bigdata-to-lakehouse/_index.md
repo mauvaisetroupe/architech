@@ -29,8 +29,7 @@ The story begins with classical data warehouses, robust solutions that emerged i
 Pioneered by industry giants like IBM, Teradata, and Oracle, these centralized repositories were designed to handle structured data efficiently. Their primary focus was on providing a platform for Business Intelligence (BI), enabling organizations to store and retrieve data for reporting and analysis.
 
 
-{{% alert  title="Key information" color="primary" %}}
-- **Timeline:** Early 2000s
+{{% alert color="primary" %}}
 - **Data Range:** Historical and structured data
 - **Main Technology/Tooling Stack:**
     - Relational Database Management Systems (RDBMS)
@@ -49,8 +48,7 @@ Despite advancements, data warehouses, originally tailored for structured data a
 
 Advancing to the 2000s, the era of Big Data unfolded. With an explosion in data volume, velocity, and variety, traditional data warehouses faced challenges in keeping up. The need to process diverse data types led to the exploration of Big Data technologies. Platforms like Apache Hadoop emerged, enabling organizations to store and process vast datasets more flexibly.
 
-{{% alert  title="Key information" color="primary" %}}
-   - **Timeline:** 2010s
+{{% alert  color="primary" %}}
    - **Data Range:** Historical, real-time, and diverse data
    - **Main Technology/Tooling Stack:**
      - [Hadoop ecosystem](../hadoop/) (HDFS, MapReduce, Hive, HBase)
@@ -75,14 +73,11 @@ Over time, evolution has led to the emergence of new, more efficient databases.
 - The first evolution was the advent of new columnar architecture databases (such as Sybase IQ or Vertica).
 - However, the most significant advancement came with the rise of cloud service providers, who brought substantial improvements in terms of performance and elasticity (AWS Redshift, Google BigQuery, Snowflake).
 
-{{% alert  title="Key information" color="primary" %}}
-   - **Timeline:** Mid-2010s
+{{% alert  color="primary" %}}
    - **Data Range:** Historical and real-time data
    - **Main Technology/Tooling Stack:**
      - Cloud-based infrastructure (e.g., AWS Redshift, Google BigQuery, Snowflake)
      - SQL-based querying and reporting tools
-     - Optionally, integration with Dremio for data virtualization
-     - Optionally, integration with Presto or Trino for distributed SQL querying
 {{% /alert %}}
 
 Overall, the emphasis has been on elasticity in the cloud and improved performance. An despite these advancements, data warehouses remain primarily focused on Business Intelligence (BI) access, thereby presenting certain inherent limitations associated with this orientation (only for structured data, not implemented machine learning, IoT data, and real-time data streams, ...)
@@ -97,14 +92,12 @@ Technologies like Apache Hadoop already lay the groundwork for scalable storage 
 - It has become easier from an operability standpoint with managed services that alleviate companies from the expensive and intricate implementation of such technological stacks on-premise (installing an on-premise Hadoop stack, including HDFS, can be a challenging task).
 - The cloud also provides cost-effective and elastic storage solutions, with services such as AWS S3.
 
-{{% alert  title="Key information" color="primary" %}}
-   - **Timeline:** Late 2010s
+{{% alert  color="primary" %}}
    - **Data Range:** Historical, real-time, and diverse data
    - **Main Technology/Tooling Stack:**
      - Cloud storage services (AWS S3, Azure Data Lake Storage, Google Cloud Storage)
      - Managed big data services (AWS EMR, Azure HDInsight)
      - [Apache Parquet](../parquet/) for columnar storage
-     - Integration with cloud analytics tools (e.g., Google BigQuery)
 {{% /alert %}}
 
 Currently, there is a proliferation of managed services around Spark, with platforms such as Databricks, AWS EMR... These services significantly simplify the deployment and management of [Apache Spark](../spark/) clusters.
@@ -133,45 +126,22 @@ In short, if data is not linked together, and if there are no metadata, a data l
 
 ### 05. Lakehouse paradigm
 
-When examining **data lakes** (primarily based on managed Spark and blob storage like AWS S3), they address certain challenges, but with some limitations
+Current **Data lakes** are mainly based on managed Spark and blob storage like AWS S3. They bring unprecedented flexibility, advanced support for machine learning tasks, and good support for streaming operations and real-time processing. However, they are not fully adequate for large-scale BI. They have performance limitations that prevent reaching the levels expected by businesses, necessitating the copying of data from the data lake to the data warehouse. This data duplication, coupled with a lack of governance, can lead to poor-quality data, making their effective use difficult.
 
-{{% alert  title="Data Lake - Advantages" color="success" %}}
-- Unprecedented flexibilit
-- Advanced support for machine learning tasks.
-- Simplification of streaming operations and real-time processing.
-{{% /alert %}}
+As consequence, the **Lakehouse** approach emerged in 2020 and, as of 2024, is still quite recent and evolving. The concept of this approach is to no longer have copies of data spread across multiple data warehouses or datamarts. Instead, the idea is to deploy data warehouse-like tools directly on the data lake to enable real-time analysis, schema evolution, and integration with tools for managing data quality.
 
-{{% alert  title="Data Lake - Limitations" color="danger" %}}
-- For large-scale BI, these solutions may not adequately meet throughput requirements.
-- Performance may not reach the levels expected by businesses, necessitating the copying of data from the data lake to the data warehouse.
-- Data quality issues arise because the flexible nature of the data lake, which accepts all types of data without schema constraints, can initially be an advantage but sometimes turns into a major challenge. This can lead to poor-quality data, making their effective use difficult.
-{{% /alert %}}
-
-This led to the inception of the '**lakehouse**' concept, combining the strengths of data warehouses and data lakes. Companies sought a unified approach that addressed the shortcomings of both, paving the way for platforms like Databricks Delta Lake and Apache Iceberg.
 
 ![data hitory timeline](from-dwh-to-lakehouse-history-05.drawio.png)
 
-**Lakehouse** is a kind of mix between Datawarehouse and Data Lake.
-
-{{% alert  title="Key information" color="primary" %}}
-   - **Timeline:** 2020s
+{{% alert color="primary" %}}
    - **Data Range:** Historical and real-time data, structured and semi-structured
    - **Main Technology/Tooling Stack:**
      - Unified analytics platforms (e.g., Databricks Delta Lake)
      - Apache Iceberg for table evolution and metadata management
      - [Apache Parquet](../parquet/) for columnar storage
-     - Optionally, integration with Dremio for data virtualization
      - Optionally, integration with Presto or Trino for distributed SQL querying
-     - Structured query language (SQL) for analytics
-     - Optimized storage and processing engines
 {{% /alert %}}
 
-
-#### Lakehouse & Cloud - The Modern Landscape
-
-Today, organizations find themselves in a dynamic data landscape where traditional boundaries between data warehouses and data lakes blur. The lakehouse approach facilitates real-time analytics, schema evolution, and data quality, ensuring a holistic and agile solution for diverse business needs.
-
-![data hitory timeline](from-dwh-to-lakehouse-history-05-bis.drawio.png)
 
 If you want to know more detail about [Lakehouse, Iceberg & Delta](../lakehouse-iceberg-delta/).
 
@@ -180,8 +150,9 @@ If you want to know more detail about [Lakehouse, Iceberg & Delta](../lakehouse-
 
 An alternative or complementary strategy to the Data Lakehouse concept is data virtualization, as suggested in a [blog post by Denodo](https://www.datamanagementblog.com/data-lakehouse-myth/).
 
-The challenge with the Data Lakehouse concept lies in its attempt to serve as the singular centralized repository for all enterprise data. However, not only has this proven to be ultimately unattainable, but it is also considered inadvisable.
+The challenge with the data lakehouse concept lies in its attempt to be the exclusive central repository for all enterprise data. In today's data landscape, data is inherently distributed and likely to remain so.
 
-A more effective approach, termed the "connect" principle, advocates leaving the data in its respective locations, establishing logical connections as needed, and presenting a unified view of the information to consumers without the necessity of physically relocating any data. When applying the "connect" principle to the conventional, physically-based data warehouse, the result is a transformation of the traditional data warehouse into a logical data warehouse.
+A more effective approach could be to leave the data in its original locations, creating logical connections without physically moving any data. Implementing this approach transforms the traditional data warehouse into a logical data warehouse
+
 
 The evolution of data management technologies continues...
