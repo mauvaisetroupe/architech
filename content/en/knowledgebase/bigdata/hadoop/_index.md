@@ -159,7 +159,7 @@ SELECT * FROM employee3 WHERE emp_department='IT' TABLESAMPLE(BUCKET 1 OUT OF 4 
 ## Hive Hands-on
 
 Want to try ? 
-- [How to installl Hadoop & Hive using Docker](./01-docker-install//)
+- [How to installl Hadoop & Hive using Docker](./01-docker-install/)
 - [How to do a implement MapReduce in Java](./02-mapreduce-hands-on/)
 - [How to create a database and tables in Hive](./03-hive-hands-on/)
 
