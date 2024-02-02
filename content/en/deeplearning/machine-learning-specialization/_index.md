@@ -133,7 +133,7 @@ Learning Objectives
 - Learn to include fairness and ethics in your machine learning model development
 - Measure precision and recall to work with skewed (imbalanced) datasets
 
-#### [Week 4 - Decision trees](./c2-advanced-learning-algorithms/week4)
+#### [Week 4 - Decision trees](./c2-advanced-learning-algorithms/week4/)
 
 This week, you'll learn about a practical and very commonly used learning algorithm the decision tree. You'll also learn about variations of the decision tree, including random forests and boosted trees (XGBoost).
 

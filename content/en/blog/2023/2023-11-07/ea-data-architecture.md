@@ -7,7 +7,7 @@ categories: [English]
 
 ## Context (Why)
 
-Over the past five years, the Enterprise Architecture (EA) team I've been a part of has diligently established a comprehensive EA framework. This framework encompasses the organization, deliverables, processes, and tools. Within this context, I have developed a tool known as [designIT](/ea-design-it). Up to this point, designIT has primarily focused on the Application facet of the information system, utilizing TOGAF terminology.
+Over the past five years, the Enterprise Architecture (EA) team I've been a part of has diligently established a comprehensive EA framework. This framework encompasses the organization, deliverables, processes, and tools. Within this context, I have developed a tool known as [designIT](/ea-design-it/). Up to this point, designIT has primarily focused on the Application facet of the information system, utilizing TOGAF terminology.
 
 Today, we are immersed in a thoughtful process aimed at reconfiguring aspects of our architecture, with a strong emphasis on data and information. This initiative involves a thorough examination of how data and information are integrated into our existing framework and how they can be optimized to better serve our organizational needs.
 

@@ -47,7 +47,7 @@ Set up a machine learning problem with a neural network mindset and use vectoriz
 
 Build a neural network with one hidden layer, using forward propagation and backpropagation.
 
-#### [Week 4 - Deep L-layer Neural Network](./c1-neural-networks-and-deep-learning/week4)
+#### [Week 4 - Deep L-layer Neural Network](./c1-neural-networks-and-deep-learning/week4/)
 
 Analyze the key computations underlying deep learning, then use them to build and train deep neural networks for computer vision tasks.
 

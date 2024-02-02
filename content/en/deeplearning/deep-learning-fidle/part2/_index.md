@@ -29,7 +29,7 @@ A noter que lorsqu'on parle des réseau actuels, on parle du nombre de paramètr
 
 ### Session de live coding
 
-- Recognizing handwritten numbers (implemented via DNN on [previous sequence](../part1#data-and-neurons), now done with CNN)
+- Recognizing handwritten numbers (implemented via DNN on [previous sequence](../part1/#data-and-neurons), now done with CNN)
 - Le résultat est meilleur en CNN vs DNN (accuracy 98% vs. 95%)
 
 

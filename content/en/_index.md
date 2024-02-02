@@ -3,7 +3,7 @@ title: Architech.lu
 ---
 
 {{< blocks/cover title="Welcome to ArchiTech.lu" image_anchor="bottom " height="full" >}}
-<a class="btn btn-lg btn-primary me-3 mb-4" href="/deeplearning">
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/deeplearning/">
   My Deep Learning notes <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="https://github.com/mauvaisetroupe">
