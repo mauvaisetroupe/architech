@@ -25,12 +25,13 @@ Unless these two conditions are satisfied, the data lake is at risk of becoming 
 
 ### Data Lake limitations
 
-#### Reliability
+#### Reliability & Data Integrity
 
-In data management, maintaining reliability is challenging
-- Adding data to evolving schemas and performing updates or deletions are complex tasks that often require manual correction, especially following job failures. 
+In a classical Data Lake, maintaining reliability is challenging.
+- Writing operation on existing datasets could lead to incorrect data reads. Performing updates or deletions are complex tasks that often require manual correction, especially following job failures that can corrupt the data integrity.
 - Combining streaming with batch processing is tricky as it can lead to misinterpretations by processing engines like Spark. 
-- Furthermore, ensuring traceability and safe concurrent modifications across multiple partitions by various jobs is difficult, risking data integrity and consistency. Efficient systems must manage these aspects to prevent reliability issues.
+- Safe concurrent modifications across multiple partitions by various jobs is difficult, risking data integrity and consistency
+- Ensuring traceability of writing operation is not out-of-the-box
 
 #### Security and privacy
 
