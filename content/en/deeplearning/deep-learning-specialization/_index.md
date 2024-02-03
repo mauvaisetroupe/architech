@@ -138,7 +138,7 @@ Discover some powerful practical tricks and methods used in deep CNNs, straight 
 Apply your new knowledge of CNNs to one of the hottest (and most challenging!) fields in computer vision: object detectio
 
 
-#### [Week 4 - Special Applications: Face recognition & Neural Style Transfer](./c4-convolutional-neural-netowrks/week4)
+#### [Week 4 - Special Applications: Face recognition & Neural Style Transfer](./c4-convolutional-neural-netowrks/week4/)
 
 Explore how CNNs can be applied to multiple fields, including art generation and face recognition, then implement your own algorithm to generate art and recognize faces!
 
@@ -172,4 +172,4 @@ Natural language processing with deep learning is a powerful combination. Using 
 Augment your sequence models using an attention mechanism, an algorithm that helps your model decide where to focus its attention given a sequence of inputs. Then, explore speech recognition and how to deal with audio data.
 
 
-#### [Week 4 - Transformer Network](./c5-recurrent-neural-networks/week4)
+#### [Week 4 - Transformer Network](./c5-recurrent-neural-networks/week4/)
