@@ -5,3 +5,4 @@ package-lock.json
 .hugo_build.lock
 hugo.exe
 **/*.drawio.bkp
+**/.DS_Store
