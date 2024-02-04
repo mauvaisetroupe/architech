@@ -2,6 +2,7 @@
 title: About ArchiTech.lu 
 linkTitle: About
 menu: {main: {weight: 10}}
+description: "I'm Lionel Coquin, a Luxembourg-based IT architect with 20+ years in tech, specializing in cloud, AI, and innovations, blending leadership with hands-on expertise."
 ---
 
 {{% blocks/cover title="About ArchiTech.lu " image_anchor="bottom" height="med" %}}
