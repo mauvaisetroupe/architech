@@ -1,7 +1,7 @@
 ---
 title: "W1 - Practical Aspects of Deep Learning"
 type: docs
-
+description: "Explore practical aspects of deep learning: initialization methods, regularization techniques like dropout, optimization, and gradient checking for neural networks."
 ---
 
 Discover and experiment with a variety of different initialization methods, apply L2 regularization and dropout to avoid model overfitting, then apply gradient checking to identify errors in a fraud detection model.

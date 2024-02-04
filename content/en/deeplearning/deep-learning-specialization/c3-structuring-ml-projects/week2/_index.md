@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "W2 - ML Strategy"
+description: "Learn error analysis, data mismatch, transfer, multi-task, and end-to-end deep learning in machine learning."
 ---
 
 

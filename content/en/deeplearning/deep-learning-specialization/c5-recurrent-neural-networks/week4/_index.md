@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "W4 - Transformer Network"
+description: "Learn how to create Transformer Networks, perform self-attention, multi-head attention, implement NER, QA, and more in this comprehensive guide."
 ---
 
 Learning Objectives

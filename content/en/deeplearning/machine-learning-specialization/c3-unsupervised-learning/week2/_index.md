@@ -1,6 +1,7 @@
 ---
 title: "W2 - Recommender Systems"
 type: docs
+description: "Explore recommender systems with collaborative and content-based filtering, deep learning techniques, and the role of PCA in feature reduction and visualization."
 ---
 
 

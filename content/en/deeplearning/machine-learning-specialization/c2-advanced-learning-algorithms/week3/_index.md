@@ -1,6 +1,7 @@
 ---
 title: "W3 - Advice for applying machine learning"
 type: docs
+description: "Gain insights on machine learning best practices, including evaluating models, diagnosing bias and variance, and leveraging transfer learning to enhance model performance."
 ---
 
 This week you'll learn best practices for training and evaluating your learning algorithms to improve performance. This will cover a wide range of useful advice about the machine learning lifecycle, tuning your model, and also improving your training data.

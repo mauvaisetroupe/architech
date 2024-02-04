@@ -2,8 +2,7 @@
 type: docs
 title: "C2 - Improving Deep Neural Networks"
 permalink: /c2-improving-deep-neural-networks/
-has_toc: true
-has_children: true
+description: "Dive deeper into neural networks: learn to fine-tune, optimize, and use TensorFlow for advanced deep learning applications."
 ---
 
 https://www.coursera.org/learn/deep-neural-network

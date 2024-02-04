@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "W1 - Recurrent Neural Networks"
+description: "Discover recurrent neural networks, a type of model that performs extremely well on temporal data, and several of its variants, including LSTMs, GRUs and Bidirectional RNNs"
 ---
 
 

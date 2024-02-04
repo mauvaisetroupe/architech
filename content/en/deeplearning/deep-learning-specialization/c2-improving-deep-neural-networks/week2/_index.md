@@ -1,6 +1,7 @@
 ---
 title: "W2 - Optimization Algorithms"
 type: docs
+description: "Advance your deep learning skills with optimization algorithms like Gradient Descent with Momentum, RMSprop, and Adam. Learn techniques like minibatching, learning rate decay, and understand the real issue with local optima in high-dimensional spaces."
 ---
 
 

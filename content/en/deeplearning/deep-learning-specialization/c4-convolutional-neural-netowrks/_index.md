@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "C4 - Convolutional Neural Networks"
+description: "Learn Convolutional Neural Networks, object detection, and more in the Deep Learning Specialization's fourth course. Master the skills to excel in AI."
 ---
 
 

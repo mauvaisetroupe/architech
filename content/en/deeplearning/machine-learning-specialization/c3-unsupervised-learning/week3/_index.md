@@ -1,6 +1,7 @@
 ---
 title: "W3 - Reinforcement learning "
 type: docs
+description: "Learn reinforcement learning and build a deep Q-learning network to land a lunar lander on Mars. Understand key concepts and apply them in a practical project."
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: W1 - Introduction to deep learning
 type: docs
+description: "Explore deep learning's rise, its application in supervised learning, model types like CNNs and RNNs, and suitable use cases."
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: "W4 - Decision trees"
 type: docs
+description: "Explore decision trees, from the basics of their structure and learning process to advanced concepts like tree ensembles, random forests, and XGBoost."
 ---
 
 

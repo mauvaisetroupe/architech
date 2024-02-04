@@ -1,6 +1,7 @@
 ---
 title: "W1 - Neural Networks"
 type: docs
+description: "Dive into neural networks with TensorFlow and Python, learning concepts like layers, forward propagation, and vectorization for efficient computations."
 ---
 
 

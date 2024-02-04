@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "W2 - Deep Convolutional Models: Case Studies"
+description: This document discusses various deep convolutional neural network architectures, transfer learning, data augmentation, and practical tips for computer vision.
 ---
 
 

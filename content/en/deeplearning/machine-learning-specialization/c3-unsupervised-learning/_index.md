@@ -1,6 +1,7 @@
 ---
 title: "C3 - Unsupervised Learning, Recommenders, Reinforcement Learning"
 type: docs
+description: "Dive into unsupervised learning, build recommender systems using collaborative and content-based methods, and explore deep reinforcement learning models."
 ---
 
 In the third course of the Machine Learning Specialization, you will:

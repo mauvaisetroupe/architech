@@ -1,6 +1,7 @@
 ---
 title: "W2 - Neural network training"
 type: docs
+description: "Discover neural network training, activation functions, multiclass classification, and advanced optimization techniques in TensorFlow."
 ---
 
 

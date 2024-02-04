@@ -1,6 +1,7 @@
 ---
 title: "C2 - Advanced Learning Algorithms (Neural Networks and Decision Trees)"
 type: docs
+description: "Explore advanced ML with neural networks and decision trees, including TensorFlow training, multiclass classification, and tree ensembles like random forests and XGBoost."
 ---
 
 In the second course of the Machine Learning Specialization, you will:

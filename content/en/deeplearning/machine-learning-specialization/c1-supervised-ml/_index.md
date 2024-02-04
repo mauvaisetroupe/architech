@@ -1,6 +1,8 @@
 ---
 title: "C1 - Supervised Machine Learning : Regression and Classification"
 type: docs
+description: "Dive into ML with Python, covering regression, classification, and best practices in AI innovation."
+
 ---
 
 In the first course of the Machine Learning Specialization, you will:

@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "C3 - Structuring Machine Learning Projects"
+description:"C3 - Structuring Machine Learning Projects" course teaches leadership, error diagnosis, and advanced ML techniques. Suitable for basic ML knowledge.
 ---
 
 https://www.coursera.org/learn/machine-learning-projects

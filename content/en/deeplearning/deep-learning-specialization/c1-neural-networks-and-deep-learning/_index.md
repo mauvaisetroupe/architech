@@ -1,6 +1,7 @@
 ---
 title: "C1 - Neural Networks and Deep Learning"
 type: docs
+description: "Learn the fundamentals of neural networks and deep learning: build and train neural networks, understand architecture, and apply deep learning to real-world applications."
 ---
 
 

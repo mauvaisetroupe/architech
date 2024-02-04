@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "W3 - Hyperparameter Tuning, Batch Normalization and Programming Frameworks"
+Description: "Explore TensorFlow for neural network development, hyperparameter tuning, and batch normalization. Master the art of tuning, normalize activations, and understand Softmax classification. Dive into deep learning frameworks and let TensorFlow handle backpropagation."
 ---
 
 

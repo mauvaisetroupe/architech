@@ -1,6 +1,7 @@
 ---
 title: "W2 - Regression with multiple values"
 type: docs
+description: "Expand linear regression to multiple features with vectorization, feature scaling, and polynomial regression for enhanced model training."
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: W3 - Shallow Neural Networks
 type: docs
+description: "Develop a neural network with one hidden layer, utilizing forward and backpropagation for 2-class classification."
 ---
 
 Build a neural network with one hidden layer, using forward propagation and backpropagation.

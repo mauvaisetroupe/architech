@@ -1,6 +1,7 @@
 ---
 title: W4 - Deep L-layer Neural Network
 type: docs
+description: "Explore deep learning's core concepts: build and train deep neural networks for vision tasks, understanding layers, forward/back propagation, and hyperparameters."
 ---
 
 

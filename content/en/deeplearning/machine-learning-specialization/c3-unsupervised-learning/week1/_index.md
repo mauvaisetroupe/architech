@@ -1,6 +1,7 @@
 ---
 title: "W1 - Unsupervided learning"
 type: docs
+description: "Explore unsupervised learning with k-means clustering and anomaly detection, covering algorithms, optimization objectives, and feature selection for effective modeling."
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 type: docs
 title: "W4 - Special Applications: Face recognition & Neural Style Transfer"
+description: "Explore how CNNs can be applied to multiple fields, including art generation and face recognition, then implement your own algorithm to generate art and recognize faces!"
+
 ---
 
 

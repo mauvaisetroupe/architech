@@ -1,6 +1,7 @@
 ---
 title: "W3 - Classification"
 type: docs
+description: "Learn binary classification with logistic regression, address overfitting using regularization, and implement logistic regression to improve model performance."
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 type: docs
 title: "W1 - Foundations of Convolutional Neural Networks"
+descriptiion: "W1 - Foundations of Convolutional Neural Networks" explains CNN basics, pooling, padding, and advantages in computer vision applications.
 ---
 
 

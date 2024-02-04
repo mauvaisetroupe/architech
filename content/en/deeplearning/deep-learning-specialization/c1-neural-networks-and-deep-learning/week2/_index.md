@@ -1,7 +1,7 @@
 ---
 title: W2 - Neural networks Basics
 type: docs
-
+description: "Master neural network basics: build logistic regression as a neural network, optimize with gradient descent, and implement vectorization for speed."
 ---
 
 Set up a machine learning problem with a neural network mindset and use vectorization to speed up your models.
