@@ -1,7 +1,7 @@
 ---
 type: docs
 title: "W1 - ML Strategy"
-Description: "Learn to optimize ML production workflows with strategic goal-setting and human-level performance priorities in this comprehensive course." (160 characters)
+description: "Learn to optimize ML production workflows with strategic goal-setting and human-level performance priorities in this comprehensive course."
 ---
 
 
