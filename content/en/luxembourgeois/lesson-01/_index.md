@@ -125,3 +125,14 @@ En luxembourgeois, on met l'article devant les noms et prénoms:
 ||**Wéi ass däin Numm?**|Quel es ton nom?|
 
 {{% /example %}}
+
+## Verbe heeschen
+
+|||
+|-|-|
+|ech | **heeschen**|
+|du | **heeschs**|
+|hien;si;hatt;et | **heescht**|
+|mir | **heeschen**|
+|dir | **heescht**|
+|si | **heeschen**|
