@@ -8,14 +8,23 @@ body_class: luxclass
 ---
 
 
-
-
 ## L'alphabet
 
-Le luxembourgeois utilise l'alphabet latin, similaire à celui du français, avec quelques lettres spécifiques : **ä, ë, é, è, ö, ü**
+Le luxembourgeois utilise lalphabet latin, similaire à celui du français, avec quelques lettres spécifiques : **ä, ë, é, è, ö, ü**
 
 ![alt text](./image.png)
 
+## Présentation
+
+- Je suis
+    - **Ech sinn** de(n) Marc
+    - Ech sinn d'Anna
+- Je m'appelle
+    - **Ech Eeschenn** Marc
+    - Ech Eeschenn Anna
+- Mon nom est
+    - **Mäin Numm ass** Marc
+    - Mäin Numm ass Anna
 
 ## Salutations
 
@@ -28,42 +37,54 @@ Le luxembourgeois utilise l'alphabet latin, similaire à celui du français, ave
 |22:00 - 07:00|Gutt **Nuecht**|
 |00:00 - 24:00 | **Äddi** / **Awar** / **Awuer** |
 
-> Pour comprendre : <i>Mëtteg</i> signifie <i>midi</i> et <i>no</i> signifie <i>après</i> : **No** (après) **Mëtteg** (midi)
+> Pour comprendre **No** (après) **Mëtteg** (midi)
+
+## n-Reegel
+
+La règle n-Reegel en luxembourgeois, aussi appelée Eifeler Regel, détermine si le "n" final d'un mot est maintenu ou supprimé. Le "n" reste si le mot suivant commence par:
+- **N T D Z H**
+- ou par une **voyelle**. 
+
+La méthode mnémotechnique "**United Zoha**" aide à se souvenir de ces lettres (D, H, N, T, Z) pour lesquelles le "n" reste en place devant.
 
 ## Les articles 
 
-||articles définis|articles indéfinis|
+||articles définis (le/la/les)|articles indéfinis (un/une)|
 |--|--|--|
-|Singulier masculin |**den** (le)|**e** (un)|
-|Singulier féminin |**déi** (la)|**eng** (une)|
-|Singulier neutre |**dat** (le/la pour des objets neutres)|**e** (un/une)|
-|Pluriel (pour tous les genres) |**déi** (les)|Pas d'article indéfini au pluriel.|
+|Singulier masculin |**de(n)**|**e**|
+|Singulier féminin |**d'** |**eng**|
+|Singulier neutre |**d'** |**e**|
+|Pluriel (pour tous les genres) |**d'**|-|
+
+
+## Article devant les personnes 
+
+En luxembourgeois, on met l'article devant les noms et prénoms: 
+- Ech sinn **de** Jean.
+- Ech sinn **d'** Anna.
+- Ech sinn **den** Olivier Schmit.
 
 ## Pronom personnels
 
 |Forme|Pronoms personnels|Traduction|
 |--|--|--|
-|1ère pers. singulier|**ech**|je|
-|2ème pers. singulier|**du**|tu|
-|3ème pers. singulier|**hien** / **si** / **hatt**|il/elle/on|
+|1ère pers. singulier|**Ech**|je|
+|2ème pers. singulier|**Du**|tu|
+|3ème pers. singulier|**Hien** /  **Hatt** / **Si**  / **Et** |il / elle / elle (politesse)/ ça|
 |1ère pers. pluriel|**mir**|nous|
 |2ème pers. pluriel|**dir**|vous|
-|3ème pers. pluriel|**sir**|ils|
-
+|3ème pers. pluriel|**si**|ils / elles|
 
 ## Verbe SEIN (être)
 
 - **Ech sinn** (Je suis)
 - Du bass (Tu es)
-- Hien/Si/Hatt ass (Il/Elle est)
+- Hien/Hatt/Et ass (Il/Elle est)
 - Mir sinn (Nous sommes)
 - **Dir sidd** (Vous êtes)
 - Si sinn (Ils/Elles sont)
 
-## Pronom démonstratifs
+> **Et ass** kal (il fait froid, litt. il est froid)<br/>
 
-||Traduction|Genre|Exemple|
-|--|--|--|--|
-|**dat**|ça|neutre|**Dat ass** gutt. (Ça, c'est bien.)|
-|**dee**|celui-là|masculin|Dee Mann ass grouss. (Cet homme est grand.)|
-|**déi**|celle-là / ceux-là|féminin / pluriel|Déi Fra ass léif. (Cette femme est gentille.)|
+> **Ass dat** de Lionel? (est-ce Lionel ? en montrant du doigt)<br/>
+> **Dat ass** de Lionel (c'est Lionel)
