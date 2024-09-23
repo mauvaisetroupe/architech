@@ -16,15 +16,16 @@ Le luxembourgeois utilise lalphabet latin, similaire à celui du français, avec
 
 ## Présentation
 
-- Je suis
-    - **Ech sinn** de(n) Marc
-    - Ech sinn d'Anna
-- Je m'appelle
-    - **Ech Eeschenn** Marc
-    - Ech Eeschenn Anna
-- Mon nom est
-    - **Mäin Numm ass** Marc
-    - Mäin Numm ass Anna
+{{% example %}}
+|||
+|-|-|
+|Je suis|**Ech sinn** de(n) Marc|
+||**Ech sinn** d'Anna|
+|Je m'appelle|**Ech Heesche** Marc|
+||**Ech Heschenn** Anna|
+|Mon nom est|**Mäin Numm ass** Marc|
+||**Mäin Numm ass** Anna|
+{{% /example %}}
 
 ## Salutations
 
@@ -37,7 +38,9 @@ Le luxembourgeois utilise lalphabet latin, similaire à celui du français, avec
 |22:00 - 07:00|Gutt **Nuecht**|
 |00:00 - 24:00 | **Äddi** / **Awar** / **Awuer** |
 
-> Pour comprendre **No** (après) **Mëtteg** (midi)
+{{% explanation %}}
+**Nomëtteg** = **No** (après) **Mëtteg** (midi)
+{{% /explanation %}}
 
 ## n-Reegel
 
@@ -49,7 +52,7 @@ La méthode mnémotechnique "**United Zoha**" aide à se souvenir de ces lettres
 
 ## Les articles 
 
-||articles définis (le/la/les)|articles indéfinis (un/une)|
+||Définis (le/la/les)|Indéfinis (un/une)|
 |--|--|--|
 |Singulier masculin |**de(n)**|**e**|
 |Singulier féminin |**d'** |**eng**|
@@ -60,31 +63,40 @@ La méthode mnémotechnique "**United Zoha**" aide à se souvenir de ces lettres
 ## Article devant les personnes 
 
 En luxembourgeois, on met l'article devant les noms et prénoms: 
+
+{{% example %}}
 - Ech sinn **de** Jean.
 - Ech sinn **d'** Anna.
 - Ech sinn **den** Olivier Schmit.
+{{% /example %}}
 
 ## Pronom personnels
 
-|Forme|Pronoms personnels|Traduction|
-|--|--|--|
-|1ère pers. singulier|**Ech**|je|
-|2ème pers. singulier|**Du**|tu|
-|3ème pers. singulier|**Hien** /  **Hatt** / **Si**  / **Et** |il / elle / elle (politesse)/ ça|
-|1ère pers. pluriel|**mir**|nous|
-|2ème pers. pluriel|**dir**|vous|
-|3ème pers. pluriel|**si**|ils / elles|
+||
+|--|--|
+|**Ech**|je|
+|**Du**|tu|
+|**Hien** /  **Hatt** / **Si**  / **Et** |il / elle / elle (politesse)/ ça|
+|**mir**|nous|
+|**dir**|vous|
+|**si**|ils / elles|
 
 ## Verbe SEIN (être)
 
-- **Ech sinn** (Je suis)
-- Du bass (Tu es)
-- Hien/Hatt/Et ass (Il/Elle est)
-- Mir sinn (Nous sommes)
-- **Dir sidd** (Vous êtes)
-- Si sinn (Ils/Elles sont)
+|||
+|--|--|
+|Ech|**sinn**|
+|Du|bass|
+|Hien / Hatt / Et|**ass**|
+|Mir|sinn|
+|Dir|**sidd**|
+|Si|sinn|
 
-> **Et ass** kal (il fait froid, litt. il est froid)<br/>
-
-> **Ass dat** de Lionel? (est-ce Lionel ? en montrant du doigt)<br/>
-> **Dat ass** de Lionel (c'est Lionel)
+{{% example %}}
+|||
+|--|--|
+|**Ech sinn** de(n) Marc|Je suis Marc|
+|**Et ass kal**|Il fait froid, litt. il est froid|
+|**Ass dat de Lionel**?|Est-ce Lionel ? en montrant du doigt|
+|**Dat ass de Lionel** |C'est Lionel|
+{{% /example %}}
