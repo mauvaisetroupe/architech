@@ -27,6 +27,12 @@ Le luxembourgeois utilise lalphabet latin, similaire à celui du français, avec
 ||**Mäin Numm ass** Anna|
 {{% /example %}}
 
+
+{{% example %}}
+Mäin **Familljennumm** ass Schmidt, a mäi **Virnumm** ass Olivier
+{{% /example %}}
+
+
 ## Salutations
 
 |Période|Begréissungen|
@@ -99,4 +105,23 @@ En luxembourgeois, on met l'article devant les noms et prénoms:
 |**Et ass kal**|Il fait froid, litt. il est froid|
 |**Ass dat de Lionel**?|Est-ce Lionel ? en montrant du doigt|
 |**Dat ass de Lionel** |C'est Lionel|
+{{% /example %}}
+
+## Les mots interrogatifs / D’Froewierder
+
+|||
+|-|-|
+|**Wie(n)**? | Qui? |
+|**Wéi**? | Comment? |
+
+{{% example %}}
+||||
+|-|-|-|
+|Wie(n)|**Wie sidd dir**? | Qui êtes-vous?|
+||**Wie bass du**? | Qui es-tu?|
+|Wéi|**Wéi heescht dir?**|Comment vous appelez-vous?|
+||**Wéi heeschs du?**|Comment t'appelles-tu?|
+|Wéi|**Wéi ass Ären Numm?**|Quel est votre nom?|
+||**Wéi ass däin Numm?**|Quel es ton nom?|
+
 {{% /example %}}
