@@ -89,7 +89,7 @@ La règle n-Reegel en luxembourgeois, aussi appelée Eifeler Regel, détermine s
 - **N T D Z H**
 - ou par une **voyelle**. 
 
-La méthode mnémotechnique "**U N I T E D&nbsp;&nbsp;&nbsp;Z O H A**" aide à se souvenir de ces lettres (D, H, N, T, Z) pour lesquelles le "n" reste en place devant.
+La méthode mnémotechnique "**U&nbsp;N&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;&nbsp;&nbsp;Z&nbsp;O&nbsp;H&nbsp;A**" aide à se souvenir de ces lettres (D, H, N, T, Z) pour lesquelles le "n" reste en place devant.
 
 ## Les articles 
 
