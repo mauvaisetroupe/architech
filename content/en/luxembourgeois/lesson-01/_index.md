@@ -95,10 +95,13 @@ La méthode mnémotechnique "**U N I T E D&nbsp;&nbsp;&nbsp;Z O H A**" aide à s
 
 ||Définis (le/la/les)|Indéfinis (un/une)|
 |--|--|--|
-|Singulier masculin |**de(n)**|**e**|
-|Singulier féminin |**d'** |**eng**|
-|Singulier neutre |**d'** |**e**|
-|Pluriel (pour tous les genres) |**d'**|-|
+|Singulier masculin |**<font color=red>de(n)</font>**|**e(n)**|
+|Singulier féminin |**d'** |**<font color=red>eng</font>**|
+|Singulier neutre |**d'** |**e(n)**|
+|Pluriel masculib |**d'**|-|
+|Pluriel féminin |**d'**|-|
+|Pluriel neutre |**d'**|-|
+
 
 
 ## Article devant les personnes 
@@ -165,10 +168,10 @@ En luxembourgeois, on met l'article devant les noms et prénoms:
 
 |||
 |-|-|
-|ech | **heesch<font color=red>en</font>**|
+|ech | **heesch<font color=red>e(n)</font>**|
 |du | **heesch<font color=red>s</font>**|
 |Hien / Hatt / Et | **heesch<font color=red>t</font>**|
-|mir | **heesch<font color=red>en</font>**|
+|mir | **heesch<font color=red>e(n)</font>**|
 |dir | **heesch<font color=red>t</font>**|
-|si | **heesch<font color=red>en</font>**|
+|si | **heesch<font color=red>e(n)</font>**|
 
