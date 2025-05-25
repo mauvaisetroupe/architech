@@ -125,19 +125,17 @@ Cette modélisation permet également d’aller plus loin, en modélisant :
 
 #### D'accord, mais je les trouve où mes Bounded Context?
 
-Il n’existe malheureusement pas de méthode magique pour identifier les *Bounded Contexts* dans un système.
+> Il n’existe malheureusement pas de méthode magique pour identifier les *Bounded Contexts* dans un système.
+> 
+> Dans ce [workshop](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune propose un exercice de modélisation d’un système d’*Adaptive Cruise Control*. Après une première phase consacrée à l’exploration de l’espace du problème — à travers un *EventStorming* de type *Big Picture* — il engage, avec son co-animateur jouant le rôle d’expert métier, une démarche de découverte des *Bounded Contexts*. Ensemble, ils construisent progressivement une vision partagée du système en identifiant les contours contextuels pertinents.
 
-Dans ce [workshop](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune propose un exercice de modélisation d’un système d’*Adaptive Cruise Control*. Après une première phase consacrée à l’exploration de l’espace du problème — à travers un *EventStorming* de type *Big Picture* — il engage, avec son co-animateur jouant le rôle d’expert métier, une démarche de découverte des *Bounded Contexts*. Ensemble, ils construisent progressivement une vision partagée du système en identifiant les contours contextuels pertinents.
-
-Cette démarche repose sur plusieurs éléments clés : 
+La réussite de cette découpe en bounded context et donc en microservices repose sur plusieurs éléments clés : 
 - une connaissance approfondie du métier, 
 - une compréhension fine des enjeux fonctionnels, 
 - des compétences en conception logicielle, 
 - ainsi qu’une capacité à modéliser de manière collaborative.
 
-Autrement dit, il s’agit avant tout d’un travail itératif, nécessitant de se confronter au domaine, de formuler des hypothèses, de modéliser, puis d’ajuster au fil des échanges et de l’apprentissage collectif.
-
-Puis il faut se **lancer**.
+Il faut se **lancer**, oser une première découpe
 
 Et surtout, **itérer**.
 
