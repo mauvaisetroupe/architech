@@ -49,37 +49,23 @@ Utilise un scénario "system-wide" pour aligner tous les participants et révél
 
 Le déroulé est itératif : les participants racontent les événements majeurs qui jalonnent les processus de leur organisation, en les positionnant chronologiquement. Cela se traduit par des **Domain Events** (post-it oranges)
 
-
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="./legende-8.png" alt="alt text">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      Un fait significatif qui s'est produit dans le système, formulé au passé, représentant un changement d'état. Représente des faits qui se sont produits, indiquent des changements importants dans le domaine et forment l'épine dorsale de la narration métier.
-    </td>
-  </tr>
-</table>
+<div style="background-color: #FF9933; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+  Un <strong>Event</strong> ou <strong>Domain Event</strong> : Un fait significatif qui s'est produit dans le système, formulé au passé, représentant un changement d'état. Représente des faits qui se sont produits, indiquent des changements importants dans le domaine et forment l'épine dorsale de la narration métier.
+</div>
 
 
-
-![BigPicture - step 1](,./image.png)
+![BigPicture - step 1](./image.png)
 
 ### Step 02 - Commands and Persons
 
 
 On ajoute ensuite les **commandes** (post-it bleus)
 
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="./legende-9.png" alt="alt text">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      Une <strong>commande</strong>, c'est une intention exprimée par un utilisateur ou un système, qui demande qu’une action soit exécutée. Chaque commande déclenche (souvent) un événement, si les conditions métier sont respectées.
-    </td>
-  </tr>
-</table>
+
+<div style="background-color:#DAE8FC; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+Une <strong>commande</strong>, c'est une intention exprimée par un utilisateur ou un système, qui demande qu’une action soit exécutée. Chaque commande déclenche (souvent) un événement, si les conditions métier sont respectées.
+</div>
+
 
 
 
@@ -89,16 +75,11 @@ On ajoute ensuite les **commandes** (post-it bleus)
 
 Et dans le même temps les **Actorss** ou **Persons**  (post-it jaune) sur les commandes qu'elles déclenchent
 
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="./legende-10.png" alt="alt text">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
+
+
+<div style="background-color:#FFFF66; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
       Un <strong>Actor</strong> ou <strong>Person</strong>, c'est quelqu'un qui agit sur le système et prend des décisions. En général, les personnes sont posées sur des commandes dont elles sont à l'origine.
-    </td>
-  </tr>
-</table>
+</div>
 
 
 ![BigPricture - step 3](./image-2.png)
@@ -108,23 +89,12 @@ Et dans le même temps les **Actorss** ou **Persons**  (post-it jaune) sur les c
 
 On peut ensuite ajouter les systèmes externes
 
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="legende-11.png" alt="alt text">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
+<div style="background-color:#FF99CC; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
       Le <strong>systèmes externes</strong> sont les systèmes maintenus par d'autres équipes ou d'autres organisations. Ces systèmes sont les logiciels qu'on ne modélise pas dans le processus actuel.
-    </td>
-  </tr>
-</table>
+</div>
 
 
 ![BigPicture - step 4](./image-3.png)
-
-#### Summary legend
-
-![Big Picture - Legend](./image-4.png)
 
 
 ## Process Modelling EventStorming
@@ -144,17 +114,10 @@ Il est particulièrement utile dans les contextes de transformation opérationne
 
 ### Step 04 - Policies
 
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="legende-12.png" alt="alt text">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      Une <strong>policy</strong> est une règle métier ou un comportement automatique déclenché par un événement. Elle agit comme une réaction logique à un événement, et peut conduire à une commande ou un autre événement.
-    </td>
-  </tr>
-</table>
 
+<div style="background-color:#CC99FF; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+      Une <strong>policy</strong> est une règle métier ou un comportement automatique déclenché par un événement. Elle agit comme une réaction logique à un événement, et peut conduire à une commande ou un autre événement.
+</div>
 
 ![Process Modelling - step 04](./image-6.png)
 
@@ -165,27 +128,14 @@ Une policie peut également servir à introduire un comportement conditionnel da
 
 ### Step 05 -  Read model
 
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="legende-13.png" alt="alt text">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
+<div style="background-color:#99FF99; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
       Un <strong>Read Model</strong> (ou <strong>information</strong>) est une vue optimisée pour la lecture, créée à partir des événements métier. Il sert à afficher les données dont un utilisateur ou un système a besoin, souvent via des écrans, APIs, dashboards, etc.
-    </td>
-  </tr>
-</table>
-
+</div>
 
 Ici, le read-model **Order Summary** permet à l'utilisateur de vérifier sa commande avant d'executer le paiememt.
 
 ![Process Moddeling - step 5](./image-8.png)
 
-
-#### Summary Legend 
-
-
-![Process Modelling legend](./image-5.png)
 
 ## Software Design EventStorming
 
@@ -209,16 +159,10 @@ Il s’agit du format le plus technique, mais il garde une forte valeur collabor
 ### Step 06 - Aggregates
 
 
-<table style="width: 100%; background-color: #fafafa; border-collapse: collapse;">
-  <tr>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      <img src="legende-14.png" alt="alt text ghhg hghg hghg hghg ">
-    </td>
-    <td style="padding: 20px; background-color: #f5f5f5; border: 1px solid #ddd;">
-      Un agrégat est un concept destiné à être transformé en code — sous forme de classes ou de fonctions. C’est essentiellement une <strong>machine à états</strong>, c’est-à-dire quelque chose qui suit un cycle de vie. 
-    </td>
-  </tr>
-</table>
+<div style="background-color:#FFFFCC; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+      Un <strong>aggrégat</strong> est un concept destiné à être transformé en code — sous forme de classes ou de fonctions. C’est essentiellement une <strong>machine à états</strong>, c’est-à-dire quelque chose qui suit un cycle de vie. 
+</div>
+
 
 
 Dans notre scénario, voici les aggrégats que nous pourrions ajouter :
@@ -236,11 +180,11 @@ Pour les aggregates, on met l’accent sur le comportement, pas sur les données
 
 ![Software Design - step 06](./image-9.png)
 
-#### Summary Legend
+### Summary Legend
 
 ![Software Legend](./image-7.png)
 
----
+### Conclusion
 
 En combinant ces trois formats, il est possible d’orchestrer une approche holistique : commencer par un **Big Picture**, zoomer avec un **Process Modelling**, puis approfondir la conception avec un **Software Design**. 
 
