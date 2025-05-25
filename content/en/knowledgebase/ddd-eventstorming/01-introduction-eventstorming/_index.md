@@ -49,7 +49,7 @@ Utilise un scénario "system-wide" pour aligner tous les participants et révél
 
 Le déroulé est itératif : les participants racontent les événements majeurs qui jalonnent les processus de leur organisation, en les positionnant chronologiquement. Cela se traduit par des **Domain Events** (post-it oranges)
 
-<div style="background-color: #FF9933; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+<div style="background-color: #FF9933; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
   Un <strong>Event</strong> ou <strong>Domain Event</strong> : Un fait significatif qui s'est produit dans le système, formulé au passé, représentant un changement d'état. Représente des faits qui se sont produits, indiquent des changements importants dans le domaine et forment l'épine dorsale de la narration métier.
 </div>
 
@@ -62,7 +62,7 @@ Le déroulé est itératif : les participants racontent les événements majeurs
 On ajoute ensuite les **commandes** (post-it bleus)
 
 
-<div style="background-color:#DAE8FC; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+<div style="background-color:#DAE8FC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
 Une <strong>commande</strong>, c'est une intention exprimée par un utilisateur ou un système, qui demande qu’une action soit exécutée. Chaque commande déclenche (souvent) un événement, si les conditions métier sont respectées.
 </div>
 
@@ -77,7 +77,7 @@ Et dans le même temps les **Actorss** ou **Persons**  (post-it jaune) sur les c
 
 
 
-<div style="background-color:#FFFF66; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+<div style="background-color:#FFFF66; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
       Un <strong>Actor</strong> ou <strong>Person</strong>, c'est quelqu'un qui agit sur le système et prend des décisions. En général, les personnes sont posées sur des commandes dont elles sont à l'origine.
 </div>
 
@@ -89,7 +89,7 @@ Et dans le même temps les **Actorss** ou **Persons**  (post-it jaune) sur les c
 
 On peut ensuite ajouter les systèmes externes
 
-<div style="background-color:#FF99CC; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+<div style="background-color:#FF99CC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
       Le <strong>systèmes externes</strong> sont les systèmes maintenus par d'autres équipes ou d'autres organisations. Ces systèmes sont les logiciels qu'on ne modélise pas dans le processus actuel.
 </div>
 
@@ -115,7 +115,7 @@ Il est particulièrement utile dans les contextes de transformation opérationne
 ### Step 04 - Policies
 
 
-<div style="background-color:#CC99FF; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+<div style="background-color:#CC99FF; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
       Une <strong>policy</strong> est une règle métier ou un comportement automatique déclenché par un événement. Elle agit comme une réaction logique à un événement, et peut conduire à une commande ou un autre événement.
 </div>
 
@@ -128,7 +128,7 @@ Une policie peut également servir à introduire un comportement conditionnel da
 
 ### Step 05 -  Read model
 
-<div style="background-color:#99FF99; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
+<div style="background-color:#99FF99; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
       Un <strong>Read Model</strong> (ou <strong>information</strong>) est une vue optimisée pour la lecture, créée à partir des événements métier. Il sert à afficher les données dont un utilisateur ou un système a besoin, souvent via des écrans, APIs, dashboards, etc.
 </div>
 
@@ -159,8 +159,8 @@ Il s’agit du format le plus technique, mais il garde une forte valeur collabor
 ### Step 06 - Aggregates
 
 
-<div style="background-color:#FFFFCC; padding: 10px; margin: 20px 50px 20px 50px; border: 1px solid #ddd;">
-      Un <strong>aggrégat</strong> est un concept destiné à être transformé en code — sous forme de classes ou de fonctions. C’est essentiellement une <strong>machine à états</strong>, c’est-à-dire quelque chose qui suit un cycle de vie. 
+<div style="background-color:#FFFFCC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+  Un <strong>aggrégat</strong> est un concept destiné à être transformé en code — sous forme de classes ou de fonctions. C’est essentiellement une <strong>machine à états</strong>, c’est-à-dire quelque chose qui suit un cycle de vie. 
 </div>
 
 
@@ -174,7 +174,7 @@ Dans notre scénario, voici les aggrégats que nous pourrions ajouter :
 | ProductInventory  | Pour intégrer la gestion de stock (en lecture/écriture)         |
 
 
-Dans la vraie vie un **aggregate** est une classe métier qui fait autorité sur un sous-domaine
+Dans la vraie vie, un **aggregate** est une classe métier qui fait autorité sur un sous-domaine
 Pour les aggregates, on met l’accent sur le comportement, pas sur les données — dans l’esprit de la programmation orientée objet. Toutes les règles métier doivent être appliquées et garanties par cet agrégat.
 
 
