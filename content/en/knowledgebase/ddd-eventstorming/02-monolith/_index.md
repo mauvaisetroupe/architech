@@ -10,7 +10,7 @@ weight: 20
 
 ## Espace Problème / Solution
 
-L'Event Storming, popularisé par Alberto Brandolini, est une approche collaborative de modélisation qui aide les équipes à comprendre, explorer et concevoir des systèmes complexes. 
+[L'Event Storming](../01-introduction-eventstorming/), popularisé par Alberto Brandolini, est une approche collaborative de modélisation qui aide les équipes à comprendre, explorer et concevoir des systèmes complexes. 
 
 > En Domain-Driven Design (DDD), il est essentiel de distinguer :
 > - l’espace du problème (ce que le domaine métier cherche à résoudre) 

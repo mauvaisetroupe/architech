@@ -37,7 +37,7 @@ EventStorming se décline en plusieurs formats, adaptés à différents niveaux 
 > - **Design-Level** : modélisation orientée vers la conception logicielle, souvent couplée au DDD (Domain-Driven Design).
 
 
-## Big Picture EventStorming
+## Big Picture
 
 Le format **Big Picture** est le plus vaste. Il mobilise souvent **25 à 30 participants** issus de tous les niveaux de l’organisation. L’objectif est d’explorer **l’ensemble d’une ligne métier**, du début à la fin.
 
@@ -98,7 +98,7 @@ On peut ensuite ajouter les systèmes externes
 ![BigPicture - step 4](./image-3.png)
 
 
-## Process Modelling EventStorming
+## Process Modelling
 
 Le format **Process Modelling** vise un niveau de granularité plus fin. On y modélise un **processus spécifique**, de bout en bout, en y ajoutant **plus de rigueur méthodologique**.
 
@@ -138,7 +138,7 @@ Ici, le read-model **Order Summary** permet à l'utilisateur de vérifier sa com
 ![Process Moddeling - step 5](./image-8.png)
 
 
-## Software Design EventStorming
+## Software Design
 
 Le format **Software Design** fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire comme :
 
@@ -181,14 +181,15 @@ Pour les aggregates, on met l’accent sur le comportement, pas sur les données
 
 ![Software Design - step 06](./image-9.png)
 
-### Summary Legend
+## Résumé des post-it utlisés
 
 ![Software Legend](./legende.png)
 
-### Conclusion
+## Conclusion
 
 En combinant ces trois formats, il est possible d’orchestrer une approche holistique : commencer par un **Big Picture**, zoomer avec un **Process Modelling**, puis approfondir la conception avec un **Software Design**. 
 
 
 Un fil conducteur : la collaboration visuelle, au service de la compréhension et de l’action.
 
+En savoir plus : [organiser un workshop pour découper un monolithe en microservices](../02-monolith/)
