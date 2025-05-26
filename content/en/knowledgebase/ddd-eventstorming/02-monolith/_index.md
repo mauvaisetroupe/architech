@@ -61,6 +61,8 @@ Si nécessaire, on peut approfondir certains processus en réalisant un EventSto
 
 Le but final est que tous les participants aient une compréhension suffisamment claire du métier tel qu’il est ou sera implémenté dans le système.
 
+Plus de détails [ici](../01-introduction-eventstorming/#big-picture).
+
 #### Bounded Context
 
 Lorsqu’on parle d’architecture et de conception stratégique, les *Bounded Contexts* viennent souvent à l’esprit. Il s’agit d’identifier et de définir des frontières claires au sein d’un système.
@@ -102,7 +104,7 @@ Ces activités ne se déroulent pas toujours dans un ordre bien défini, et elle
 
 On utilise cette approche pour identifier les agrégats, les commandes, les politiques, les événements techniques, et pour poser les limites de contexte (*Bounded Contexts*) du futur système modulaire.
 
-Plus de détails dans cet [article](../01-introduction-eventstorming/#software-design-eventstorming).
+Plus de détails [ici](../01-introduction-eventstorming/#software-design).
 
 ### 02. Alternative 2 : Message Flow Modelling
 
