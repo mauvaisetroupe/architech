@@ -135,3 +135,13 @@ Cela vous aidera à :
 * clarifier les responsabilités ;
 * identifier les éventuels regroupements logiques ;
 * repérer les surcharges ou incohérences à corriger.
+
+## Workshop et itérations
+
+Comme dans beaucoup de workshops liés à DDD ou à EventStorming, on appliquera les principes du [Modeling Whirlpool](../01-introduction-eventstorming/#modeling-whirlpool)
+
+> Un dans ce workshop d'EventStorming visant à découper un monolithe, on devra :
+> 1. Travailler dans l’espace du **problème**, pour **comprendre ce qu’il faut modéliser** et aligner tous les participants autour d’une compréhension partagée.
+> 2. Travailler dans l’espace de la **solution**, pour **faire émerger les microservices** qui remplaceront le monolithe.
+
+![problem vs solution spaces](image-5.png)
