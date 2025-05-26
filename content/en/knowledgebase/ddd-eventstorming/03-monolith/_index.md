@@ -40,7 +40,7 @@ Le sujet suscite évidemment des opinions bien tranchées, et de nombreux articl
 
 > À ce stade, il est déjà possible de **faire émerger des Bounded Contexts** potentiels, en observant les zones de rupture, les vocabulaires distincts ou les responsabilités bien délimitées. Ces pistes seront approfondies dans les étapes suivantes.
 
-![alt text](./image.png)
+![alt text](./image-1.1.png)
 
 Source : https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet
 
@@ -58,7 +58,7 @@ Dans [un workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc)
 
 Ces activités ne se déroulent pas toujours dans un ordre bien défini, et elles sont souvent entrecoupées d'autres processus, comme la demande d'un mortgage ou l'ouverture d'un savings account.
 
-![alt text](./image-copy.png)
+![alt text](./image-1.2.png)
 
 > Bien que ce soient des phases distinctes, **elles reposent toutes sur le même objet de domaine**, **account**. Cela entraîne des défis de modélisation et des compromis (cohésion vs. duplication).
 
