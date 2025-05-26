@@ -9,11 +9,13 @@ weight: 30
 
 
 
-## Workshop pour découper mon monolithe
+## Workshop pour découper un monolithe
 
 Comment décomposer un grand système en composants plus petits, modulaires et faciles à maintenir ? C’est la question qui se pose le plus souvent. Dans cet article, [Nick Tune nous donne sa recette](https://medium.com/nick-tune-tech-strategy-blog/modelling-bounded-contexts-with-the-bounded-context-design-canvas-a-workshop-recipe-1f123e592ab) qui a inspiré cet article.
 
 ### 01. Big Picture EventStorming
+
+> 💡 Le but de cette étape est de comprendre le processus métier dans sa globalité, ou tout au moins dams un *customer journey* qui couvre l'ensemble du système. Cette étape permet également de faire émerger les premiers Bouded Contexts ou tout au moins les grands domaines fonctionnels
 
 **Participants** : il est essentiel d’avoir des représentants du métier ou des experts métier, ainsi que des développeurs et des personnes capables de concevoir des systèmes informatiques (architectes, tech leads, etc.).
 
@@ -25,7 +27,7 @@ Le but final est que tous les participants aient une compréhension suffisamment
 
 Plus de détails [ici](../02-techniques-eventstorming/#big-picture).
 
-#### Bounded Context
+#### Bounded Context ou microservices?
 
 Lorsqu’on parle d’architecture et de conception stratégique, les *Bounded Contexts* viennent souvent à l’esprit. Il s’agit d’identifier et de définir des frontières claires au sein d’un système.
 Concevoir une architecture revient souvent à découper une structure complexe en sous-systèmes plus petits.
@@ -42,13 +44,13 @@ Le sujet suscite évidemment des opinions bien tranchées, et de nombreux articl
 
 Source : https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet
 
-#### Les Bounded Contexts ne sont pas toujours évidents
+#### Les Bounded Contexts - Entre théorie et pratique
 
 > En théorie, on pourrait regarder un tableau d'EventStorming et penser qu'on peut diviser les événements en sections distinctes, chacune correspondant à un Bounded Context. Mais en réalité, cela n'est que rarement aussi simple.
 
 Souvent, des événements liés à un même Bounded Context apparaissent à plusieurs endroits sur le tableau. Un même Bounded Context peut se manifester au début d'un processus, puis réapparaître à la fin. C’est pourquoi Alberto Brandolini, le créateur de l’EventStorming, les qualifie de *Bounded Contexts émergents*. Ils émergent du processus — ils ne sont pas prédéfinis.
 
-Considérons cet exemple inspiré d'une vidéo YouTube [[Hands-on] Exploring Techniques For Modelling Bounded Context Collaboration](https://www.youtube.com/watch?v=oj4zGj6sPDc), avec la participation de Nick Tune. Il y décrit le cycle de vie d'un **bank account** :
+Dans [un workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune décrit le cycle de vie d'un **bank account** :
 * Un utilisateur crée un **account**.
 * Dépose de l'argent.
 * Retire de l'argent.
@@ -60,21 +62,21 @@ Ces activités ne se déroulent pas toujours dans un ordre bien défini, et elle
 
 > Bien que ce soient des phases distinctes, **elles reposent toutes sur le même objet de domaine**, **account**. Cela entraîne des défis de modélisation et des compromis (cohésion vs. duplication).
 
-### 02. Alternative 1 : Software Design EventStorming
+### 02. Message Flow Modelling
+
+> 💡 Le but de cette étape est d'identifier les premiers Bouded Contexts ou microservices.
 
 **Participants** : en plus des participants précédents, on implique des personnes du métier, des développeurs, et des experts en conception de systèmes logiciels. Ce type d’atelier est plus orienté architecture et modélisation technique.
 
-On utilise cette approche pour identifier les agrégats, les commandes, les politiques, les événements techniques, et pour poser les limites de contexte (*Bounded Contexts*) du futur système modulaire.
+On pourrait dans cette étape utiliser [Software Design EventStorming](../02-techniques-eventstorming/#software-design) pour identifier les agrégats, les commandes, les politiques, les événements techniques, et pour poser les limites de contexte (*Bounded Contexts*) du futur système modulaire.
 
-Plus de détails [ici](../02-techniques-eventstorming/#software-design).
-
-### 02. Alternative 2 : Message Flow Modelling
+Nick Tune propose d'utiliser un outil appelé [Message Flow Modelling](https://github.com/ddd-crew/domain-message-flow-modelling).
 
 #### EventStorming vs Message Flow Modelling
 
 > Concevoir des systèmes faiblement couplés nécessite plus que de simples frontières bien définies. Il est tout aussi important de définir précisément les interactions entre les *Bounded Contexts*.
 
-C’est pour cette raison qu’un *EventStorming* de type *software modelling* n’est pas toujours suffisant. Nick Tune introduit le [Message Flow Modelling](https://github.com/ddd-crew/domain-message-flow-modelling). Cette alternative est centrée sur l’échange de messages entre les composants du système. Elle peut être utilisée pour explorer ou valider la communication entre **Bounded Contexts**, et donc valider la découpe en **microservices**.
+C’est pour cette raison qu’un EventStorming de type Software Design n’est pas toujours suffisant. Nick Tune introduit le Message Flow Modelling. Cette alternative est centrée sur l’échange de messages entre les composants du système. Elle peut être utilisée pour explorer ou valider la communication entre **Bounded Contexts**, et donc valider la découpe en **microservices**.
 
 ![Message Flow Modelling](image-2.png)
 
@@ -104,6 +106,8 @@ Il faut se **lancer**, oser une première découpe.
 Et surtout, **itérer**.
 
 ### 03. Bounded Context Canvas
+
+> 💡 Le but de cette étape est d'affiner les premiers Bouded Contexts ou microservices.
 
 L'étape suivante du processus de conception consiste à modéliser chaque *Bounded Context* candidat en détaillant des critères de design clés. Pour cela, le [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas) fournit un support structurant, particulièrement utile pour faire émerger une compréhension partagée du rôle, des capacités et des contraintes d’un contexte donné.
 
