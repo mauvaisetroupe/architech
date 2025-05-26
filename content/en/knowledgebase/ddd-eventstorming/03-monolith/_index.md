@@ -1,51 +1,13 @@
 ---
-title: "02. Découper mon monolithe"
+title: "03. Découper mon monolithe"
 tags: [DDD, EventStorming]
 date: 2023-12-30
 categories: [French]
 type: docs
-weight: 20
+weight: 30
 ---
 
 
-## Espace Problème / Solution
-
-L'[EventStorming](../01-introduction-eventstorming/), popularisé par Alberto Brandolini, est une approche collaborative de modélisation qui aide les équipes à comprendre, explorer et concevoir des systèmes complexes.
-
-> En Domain-Driven Design (DDD), il est essentiel de distinguer :
-> - l’espace du **problème** (ce que le domaine métier cherche à résoudre) ;
-> - l’espace de la **solution** (la façon dont le logiciel le résout).
-
-Le *Modeling Whirlpool* décrit le flux naturel de la modélisation en DDD. Il s’agit d’une oscillation continue entre l’espace du problème (compréhension métier) et l’espace de la solution (conception logicielle). Ce va-et-vient permet de raffiner progressivement le modèle jusqu’à ce qu’il réponde à la fois aux besoins métier et aux contraintes techniques.
-
-![alt text](./image-1.png)
-
-### Les étapes du tourbillon :
-
-1. **Raconter une histoire** : parcourir des scénarios utilisateurs concrets pour ancrer la réflexion (ex. : activer le régulateur de vitesse).
-2. **Proposer un modèle** : élaborer un premier modèle basé sur les scénarios (ex. : Service de régulation de vitesse, Service moteur).
-3. **Découvrir de nouveaux éléments** : identifier des cas limites ou contraintes inattendues (ex. : reprise manuelle via la pédale).
-4. **Retour à l’histoire** : affiner le modèle à partir des retours métier.
-
-Ce processus est itératif : chaque passage dans le *whirlpool* améliore la pertinence du modèle en le confrontant à la réalité métier et aux contraintes techniques.
-
-## Quel est le lien avec le workshop ?
-
-Nous avons vu dans cet [article](../01-introduction-eventstorming/) les trois types d’EventStorming : *Big Picture*, *Process Modelling* et *Software Modelling*.
-
-Voici un tableau qui les met en relation avec les espaces du DDD :
-
-| Type d’EventStorming             | Espace DDD               | Explication |
-|----------------------------------|--------------------------|-------------|
-| Big Picture EventStorming        | Espace du problème       | Vision d’ensemble du métier, parties prenantes, objectifs. L’objectif est de comprendre, pas de concevoir. |
-| Process Modelling EventStorming  | Espace du problème (majoritairement) | Zoom sur un processus métier spécifique. On s’approche de la solution, mais on reste dans la compréhension métier. |
-| Software Design EventStorming    | Espace de la solution    | On modélise les agrégats, commandes, politiques, événements techniques, limites de contexte, etc. |
-
-> Un workshop visant à découper un monolithe devra :
-> 1. Travailler dans l’espace du **problème**, pour **comprendre ce qu’il faut modéliser** et aligner tous les participants autour d’une compréhension partagée.
-> 2. Travailler dans l’espace de la **solution**, pour **faire émerger les microservices** qui remplaceront le monolithe.
-
----
 
 ## Workshop pour découper mon monolithe
 
@@ -61,7 +23,7 @@ Si nécessaire, on peut approfondir certains processus en réalisant un EventSto
 
 Le but final est que tous les participants aient une compréhension suffisamment claire du métier tel qu’il est ou sera implémenté dans le système.
 
-Plus de détails [ici](../01-introduction-eventstorming/#big-picture).
+Plus de détails [ici](../02-techniques-eventstorming/#big-picture).
 
 #### Bounded Context
 
@@ -104,7 +66,7 @@ Ces activités ne se déroulent pas toujours dans un ordre bien défini, et elle
 
 On utilise cette approche pour identifier les agrégats, les commandes, les politiques, les événements techniques, et pour poser les limites de contexte (*Bounded Contexts*) du futur système modulaire.
 
-Plus de détails [ici](../01-introduction-eventstorming/#software-design).
+Plus de détails [ici](../02-techniques-eventstorming/#software-design).
 
 ### 02. Alternative 2 : Message Flow Modelling
 
