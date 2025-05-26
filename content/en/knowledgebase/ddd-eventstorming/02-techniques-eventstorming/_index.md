@@ -34,7 +34,7 @@ Le déroulé est itératif : les participants racontent les événements majeurs
   Un <strong>Event</strong> ou <strong>Domain Event</strong> : un fait significatif qui s'est produit dans le système, formulé au passé, représentant un changement d'état. Il représente des faits qui se sont produits, indique des changements importants dans le domaine et forme l'épine dorsale de la narration métier.
 </div>
 
-![BigPicture - step 1](./image.png)
+![BigPicture - step 1](./image-0.png)
 
 ### Step 02 - Commands / Persons
 
