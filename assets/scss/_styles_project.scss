@@ -20,3 +20,15 @@ h3, .h3 {
     color: blue; 
     font-weight: bold;   
 }
+
+
+/*
+  For MediumZoom.js to force the zoomed image to be displayed on top of everything.
+  Without these settings, the zoomed image will display under some elements on the page.
+
+  Ref: https://github.com/francoischalifour/medium-zoom#debugging
+*/
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
