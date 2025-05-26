@@ -31,13 +31,13 @@ EventStorming repose sur quelques constats simples mais puissants :
 EventStorming se décline en plusieurs formats, adaptés à différents niveaux de profondeur. Tous reposent sur le **récit collectif** à l’aide de **post-its colorés** sur une grande surface de modélisation (généralement un long rouleau de papier).
 
 > Au fil des années, trois grands types d’ateliers ont émergé :
-> - **Big Picture** : cartographier tout un domaine ou un ensemble de processus métier.
-> - **Process Modeling** : se concentrer sur un processus spécifique.
-> - **Design-Level** : modélisation orientée vers la conception logicielle, souvent couplée au DDD (Domain-Driven Design).
+> - **Big Picture EventStorming** : cartographier tout un domaine ou un ensemble de processus métier.
+> - **Process Modelling EventStorming** : se concentrer sur un processus spécifique.
+> - **Software Design EventStorming** : modélisation orientée vers la conception logicielle, souvent couplée au DDD (Domain-Driven Design).
 
 ## Big Picture
 
-Le format **Big Picture** est le plus vaste. Il mobilise souvent **25 à 30 participants** issus de tous les niveaux de l’organisation. L’objectif est d’explorer **l’ensemble d’une ligne métier**, du début à la fin.
+Le format **Big Picture EventStorming** est le plus vaste. Il mobilise souvent **25 à 30 participants** issus de tous les niveaux de l’organisation. L’objectif est d’explorer **l’ensemble d’une ligne métier**, du début à la fin.
 
 {{% pageinfo color="secondary" %}}
 #### 💡 Tip : Scénario Global
@@ -84,7 +84,7 @@ On peut ensuite ajouter les systèmes externes.
 
 ## Process Modeling
 
-Le format **Process Modeling** vise un niveau de granularité plus fin. On y modélise un **processus spécifique**, de bout en bout, en y ajoutant **plus de rigueur méthodologique**.
+Après le format **Big Picture EventStorming**, le second format s'appelle **Process Modeling**. Il vise un niveau de granularité plus fin. On y modélise un **processus spécifique**, de bout en bout, en y ajoutant **plus de rigueur méthodologique**.
 
 Ici, on introduit une **grammaire précise** (événements, commandes, règles, acteurs…), dans un esprit de **jeu collaboratif structuré**, tout en restant du côté métier – on ne descend pas encore dans la conception logicielle.
 
@@ -121,7 +121,7 @@ Ici, le read model **Order Summary** permet à l'utilisateur de vérifier sa com
 
 ## Software Design
 
-Le format **Software Design** fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire comme :
+Le dernier format s'appelle **Software Design EventStorming**. Il fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire comme :
 
 - Les **agrégats** (Aggregates),
 - Les **contextes bornés** (Bounded Contexts).
