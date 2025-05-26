@@ -91,19 +91,6 @@ L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-mod
 > - l’espace du **problème** (ce que le domaine métier cherche à résoudre) ;
 > - l’espace de la **solution** (la façon dont le logiciel le résout).
 
-Le *Modeling Whirlpool* décrit le flux naturel de la modélisation en DDD. Il s’agit d’une oscillation continue entre l’espace du problème (compréhension métier) et l’espace de la solution (conception logicielle). Ce va-et-vient permet de raffiner progressivement le modèle jusqu’à ce qu’il réponde à la fois aux besoins métier et aux contraintes techniques.
-
-![alt text](./image-whirlpool.png)
-
-### Les étapes du tourbillon :
-
-1. **Raconter une histoire** : parcourir des scénarios utilisateurs concrets pour ancrer la réflexion (ex. : activer le régulateur de vitesse).
-2. **Proposer un modèle** : élaborer un premier modèle basé sur les scénarios (ex. : Service de régulation de vitesse, Service moteur).
-3. **Découvrir de nouveaux éléments** : identifier des cas limites ou contraintes inattendues (ex. : reprise manuelle via la pédale).
-4. **Retour à l’histoire** : affiner le modèle à partir des retours métier.
-
-Ce processus est itératif : chaque passage dans le *whirlpool* améliore la pertinence du modèle en le confrontant à la réalité métier et aux contraintes techniques.
-
 ### Espaces et outils de modélisation
 
 Voici un tableau qui les met en relation les outils de modélisation avec les espaces du DDD :
@@ -119,10 +106,22 @@ Voici un tableau qui les met en relation les outils de modélisation avec les es
 
 ![alt text](./image-1.png)
 
-> Un dans un workshop d'EventStorming, par exemple visant à [découper un monolithe](../03-monolith/), on devra :
-> 1. Travailler dans l’espace du **problème**, pour **comprendre ce qu’il faut modéliser** et aligner tous les participants autour d’une compréhension partagée.
-> 2. Travailler dans l’espace de la **solution**, pour **faire émerger les microservices** qui remplaceront le monolithe.
+### Modeling Whirlpool
 
+Le *Modeling Whirlpool* décrit le flux naturel de la modélisation en DDD. Il s’agit d’une oscillation continue entre l’espace du problème (compréhension métier) et l’espace de la solution (conception logicielle). Ce va-et-vient permet de raffiner progressivement le modèle jusqu’à ce qu’il réponde à la fois aux besoins métier et aux contraintes techniques.
+
+![alt text](./image-whirlpool.png)
+
+#### Les étapes du Whirlpool :
+
+1. **Raconter une histoire** : parcourir des scénarios utilisateurs concrets pour ancrer la réflexion (ex. : activer le régulateur de vitesse).
+2. **Proposer un modèle** : élaborer un premier modèle basé sur les scénarios (ex. : Service de régulation de vitesse, Service moteur).
+3. **Découvrir de nouveaux éléments** : identifier des cas limites ou contraintes inattendues (ex. : reprise manuelle via la pédale).
+4. **Retour à l’histoire** : affiner le modèle à partir des retours métier.
+
+Ce processus est itératif : chaque passage dans le *whirlpool* améliore la pertinence du modèle en le confrontant à la réalité métier et aux contraintes techniques.
+
+![problem vs solution spaces](image-2.png)
 
 ## Conclusion
 
