@@ -127,17 +127,14 @@ Il s’agit du format le plus technique, mais il garde une forte valeur collabor
 </div>
 
 Dans notre scénario, voici les agrégats que nous pourrions ajouter :
+- **Payment** - Si le paiement devient un processus complexe à part entière
+- **Shipment** - Pour gérer finement les livraisons (multi-colis, tracking)
+- **ProductInventory** - Pour intégrer la gestion de stock (en lecture/écriture)
 
-| Aggregate         | Justification possible                                        |
-|------------------|--------------------------------------------------------------|
-| Payment          | Si le paiement devient un processus complexe à part entière  |
-| Shipment         | Pour gérer finement les livraisons (multi-colis, tracking)   |
-| ProductInventory | Pour intégrer la gestion de stock (en lecture/écriture)      |
+![Software Design - step 06](./image-9.png)
 
 Dans la vraie vie, un **aggregate** est une classe métier qui fait autorité sur un sous-domaine.
 Pour les agrégats, on met l’accent sur le comportement, pas sur les données — dans l’esprit de la programmation orientée objet. Toutes les règles métier doivent être appliquées et garanties par cet agrégat.
-
-![Software Design - step 06](./image-9.png)
 
 ## Résumé des post-its utilisés
 
