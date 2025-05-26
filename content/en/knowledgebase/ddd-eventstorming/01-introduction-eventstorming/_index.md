@@ -85,7 +85,7 @@ L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-mod
 
 ![alt text](./image.png)
 
-## Espace Problème / Solution
+## Espaces Problème / Solution
 
 > En Domain-Driven Design (DDD), il est essentiel de distinguer :
 > - l’espace du **problème** (ce que le domaine métier cherche à résoudre) ;
