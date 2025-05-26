@@ -37,6 +37,54 @@ EventStorming se décline en plusieurs formats, adaptés à différents niveaux 
 
 Plus de détails sur [la technique, les post-its à utiliser, les grandes étapes](../02-techniques-eventstorming/).
 
+## Comparaison avec d'autres outils de modélisation
+
+### Entre structure et complexité
+
+Nick Tune participe à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare les différents outils (BPMN, UML, EventStorming, Message Flow).
+
+Structurer un diagramme peut aider à identifier des problèmes, surtout si l’organisation du modèle est difficile — cela peut révéler des failles plus profondes. Mais attention : toute complexité n’est pas utile. Parfois, structurer ajoute juste des complications inutiles.
+
+Au final, le choix entre un modèle structuré ou libre dépend des objectifs. La flexibilité encourage l’exploration, tandis que la structure apporte de la clarté — mais peut aussi cacher des défauts de conception :
+
+> * Modèles structurés (UML, BPMN) : clairs, précis, mais peuvent masquer des défauts de conception.
+> * Modèles flexibles (EventStorming, Message Flow) : favorisent l’exploration, mais peuvent être confus sans cadre.
+> * Il y a une tension permanente entre simplicité (pour communiquer) et précision (pour concevoir).
+> * La clé : adapter l’outil au moment et au but — l’exploration nécessite flexibilité, la documentation exige rigueur.
+
+#### EventStorming
+
+* Outil flexible, collaboratif et peu formel, idéal pour l’exploration initiale et la créativité.
+* Simplicité apparente, mais potentiellement chaotique sans facilitateur compétent.
+* L’absence de formalisme strict (couleurs, noms, règles souples) facilite l’expression, mais peut générer de la confusion, surtout pour les débutants.
+* Plus utile dans une phase de découverte de domaine que dans la structuration technique.
+
+#### BPMN
+
+* Structuré et formel, BPMN est efficace pour visualiser des workflows, mais son usage peut varier.
+* Il devient complexe s’il cherche à tout intégrer (logique métier incluse), mais plus souple quand il se contente d’orchestrer visuellement en déléguant la logique aux microservices.
+* Son formalisme fort est utile pour documenter des processus, mais peut être rigide pour la conception ou l’exploration.
+* Tendance à évoluer, mais pour l’instant, il est plus adapté à des contextes structurés qu’à des phases exploratoires.
+
+#### UML (diagrammes de séquence)
+
+* Très structuré et formel, UML évite les malentendus et apporte de la précision.
+* Moins flexible qu’EventStorming, il est parfait pour représenter clairement les flux séquentiels et les interactions système.
+* Cette rigueur peut masquer des problèmes architecturaux (ex. couplage excessif) qui seraient visibles dans un outil plus libre.
+
+#### Domain Message Flow Modeling 
+
+L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-modelling). Il peut être utilisé dans un [workshop pour découper un monolithe](../03-monolith/#02-alternative-2--message-flow-modelling).
+
+* Outil entre deux mondes : plus structuré qu’EventStorming, moins rigide qu’UML.
+* La version simple mise sur la clarté et la simplicité ; la version avancée ajoute des notations précises (commandes, événements, requêtes).
+* Flexibilité initiale, puis montée en complexité selon le niveau d’expertise.
+* Utile pour révéler des anti-patterns (ex. trop de requêtes → monolithe distribué).
+* L’agencement libre rend la modélisation plus expressive, mais plus cognitive à gérer que des diagrammes automatisés comme UML.
+
+
+![alt text](./image.png)
+
 ## Espace Problème / Solution
 
 > En Domain-Driven Design (DDD), il est essentiel de distinguer :
