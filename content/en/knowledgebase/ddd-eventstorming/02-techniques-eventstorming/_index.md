@@ -136,6 +136,12 @@ Dans notre scénario, voici les agrégats que nous pourrions ajouter :
 Dans la vraie vie, un **aggregate** est une classe métier qui fait autorité sur un sous-domaine.
 Pour les agrégats, on met l’accent sur le comportement, pas sur les données — dans l’esprit de la programmation orientée objet. Toutes les règles métier doivent être appliquées et garanties par cet agrégat.
 
+#### De la commande à l'event
+
+Que ce soit un **Aggregate** ou un **External System**, ces "morceaux de software" serevent souvent à transformer une **Commande** en **Event**
+
+![Software Design - step 06](./image-11.png)
+
 ## Résumé des post-its utilisés
 
 ![Software Legend](./legende.png)
