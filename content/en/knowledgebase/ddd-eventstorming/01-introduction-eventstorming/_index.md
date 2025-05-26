@@ -93,14 +93,14 @@ L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-mod
 
 Voici un tableau qui les met en relation les outils de modélisation avec les espaces du DDD :
 
-| Type d’EventStorming / Outil     | Espace DDD               | Explication |
-|----------------------------------|--------------------------|-------------|
-| Big Picture EventStorming        | Espace du problème       | Vision d’ensemble du métier, parties prenantes, objectifs. L’objectif est de comprendre, pas de concevoir. |
-| Process Modelling EventStorming  | Espace du problème (majoritairement) | Zoom sur un processus métier spécifique. On s’approche de la solution, mais on reste dans la compréhension métier. |
-| Software Design EventStorming    | Espace de la solution    | On modélise les agrégats, commandes, politiques, événements techniques, limites de contexte, etc. |
-| Domain Message Flow Modeling     | Espace de la solution    | On modélise les bounded contexts (et donc les microservices) et les communications entre ceux-ci. |
-| BPMN                             | Espace du problème       | Outil formel pour décrire les processus métier avec acteurs, décisions, événements. Utilisé pour l’analyse métier, parfois automatisable. |
-| UML Sequence Diagram             | Espace de la solution    | Outil pour modéliser les interactions entre objets/systèmes dans le temps. Très utile pour spécifier des flux de messages, services, appels d’API. |
+| Outil     | Espace DDD               |
+|----------------------------------|--------------------------|
+| Big Picture EventStorming        | **Problème** - Vision d’ensemble du métier, parties prenantes, objectifs. L’objectif est de comprendre, pas de concevoir. |
+| Process Modelling EventStorming  | **Problème (majoritairement)** - Zoom sur un processus métier spécifique. On s’approche de la solution, mais on reste dans la compréhension métier. |
+| Software Design EventStorming    | **Solution** - On modélise les agrégats, commandes, politiques, événements techniques, limites de contexte, etc. |
+| Domain Message Flow Modeling     | **Solution** - On modélise les bounded contexts (et donc les microservices) et les communications entre ceux-ci. |
+| BPMN                             | **Problème** - Outil formel pour décrire les processus métier avec acteurs, décisions, événements. Utilisé pour l’analyse métier, parfois automatisable. |
+| UML Sequence Diagram             | **Solution** - Outil pour modéliser les interactions entre objets/systèmes dans le temps. Très utile pour spécifier des flux de messages, services, appels d’API. |
 
 ![alt text](./image-1.png)
 
