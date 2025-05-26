@@ -146,5 +146,14 @@ Que ce soit un **Aggregate** ou un **External System**, ces "morceaux de softwar
 
 ![Software Legend](./legende.png)
 
+Nous avons essayé de rester proches du standard, notamment en ce qui concerne le nom et la couleur des post-its. Cependant, il est important de comprendre qu'il est possible de prendre beaucoup de libertés avec ces conventions.
+
+Voici un exemple de ce que Nick Tune a présenté lors d'un workshop :
+- Le **context**, qui représente un **aggregate**, a la même couleur qu'un **external system**.
+- Le **read model** est appelé **query**, car ici le premier **event** effectue un appel vers le second pour obtenir des **information** (**read model**).
+
+![Software Design - step 06](./image-12.png)
+
+
 
 En savoir plus : [organiser un workshop pour découper un monolithe en microservices](../03-monolith/)
