@@ -10,11 +10,9 @@ weight: 10
 
 Dans le développement logiciel, la compréhension fine du métier est souvent le point de friction principal entre les experts métier et les équipes techniques. C’est là qu’intervient l’EventStorming, une méthode de modélisation collaborative puissante qui permet de visualiser, d’explorer et de structurer les processus métier complexes de manière efficace et intuitive.
 
-## Un peu d’histoire
+## Qu’est-ce que l’EventStorming ?
 
 EventStorming a été introduit en 2013 par Alberto Brandolini. Pour plus de détails sur son origine et son évolution, consultez l’article complet ici : [https://www.avanscoperta.it/en/eventstorming/](https://www.avanscoperta.it/en/eventstorming/).
-
-## Qu’est-ce que l’EventStorming ?
 
 L’EventStorming est une approche de modélisation orientée événements métiers (domain events), inventée par Alberto Brandolini. Elle repose sur une session collaborative impliquant toutes les parties prenantes – développeurs, experts métier, UX designers, product owners – afin de construire ensemble une vision partagée du système.
 
@@ -26,7 +24,7 @@ EventStorming repose sur quelques constats simples mais puissants :
 
 > L'EventStorming est une méthode rapide et visuelle qui favorise une vision partagée et permet de détecter précocement les zones grises dans un processus complexe.
 
-## Les grands formats d’EventStorming
+## Les 3 formats d’EventStorming
 
 EventStorming se décline en plusieurs formats, adaptés à différents niveaux de profondeur. Tous reposent sur le **récit collectif** à l’aide de **post-its colorés** sur une grande surface de modélisation (généralement un long rouleau de papier).
 
@@ -37,7 +35,7 @@ EventStorming se décline en plusieurs formats, adaptés à différents niveaux 
 
 Plus de détails sur [la technique, les post-its à utiliser, les grandes étapes](../02-techniques-eventstorming/).
 
-## Comparaison avec d'autres outils de modélisation
+## Comparaison avec d'autres outils
 
 ### Entre structure et complexité
 
@@ -52,27 +50,27 @@ Au final, le choix entre un modèle structuré ou libre dépend des objectifs. L
 > * Il y a une tension permanente entre simplicité (pour communiquer) et précision (pour concevoir).
 > * La clé : adapter l’outil au moment et au but — l’exploration nécessite flexibilité, la documentation exige rigueur.
 
-#### EventStorming
+### EventStorming
 
 * Outil flexible, collaboratif et peu formel, idéal pour l’exploration initiale et la créativité.
 * Simplicité apparente, mais potentiellement chaotique sans facilitateur compétent.
 * L’absence de formalisme strict (couleurs, noms, règles souples) facilite l’expression, mais peut générer de la confusion, surtout pour les débutants.
 * Plus utile dans une phase de découverte de domaine que dans la structuration technique.
 
-#### BPMN
+### BPMN
 
 * Structuré et formel, BPMN est efficace pour visualiser des workflows, mais son usage peut varier.
 * Il devient complexe s’il cherche à tout intégrer (logique métier incluse), mais plus souple quand il se contente d’orchestrer visuellement en déléguant la logique aux microservices.
 * Son formalisme fort est utile pour documenter des processus, mais peut être rigide pour la conception ou l’exploration.
 * Tendance à évoluer, mais pour l’instant, il est plus adapté à des contextes structurés qu’à des phases exploratoires.
 
-#### UML (diagrammes de séquence)
+### UML Sequence Diagram
 
 * Très structuré et formel, UML évite les malentendus et apporte de la précision.
 * Moins flexible qu’EventStorming, il est parfait pour représenter clairement les flux séquentiels et les interactions système.
 * Cette rigueur peut masquer des problèmes architecturaux (ex. couplage excessif) qui seraient visibles dans un outil plus libre.
 
-#### Domain Message Flow Modeling 
+### Message Flow Modeling 
 
 L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-modelling). Il peut être utilisé dans un [workshop pour découper un monolithe](../03-monolith/#02-alternative-2--message-flow-modelling).
 
@@ -91,7 +89,7 @@ L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-mod
 > - l’espace du **problème** (ce que le domaine métier cherche à résoudre) ;
 > - l’espace de la **solution** (la façon dont le logiciel le résout).
 
-### Espaces et outils de modélisation
+### Espaces et outils
 
 Voici un tableau qui les met en relation les outils de modélisation avec les espaces du DDD :
 

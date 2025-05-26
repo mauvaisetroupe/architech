@@ -10,7 +10,7 @@ weight: 20
 
 Dans le développement logiciel, la compréhension fine du métier est souvent le point de friction principal entre les experts métier et les équipes techniques. C’est là qu’intervient l’EventStorming, une méthode de modélisation collaborative puissante qui permet de visualiser, d’explorer et de structurer les processus métier complexes de manière efficace et intuitive.
 
-## Les grands formats d’EventStorming
+## Les 3 formats d’EventStorming
 
 > Au fil des années, trois grands types d’ateliers ont émergé :
 > - **Big Picture EventStorming** : cartographier tout un domaine ou un ensemble de processus métier.
@@ -36,7 +36,7 @@ Le déroulé est itératif : les participants racontent les événements majeurs
 
 ![BigPicture - step 1](./image.png)
 
-### Step 02 - Commands and Persons
+### Step 02 - Commands / Persons
 
 On ajoute ensuite les **commandes** (post-its bleus).
 

@@ -9,7 +9,7 @@ weight: 30
 
 
 
-## Workshop pour découper un monolithe
+## Les étapes du Workshop
 
 Comment décomposer un grand système en composants plus petits, modulaires et faciles à maintenir ? C’est la question qui se pose le plus souvent. Dans cet article, [Nick Tune nous donne sa recette](https://medium.com/nick-tune-tech-strategy-blog/modelling-bounded-contexts-with-the-bounded-context-design-canvas-a-workshop-recipe-1f123e592ab) qui a inspiré cet article.
 
