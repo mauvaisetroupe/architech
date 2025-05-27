@@ -49,14 +49,14 @@ Une <strong>commande</strong>, c'est une intention exprimée par un utilisateur 
 Et dans le même temps, les **acteurs** ou **personnes** (post-its jaunes) sur les commandes qu'ils déclenchent.
 
 <div style="background-color:#FFFF66; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
-  Un <strong>acteur</strong> ou <strong>personne</strong>, c'est quelqu'un qui agit sur le système et prend des décisions. En général, les personnes sont posées sur des commandes dont elles sont à l'origine.
+  Un <strong>acteur</strong> ou <strong>personne</strong> est quelqu’un qui agit sur le système et prend des décisions. En général, les personnes sont positionnées sur les commandes dont elles sont à l'origine.
 </div>
 
 ![BigPicture - step 3](./image-2.png)
 
 ### Step 03 - External Systems
 
-On peut ensuite ajouter les systèmes externes.
+On peut ensuite ajouter les **systèmes externes**.
 
 <div style="background-color:#FF99CC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
   Les <strong>systèmes externes</strong> sont les systèmes maintenus par d'autres équipes ou organisations. Ces systèmes sont les logiciels qu'on ne modélise pas dans le processus actuel.
@@ -133,10 +133,10 @@ Dans notre scénario, voici les agrégats que nous pourrions ajouter :
 
 ![Software Design - step 06](./image-9.png)
 
-Dans la vraie vie, un **aggregate** est une classe métier qui fait autorité sur un sous-domaine.
-Pour les agrégats, on met l’accent sur le comportement, pas sur les données — dans l’esprit de la programmation orientée objet. Toutes les règles métier doivent être appliquées et garanties par cet agrégat.
+En pratique, un **aggregate** est une classe métier qui fait autorité sur un sous-domaine.
+Pour les agrégats, on met l’accent sur le comportement, pas sur les données - dans l’esprit de la programmation orientée objet. Toutes les règles métier doivent être appliquées et garanties par cet agrégat.
 
-#### De la commande à l'event
+#### De la commande à l'événement
 
 Que ce soit un **Aggregate** ou un **External System**, ces "morceaux de software" serevent souvent à transformer une **Commande** en **Event**
 
@@ -148,12 +148,10 @@ Que ce soit un **Aggregate** ou un **External System**, ces "morceaux de softwar
 
 Nous avons essayé de rester proches du standard, notamment en ce qui concerne le nom et la couleur des post-its. Cependant, il est important de comprendre qu'il est possible de prendre beaucoup de libertés avec ces conventions.
 
-Voici un exemple de ce que Nick Tune a présenté lors d'un workshop :
-- Le **context**, qui représente un **aggregate**, a la même couleur qu'un **external system**.
-- Le **read model** est appelé **query**, car ici le premier **event** effectue un appel vers le second pour obtenir des **information** (**read model**).
+Voici un exemple présenté par Nick Tune lors d’un atelier :
+- Le **context**, qui représente un **aggregate**, a la même couleur qu’un **external system**.
+- Le **read model** est appelé **query**, car ici le premier **event** effectue un appel vers le second pour obtenir des **informations** (*read model*).
 
 ![Software Design - step 06](./image-12.png)
-
-
 
 En savoir plus : [organiser un workshop pour découper un monolithe en microservices](../03-monolith/)
