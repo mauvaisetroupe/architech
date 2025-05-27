@@ -44,15 +44,15 @@ jobs:
           HUGO_ENV: production
         run: hugo --gc --minify
 
-      - name: Deploy to OVH via SFTP
-        uses: appleboy/ftp-action@v1.1.0
+      - name: Deploy with Password
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
-          protocol: sftp
-          local-dir: ./public
-          remote-dir: ${{ secrets.SFTP_TARGET }}
+          local_path: './public/*'
+          remote_path: ${{ secrets.SFTP_TARGET }}
+          sftp_only: true
+          password: ${{ secrets.SFTP_PASSWORD }}
 
 
