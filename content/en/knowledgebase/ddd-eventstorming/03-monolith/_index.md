@@ -20,7 +20,6 @@ C’est pourquoi il est essentiel d’aller au-delà d’EventStorming en introd
 
 ## Les étapes du Workshop
 
-
 ### 01. Big Picture EventStorming
 
 > 💡 Le but de cette étape est de comprendre le processus métier dans sa globalité. Cette étape permet également de faire émerger les premiers *Bounded Contexts* ou, au minimum, les grands domaines fonctionnels.
@@ -31,6 +30,8 @@ On ne peut pas modèliser la solution qui répond à un métier qu'on ne compren
 
 Plus de détails [sur la technique de modélisation pour réaliser un EventStorming de type Big Picture](../02-techniques-eventstorming/#big-picture). Si nécessaire, on peut approfondir certains processus en réalisant un EventStorming de type *Process Modelling* (qui est le [second type d'EventStorming](../02-techniques-eventstorming/#process-modeling))
 
+### 02. Identifier les Bounded Context
+
 #### Bounded Context ou microservices?
 
 Lorsqu’on parle d’architecture et de conception stratégique, les *Bounded Contexts* viennent souvent à l’esprit. Il s’agit d’identifier et de définir des frontières claires au sein d’un système.
@@ -38,15 +39,15 @@ Concevoir une architecture revient souvent à découper une structure complexe e
 
 Certains appellent cela des microservices, d’autres parlent de *Bounded Contexts*, et pour certains, un microservice est un *Bounded Context* à part entière. Le sujet suscite évidemment des opinions bien tranchées, et de nombreux articles de blog lui ont été consacrés.
 
-#### Emergent Bounded Context
+#### Emergent Bounded Context - La théorie
 
-> À ce stade, il est déjà possible de **faire émerger des Bounded Contexts** potentiels, en observant les zones de rupture, les vocabulaires distincts ou les responsabilités bien délimitées. Ces pistes seront approfondies dans les étapes suivantes.
+> À ce stade, il est déjà possible *en théorie* de **faire émerger des Bounded Contexts** potentiels, en observant dans la Big Picture les zones de rupture, les vocabulaires distincts ou les responsabilités bien délimitées
 
 ![alt text](./image-1.1.png)
 
 Source : https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet
 
-#### Les Bounded Contexts - Entre théorie et pratique
+#### Les Bounded Contexts - La pratique
 
 > En théorie, on pourrait regarder un tableau d'EventStorming et penser qu'on peut diviser les événements en sections distinctes, chacune correspondant à un Bounded Context. Mais en réalité, cela n'est que rarement aussi simple.
 
@@ -58,9 +59,21 @@ Dans [un workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc)
 
 > Bien que ce soient des phases distinctes, **elles reposent toutes sur le même objet de domaine**, **compte**. Cela soulève des défis de modélisation, notamment entre cohésion et duplication.
 
-### 02. Message Flow Modelling
+### Les Bounded Contexts – Les domaines fonctionnels
 
-> 💡 Le but de cette étape est d'identifier les premiers *Bounded Contexts* ou microservices.
+A défaut d'avoir les *bounded contexts* sous forme de "patate" dans la Big Picture, que pouvons-nous attendre de cette première phase en terme de découpe en microservices?
+
+> Lors d’un EventStorming Big Picture, il est souvent plus réaliste de commencer par identifier des **domaines fonctionnels** plutôt que de chercher directement des Bounded Contexts complets et bien délimités.
+
+Ces domaines fonctionnels représentent des zones d’activité métier cohérentes, comme la gestion des commandes, la relation client, la facturation ou la logistique. Ils ne sont pas encore des Bounded Contexts au sens DDD — il manque encore un modèle de domaine, une équipe dédiée, des frontières techniques — mais ils jouent un rôle fondamental : ils servent de boussoles pour organiser la suite de l’exploration.
+
+Repérer ces grands ensembles permet de structurer la complexité du système en blocs compréhensibles par tous. C’est souvent à ce niveau qu’on commence à révéler les dépendances, les frictions ou les doublons, et donc à préparer le terrain pour une future découpe en microservices ou en contextes bien définis.
+
+![alt text](./image-1.3.png)
+
+### 03. Message Flow Modelling
+
+> 💡 Le but de cette étape est d'identifier les premiers *Bounded Contexts* ou microservices. En s'inspirant de la *Big Picture*, et de la connaissance métier et techniques des participants
 
 
 #### EventStorming vs Message Flow Modelling
@@ -69,18 +82,26 @@ On pourrait dans cette étape utiliser [Software Design EventStorming](../02-tec
 
 > Concevoir des systèmes faiblement couplés nécessite plus que de simples frontières bien définies. Il est tout aussi important de définir précisément les interactions entre les *Bounded Contexts*.
 
-C’est pour cette raison qu’un EventStorming de type *Software Design* ne suffit pas toujours. Le *Message Flow Modelling* est centrée sur l’échange de messages entre les composants du système. C'est ou outil plus adapté pour explorer ou valider la communication entre *Bounded Contexts*, et donc valider la découpe en *microservices*.
+C’est pour cette raison qu’un EventStorming de type *Software Design* ne suffit pas toujours. 
+
+Le *Message Flow Modelling* est centrée sur l’échange de messages entre les composants du système. C'est ou outil plus adapté pour explorer ou valider la communication entre *Bounded Contexts*, et donc valider la découpe en *microservices*.
 
 ![Message Flow Modelling](image-2.png)
 
-À noter que Nick propose aussi une version simplifiée pour modéliser ces communications.
+#### Message Flow Modelling - En pratique
 
-![alt text](image-3.png)
+> Dans la pratique:
+> - on sélectionne **les flux stratégique**s, qu'on considère comme des *scénarios* ou des *use cases* en s'inspirant de la *Big Picture* que tout le monde connait, mais aussi de la connaissance métier et techniques des participants
+> - pour **chaque scénario** on dessine le Message Flow correspondant au scénario
 
-Cette modélisation, que nous utilisons ici pour découvrir les *bouded context* et les microservices, permet également d’aller plus loin, en modélisant :
-* Les événements publiés et consommés ;
-* Les interactions synchrones/asynchrones ;
-* Et les protocoles d’intégration.
+Avec Message Flow Modelling, les *bounded contexts* deviennent les acteurs principaux de l’histoire.
+- Une histoire typique commence par un utilisateur qui cherche à atteindre un objectif, 
+- puis décrit les interactions entre les bounded contexts qui collaborent pour fournir une solution à cet utilisateur.
+
+Modéliser les flux stratégiques du domaine permet d’obtenir un retour sur la qualité de les *bounded contexts* proposés. Cela met en évidence comment ils collaborent et comment ils dépendent les uns des autres pour réaliser des *use cases* métier complets.
+
+La question clé à se poser : « Est-ce que la description de chaque *bounded context* est alignée avec le rôle qu’il joue dans le *use case* décrit par le *Message Flow Modelling*? »
+Si ce n’est pas le cas, il est probable que le nommage ou les frontières du bounded context nécessitent une refonte.
 
 #### D'accord, mais où trouver mes Bounded Contexts ?
 
@@ -96,11 +117,18 @@ La réussite de cette découpe en *Bounded Context* et donc en microservices rep
 
 Il faut se **lancer**, oser une première découpe.
 
-Et surtout, [**itérer**](#workshop-et-itérations).
+Et surtout, [**itérer**](#workshop-et-itérations)
 
-### 03. Bounded Context Canvas
+#### Message Flow Modelling - Aller plus loin
 
-> 💡 Le but de cette étape est d'affiner les premiers Bounded Contexts ou microservices.
+Cette modélisation, que nous utilisons ici pour découvrir les *bouded context* et les microservices, permet également d’aller plus loin, en modélisant :
+* Les événements publiés et consommés ;
+* Les interactions synchrones/asynchrones ;
+* Et les protocoles d’intégration.
+
+### 04. Bounded Context Canvas
+
+> 💡 Le but de cette étape est d'affiner les premiers Bounded Contexts ou microservices. 
 
 L'étape suivante du processus de conception consiste à modéliser chaque *Bounded Context* candidat en détaillant des critères de design clés. Pour cela, le [Bounded Context Canvas](https://github.com/ddd-crew/bounded-context-canvas) fournit un support structurant, particulièrement utile pour faire émerger une compréhension partagée du rôle, des capacités et des contraintes d’un contexte donné.
 
@@ -135,7 +163,8 @@ Cela vous aidera à :
 Comme dans beaucoup de workshops liés à DDD ou à EventStorming, on appliquera les principes du [Modeling Whirlpool](../01-introduction-eventstorming/#modeling-whirlpool)
 
 > Dans ce workshop d'EventStorming visant à découper un monolithe, on devra :
-> 1. Travailler dans l’espace du **problème**, pour **comprendre ce qu’il faut modéliser** et aligner tous les participants autour d’une compréhension partagée.
-> 2. Travailler dans l’espace de la **solution**, pour **faire émerger les microservices** qui remplaceront le monolithe.
+> - Travailler dans l’espace du **problème**, pour **comprendre ce qu’il faut modéliser** et aligner tous les participants autour d’une compréhension partagée.
+> - Travailler dans l’espace de la **solution**, pour **faire émerger les microservices** qui remplaceront le monolithe
+> - Retourner dans l'espace du **problème** quand des incohérence ou des manques d'explications apparaissent
 
 ![problem vs solution spaces](image-5.png)
