@@ -20,6 +20,14 @@ C’est pourquoi il est essentiel d’aller au-delà d’EventStorming en introd
 
 ## Les étapes du Workshop
 
+Le workshop de déroule en 4 étapes:
+1. Créer une **EventStormingBig Picture** pour comprendre le processus complet
+2. Analyser *rapidement* la *Big Picture* pour faire émerger les grands **domaines fonctionnels** (à faute de trouver les *Bounded Contexts*)
+3. Analyser des scénarios (ou *use cases*) stratégiques à l'aide de **Message Flow Modeling**. C'est lors de cette phase que nous allons trouver les candidats opur les **Bounded Contexts**.
+4. Faire une carte d'identité de chaque *Bouded Context* grâce aux **Bouded Context Canvas**
+
+![problem vs solution spaces](image-ws-simplifie.png)
+
 ### 01. Big Picture EventStorming
 
 > 💡 Le but de cette étape est de comprendre le processus métier dans sa globalité. Cette étape permet également de faire émerger les premiers *Bounded Contexts* ou, au minimum, les grands domaines fonctionnels.
@@ -30,7 +38,7 @@ On ne peut pas modèliser la solution qui répond à un métier qu'on ne compren
 
 Plus de détails [sur la technique de modélisation pour réaliser un EventStorming de type Big Picture](../02-techniques-eventstorming/#big-picture). Si nécessaire, on peut approfondir certains processus en réalisant un EventStorming de type *Process Modelling* (qui est le [second type d'EventStorming](../02-techniques-eventstorming/#process-modeling))
 
-### 02. Identifier les Bounded Context
+### 02. Identifier les Bounded Contexts
 
 #### Bounded Context ou microservices?
 
@@ -59,7 +67,7 @@ Dans [un workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc)
 
 > Bien que ce soient des phases distinctes, **elles reposent toutes sur le même objet de domaine**, **compte**. Cela soulève des défis de modélisation, notamment entre cohésion et duplication.
 
-### Les Bounded Contexts – Les domaines fonctionnels
+#### Les Bounded Contexts – Les domaines fonctionnels
 
 A défaut d'avoir les *bounded contexts* sous forme de "patate" dans la Big Picture, que pouvons-nous attendre de cette première phase en terme de découpe en microservices?
 
@@ -167,4 +175,4 @@ Comme dans beaucoup de workshops liés à DDD ou à EventStorming, on appliquera
 > - Travailler dans l’espace de la **solution**, pour **faire émerger les microservices** qui remplaceront le monolithe
 > - Retourner dans l'espace du **problème** quand des incohérence ou des manques d'explications apparaissent
 
-![problem vs solution spaces](image-5.png)
+![problem vs solution spaces](image-ws-complet.png)
