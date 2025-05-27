@@ -7,8 +7,7 @@ type: docs
 weight: 10
 ---
 
-
-Dans le développement logiciel, la compréhension fine du métier est souvent le point de friction principal entre les experts métier et les équipes techniques. C’est là qu’intervient l’EventStorming, une méthode de modélisation collaborative puissante qui permet de visualiser, d’explorer et de structurer les processus métier complexes de manière efficace et intuitive.
+Dans le développement logiciel, le principal point de friction entre les experts métier et les équipes techniques réside souvent dans la compréhension fine du métier. C’est là qu’intervient l’EventStorming, une méthode de modélisation collaborative puissante qui permet de visualiser, d’explorer et de structurer les processus métier complexes de manière efficace et intuitive.
 
 ## Qu’est-ce que l’EventStorming ?
 
@@ -39,9 +38,9 @@ Plus de détails sur [la technique, les post-its à utiliser, les grandes étape
 
 ### Entre structure et complexité
 
-Nick Tune participe à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare les différents outils (BPMN, UML, EventStorming, Message Flow).
+Nick Tune a participé à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare différents outils (BPMN, UML, EventStorming, Message Flow).
 
-Structurer un diagramme peut aider à identifier des problèmes, surtout si l’organisation du modèle est difficile — cela peut révéler des failles plus profondes. Mais attention : toute complexité n’est pas utile. Parfois, structurer ajoute juste des complications inutiles.
+Structurer un diagramme peut aider à identifier des problèmes, surtout si l’organisation du modèle est difficile — cela peut révéler des failles plus profondes. Mais attention : toute complexité n’est pas utile. Parfois, structurer ne fait qu’ajouter des complications inutiles.
 
 Au final, le choix entre un modèle structuré ou libre dépend des objectifs. La flexibilité encourage l’exploration, tandis que la structure apporte de la clarté — mais peut aussi cacher des défauts de conception :
 
@@ -78,7 +77,7 @@ L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-mod
 * La version simple mise sur la clarté et la simplicité ; la version avancée ajoute des notations précises (commandes, événements, requêtes).
 * Flexibilité initiale, puis montée en complexité selon le niveau d’expertise.
 * Utile pour révéler des anti-patterns (ex. trop de requêtes → monolithe distribué).
-* L’agencement libre rend la modélisation plus expressive, mais plus cognitive à gérer que des diagrammes automatisés comme UML.
+* L’agencement libre rend la modélisation plus expressive
 
 
 ![alt text](./image.png)
@@ -91,7 +90,7 @@ L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-mod
 
 ### Espaces et outils
 
-Voici un tableau qui les met en relation les outils de modélisation avec les espaces du DDD :
+Voici un tableau qui met en relation les outils de modélisation avec les espaces du DDD :
 
 | Outil     | Espace DDD               |
 |----------------------------------|--------------------------|
