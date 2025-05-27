@@ -45,13 +45,14 @@ jobs:
         run: hugo --gc --minify
 
       - name: Deploy to OVH via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: appleboy/ftp-action@v1.1.0
         with:
-          server: ${{ secrets.SFTP_HOST }}
+          host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: ${{ secrets.SFTP_PORT }}
           protocol: sftp
           local-dir: ./public
-          server-dir: ${{ secrets.SFTP_TARGET }}
+          remote-dir: ${{ secrets.SFTP_TARGET }}
+
 
