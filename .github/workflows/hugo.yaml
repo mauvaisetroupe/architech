@@ -45,12 +45,13 @@ jobs:
         run: hugo --gc --minify
 
       - name: Deploy to OVH via SFTP
-        uses: easingthemes/ssh-deploy@v2.2.11
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.SFTP_HOST }}
-          port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: ./public
-          remote_path: ${{ secrets.SFTP_TARGET }}
-          sftp_only: true
+          port: ${{ secrets.SFTP_PORT }}
+          protocol: sftp
+          local-dir: ./public
+          server-dir: ${{ secrets.SFTP_TARGET }}
+
