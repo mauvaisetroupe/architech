@@ -28,9 +28,9 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install PostCSS CLI
+      - name: Install PostCSS dependencies locally
         run: |
-          npm install --global postcss postcss-cli autoprefixer
+          npm install postcss postcss-cli autoprefixer
 
       - name: Install Node.js dependencies (if needed)
         run: |
