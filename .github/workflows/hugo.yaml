@@ -23,16 +23,28 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
 
-      - name: Install Node.js dependencies
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install PostCSS CLI
+        run: |
+          npm install --global postcss postcss-cli autoprefixer
+
+      - name: Install Node.js dependencies (if needed)
         run: |
           if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
             npm ci
           fi
 
-      - name: Build with Hugo
+      - name: Build Hugo site
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
         run: hugo --gc --minify
 
-      - name: Deploy via SFTP to OVH
+      - name: Deploy to OVH via SFTP
         uses: easingthemes/ssh-deploy@v2.2.11
         with:
           server: ${{ secrets.SFTP_HOST }}
