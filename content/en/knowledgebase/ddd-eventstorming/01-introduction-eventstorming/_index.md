@@ -46,6 +46,8 @@ Les modèles flexibles (comme EventStorming) encouragent l’exploration et la c
 
 Il faut choisir l’approche selon le besoin : privilégier la souplesse pour explorer, et la rigueur pour formaliser.
 
+![alt text](./image-chaos.png)
+
 #### EventStorming
 
 * Outil collaboratif et flexible, idéal pour explorer un domaine.
@@ -75,9 +77,6 @@ Il faut choisir l’approche selon le besoin : privilégier la souplesse pour ex
 
 Il peut être utilisé pour [découper un monolithe](../03-monolith/#03-message-flow-modelling).
 
-
-
-![alt text](./image.png)
 
 ## Espaces Problème / Solution
 
