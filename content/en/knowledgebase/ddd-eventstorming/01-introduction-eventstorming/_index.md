@@ -11,9 +11,7 @@ Dans le développement logiciel, le principal point de friction entre les expert
 
 ## Qu’est-ce que l’EventStorming ?
 
-EventStorming a été introduit en 2013 par Alberto Brandolini. Pour plus de détails sur son origine et son évolution, consultez l’article complet ici : [https://www.avanscoperta.it/en/eventstorming/](https://www.avanscoperta.it/en/eventstorming/).
-
-L’EventStorming est une approche de modélisation orientée événements métiers (domain events), inventée par Alberto Brandolini. Elle repose sur une session collaborative impliquant toutes les parties prenantes – développeurs, experts métier, UX designers, product owners – afin de construire ensemble une vision partagée du système.
+EventStorming a été introduit en 2013 par Alberto Brandolini. C'est une approche de modélisation orientée événements métiers (domain events) qui repose sur une session collaborative impliquant toutes les parties prenantes – développeurs, experts métier, UX designers, product owners – afin de construire ensemble une vision partagée du système.
 
 Plutôt que de partir d’une documentation technique ou de diagrammes UML, l’EventStorming commence par des post-its de couleurs différentes, collés sur un mur ou un tableau blanc, pour représenter les événements, commandes, agrégats, acteurs, règles métier, etc.
 
@@ -22,6 +20,8 @@ EventStorming repose sur quelques constats simples mais puissants :
 - Les meilleures conversations naissent quand les outils s’effacent. Les tableaux blancs laissent place à l’exploration, là où les outils plus rigides comme BPMN ou UML freinent les idées et excluent ceux qui ne maîtrisent pas leur langage.
 
 > L'EventStorming est une méthode rapide et visuelle qui favorise une vision partagée et permet de détecter précocement les zones grises dans un processus complexe.
+
+Pour plus de détails sur son origine et son évolution, consultez l’article complet ici : [https://www.avanscoperta.it/en/eventstorming/](https://www.avanscoperta.it/en/eventstorming/).
 
 ## Les 3 formats d’EventStorming
 
@@ -36,48 +36,45 @@ Plus de détails sur [la technique, les post-its à utiliser, les grandes étape
 
 ## Comparaison avec d'autres outils
 
-### Entre structure et complexité
+#### Entre structure et complexité
 
-Nick Tune a participé à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare différents outils (BPMN, UML, EventStorming, Message Flow).
+Nick Tune a participé à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare différents outils (BPMN, UML, EventStorming, Message Flow). 
 
-Structurer un diagramme peut aider à identifier des problèmes, surtout si l’organisation du modèle est difficile — cela peut révéler des failles plus profondes. Mais attention : toute complexité n’est pas utile. Parfois, structurer ne fait qu’ajouter des complications inutiles.
+Structurer un diagramme peut apporter de la clarté, mais parfois au prix d’une complexité inutile.
+Les modèles structurés (comme UML) offrent de la précision, mais peuvent donner une fausse impression de qualité en dissimulant des erreurs de conception.
+Les modèles flexibles (comme EventStorming) encouragent l’exploration et la créativité, mais peuvent devenir flous sans cadre.
 
-Au final, le choix entre un modèle structuré ou libre dépend des objectifs. La flexibilité encourage l’exploration, tandis que la structure apporte de la clarté — mais peut aussi cacher des défauts de conception :
+Il faut choisir l’approche selon le besoin : privilégier la souplesse pour explorer, et la rigueur pour formaliser.
 
-> * Modèles structurés (UML, BPMN) : clairs, précis, mais peuvent masquer des défauts de conception.
-> * Modèles flexibles (EventStorming, Message Flow) : favorisent l’exploration, mais peuvent être confus sans cadre.
-> * Il y a une tension permanente entre simplicité (pour communiquer) et précision (pour concevoir).
-> * La clé : adapter l’outil au moment et au but — l’exploration nécessite flexibilité, la documentation exige rigueur.
+#### EventStorming
 
-### EventStorming
+* Outil collaboratif et flexible, idéal pour explorer un domaine.
+* Très expressif mais potentiellement chaotique sans cadre ni facilitateur.
+* Utile en phase de découverte, moins adapté à la structuration technique.
 
-* Outil flexible, collaboratif et peu formel, idéal pour l’exploration initiale et la créativité.
-* Simplicité apparente, mais potentiellement chaotique sans facilitateur compétent.
-* L’absence de formalisme strict (couleurs, noms, règles souples) facilite l’expression, mais peut générer de la confusion, surtout pour les débutants.
-* Plus utile dans une phase de découverte de domaine que dans la structuration technique.
 
-### BPMN
+#### BPMN
 
-* Structuré et formel, BPMN est efficace pour visualiser des workflows, mais son usage peut varier.
-* Il devient complexe s’il cherche à tout intégrer (logique métier incluse), mais plus souple quand il se contente d’orchestrer visuellement en déléguant la logique aux microservices.
-* Son formalisme fort est utile pour documenter des processus, mais peut être rigide pour la conception ou l’exploration.
-* Tendance à évoluer, mais pour l’instant, il est plus adapté à des contextes structurés qu’à des phases exploratoires.
+* Approche formelle et structurée pour modéliser des workflows.
+* Efficace pour documenter, mais devient complexe si trop détaillé.
+* Moins adapté à l’exploration ou à la conception souple.
 
-### UML Sequence Diagram
+#### UML Sequence Diagram
 
-* Très structuré et formel, UML évite les malentendus et apporte de la précision.
-* Moins flexible qu’EventStorming, il est parfait pour représenter clairement les flux séquentiels et les interactions système.
-* Cette rigueur peut masquer des problèmes architecturaux (ex. couplage excessif) qui seraient visibles dans un outil plus libre.
+* Très structuré, idéal pour représenter des flux séquentiels précis.
+* Apporte clarté et rigueur, mais peu flexible.
+* Peut masquer des défauts de conception derrière sa formalisation.
 
-### Message Flow Modeling 
+#### Message Flow Modeling 
 
-L'outil est présenté [ici](https://github.com/ddd-crew/domain-message-flow-modelling). Il peut être utilisé dans un [workshop pour découper un monolithe](../03-monolith/#02-alternative-2--message-flow-modelling).
+[Message flow modeling](https://github.com/ddd-crew/domain-message-flow-modelling), promu par Nick Tune, est une méthode intermédiaire pour le design stratégique.
 
-* Outil entre deux mondes : plus structuré qu’EventStorming, moins rigide qu’UML.
-* La version simple mise sur la clarté et la simplicité ; la version avancée ajoute des notations précises (commandes, événements, requêtes).
-* Flexibilité initiale, puis montée en complexité selon le niveau d’expertise.
-* Utile pour révéler des anti-patterns (ex. trop de requêtes → monolithe distribué).
-* L’agencement libre rend la modélisation plus expressive
+* Plus structuré qu’EventStorming, moins rigide qu’UML.
+* Permet d’explorer, puis de préciser les échanges entre *bounded contexts*.
+* Révèle les dépendances, couplages, et anti-patterns (ex. monolithe distribué)
+
+Il peut être utilisé pour [découper un monolithe](../03-monolith/#03-message-flow-modelling).
+
 
 
 ![alt text](./image.png)

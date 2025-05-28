@@ -51,7 +51,7 @@ Certains appellent cela des microservices, d’autres parlent de *bounded contex
 
 #### Emergent Bounded Context - La théorie
 
-À ce stade, il est déjà possible *en théorie* de **faire émerger des bounded contexts** potentiels, en observant dans la Big Picture les zones de rupture, les vocabulaires distincts ou les responsabilités bien délimitées. Ce sont les *grosses patates* dur ce schéma.
+À ce stade, il est déjà possible *en théorie* de **faire émerger des bounded contexts** potentiels, en observant dans la Big Picture les zones de rupture, les vocabulaires distincts ou les responsabilités clairement délimitées. Ce sont les *grosses patates* sur ce schéma.
 
 ![alt text](./image-1.1.png)
 
