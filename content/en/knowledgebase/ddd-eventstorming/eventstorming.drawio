@@ -974,7 +974,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="rNL4arTgAgMZIYDM6v8f" name="workshop">
-    <mxGraphModel dx="1426" dy="1686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1018" dy="1575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1007,7 +1007,7 @@
             <mxPoint x="366" y="20" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Qrgca0SRQmRbh6FkP0x5-120" value="&lt;b&gt;Step 04.&lt;/b&gt; Consolider les infos diospersés dans les différents MessagesFlow dans &lt;b&gt;plusieurs BoudedContext Canvas&lt;/b&gt;&amp;nbsp;" style="text;whiteSpace=wrap;fontFamily=architects daughter;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;fontStyle=0;spacing=1;spacingLeft=9;spacingBottom=9;html=1;fontSize=15;" parent="Qrgca0SRQmRbh6FkP0x5-167" vertex="1">
+        <mxCell id="Qrgca0SRQmRbh6FkP0x5-120" value="&lt;b&gt;Step 04.&lt;/b&gt; Consolider les infos dispersées dans les différents MessagesFlow dans &lt;b&gt;plusieurs BoudedContext Canvas&lt;/b&gt;&amp;nbsp;" style="text;whiteSpace=wrap;fontFamily=architects daughter;fillColor=#dae8fc;strokeColor=#6c8ebf;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;fontStyle=0;spacing=1;spacingLeft=9;spacingBottom=9;html=1;fontSize=15;" parent="Qrgca0SRQmRbh6FkP0x5-167" vertex="1">
           <mxGeometry x="401" y="519" width="295" height="64" as="geometry" />
         </mxCell>
         <mxCell id="Qrgca0SRQmRbh6FkP0x5-121" value="" style="group" parent="Qrgca0SRQmRbh6FkP0x5-167" vertex="1" connectable="0">
@@ -1348,7 +1348,7 @@
         <mxCell id="Qrgca0SRQmRbh6FkP0x5-173" value="retour" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Architects Daughter;fontSize=16;rotation=-90;fontColor=#FF0000;" parent="Qrgca0SRQmRbh6FkP0x5-174" vertex="1">
           <mxGeometry x="-26.999999999999886" y="337" width="68.26" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="bN1vuow74g2TYhv0aGvC-1" value="retour" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Architects Daughter;fontSize=16;rotation=0;fontColor=#FF0000;" vertex="1" parent="Qrgca0SRQmRbh6FkP0x5-174">
+        <mxCell id="bN1vuow74g2TYhv0aGvC-1" value="retour" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Architects Daughter;fontSize=16;rotation=0;fontColor=#FF0000;" parent="Qrgca0SRQmRbh6FkP0x5-174" vertex="1">
           <mxGeometry x="122.5" y="500" width="68.26" height="8" as="geometry" />
         </mxCell>
       </root>
