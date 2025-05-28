@@ -7,6 +7,8 @@ type: docs
 weight: 30
 ---
 
+> 🧩 Cet article fait partie d’une [série sur l’EventStorming](../)
+
 ## Description de l'approche
 
 La décomposition d’un grand système en composants plus petits, modulaires et faciles à maintenir est une question fréquemment soulevée dans les projets de transformation.

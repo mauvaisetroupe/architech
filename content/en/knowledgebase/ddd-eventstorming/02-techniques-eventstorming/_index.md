@@ -7,6 +7,7 @@ type: docs
 weight: 20
 ---
 
+> 🧩 Cet article fait partie d’une [série sur l’EventStorming](../)
 
 Dans le développement logiciel, la compréhension fine du métier est souvent le point de friction principal entre les experts métier et les équipes techniques. C’est là qu’intervient l’EventStorming, une méthode de modélisation collaborative puissante qui permet de visualiser, d’explorer et de structurer les processus métier complexes de manière efficace et intuitive.
 
