@@ -40,7 +40,7 @@ Plus de détails sur [la technique, les post-its à utiliser, les grandes étape
 
 #### Entre structure et complexité
 
-Nick Tune a participé à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare différents outils (BPMN, UML, EventStorming, Message Flow). 
+Nick Tune a participé à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare différents outils : BPMN, UML, EventStorming et [Message flow modeling](https://github.com/ddd-crew/domain-message-flow-modelling), une méthode pour le design stratégique promu par Nick Tune.
 
 Structurer un diagramme peut apporter de la clarté, mais parfois au prix d’une complexité inutile.
 Les modèles structurés (comme UML) offrent de la précision, mais peuvent donner une fausse impression de qualité en dissimulant des erreurs de conception.
@@ -50,35 +50,12 @@ Il faut choisir l’approche selon le besoin : privilégier la souplesse pour ex
 
 ![alt text](./image-chaos.png)
 
-#### EventStorming
-
-* Outil collaboratif et flexible, idéal pour explorer un domaine.
-* Très expressif mais potentiellement chaotique sans cadre ni facilitateur.
-* Utile en phase de découverte, moins adapté à la structuration technique.
-
-
-#### BPMN
-
-* Approche formelle et structurée pour modéliser des workflows.
-* Efficace pour documenter, mais devient complexe si trop détaillé.
-* Moins adapté à l’exploration ou à la conception souple.
-
-#### UML Sequence Diagram
-
-* Très structuré, idéal pour représenter des flux séquentiels précis.
-* Apporte clarté et rigueur, mais peu flexible.
-* Peut masquer des défauts de conception derrière sa formalisation.
-
-#### Message Flow Modeling 
-
-[Message flow modeling](https://github.com/ddd-crew/domain-message-flow-modelling), promu par Nick Tune, est une méthode intermédiaire pour le design stratégique.
-
-* Plus structuré qu’EventStorming, moins rigide qu’UML.
-* Permet d’explorer, puis de préciser les échanges entre *bounded contexts*.
-* Révèle les dépendances, couplages, et anti-patterns (ex. monolithe distribué)
-
-Il peut être utilisé pour [découper un monolithe](../03-monolith/#03-message-flow-modelling).
-
+| Outil     |  Caractéristiques               |
+|----------------------------------|--------------------------|
+| EventStorming | <ul><li>Outil collaboratif et flexible, idéal pour explorer un domaine.</li><li>Très expressif mais potentiellement chaotique sans cadre ni facilitateur</li><li>Utile en phase de découverte, moins adapté à la structuration technique</li><lu>|
+| BPMN|<ul><li>Approche formelle et structurée pour modéliser des workflows.</li><li>Efficace pour documenter, mais devient complexe si trop détaillé.</li><li>Moins adapté à l’exploration ou à la conception souple.</li></ul>|
+|UML Sequence Diagram|<ul><li>Très structuré, idéal pour représenter des flux séquentiels précis.</li><li>Apporte clarté et rigueur, mais peu flexible.</li><li>Peut masquer des défauts de conception derrière sa formalisation.</li></ul>|
+|Message Flow Modeling |<ul><li>Plus structuré qu’EventStorming, moins rigide qu’UML.</li><li>Permet d’explorer, puis de préciser les échanges entre *bounded contexts*.</li><li>Révèle les dépendances, couplages, et anti-patterns (ex. monolithe distribué)</li><li>Il peut être utilisé pour [découper un monolithe](../03-monolith/#03-message-flow-modelling).</li></ul>|
 
 ## Espaces Problème / Solution
 
