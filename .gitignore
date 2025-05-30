@@ -6,3 +6,4 @@ package-lock.json
 hugo.exe
 **/*.drawio.bkp
 **/.DS_Store
+**/*.drawio.dtmp
