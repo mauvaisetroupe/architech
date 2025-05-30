@@ -27,41 +27,49 @@ Le format **Big Picture EventStorming** est le plus vaste. Il mobilise souvent *
 Utilise un scénario "system-wide" pour aligner tous les participants et révéler les opportunités d'amélioration à travers les départements. Il doit couvrir tout un "customer journey".
 {{% /pageinfo %}}
 
-### Step 01 - Domain Events
+### 01. Domain Events
 
 Le déroulé est itératif : les participants racontent les événements majeurs qui jalonnent les processus de leur organisation, en les positionnant chronologiquement. Cela se traduit par des **Domain Events** (post-its oranges).
 
-<div style="background-color: #FF9933; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
-  Un <strong>Event</strong> ou <strong>Domain Event</strong> : un fait significatif qui s'est produit dans le système, formulé au passé, représentant un changement d'état. Il représente des faits qui se sont produits, indique des changements importants dans le domaine et forme l'épine dorsale de la narration métier.
-</div>
+{{< 
+postit color="#FF9933" 
+postitName="Domain Event" >}}
+ Un <strong>Event</strong> ou <strong>Domain Event</strong> est un fait significatif qui s'est produit dans le système, formulé au passé, représentant un changement d'état. Il représente des faits qui se sont produits, indique des changements importants dans le domaine et forme l'épine dorsale de la narration métier.
+{{< /postit >}}
 
 ![BigPicture - step 1](./image-0.png)
 
-### Step 02 - Commands / Persons
+### 02. Commands / Persons
 
 On ajoute ensuite les **commandes** (post-its bleus).
 
-<div style="background-color:#DAE8FC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+{{< 
+postit color="#DAE8FC" 
+postitName="Command" >}}
 Une <strong>commande</strong>, c'est une intention exprimée par un utilisateur ou un système, qui demande qu’une action soit exécutée. Chaque commande déclenche (souvent) un événement, si les conditions métier sont respectées.
-</div>
+{{< /postit >}}
 
 ![BigPicture - step 1](./image-1.png)
 
 Et dans le même temps, les **acteurs** ou **personnes** (post-its jaunes) sur les commandes qu'ils déclenchent.
 
-<div style="background-color:#FFFF66; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+{{< 
+postit color="#FFFF66" 
+postitName="Actor" >}}
   Un <strong>acteur</strong> ou <strong>personne</strong> est quelqu’un qui agit sur le système et prend des décisions. En général, les personnes sont positionnées sur les commandes dont elles sont à l'origine.
-</div>
+{{< /postit >}}
 
 ![BigPicture - step 3](./image-2.png)
 
-### Step 03 - External Systems
+### 03. External Systems
 
 On peut ensuite ajouter les **systèmes externes**.
 
-<div style="background-color:#FF99CC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+{{< 
+postit color="#FF99CC" 
+postitName="External System" >}}
   Les <strong>systèmes externes</strong> sont les systèmes maintenus par d'autres équipes ou organisations. Ces systèmes sont les logiciels qu'on ne modélise pas dans le processus actuel.
-</div>
+{{< /postit >}}
 
 ![BigPicture - step 4](./image-3.png)
 
@@ -80,11 +88,13 @@ Ce format permet :
 
 Il est particulièrement utile dans les contextes de transformation opérationnelle ou d’amélioration continue.
 
-### Step 04 - Policies
+### 04. Policies
 
-<div style="background-color:#CC99FF; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+{{< 
+postit color="#CC99FF" 
+postitName="Policy" >}}
   Une <strong>policy</strong> est une règle métier ou un comportement automatique déclenché par un événement. Elle agit comme une réaction logique à un événement, et peut conduire à une commande ou un autre événement.
-</div>
+{{< /postit >}}
 
 ![Process Modeling - step 04](./image-6.png)
 
@@ -92,11 +102,13 @@ Une policy peut également servir à introduire un comportement conditionnel dan
 
 ![Policy if then else](./image-10.png)
 
-### Step 05 - Read model
+### 05. Read model
 
-<div style="background-color:#99FF99; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+{{< 
+postit color="#99FF99" 
+postitName="Read Model" >}}
   Un <strong>Read Model</strong> (ou <strong>information</strong>) est une vue optimisée pour la lecture, créée à partir des événements métier. Il sert à afficher les données dont un utilisateur ou un système a besoin, souvent via des écrans, APIs, dashboards, etc.
-</div>
+{{< /postit >}}
 
 Ici, le read model **Order Summary** permet à l'utilisateur de vérifier sa commande avant d'exécuter le paiement.
 
@@ -121,11 +133,13 @@ Ce format est particulièrement pertinent pour :
 
 Il s’agit du format le plus technique, mais il garde une forte valeur collaborative en maintenant le **dialogue constant entre experts métier et développeurs**.
 
-### Step 06 - Aggregates
+### 06. Aggregates
 
-<div style="background-color:#FFFFCC; padding: 10px; width: 80%; margin: 20px auto; border: 1px solid #ddd;">
+{{< 
+postit color="#FFFFCC" 
+postitName="Aggregate" >}}
   Un <strong>agrégat</strong> est un concept destiné à être transformé en code — sous forme de classes ou de fonctions. C’est essentiellement une <strong>machine à états</strong>, c’est-à-dire quelque chose qui suit un cycle de vie.
-</div>
+{{< /postit >}}
 
 Dans notre scénario, voici les agrégats que nous pourrions ajouter :
 - **Payment** - Si le paiement devient un processus complexe à part entière
