@@ -27,9 +27,8 @@ Pour plus de détails sur son origine et son évolution, consultez l’article c
 
 ## Les 3 formats d’EventStorming
 
-EventStorming se décline en plusieurs formats, adaptés à différents niveaux de profondeur. Tous reposent sur le **récit collectif** à l’aide de **post-its colorés** sur une grande surface de modélisation (généralement un long rouleau de papier).
+EventStorming se décline en plusieurs formats, adaptés à différents niveaux de profondeur. Au fil des années, trois grands types d’ateliers ont émergé :
 
-> Au fil des années, trois grands types d’ateliers ont émergé :
 > - [**Big Picture EventStorming**](../02-techniques-eventstorming/#big-picture) : cartographier tout un domaine ou un ensemble de processus métier.
 > - [**Process Modelling EventStorming**](../02-techniques-eventstorming/#process-modeling) : se concentrer sur un processus spécifique.
 > - [**Software Design EventStorming**](../02-techniques-eventstorming/#software-design) : modélisation orientée vers la conception logicielle, souvent couplée au DDD (Domain-Driven Design).
@@ -40,13 +39,15 @@ Plus de détails sur [la technique, les post-its à utiliser, les grandes étape
 
 #### Entre structure et complexité
 
-Nick Tune a participé à un [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc) dans lequel il compare différents outils : BPMN, UML, EventStorming et [Message flow modeling](https://github.com/ddd-crew/domain-message-flow-modelling), une méthode pour le design stratégique promu par Nick Tune.
-
 Structurer un diagramme peut apporter de la clarté, mais parfois au prix d’une complexité inutile.
 Les modèles structurés (comme UML) offrent de la précision, mais peuvent donner une fausse impression de qualité en dissimulant des erreurs de conception.
 Les modèles flexibles (comme EventStorming) encouragent l’exploration et la créativité, mais peuvent devenir flous sans cadre.
 
 Il faut choisir l’approche selon le besoin : privilégier la souplesse pour explorer, et la rigueur pour formaliser.
+
+#### Caractéristiques des outils
+
+Dans ce [workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune compare différents outils dont EventStorming, UML, BPMN, et [Message flow modeling](https://github.com/ddd-crew/domain-message-flow-modelling).
 
 ![alt text](./image-chaos.png)
 
