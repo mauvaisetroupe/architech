@@ -39,7 +39,7 @@ postitName="Domain Event" >}}
 
 Les événements métier racontent une histoire compréhensible par le métier. 
 
-![BigPicture - step 1](./image-0.png)
+![BigPicture - step 1](./image-01.png)
 
 ### 02. Commands / Persons
 
@@ -60,7 +60,7 @@ postitName="Actor" >}}
 
 Notre histoire est enrichie avec les commandes qui souvent une conséquence d’une action d’un acteur. Les commandes déclenchent les événements métier.
 
-![BigPicture - step 3](./image-2.png)
+![BigPicture - step 3](./image-02.png)
 
 ### 03. External Systems
 
@@ -74,7 +74,7 @@ postitName="External System" >}}
 
 Notre histoire continue d'évoluer, certains systèmes externes sont identifiés. Ces systèmes jouent un rôle dans l'apparition d'un événement métier. 
 
-![BigPicture - step 4](./image-3.png)
+![BigPicture - step 4](./image-03.png)
 
 ## Process Modeling
 
@@ -101,11 +101,11 @@ postitName="Policy" >}}
 
 Dans notre histoire, on identifie - à travers les policies - les règles qui existent lorsqu'un événement se produit.
 
-![Process Modeling - step 04](./image-6.png)
+![Process Modeling - step 04](./image-04.1.png)
 
 Une policy peut également servir à introduire un comportement conditionnel dans la description du processus.
 
-![Policy if then else](./image-10.png)
+![Policy if then else](./image-04.2.png)
 
 ### 05. Read model
 
@@ -117,11 +117,11 @@ postitName="Read Model" >}}
 
 Ici, le read model **Order Summary** est un écran qu'on présente à l'acheteur et qui lui permet de vérifier sa commande avant d'exécuter le paiement.
 
-![Process Modeling - step 5](./image-8.png)
+![Process Modeling - step 5](./image-05.png)
 
 ## Software Design
 
-Le dernier format s'appelle **Software Design EventStorming**. Il fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire comme :
+Le dernier format s'appelle **Software Design EventStorming**. Il fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire comme:
 
 - Les **agrégats** (Aggregates),
 - Les **contextes bornés** (Bounded Contexts).
@@ -151,7 +151,7 @@ Dans notre scénario, voici les agrégats que nous pourrions ajouter :
 - **Shipment** - Pour gérer finement les livraisons (multi-colis, tracking)
 - **ProductInventory** - Pour intégrer la gestion de stock (en lecture/écriture)
 
-![Software Design - step 06](./image-9.png)
+![Software Design - step 06](./image-06.png)
 
 En pratique, un **aggregate** est une classe métier qui fait autorité sur un sous-domaine.
 Pour les agrégats, on met l’accent sur le comportement, pas sur les données - dans l’esprit de la programmation orientée objet. Toutes les règles métier doivent être appliquées et garanties par cet agrégat.
