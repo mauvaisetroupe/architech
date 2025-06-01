@@ -58,7 +58,7 @@ postitName="Actor" >}}
   Un <strong>acteur</strong> ou <strong>personne</strong> est quelqu’un qui agit sur le système et prend des décisions. En général, les personnes sont positionnées sur les commandes dont elles sont à l'origine.
 {{< /postit >}}
 
-Notre histoire est enrichie avec les commandes qui souvent une conséquence d’une action d’un acteur. Les commandes déclenchent les événements métier.
+Notre histoire s'enrichit à travers les commandes, qui résultent souvent d'une action d'un acteur et déclenchent des événements métier.
 
 ![BigPicture - step 3](./image-02.png)
 
@@ -78,9 +78,9 @@ Notre histoire continue d'évoluer, certains systèmes externes sont identifiés
 
 ## Process Modeling
 
-Après le format **Big Picture EventStorming**, le second format s'appelle **Process Modeling**. Il vise un niveau de granularité plus fin. On y modélise un **processus spécifique**, de bout en bout, en y ajoutant **plus de rigueur méthodologique**.
+Après le format **Big Picture**, le second format s'appelle **Process Modeling**. Il vise un niveau de granularité plus fin, tout en restant du côté métier – on ne descend pas encore dans la conception logicielle.
 
-Ici, on introduit une **grammaire précise** (événements, commandes, règles, acteurs…), dans un esprit de **jeu collaboratif structuré**, tout en restant du côté métier – on ne descend pas encore dans la conception logicielle.
+On y modélise un processus spécifique, de bout en bout, en y ajoutant **plus de rigueur** sur l'utilisation des éléments de la Big Picture et en ajoutant de nouveaux éléments (**policie** et **read model**)
 
 Ce format permet :
 
@@ -121,11 +121,7 @@ Ici, le read model **Order Summary** est un écran qu'on présente à l'acheteur
 
 ## Software Design
 
-Le dernier format s'appelle **Software Design EventStorming**. Il fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire comme:
-
-- Les **agrégats** (Aggregates),
-- Les **contextes bornés** (Bounded Contexts).
-
+Le dernier format s'appelle **Software Design**. Il fait le lien entre les événements du métier et leur **implémentation logicielle** potentielle. On y introduit des éléments supplémentaires dans la grammaire (les **aggregates**, et les **contextes bornés**).
 Cela permet d’augmenter la **précision de la discussion**, tout en conservant un fort ancrage métier.
 
 Ce format est particulièrement pertinent pour :
