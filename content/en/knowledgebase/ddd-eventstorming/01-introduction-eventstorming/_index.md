@@ -35,6 +35,8 @@ EventStorming se décline en plusieurs formats, adaptés à différents niveaux 
 > - [**Process Modelling EventStorming**](../02-techniques-eventstorming/#process-modeling) : se concentrer sur un processus spécifique.
 > - [**Software Design EventStorming**](../02-techniques-eventstorming/#software-design) : modélisation orientée vers la conception logicielle, souvent couplée au DDD (Domain-Driven Design).
 
+![alt text](image-3-types.png)
+
 Plus de détails sur [la technique, les post-its à utiliser, les grandes étapes](../02-techniques-eventstorming/).
 
 ## Un processus itératif
