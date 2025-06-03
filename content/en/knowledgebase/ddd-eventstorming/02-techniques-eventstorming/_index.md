@@ -18,6 +18,8 @@ Dans le développement logiciel, la compréhension fine du métier est souvent l
 > - **Process Modelling EventStorming** : se concentrer sur un processus spécifique.
 > - **Software Design EventStorming** : modélisation orientée vers la conception logicielle, souvent couplée au DDD (Domain-Driven Design).
 
+![alt text](image-3-types.png)
+
 ## Big Picture
 
 Le format **Big Picture EventStorming** est le plus vaste. Il mobilise souvent **25 à 30 participants** issus de tous les niveaux de l’organisation. L’objectif est d’explorer **l’ensemble d’une ligne métier**, du début à la fin.
