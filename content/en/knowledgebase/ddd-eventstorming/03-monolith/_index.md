@@ -46,10 +46,10 @@ Plus de détails [sur la technique de modélisation pour réaliser un EventStorm
 
 #### Bounded Context ou microservices ?
 
-Lorsqu’on parle d’architecture et de conception stratégique, les *bounded contexts* viennent souvent à l’esprit. Il s’agit d’identifier et de définir des frontières claires au sein d’un système.
-Concevoir une architecture revient souvent à découper une structure complexe en sous-systèmes plus petits.
 
-Certains appellent cela des microservices, d’autres parlent de *bounded contexts*, et pour certains, un microservice est un *bounded context* à part entière. Le sujet suscite évidemment des opinions bien tranchées, et de nombreux articles de blog lui ont été consacrés.
+Concevoir une architecture revient souvent à découper une structure complexe en sous-systèmes plus petits. Les *bounded contexts* permettent d’identifier et de définir des frontières claires au sein d’un système.
+
+Le lient entre *bounded contexts* et *microservices* fluctuent. Pour certains, un *microservice* est un *bounded context* à part entière. Le sujet suscite évidemment des opinions bien tranchées, et de nombreux articles de blog lui ont été consacrés.
 
 #### Emergent Bounded Context - La théorie
 
@@ -61,11 +61,11 @@ Source : https://github.com/ddd-crew/eventstorming-glossary-cheat-sheet
 
 #### Les Bounded Contexts - La pratique
 
-En **théorie**, on pourrait regarder un tableau d'EventStorming et penser qu'on peut diviser les événements en sections distinctes, chacune correspondant à un bounded context. Mais en **réalité**, cela n'est que rarement aussi simple.
+En *réalité*, cela n'est que rarement aussi simple.
 
 Souvent, des événements liés à un même bounded context apparaissent à plusieurs endroits sur le tableau. Un même bounded context peut se manifester au début d'un processus, puis réapparaître à la fin. C’est pourquoi Alberto Brandolini, le créateur de l’EventStorming, les qualifie de *bounded contexts* **émergents**. Ils émergent du processus, mais ils ne sont pas stabilisés ni définitifs.
 
-Dans [un workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune décrit le cycle de vie d'un **bank account** : un utilisateur crée un compte, il peut déposer ou retirer de l'argent, et même fermer son compte. Ces activités ne se déroulent pas toujours dans un ordre bien défini, et elles sont souvent entrecoupées d'autres processus, comme la demande d'un prêt ou l'ouverture d'un compte épargne.
+Dans [ce workshop de modélisation](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune décrit le cycle de vie d'un **bank account** : un utilisateur crée un compte, il peut déposer ou retirer de l'argent, et même fermer son compte. Ces activités ne se déroulent pas toujours dans un ordre bien défini, et elles sont souvent entrecoupées d'autres processus, comme la demande d'un prêt ou l'ouverture d'un compte épargne.
 
 ![alt text](./image-1.2.png)
 
@@ -77,7 +77,7 @@ Il est souvent plus réaliste de commencer par identifier des **domaines fonctio
 
 Ces domaines fonctionnels représentent des zones d’activité métier cohérentes, comme la gestion des commandes, la relation client, la facturation ou la logistique. 
 
-Ils ne sont pas encore des bounded contexts au sens DDD - il manque encore un modèle de domaine, des frontières techniques - mais ils servent de boussoles pour organiser la suite de l’exploration. Repérer ces grands ensembles permet de structurer la complexité du système en blocs compréhensibles par tous. C’est souvent à ce niveau qu’on commence à révéler les dépendances, les frictions ou les doublons, et donc à préparer le terrain pour une future découpe en microservices ou en contextes bien définis.
+Ils ne sont pas encore des bounded contexts au sens DDD - il manque encore un modèle de domaine, des frontières techniques - mais ils servent de boussoles pour organiser la suite de l’exploration. Repérer ces grands ensembles permet de structurer la complexité du système en blocs compréhensibles par tous.
 
 ![alt text](./image-1.3.png)
 
@@ -87,54 +87,36 @@ Ils ne sont pas encore des bounded contexts au sens DDD - il manque encore un mo
 
 #### EventStorming vs Message Flow Modelling
 
-On pourrait dans cette étape utiliser [Software Design EventStorming](../02-techniques-eventstorming/#software-design) pour identifier les agrégats, les commandes, les politiques, les événements techniques, et pour poser les limites de contexte (*bounded contexts*) du futur système modulaire. Nick Tune propose d'utiliser un autre outil appelé [Message Flow Modelling](https://github.com/ddd-crew/domain-message-flow-modelling).
+Concevoir des systèmes faiblement couplés nécessite plus que de simples frontières bien définies. Il est tout aussi important de **définir précisément les interactions** entre les *bounded contexts*. C’est pour cette raison qu’un EventStorming de type *Software Design* ne suffit pas toujours. Nick Tune propose d'utiliser un autre outil appelé [Message Flow Modelling](https://github.com/ddd-crew/domain-message-flow-modelling).
 
-Concevoir des systèmes faiblement couplés nécessite plus que de simples frontières bien définies. Il est tout aussi important de **définir précisément les interactions** entre les *bounded contexts*.
 
-C’est pour cette raison qu’un EventStorming de type *Software Design* ne suffit pas toujours.
 
-Le *Message Flow Modelling* est centré sur l’échange de messages entre les composants du système. C'est un outil plus adapté pour explorer ou valider la communication entre *bounded contexts*, et donc valider la découpe en *microservices*.
+Le *Message Flow Modelling* est centré sur l’échange de messages entre les composants du système. C'est un outil plus adapté pour explorer ou valider la communication entre *bounded contexts*, et donc valider la découpe en *microservices*. Avec Message Flow Modelling, les *bounded contexts* deviennent les acteurs principaux de l’histoire.
+
+Modéliser les flux stratégiques du domaine permet d’obtenir un retour sur la qualité des *bounded contexts* proposés. Cela met en évidence comment ils collaborent et dépendent les uns des autres pour réaliser des *use cases* métier complets.
+
 
 ![Message Flow Modelling](image-2.png)
 
 #### Message Flow Modelling - En pratique
 
 Dans la pratique :
-- on sélectionne **les flux stratégiques**, qu'on considère comme des *scénarios* ou des *use cases*, en s'inspirant de la *Big Picture*, mais aussi de la connaissance métier et technique des participants ;
-- pour **chaque scénario**, on dessine le *message flow* correspondant.
+- On part des **domaines fonctionnels** identifiés lors de la phase précèdente comme *bounded contexte*
+- On sélectionne **les flux stratégiques**, qu'on considère comme des *scénarios* ou des *use cases*, en s'inspirant de la *Big Picture*, mais aussi de la connaissance métier et technique des participants ;
+- Pour **chaque scénario**, on dessine le *message flow* correspondant
 
-Avec Message Flow Modelling, les *bounded contexts* deviennent les acteurs principaux de l’histoire.
-- Une histoire typique commence par un utilisateur qui cherche à atteindre un objectif,
-- puis décrit les interactions entre les bounded contexts qui collaborent pour fournir une solution à cet utilisateur.
+**Question clé** : « Est-ce que la description de chaque *bounded context* est alignée avec le rôle qu’il joue dans le *use case* décrit par le *Message Flow Modelling* ? ». Si ce n’est pas le cas, il est probable que le nommage ou les frontières du *bounded context* nécessitent une refonte.
 
-Modéliser les flux stratégiques du domaine permet d’obtenir un retour sur la qualité des *bounded contexts* proposés. Cela met en évidence comment ils collaborent et dépendent les uns des autres pour réaliser des *use cases* métier complets.
+#### D'accord, mais comment trouver les bon *bounded contexts* ?
 
-**Question clé** : « Est-ce que la description de chaque *bounded context* est alignée avec le rôle qu’il joue dans le *use case* décrit par le *Message Flow Modelling* ? »
-
-Si ce n’est pas le cas, il est probable que le nommage ou les frontières du *bounded context* nécessitent une refonte.
-
-#### D'accord, mais où trouver mes Bounded Contexts ?
 
 > Il n’existe malheureusement pas de méthode magique pour identifier les *bounded contexts* dans un système.
 > 
 > Dans ce [workshop](https://www.youtube.com/watch?v=oj4zGj6sPDc), Nick Tune se livre à un exercice de modélisation d’un système d'*Adaptive Cruise Control*. Après une première phase consacrée à l’exploration de l’espace du problème - à travers un *EventStorming* de type *Big Picture* - il engage, avec son co-animateur jouant le rôle d’expert métier, une démarche de découverte des *bounded contexts*. Ensemble, ils construisent progressivement une vision partagée du système en identifiant (*devinant*) les contours contextuels pertinents.
 
-La réussite de cette découpe en *bounded contexts*, et donc en microservices, repose sur plusieurs éléments clés :
-- Une connaissance approfondie du métier ;
-- Une compréhension fine des enjeux fonctionnels ;
-- Des compétences en conception logicielle ;
-- Ainsi qu’une capacité à modéliser de manière collaborative.
+La réussite de cette découpe en *bounded contexts*, et donc en microservices, repose sur une connaissance approfondie du métier, une compréhension fine des enjeux fonctionnels, des compétences en conception logicielle et une capacité à modéliser de manière collaborative.
 
-Il faut se **lancer**, oser une première découpe.
-
-Et surtout, [**itérer**](#workshop-et-itérations).
-
-#### Message Flow Modelling - Aller plus loin
-
-Cette modélisation, que nous utilisons ici pour découvrir les *bounded contexts* et les microservices, permet également d’aller plus loin, en modélisant :
-* Les événements publiés et consommés ;
-* Les interactions synchrones/asynchrones ;
-* Et les protocoles d’intégration.
+Il faut se **lancer**, oser une première découpe. Et surtout, [**itérer**](#workshop-et-itérations).
 
 ### 04. Bounded Context Canvas
 
