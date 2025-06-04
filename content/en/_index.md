@@ -62,7 +62,7 @@ For announcement of latest features etc.
 
 
 
-ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy). Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy). Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> - Env : {{< environment >}}
 {.text-center .fs-6}
 
 
