@@ -6,7 +6,11 @@ categories: [French]
 draft: false
 ---
 
-# Diataxis, la méthode de documentation
+Dans cette vidéo enregistrée le 19 décembre 2024, Emmanuel Bernard, Guillaume Laforge et Arnaud Héritier échangent autour de **Diátaxis**, une approche structurée pour organiser efficacement la documentation technique.   Ils partagent leurs points de vue, leurs usages concrets, et leur compréhension du modèle.
+
+La discussion s'élargit ensuite aux **plateformes de documentation** et à l'**impact de l'intelligence artificielle** sur la manière dont nous concevons, maintenons et consommons la documentation aujourd'hui.
+
+[Voir la vidéo sur YouTube](https://www.youtube.com/watch?v=3RXAu0hHLbU)
 
 ## C'est quoi Diátaxis ?
 
@@ -60,14 +64,6 @@ L'objectif est de se concentrer sur l'expérience pratique, d'encourager l'utili
 
 L'apprentissage se fait par l'expérimentation, en testant des APIs, en enchaînant des actions concrètes.  
 Des questions surgiront naturellement et trouveront leurs réponses dans d'autres types de documentation.
-
-
----
-
-
-
-
-
 
 
 ### Les Guides Pratiques : Comment Faire (how-to guides)
