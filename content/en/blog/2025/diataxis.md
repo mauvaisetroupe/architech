@@ -1,444 +1,360 @@
+---
+title: "Les castcodeurs - Diataxis, la méthode de documentation"
+tags: [Documentation, Diátaxis]
+date: 2025-06-01
+categories: [French]
+draft: false
+---
+
 # Diataxis, la méthode de documentation
 
 ## C'est quoi Diátaxis ?
 
-Vous pouvez aller sur diataxis.fr pour voir la documentation.
+Il est possible de consulter la documentation sur [diataxis.fr](http://diataxis.fr).
 
-Je ne sais pas comment vous voulez procéder... Je peux commencer par expliquer un peu ce que j’en ai compris, et puis on continue à partir de là ?
-— Oui, vas-y.
-— OK, attendez, je vais vous partager mon écran... Voilà.
+Diátaxis n'est pas une méthode sur la façon d'écrire au sein de la documentation, mais plutôt sur la manière de structurer la documentation en quatre types de contenus :
+- Les tutoriels
+- Les guides (ou guides pratiques, aussi appelés "how-to guides")
+- Les explications
+- La référence
 
-Donc, Diátaxis, ce n’est pas une méthode pour savoir comment écrire à l’intérieur de la documentation, mais plutôt comment structurer la documentation en quatre types de contenus :
-- Les tutoriels,
-- Les guides ("how-to guides", ou guides pratiques),
-- Les explications,
-- Et la référence.
+Les tutoriels et les guides sont généralement bien compris.  
+Les explications, en revanche, peuvent être un type de document moins souvent formalisé dans une documentation de projet.  
+Quant à la référence, elle correspond à un ouvrage technique classique listant tous les détails nécessaires.
 
-Les tutoriels et les guides, on voit à peu près ce que c’est.
-Les explications, c’est peut-être un type de document que vous n’avez pas l’habitude de voir formalisé comme tel dans une documentation de projet.
-Et la référence, ça, tout le monde connaît : c’est le bon vieux bouquin technique qui liste tout, avec tous les détails.
+Au départ, le concept de Diátaxis peut sembler restrictif, car une structure trop rigide peut donner l'impression de devenir une règle absolue.
 
-Alors au début, j’étais un peu sceptique. J’aime pas trop quand c’est trop structuré, parce que j’ai l’impression que, souvent, ça devient une sorte de loi absolue. Et on entend des trucs du genre :
-« Non, on ne peut pas écrire ça ici, parce que ce n’est pas le bon type de document ! »
-Et pour moi, ça n’aide pas forcément à atteindre l’objectif principal, qui est de faire une documentation claire, compréhensible, et surtout utile : c’est-à-dire aider les gens à faire ce qu’ils ont à faire, puis à passer à autre chose.
+Cependant, l'objectif principal reste d'avoir une documentation claire, compréhensible et utile, permettant d'aider les utilisateurs à accomplir leurs tâches efficacement.
 
-Mais bon, j’ai quand même lu, et j’ai trouvé ça intéressant.
+Ce qui est intéressant dans cette approche, c'est qu'elle incite à réfléchir sur ce qu'il ne faut **pas inclure dans chaque type de document**.  
+Cela aide à définir où placer une information en fonction de son objectif, en choisissant le type de document le plus adapté.
 
-Notamment, ce que j’ai trouvé le plus utile, c’est que cette approche te pousse à réfléchir à ce que tu ne dois pas mettre dans un certain type de document.
-Ça t’aide à te dire : « OK, je veux expliquer ceci ou faire cela, donc selon l’objectif de cette information, je devrais plutôt la mettre dans tel type de document. »
+Ils proposent également un outil appelé le "compas", permettant de situer une information par rapport aux différents types de documents. Cet outil s'avère particulièrement utile.
 
-Ils ont aussi un outil qu’ils appellent le compas, qui permet de situer une information par rapport aux types de documents. C’est assez malin.
+### Les deux axes pour catégoriser la documentation
+
+Dans le cadre de Diátaxis, deux dimensions sont à prendre en compte.
+- Est-ce que l'objectif est d'acquérir des connaissances, ou d'appliquer des connaissances ?  Cela oppose l'acquisition à l'application.
+- Est-ce que l'objectif est de réaliser une action, ou est-ce qu'il s'agit de ce que Diátaxis appelle la cognition ?  Cela pourrait être résumé par "compréhension", bien que cela soit un sous-ensemble de la cognition, et ne vise pas une action immédiate.
 
 ### Les Tutoriels : Apprendre par la Pratique
 
-En fait, dans Diátaxis, il y a deux dimensions.
+Le premier cadran correspond aux tutoriels.  
+Les tutoriels ont pour but :  
+- D'acquérir des connaissances,  
+- Par l'action – en réalisant les étapes du tutoriel.
 
-La première, c’est :  
-Est-ce que c’est pour acquérir des connaissances, ou est-ce que c’est pour appliquer des connaissances ?  
-Donc : acquisition vs application.
+Une analogie souvent utilisée pour expliquer cette approche est celle de l'enfant qui apprend à cuisiner.  
+Il découpe des ingrédients, teste différentes étapes.  
+L'objectif n'est pas d'obtenir un plat parfait, mais de lui permettre d'explorer, d'expérimenter, de comprendre les gestes et les quantités. Si le résultat final n'est pas réussi, ce n'est pas un problème.
 
-La deuxième, c’est :  
-Est-ce que c’est pour une action, ou est-ce que c’est pour ce qu’ils appellent la cognition ?  
-On pourrait dire "compréhension", même si c’est un sous-ensemble de la cognition.  
-Donc ce n’est pas forcément une action immédiate.
+C'est exactement ce principe que l'on retrouve dans les tutoriels.
 
-Le premier cadran, ce sont les tutoriels.  
-Et les tutoriels, c’est :  
-Acquérir de la connaissance,  
-Par l’action — c’est-à-dire faire les choses, faire un tutoriel.
+Écrire un bon tutoriel peut s'avérer difficile. 
+Il est important de structurer les étapes de manière claire, d'assurer une sensation de réussite pour l'utilisateur, tout en évitant de simplifier à l'extrême.
 
-Ce qui est intéressant, c’est leur analogie :  
-Ils disent que le tutoriel, c’est comme quand vous laissez vos enfants faire à manger.  
-Ils découpent des choses, ils testent.  
-L’objectif, ce n’est pas forcément d’avoir un bon gâteau à la fin.  
-Ce qui compte, c’est qu’ils explorent, qu’ils jouent avec la nourriture,  
-qu’ils apprennent les quantités, les gestes.  
-Et si le résultat final est raté, ce n’est pas grave.
+Il est tentant d'ajouter des explications théoriques, comme par exemple le contexte de la persistance avec JPA, mais cela peut vite devenir trop lourd et théorique.
 
-C’est exactement ça, l’idée du tutoriel.
+Diátaxis recommande de ne pas inclure ce type de contenu dans un tutoriel.  
+L'objectif est de se concentrer sur l'expérience pratique, d'encourager l'utilisateur à explorer et à interagir directement avec la technologie.
 
-Et moi, ça me parle pas mal.  
-Parce que, je ne sais pas vous, mais écrire un tutoriel, c’est difficile.  
-Il faut vraiment que ce soit étape par étape,  
-que la personne ait une sensation de réussite,  
-et que ce ne soit pas non plus trop simpliste.
+L'apprentissage se fait par l'expérimentation, en testant des APIs, en enchaînant des actions concrètes.  
+Des questions surgiront naturellement et trouveront leurs réponses dans d'autres types de documentation.
 
-Mais souvent, on se dit :  
-"Ah oui, je vais aussi expliquer le contexte de la persistance avec JPA…"  
-Et là, paf, on se retrouve avec un gros paragraphe théorique.
 
-Ce que dit Diátaxis, c’est :  
-Ne mettez pas ça dans un tutoriel.  
-Laissez tomber.  
-Le tutoriel, c’est fait pour mettre les mains dans le cambouis,  
-explorer, jouer avec la techno.
+---
 
-Les gens vont apprendre juste en expérimentant,  
-en testant une API, en enchaînant des choses.  
-Des questions vont émerger naturellement,  
-et les réponses viendront plus tard, dans les autres types de documentation.
+
+
+
+
+
 
 ### Les Guides Pratiques : Comment Faire (how-to guides)
 
-Le deuxième type, c’est les how-to guides.  
-Là, on est dans l’action, mais à la différence des tutoriels, il s’agit d’appliquer une connaissance précise à une tâche concrète.
+Le deuxième type de contenu selon Diátaxis est celui des guides pratiques, ou *how-to guides*.  
+Ici, il s’agit toujours d’action, mais contrairement aux tutoriels, l’objectif est d’appliquer une connaissance précise à une tâche concrète.
 
-C’est donc pour quelqu’un qui connaît déjà la techno dans les grandes lignes.  
-On ne va pas lui réexpliquer ce que c’est que JPA, ni lui redonner le contexte général.  
-L’idée, c’est : comment je me connecte à une base Oracle ?  
-Point.  
-C’est une tâche bien définie, spécifique.
+Ces guides s’adressent à des personnes qui connaissent déjà les grandes lignes de la technologie. 
 
-Ce n’est pas non plus : comment créer une application web ?  
-Ce serait trop générique.  
-Un bon how-to guide correspond à une action ciblée.
+Inutile de réexpliquer ce qu’est JPA ou de présenter le contexte général. La question est simple : comment se connecter à une base Oracle ? C’est une tâche spécifique, clairement définie.
 
-Par exemple, dans React, ils expliquent que si vous regardez la liste de vos how-to guides,  vous obtenez en fait une sorte de panorama des fonctionnalités concrètes du framework.
+À l’inverse, une question comme « comment créer une application web ? » serait trop large. Un bon guide pratique se concentre sur une action ciblée.
 
-Et ça, c’est hyper libérateur.  
-On ne rentre pas dans les détails théoriques,  
-on se contente d’indiquer ce qu’il faut faire,  
-et éventuellement de pointer vers d’autres documents pour les explications.
+Dans l’écosystème React, par exemple, la liste des *how-to guides* permet d’avoir un aperçu clair des fonctionnalités concrètes du framework. C’est une manière très efficace de cartographier les usages réels, sans entrer dans la théorie.
 
-Sinon, on risque de noyer l’utilisateur.  
-L’objectif est de rester concentré sur la tâche.
+Ce type de document va droit au but.  
+Il indique précisément ce qu’il faut faire, et si besoin, oriente vers d’autres documents pour les explications de fond.
 
-Ça permet aussi de bien séparer les différentes préoccupations.  
-Le how-to guide, c’est pour résoudre un problème concret.  
-Du genre : comment se connecter à telle base de données, comment déployer sur tel serveur, etc.
+L’objectif est d’éviter de surcharger l’utilisateur avec des détails théoriques.  
+Il faut rester concentré sur la tâche à accomplir.
 
-C’est vrai qu’on a souvent tendance à mélanger tutoriel et how-to guide.  
-Mais en réalité, le tutoriel est plus narratif, il suit une progression d’apprentissage,  
-où l’on peut toucher plusieurs sujets (comme se connecter à une base, déployer, etc.) dans une logique de découverte.
+Cette approche permet aussi de bien distinguer les différentes préoccupations.  
+Un guide pratique sert à résoudre un problème concret : comment se connecter à une base de données, comment déployer sur un serveur, etc.
 
-Alors que le how-to guide, lui, va droit au but.  
-Pas d’explication superflue, pas de concepts, pas de digression.
+Il est fréquent de confondre tutoriel et guide pratique. Pourtant, ils ont des fonctions différentes :
+- Le tutoriel suit une progression d’apprentissage, souvent plus narrative, qui peut aborder plusieurs sujets dans une logique de découverte. 
+- Le guide pratique, lui, se concentre sur une seule tâche, sans digression ni explication superflue.
 
-Et même si un how-to guide peut toucher plusieurs parties du système — un peu d’API, un peu de config —  
-ce n’est pas grave.  
-L’important, c’est que tout soit orienté vers la réalisation d’une tâche spécifique.  
-On donne juste le minimum pour que la personne puisse atteindre son objectif :  
-par exemple, déployer une application qui se connecte à une base de données.
+Même si un *how-to guide* mobilise différents éléments du système – un peu d’API, un peu de configuration – cela n’a rien d’anormal.  
+L’essentiel est que tout converge vers la réalisation d’une tâche concrète.  
+Le contenu doit fournir juste ce qu’il faut pour atteindre l’objectif, par exemple : déployer une application connectée à une base de données.
 
 ### Référence
 
-La troisième catégorie, c’est la documentation de référence.  
-C’est probablement la plus évidente, car on en retrouve souvent dans les projets, notamment en développement.
+La troisième catégorie définie par Diátaxis est la documentation de référence.  
+C’est sans doute la forme la plus courante dans les projets, notamment en développement.
 
-Cela dit, ce qu’on appelle couramment “guide de référence” fait souvent plus que ce que Diátaxis désigne sous le terme "référence".
+Cependant, ce que l’on appelle souvent “guide de référence” dépasse parfois ce que Diátaxis entend par documentation de référence.
 
-La documentation de référence, au sens strict du modèle Diátaxis, c’est le manuel détaillé.  
-C’est la liste exhaustive des éléments disponibles, sans explication ou contexte d’usage.
+Dans le modèle Diátaxis, la référence désigne un manuel strictement factuel.  
+Il s’agit d’une liste exhaustive des éléments disponibles, présentés sans explication ni contexte d’usage.
 
-Par exemple, sur une voiture, ce serait la liste de toutes les pièces, avec leurs spécifications.  
-C’est orienté information, purement factuel.
+Pour reprendre une analogie : si un projet était une voiture, la documentation de référence serait la liste complète des pièces, accompagnée de leurs spécifications techniques. C’est une documentation orientée information, purement descriptive.
 
 Un exemple typique : la Javadoc.  
-C’est de la documentation de référence.
+Elle fournit une vue détaillée des classes, des méthodes, des champs, sans explication sur le « pourquoi » ou le « comment » de leur utilisation.  
+Autre exemple : un fichier OpenAPI (ou Swagger), qui dresse la liste des routes, méthodes, paramètres, schémas de données, etc.
 
-Autre exemple : un fichier OpenAPI, ou Swagger.  
-On y retrouve la liste de toutes les méthodes, toutes les routes, les paramètres, les schémas de données, etc.
+L’objectif est de proposer une source fiable pour rechercher rapidement une méthode, une classe, une option de configuration, ou tout autre élément technique.
 
-L’objectif, c’est de fournir une source fiable pour rechercher une méthode, une classe, un champ, une option de configuration.
+Un exemple intéressant se trouve dans la documentation de LangChain4j.  
+Il existe une section intitulée “tutorial”, consacrée à la "chat memory" ([voir ici](https://docs.langchain4j.dev/tutorials/chat-memory)). À première vue, on s’attend à y trouver un tutoriel pratique, avec une progression pas à pas. Mais ce n’est pas le cas. Ce contenu décrit plutôt ce que c’est, les options disponibles, les comportements attendus :  éviction de mémoire, persistance, types de messages pris en charge, etc. Il ne s’agit donc pas d’un tutoriel. Mais ce n’est pas non plus de la référence au sens strict, car le contenu explique un concept. Dans la logique Diátaxis, ce type de documentation relèverait plutôt de l’explication.
 
-Ce matin, je lisais la doc de LangChain4j, et il y avait une section qui s’appelait “tutorial” —  par exemple sur la “chat memory”. (https://docs.langchain4j.dev/tutorials/chat-memory)
 
-Mais en fait, ce n’est pas vraiment un tutoriel.  
-On pourrait croire que ça va nous montrer comment l’utiliser dans un scénario concret, étape par étape.  
-Mais non, ça décrit juste ce que c’est, les options disponibles, les comportements attendus.
-
-Par exemple : l’éviction de mémoire, la persistance, les types de messages pris en charge.
-
-Donc ce n’est pas un tutoriel.
-
-Mais ce n’est pas forcément de la référence non plus, car ça décrit un concept.  
-Ce serait plutôt de l’explication, dans la logique Diátaxis.
 
 ### Explication (explanation)
 
-Le quatrième cadran, c’est celui des *explanations* — et c’est, pour certains, le type de documentation le plus apprécié.
+Le quatrième cadran du modèle Diátaxis est celui des *explanations*.  
+Pour beaucoup, c’est même le type de documentation le plus enrichissant.
 
-C’est là qu’on prend du recul.  
-L’objectif ici n’est pas de résoudre un problème ou de réaliser une tâche, mais plutôt d’aider à **comprendre** :  
-comprendre les choix d’architecture, les concepts clés, la philosophie du projet.
+Ce type de contenu prend du recul.  
+Il ne cherche pas à résoudre un problème ni à guider une action immédiate, mais à favoriser la **compréhension**.  
+Il aide à saisir les choix d’architecture, les concepts fondamentaux, la philosophie du projet.
 
-Ce type de documentation sert à acquérir de la connaissance, sans action immédiate attendue.  
-On y retrouve souvent des descriptions de l’architecture, des contraintes, des modèles mentaux, des explications sur pourquoi certaines décisions ont été prises.
+Les *explanations* permettent d’acquérir des connaissances, sans nécessairement passer à l’action. Elles peuvent inclure des descriptions de l’architecture, des contraintes techniques, des modèles mentaux, ou encore des justifications de décisions.
 
-Par exemple :
-- Pourquoi le projet utilise tel paradigme ?
-- Quels sont les concepts clés de l’outil ?
-- Comment les différentes parties interagissent entre elles ?
+Quelques exemples de questions typiques abordées dans cette catégorie :
+- Pourquoi le projet repose-t-il sur tel paradigme ?
+- Quels sont les concepts clés à maîtriser ?
+- Comment les différentes parties du système interagissent-elles entre elles ?
 
-La page d’accueil d’un projet peut souvent faire partie des *explanations* :  
-elle présente le projet, son objectif, les grands concepts à connaître avant d’aller plus loin.
+La page d’accueil d’un projet fait souvent partie des *explanations*, notamment lorsqu’elle introduit les objectifs, le positionnement, et les grandes idées à connaître avant de se plonger dans les détails.
 
-On peut aussi y retrouver des explications plus approfondies sur certains composants.  
-Exemple : une page “chat memory” peut très bien être une explication, si elle présente les différents types de mémoire disponibles, pourquoi elles existent, comment elles se comparent, etc.
+Certaines pages plus approfondies peuvent aussi relever de cette catégorie.  
+Par exemple, une page sur la “chat memory” peut servir d’explication si elle présente les différents types de mémoire disponibles, leurs logiques respectives, les raisons de leur existence, ou les cas d’usage auxquels elles s’appliquent.
 
-Même si chaque type de documentation a son rôle, les *explanations* peuvent contenir des liens vers les autres parties :
-- un *how-to guide* pour montrer comment utiliser un élément expliqué,
-- ou une entrée dans la documentation de référence pour consulter les détails d’implémentation.
+Même si chaque type de documentation a un rôle bien distinct, une *explanation* peut tout à fait inclure des liens vers :
+- un *how-to guide*, pour illustrer une application concrète du concept,
+- une entrée dans la *référence*, pour accéder aux détails d’implémentation.
 
-Dans la logique Diátaxis :
-- une question “**pourquoi**” → mène à une *explanation*,
-- une question “**comment faire**” → mène à un *how-to guide*,
-- une question “**qu’est-ce que c’est / quelle méthode existe**” → mène à une *référence*,
-- une volonté “**d’apprendre en pratiquant**” → mène à un *tutoriel*.
+Le modèle Diátaxis aide ainsi à faire le lien entre le type de question et le type de contenu :
+- Une question **“Pourquoi ?”** → mène à une *explanation*  
+- Une question **“Comment faire ?”** → mène à un *how-to guide*  
+- Une question **“Qu’est-ce que c’est ? / Quelles méthodes sont disponibles ?”** → mène à la *référence*  
+- Une volonté **d’apprendre par la pratique** → mène à un *tutoriel*
 
-Donc pour le *chat memory* :
-- *Tutoriel* : “Comment créer un chatbot avec mémoire de contexte”
-- *How-to* : “Configurer la mémoire pour un historique de 10 messages”
-- *Référence* : “Méthodes de la classe `ChatMemory`”
-- *Explanation* : “Pourquoi la mémoire est essentielle dans une application conversationnelle”
+Prenons à nouveau l’exemple de la “chat memory” :
+- **Tutoriel** : « Créer un chatbot avec mémoire de contexte »
+- **How-to guide** : « Configurer la mémoire pour conserver les 10 derniers messages »
+- **Référence** : « Méthodes de la classe `ChatMemory` »
+- **Explanation** : « Pourquoi la mémoire est essentielle dans une application conversationnelle »
 
 ## Les frontières parfois floues
 
-Emmanuel : Et du coup, le moment où — alors mettons que l’API soit composable — le moment où tu dis : "Voilà, il y a le concept de *chat memory*, et voilà comment tu l’intègres, comment tu choisis la taille de la fenêtre", etc., c’est où, ça ?
+Il arrive que la séparation entre les types de documentation soit subtile.
 
-Guillaume:
-- Là, honnêtement, des fois la frontière est un petit peu subtile. Parce que tu pourrais te dire que tu es en train d’expliquer un concept — donc c’est une *Explanation* du concept de *chat memory*. Tu expliques les différentes choses que c’est capable de faire, la raison pour laquelle ces choses existent.
-- Il faut faire attention : un *How-to guide*, c’est vraiment pour une tâche concrète pour configurer. Exemple : "Configurer une *chat memory*". Tu peux y expliquer brièvement ce qu’est une *chat memory*, mais pas en détail.
--un *Tutorial*, ce serait par exemple : "Créer un chatbot qui utilise une *chat memory*". 
+Par exemple, quand on explique comment intégrer une `ChatMemory` dans une application :  
+- Est-ce qu’on est en train de **faire une tâche concrète** (how-to) ?
+- Est-ce qu’on est en train de **expliquer un concept** (explanation) ?
+- Est-ce qu’on montre **tout un flux complet** (tutoriel) ?
+- Ou est-ce qu’on décrit les **détails de l’API** (référence) 
 
-On voit qu'il peut y avoir des redondances entre ce qu’on explique dans une *Explanation*, un *How-to* ou un *Tutorial*. Mais comme tu disais en introduction, il faut surtout réfléchir à ce **qu’on ne veut pas mettre**. Si tu vois que tu commences à insérer des explications de concepts dans un tutoriel ou un how-to, c’est probablement un signe que cette partie devrait être extraite et mise dans une *Explanation* dédiée.
+### Ce qu’il faut surveiller
 
-Emmanuel :
-- On peut aussi imaginer un *How-to* spécifique, du type :  **How to set up Chat Memory**. Et là, il y aurait des branches : mémoire persistante vs non-persistante. Mais du coup, ce n’est plus une tâche ultra-ciblée. On commence à perdre en spécificité.
-- Ensuite, tu as la **documentation de référence**. Là, tu expliques les API de *chat memory*, leur signature, leurs options. C’est utile, mais parfois ce type de doc n’est pas suffisant seul.
-- Le troisième, c’est les *Explanations*. Tu veux y montrer comment c’est utilisé, donner un peu de contexte, deux ou trois exemples. Ce que font beaucoup de projets jeunes ou open source, c’est qu’ils mélangent ça avec la doc de référence : leur doc de référence devient en réalité une *Explanation*. C’est souvent le cas dans la section "Getting Started" ou dans les premières pages.
+Il faut surtout réfléchir à ce **qu’on ne veut pas mettre** dans un type de document.
 
----
-Gillaume:
+Si, dans un *how-to guide*, on se met à faire de longues digressions sur les raisons d’un choix architectural ou sur les subtilités d’un concept, c’est un signe : cette partie doit probablement être extraite dans une *explanation*.
 
-Et puis il y a un point que tu soulevais, que je partage complètement : parfois, ce qui manque dans la **Javadoc** (ou équivalent), c’est justement des exemples d’usage **concrets**. Parce que manipuler une API, ce n’est pas évident. On ne sait pas forcément :
+De même, si un *tutoriel* se transforme en manuel d’utilisation complet d’une API, il sort de son rôle. Il doit rester centré sur un enchaînement clair d’actions avec un objectif pédagogique.
 
-- qu’il faut appeler telle méthode en premier,
-- qu’il faut configurer ça avant,
-- qu’on ne peut faire tel appel qu’après une certaine étape.
+### Exemples de glissements fréquents
 
-Tu peux te dire que ces éléments sont ailleurs dans la doc (dans des how-to, des tutoriels), mais quand tu es dans une classe précise, ce serait pratique d’avoir **directement** un petit bloc d’exemple de code. Juste pour montrer la manière correcte de s’en servir.
+- Un *how-to* sur “Configurer ChatMemory” commence à expliquer pourquoi la mémoire est utile : on glisse vers l’explication.
+- Un *explanation* inclut des étapes détaillées à suivre : on s’approche d’un *tutoriel* ou d’un *how-to*.
+- Une documentation de référence contient un long exemple d’usage : on emprunte au *how-to*.
 
-Ce côté *intime* et *opérationnel* de l’API — l’ordre des appels, les configurations nécessaires, les erreurs à éviter —, ça devrait à mon sens **faire partie de la documentation de référence**. Tout en haut de la Javadoc d’une classe, dans le résumé introductif.
+### En pratique
 
+Certaines zones grises sont inévitables, mais la discipline vient du fait de **refuser de tout mettre dans un seul document**.
+
+Chaque type de doc a son rôle :
+- Le *tutoriel* apprend par la pratique.
+- Le *how-to* répond à un besoin précis.
+- La *référence* documente l’API ou les options disponibles.
+- L’*explanation* donne le contexte, les raisons, les modèles mentaux.
+
+Il est utile de faire des liens entre ces types, mais sans tout mélanger dans le contenu lui-même.
 
 
 ## Évolution de la Documentation Technique (en particulier Javadoc)
 
 
-Techniquement, c'est possible, il y a ceux qui le font, oui, oui. Mais j'avoue que ce n'est pas une norme. C'est souvent plus une exception. On doit pouvoir faire ça au niveau du package aussi pour CEF. On peut faire, ils ont simplifié de façon l'inclusion, parce qu'il faut avouer que la grosse limitation pour la Javadoc, particulièrement, c'est que c'est quand même super relou d'écrire du code dans de la Javadoc. Enfin, c'est en termes de maintenance, etc. Jusqu'à présent, c'était comme ça, mais il y a eu des évolutions à ce niveau.
+Dans la documentation de référence (comme la Javadoc), des exemples de code peuvent être précieux. Même si ce n’est pas leur rôle principal, ils aident à clarifier l’usage.
 
-Avec la notation Markdown, avec les slash là, mais bon, idéalement, il faudrait qu'on puisse importer du code dans la Javadoc, genre le code de test ou des choses comme ça, pour que ça soit plus maintenable et lisible sur ce genre de technologie. Mais c'est vrai que c'est un peu ce qu'on faisait aussi. Enfin, par exemple, moi ce que j'aime bien dans la documentation de Groovy, c'est que c'est de la doc, ce que j'appelle de la doc exécutable, c'est-à-dire qu'en fait, tous les bouts de code que tu retrouves dans la doc de Groovy sont extraits de tests unitaires qu'on installe. Et en fait, ce qui est génial avec ça, c'est que ta doc, enfin, quand elle est publiée pour telle version, bah elle est à jour. Tu sais que le code tourne quelque part, ce code-là tourne, et il est testé à chaque fois qu'on publie la doc. Ça, j'aime bien. Mais bon, c'est un peu une digression par rapport à ces quatre types de documentation.
+Ces exemples doivent toutefois rester concis, et pointer vers :
+- des *how-to* pour des cas d’usage concrets,
+- ou des *tutoriels* pour une mise en pratique plus complète.
 
-Du coup, ça pose la question de... enfin, on en revient à ça, mais ça pose la question de où ils se mettent, quoi. Ouais, mais euh, tu vois, en tout cas, Arnaud, tu parlais du nouveau format de Javadoc, je crois. Je n'ai pas testé, mais normalement, tu peux aussi pointer vers tel ou tel bout de code, etc. Il me semble, j'avais vu ça. Je n'ai pas testé perso. Et c'est intéressant parce que, du coup, tu sais que ça va être synchronisé. Parce que des fois, bah malheureusement, tu as modifié telle classe, tu as rajouté une méthode ou modifié ce que fait la méthode. Oui, il y avait de la Javadoc qui expliquait ça. J'ai oublié de la retoucher alors.
+L’enjeu est de ne pas perdre l’utilisateur : il faut que chaque type de document garde sa promesse, et que la navigation entre eux soit fluide et logique.
+Techniquement, il est possible d'inclure du code dans la documentation, et bien que certains le fassent, cela reste plus l'exception que la norme. Cette possibilité est également envisageable au niveau du package, comme pour CEF. Des améliorations ont été apportées pour simplifier l’inclusion de code, car la principale limitation de la Javadoc réside dans la difficulté de maintenir et d'écrire du code directement dans celle-ci. 
 
-## Diataxis n' utilise pas Diataxis !
+Il y a eu des évolutions récentes à ce sujet, notamment avec l'introduction de la notation Markdown et l’utilisation de slash. Toutefois, idéalement, il serait utile de pouvoir importer du code directement dans la Javadoc, comme des codes de test ou d'autres éléments, pour améliorer sa maintenabilité et sa lisibilité dans le contexte de certaines technologies.
 
-Emmanuel ; Ce qui est rigolo, c'est que Diátaxis, en fait, son site web n'utilise pas le concept de tutoriel. Oui, mais...
+Un exemple intéressant est la documentation de Groovy, que l’on pourrait qualifier de "doc exécutable". Dans cette approche, tous les exemples de code présents dans la documentation sont extraits de tests unitaires. Ce qui est bénéfique avec cette méthode, c'est que la documentation reste toujours à jour, car le code inclus est testé à chaque mise à jour de la version de la documentation. Cela garantit que le code fonctionne réellement au moment de la publication de la doc.
 
-Guillaume : - Alors, j'ai vu que tu as mis ça dans ton article. Ouais, cela dit, ce n'est pas un projet, outil, une API, etc.
-Enfin, tu vas me dire que c'est un outil de documentation, mais ce n'est pas un outil, donc ça ne me choque pas que ça ne suive pas exactement ce principe-là, si tu veux. Mais bon, vas-y, je te laisse exprimer ton opinion.
+Bien que cette approche soit pertinente, elle s'éloigne quelque peu des quatre types de documentation mentionnés précédemment.
 
-En gros, eux, ils ont donc là... on est dans des explications, là, on est d'accord.
+Cela soulève la question de l’intégration et de l'organisation du code au sein de la documentation. Par exemple, le nouveau format de Javadoc permet de pointer vers des morceaux spécifiques de code.
 
-Exactement, exactement. Ils n'ont que des explications et du coup, ils ont structuré différemment. Du coup, effectivement, bah c'est que tu disais ça assez tôt.
+## Diataxis n'utilise pas Diataxis !
+
+Il est intéressant de noter que le site web de Diátaxis n’utilise pas le concept de tutoriel. Bien que cela puisse sembler paradoxal, cela peut s’expliquer par le fait que Diátaxis n’est pas un projet, un outil ou une API spécifique. Bien que le site serve à la documentation, il ne s'agit pas d'un outil traditionnel, ce qui justifie en partie l'absence de ce format dans sa structure.
+
+Le site repose principalement sur des *explications* plutôt que des tutoriels. Ainsi, la structuration de la documentation s'en trouve différente, se concentrant davantage sur la présentation des concepts sans inclure d’approches plus pratiques comme les tutoriels ou les guides étape par étape.
+
+
+
 
 ## Flexible Mind
 
-C'est, et d'ailleurs, le site est assez clair là-dessus : c'est que, bon, ben, c'est OK de se lancer et de ne pas adopter ça de manière extrêmement stricte. Du coup, vous allez peut-être vous influencer beaucoup par ça pour simplifier des questionnements philosophiques trop compliqués pour certaines personnes dans l'équipe, et aider à la clarté et à minimiser la redondance. Par contre, ne tombez pas dans... euh, bah c'est comme tout. Ce qui est intéressant avec les ADR (Architectural Decision Records), c'est qu'on se rappelle le contexte et les raisons pour lesquelles les décisions ont été prises. Et surtout, si vous avez oublié pourquoi vous avez embrassé ce framework-là et que vous l'appliquez à la lettre, c'est un problème. 
+Le site de Diátaxis est clair sur un point : il est acceptable de ne pas adopter ce modèle de manière strictement rigide. L'idée est de s'en inspirer pour simplifier des questionnements philosophiques complexes et améliorer la clarté tout en réduisant la redondance. Toutefois, il est important de ne pas tomber dans l’excès. 
 
-Prenez quand même du recul là-dessus. Ça doit être une aide et pas un carcan. 
+Ce qui est intéressant avec les *Architectural Decision Records* (ADR), c’est qu’ils permettent de documenter le contexte et les raisons des décisions prises. Si l’on oublie les raisons qui ont conduit à l’adoption d’un certain framework et que l’on l’applique de manière aveugle, cela devient problématique.
 
-En fait, il y a un premier carcan où vous ne savez pas comment structurer votre documentation. Le deuxième, c'est que c'est trop limité. Voilà. Après, je n'ai pas vu d'exemples. Il y a des gens qui parlaient du fait que tout ne rentrait pas forcément dans les cases. Bah, c'est OK aussi d'ouvrir. Tu avais des exemples de ça ou des choses qui ne rentraient pas dans les cases ? Je n'ai pas vraiment trouvé ça.
+L’objectif reste de prendre du recul. Le cadre proposé par Diátaxis doit être un outil d’aide, non un carcan.
 
+Il est important de noter que tout ne s’adapte pas nécessairement aux cases prévues. Dans ce cas, il est acceptable d’adapter et d’ouvrir le cadre. 
 
 ## Types de Documentation et Exemples Pratiques
 
-Par contre, dans TheGoodDocsProject, j'ai vu qu'il y avait pas mal de templates différents. Ils ont des... alors je te lis :  
+Dans *TheGoodDocsProject*, plusieurs modèles de documentation sont proposés, parmi lesquels :
+
 - API Quickstart  
 - API Reference  
-- Bug Report, mais bon, ce n'est pas vraiment de la doc  
+- Bug Report (ce n'est pas vraiment de la documentation)  
 - Code of Conduct  
 - Change Log  
 - Concept  
 - Contributing Guide  
 
-Après, tu vois, "Concept", c'est des explications. "Contributing Guide", c'est peut-être un "How to" ou... ouais, ça peut être ça.  
-Les FAQ, tu mets ça dans quoi ?  
-Ouais, c'est marrant, pour moi, c'est les "fireside How to", tu vois. Et pourquoi tu fais ça ? Non, remarque, tu dis pourquoi tu fais ça, ça dépend en fait de la nature de la question. Ou moins, cadrer les FAQ... après, ça dépend. C'est vrai que c'est plus succinct, par exemple.  
+Par exemple, la section "Concept" contient des explications, tandis que le "Contributing Guide" peut être vu comme un *How-to guide* ou une autre forme de documentation, selon le contexte. Les FAQ, quant à elles, peuvent être considérées comme des "fireside How-to" ou être classées différemment, selon la nature des questions abordées.
 
-Tu vois, ton Contributing Guide, déjà, il y a "guide" dedans quand même. Ouais, qu'est-ce que c'est ? Ça peut être un "How to", mais moi, j'ai tendance quand même à mettre les "How to". Pour moi, les "How to" guides, c'est du projet, des classes, de la librairie, du SDK, peu importe ce que j'utilise, mais ce n'est pas de la méta-information nécessairement autour de comment contribuer au projet.  
+Les *How-to guides* sont généralement associés à des projets, des classes, des librairies ou des SDK. Cependant, un *Contributing Guide* se distingue par son orientation méta-informatique sur la contribution au projet, et ne correspond pas nécessairement à un *How-to guide* traditionnel.
 
-Là, faut voir ce qu'on documente ici. Est-ce que c'est l'outil, le SDK, le produit ou le projet qui entoure tout ça ? Donc, c'est peut-être ceux-là qui ne rentrent pas trop dans la case.  
+Il existe également un projet appelé *TheGoodProjects.dev* qui fournit des modèles de documentation. Ce projet propose des templates pour des éléments comme le *readme*, la liste des membres d’une équipe, etc. Ces ressources sont complémentaires à celles de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet, à l'exception des tutoriels, où des approches guidées sont recommandées pour accompagner l'utilisateur vers le succès.
 
-Et donc, juste pour une fois, parce que je suis tombé là-dessus en explorant Diátaxis et en regardant ce que pensent les gens de Diátaxis, il y a un projet qui s'appelle TheGoodProjects.dev, qui lui a des templates en fait. Donc vous pouvez aller... je ne sais plus où, mais assez vite, vous pouvez télécharger en gros la totalité des templates et ça vous donne le template du readme, le template de la liste des gens dans l’équipe, etc. Et ça, ce sont des choses qui sont vraiment complémentaires, pour le coup, parce que Diátaxis n'explique pas comment vous avez structuré à l'intérieur nécessairement. À part le tutoriel où c'est assez... il recommande quand même des approches où on accompagne, où on emmène la personne vers le succès, parce que l'idée c'est qu'il fasse l'expérience et que ça soit positif pour qu'il apprenne des choses.  
+La cohérence et la consistance sont des valeurs importantes dans la documentation. Des exemples de bonnes pratiques peuvent être observés dans la documentation de projets tels que Groovy, LangChain, Forge, ainsi que dans la documentation de Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide. Par exemple, un "Quick Start" est un *How-to guide* rapide, mais il peut également être vu comme un tutoriel, car il guide l’utilisateur à travers plusieurs étapes, comme la configuration d’une base de données ou le déploiement d’un container.
 
-Je t'ai perdu Arnaud, mais j'ai déjà oublié ce que je voulais dire, et voilà. Il n'y a pas de chat memory.  
+Un "Quick Start" est une sous-catégorie de tutoriel qui est plus courte et plus ciblée. Dans la documentation de Google Cloud, un "Quick Start" est généralement suivi de guides plus détaillés. Les tutoriels sont parfois regroupés dans un portail distinct pour permettre à l’utilisateur de les retrouver facilement.
 
-En tout cas, ouais, c'est bien d'avoir de la cohérence, je veux dire, de la consistance, la cohérence. Moi, les documentations sur lesquelles j'ai pu travailler ou interagir, etc., c'était la documentation de Groovy, la documentation de LongChain, Forge, puis aussi toute la documentation qu'on a chez Google, chez Google Cloud. Et c'est vrai que c'est quand même assez codifié. Et on a des templates pour... bah voilà, là, si tu fais un Quick Start, il doit être comme ci, comme ça. Le Quick Start, c’est un "How to guide" rapide de démarrage.  
+Il est également crucial de considérer la manière dont les utilisateurs interagissent avec la documentation, notamment comment ils la recherchent et la naviguent. Cela relève davantage de l'expérience utilisateur (UX), un aspect qui n'est pas nécessairement couvert par Diátaxis mais qui peut être intégré à travers des bonnes pratiques.
 
-Enfin, non, attends, oui, le Quick Start c'est plutôt un tutoriel du coup.  
-Ouais, tu vois, même là, j'hésite, parce que le Quick Start, tu vas faire plusieurs choses, tu vas peut-être configurer ta base de données, déployer ton container, etc. Donc, c'est rapide mais ce n'est pas forcément un "How to", non, parce que... et en fait, je pense que ce qui joue beaucoup, c'est le fait que la personne est probablement novice si elle démarre avec un Quick Start.  
+Enfin, la possibilité de recueillir des commentaires ou des questions de la part des utilisateurs via des canaux comme une mailing list ou un Discord peut être un excellent moyen de compléter la documentation. Les FAQ peuvent en découler, ou elles peuvent évoluer à partir des questions fréquemment posées, comme celles concernant la configuration de la base de données.
 
-Mais du coup, deux choses que je voulais souligner là-dessus. Donc déjà, tu as quand même une sorte de notion de catégorisation/étiquetage, c'est-à-dire que "Quick Start" ce n'est pas n'importe quel type de tutoriel, quoi. Ouais, c'est une sous-catégorie, qui est plus courte, etc. Et en général, nous, par exemple, sur la documentation de Google Cloud, à chaque fois, tu as toujours un ou plusieurs Quick Starts, et après, tu as des guides plus détaillés qui vont plus loin. On a même aussi... ce qui est marrant, c'est que les tutoriels, ils sont un peu à part et on a aussi un portail pour retrouver tous les tutoriels.  
 
-Il faut aussi voir qu'il y a des choses un petit peu orthogonales, c'est-à-dire comment rechercher la documentation, comment naviguer dans tous ces types de documentation, mais également comment rechercher ces informations-là. Et ça, c’est un peu de la UX, mais qui est importante et qui n'est pas forcément couverte par Diátaxis. Après, ça peut être des bonnes pratiques, etc.  
 
-Je ne sais plus si j'avais un autre point, je sais plus ce que c'était.  
-Ouais, ah, juste, en attendant que tu trouves ça, est-ce qu’il y a des gens là qui ont des commentaires ou des questions ? Sur, euh... enfin, des gens qui nous écoutent, là, qui ont des questions qui pourraient nous faire rebondir ? On peut voir ça, d’ailleurs, si tu sais, je ne sais pas où, une mailing list ou un Discord ou je ne sais quoi, et tu vas voir quelles sont les questions qui reviennent le plus souvent. Donc des petites questions, ça peut être simplement des FAQ. Mais après, sinon, ça peut être... ah ouais, non, attends, ils sont tout le temps en train de... comment configurer la base de données ? Ah, ok.
 
 ## Outils et Frameworks de Documentation
 
-C'est de manière incrémentale qu'on va pouvoir rajouter ces différents types de documentation. Et c'est là où, bah, il va falloir faire un petit peu attention à ce que c'est. Du coup, ah, là, c'est plus un "How to". Donc les explications, je les garderai ailleurs. 
 
-Essayer de ne pas trop mélanger les différents concepts.  
+### L'ancêtre - site généré par Maven
 
-La difficulté, c'est qu'on écrit la documentation à un moment donné, ou même on la réécrit à un moment donné, et elle est à peu près propre. Et puis là, on se dit : "Tiens, ça c'était pas clair" ou "Tiens, je vais rajouter telle explication."  
+Maven était un framework d'agrégation de documentation qui générait un site statique, notamment pour centraliser des rapports, des informations sur le projet, l'équipe et d'autres éléments dynamiques. Bien que cette approche ait eu un impact révolutionnaire il y a 20 ans, elle s'est avérée trop rigide pour les besoins modernes. Le site généré était très standardisé, avec des rapports et des informations souvent inutiles pour les utilisateurs.
 
-Et c'est là où on commence à rajouter des greffes, là où ce n'est pas forcément idéal. On se dit : "Ah ouais, tiens, je crois que j'en parlais là, je le rajoute là." Et c'est là où ça se déforme de plus en plus. Donc c'est là où c'est intéressant d'avoir un truc structuré. C'est que plus tu sais, plus tu peux aider à structurer les choses, plus tu vas savoir où cette information doit naturellement se positionner.  
+Aujourd'hui, l'utilisation de Maven pour ce type de génération de site est largement obsolète. Toutefois, à l'époque, il était possible de générer automatiquement un site web complet via une simple commande, centralisant la Javadoc, les rapports et d'autres informations, ce qui était une avancée significative.
 
-Ce que je fais, par exemple, sur LongChain4J, c'est qu'il y a souvent encore plein de trous dans la documentation, tu as tel modèle ou telle base qui n'est pas documentée. Et en fait, ce que j'avais fait, par exemple, pour la partie que je maintiens, c'est-à-dire les modules autour de Gemini, c'est que j'avais fait un blog post qui, finalement, est un tutoriel en fait. Qu'est-ce que tu peux faire avec ça, comment tu peux le faire, et j'explique les différentes choses.  
+### Les outils actuels
 
-Et ce blog post, bon, je l'ai réadapté un petit peu et j'en ai fait un tutoriel qui explique finalement comment utiliser telle chose. Et après, je vois : "Bon, là, ça, j'ai pas besoin de l'expliquer, parce que pour moi, c'est dans les explications." Ah oui, la Chat Memory. Bon, bah, c'est expliqué ailleurs, ce concept-là, et je peux pointer vers.  
+Les plateformes runtime de documentation dans les projets open source ou en entreprise sont nombreuses. Il est essentiel de se concentrer sur le contenu, un des principaux avantages du modèle Diátaxis. Cependant, la rédaction de la documentation et sa publication nécessitent également des outils adaptés. Parmi les options les plus courantes, on trouve :
 
-Alors, je ne sais plus où est-ce qu'on les... si on doit publier la Javadoc. Fais gaffe, d'ailleurs, elle doit être quelque part. Et bon, c'est vrai que je n'ai pas pointé vers la Javadoc, mais on peut... C'est marrant, je ne regarde plus jamais les Javadoc, quoi. Je passe par mon IDE
+1. Les wikis, tels que **Confluence**.
+2. Des solutions plus statiques, utilisant Markdown ou  asciidoc, **Docusaurus**, **GitBook**, et d'autres projets similaires.
 
-### Maven
+D'autres exemples incluent Notion, une plateforme populaire pour publier de la documentation, bien qu'elle ne soit pas spécifiquement définie comme un wiki. **Notion** fonctionne néanmoins de manière similaire. **Antora** est également un outil souvent mentionné, qui utilise Asciidoctor, bien qu'il puisse paraître quelque peu limité dans ses options de personnalisation.
 
-Là, il parlait de framework d'agrégation de documentation. Il y en a un que je n’aimais pas du tout, je crois que c’est Maven justement, qui générait un site entier, un site statique : le site Maven.
+Certains projets, comme LangChain4J, utilisent Docusaurus. Sur des projets comme Quarkus, une approche personnalisée a été adoptée, en générant des contenus en AsciiDoc et Markdown, puis en les agrégeant via un site statique.
 
-Et pour le coup, c’était un peu trop rigide. Il y avait plein de choses qui ne me servaient pas. C’est le problème de la standardisation. Ça proposait un cadre de base avec des rapports, des informations statiques sur le projet, l’équipe, plus des informations dynamiques. Toute la partie "explanation" que tu pouvais mettre en libre dans ton projet.
+Chez CloudBees, la documentation du site cloudbees.com était générée avec **Antora**, avec une organisation personnalisée des menus et des styles CSS permettant d'identifier rapidement l'outil utilisé.
 
-C’est sûr que c’était très cadré. Aujourd’hui, c’est d’ailleurs beaucoup moins utilisé. Je pense que tu vas sur le site et tu te demandes dans quelle année tu es. C’est fou.
+Bien que des plateformes comme les wikis offrent une solution simple, elles rencontrent souvent des problèmes de maintenance liés à la propriété, à l'absence de processus de révision et à la difficulté de maintenir une documentation de qualité sur le long terme. Comme pour le code, la dette documentaire s'accumule rapidement, rendant la gestion de la documentation de plus en plus difficile.
 
-Après, l’avantage, c’est que quand j’avais switché à l’époque, j’étais attiré par la partie "site". Donc c’était il y a 20 ans, mais c’était révolutionnaire. Se dire qu’en faisant rien — à l’époque c’était une commande Maven — tu avais un site web qui te centralisait la Javadoc, les rapports, tout, sans effort. Tu cliquais, et c’était fait.
 
-Tu avais quand même migré le système de build vers Maven. Tu l'avais migré vers Maven et déjà à l’époque, ce n’était pas génial. Mais bon, je suis d’accord.
 
----
+### Outils *as code* - Git pour le feedback
 
-### GitHub
 
-Bruce dit un truc qu’il aime bien mais qui n’est pas très souvent présent sur les sites, c’est justement le bouton *feedback*. Il y en a même qui sont éditables, qu’on peut corriger directement dans GitHub.
+L'intégration de la documentation directement dans le code permet de maintenir une proximité avec ce dernier, notamment lorsqu'elle est stockée dans le même dépôt. Cette approche permet d'appliquer les mêmes pratiques de codification que pour le code, mais elle reste moins accessible aux auteurs non-développeurs.
 
-Vous avez déjà été dans les projets qui avaient ces systèmes et où vous receviez les changements via pull request ? 
+Certains projets, comme Hibernate, utilisaient des wikis où la documentation était régulièrement vandalisée. Bien que certaines pages critiques soient modifiables uniquement par un nombre restreint de personnes, le système de commentaires et les liens vers d'autres pages ajoutaient des éléments inutiles.
 
-Par exemple, la documentation de LangChain4J est dans GitHub, donc c’est une pull request comme une autre, à part qu’elle touche à la documentation.
+L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "Edit on GitHub", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
 
-Pour Groovy c’est pareil. La documentation, c’est une pull request.
-
-Vous avez vu quelles utilisations de Diátaxis ?
-
-Google, par exemple. Je ne sais pas s’ils le suivent formellement, mais je pense qu’ils appliquent ce découpage depuis longtemps. Pour moi, ça suit assez bien le format en quatre parties de Diátaxis.
-
-Diátaxis, c’est une généralisation de bonnes pratiques qu’on a vues sur différentes plateformes, projets, SDK, etc.
-
-Moi, ça me parle parce que j’ai vu ça dans différents projets ou entreprises. Ça fait sens de regrouper et séparer les types de documentation comme ça.
-
----
-
-### Les outils
-
-Sans trop diverger, les plateformes runtime de documentation dans les projets open source ou en entreprise, vous avez vu quoi ?
-
-Là, on parle du contenu, et c’est clairement le gros avantage de Diátaxis. Mais il faut aussi écrire la doc et la publier sur quelque chose. Vous avez vu quoi comme usages ?
-
-Moi, de base, je vois :
-1. Les wikis : Confluence, etc.
-2. Des trucs plus statiques, en Markdown : Skidoc, Docusaurus, GitBook, ce genre de projets.
-
-D’autres exemples ? Docusaurus, c’est ce qu’utilise LangChain4J.
-
-Je vois aussi Notion. Plein de petits projets publient leur documentation là-dessus. C’est comme un wiki, en gros. Je pense que ça rejoint ce que tu disais, même si Notion ne se définit pas comme un wiki, ça fonctionne pareil au final.
-
-Il y a Antora aussi, qui revient de temps en temps. Il utilise Asciidoctor. J’avoue que j’aime bien, mais il y a un truc un peu cheap dans le template et l’approche.
-
-Sur Quarkus, on faisait du custom : on générait tout en AsciiDoc et Markdown, puis le site statique agrégait tout selon l’approche qu’on voulait.
-
-Chez CloudBees, la documentation sur cloudbees.com était en Antora. On personnalisait l’organisation avec des menus à gauche, au centre, etc. Même la feuille de style CSS permettait de reconnaître immédiatement l’outil utilisé, car c’est souvent la même.
-
-J’aime bien le non structuré, parce que quand tu passes à un autre outil, tu n’as pas à gérer un export. Il y avait des trucs trop spécifiques à chaque plateforme. Mais oui, c’est plus de travail, donc je comprends. C’est mieux à long terme.
-
-Je vois surtout des problèmes avec les wikis ou plateformes similaires. C’est très compliqué à maintenir à cause de problèmes de propriété, de processus de review absents. C’est compliqué d’avoir une documentation de qualité dans le temps.
-
-Maintenir de la documentation prend du temps, demande des ressources. Ça ne se fait pas tout seul. Et encore moins se maintenir tout seul. Comme pour le code, la dette s’accumule. Sur les wikis, c’est beaucoup d’efforts.
-
----
-
-### Outils *as code*
-
-L’avantage d’avoir la documentation dans le code, c’est qu’on peut être très proche du code, surtout si c’est dans le même dépôt. Et même si ce n’est pas le cas, on peut appliquer les mêmes pratiques de codification.
-
-Mais c’est moins accessible pour des auteurs plus classiques, qui ne sont pas développeurs.
-
-Ce qui a vraiment été une plaie : sur Hibernate, le site web était un wiki, à l’époque où c’était très en vogue. On se faisait régulièrement vandaliser. Évidemment, certaines pages critiques n’étaient modifiables que par peu de personnes, mais il y avait toujours quelqu’un qui écrivait n’importe quoi quelque part, donc il fallait entretenir.
-
-Il y avait aussi des systèmes avec commentaires sur chaque page. Tu avais des liens vers tout et n’importe quoi. C’était censé protéger la documentation, mais ça rajoutait plein de choses inutiles dans les commentaires.
-
-Créer une *issue* ou une *pull request*, c’est intéressant parce que ça permet de découpler la contribution du contenu. Tu as la contribution, mais sans toucher directement à la doc.
-
-Il faut que ça ne soit pas un frein à la contribution. Ce que j’aime bien, comme tu l’as dit, c’est quand il y a le bouton "Edit on GitHub". Là, c’est directement au bon endroit, tu as l’éditeur, tu changes et en un ou deux clics, tu fais la pull request.
-
-Il faut simplifier au maximum si on veut que les gens contribuent à la documentation. Et si elle est modifiable, il faut la rendre open source. Là, c’est intéressant.
-
-Google Cloud, par exemple : tu peux envoyer du feedback, mais tu ne peux pas proposer directement une modification à la documentation.
+Pour garantir une participation active, la documentation doit être modifiable et accessible en open source.
 
 
 ## L’impact de l’IA sur la documentation
 
 ### L'IA pour la documentation simple
 
-Il n’y a pas une IA qui reçoit les infos et qui hop… bah non. Mais c’est pas mal comme ouverture du débat. Chez nous, il y a pas mal de personnes qui commencent à réfléchir à l’utilisation de l’IA pour différentes choses — y compris pour la documentation.
+L'intelligence artificielle ne permet pas encore de générer automatiquement une documentation complète à partir d'informations brutes. Cependant, l'idée suscite un intérêt croissant dans de nombreuses équipes, notamment pour des usages ciblés autour de la documentation.
 
-Si tu donnes tes tests unitaires et ton code à Gemini, ChatGPT ou un autre, il est capable d’écrire un tutoriel qui est pas mal, qui suit bien le code, pour des premiers guides, pour t’aider à démarrer. Pour du contenu simple, ça peut être très utile. Je ne dis pas que les IA ne peuvent pas faire des choses avancées, mais disons que ça aide à défricher ou à écrire les premières pages du contenu.
+Des outils comme Gemini, ChatGPT ou d'autres modèles d'IA peuvent, à partir du code et de tests unitaires, générer des tutoriels cohérents. Ces approches sont particulièrement efficaces pour produire des guides d’introduction ou des documents destinés à faciliter les premiers pas avec un projet. Pour ce type de contenu simple, l’IA peut représenter une aide précieuse.
 
-Mon N+3 est assez fan de cette idée : que chez les développeurs advocates, on puisse se concentrer sur les niveaux L200 et L300 (dans la classification classique de complexité), et utiliser l’IA pour produire du L100, les trucs simples, où on n’a pas forcément une grosse valeur ajoutée.
+L’objectif est de déléguer la production de documentation de niveau L100 (introductif, selon une classification courante de complexité) à l’IA, afin que les équipes techniques puissent se concentrer sur des contenus plus avancés, de niveaux L200 et L300, là où leur expertise apporte une réelle valeur ajoutée.
 
-Il y a donc des réflexions intéressantes en cours, pas uniquement chez Google, mais aussi ailleurs.
+Ce type de réflexion est en cours dans plusieurs entreprises, y compris chez Google, et témoigne d’une évolution vers une collaboration entre rédacteurs techniques et outils d’IA.
 
 ### L'IA pour la documentation plus complexe et spécifique
 
-C’est marrant, j’aurais pensé l’inverse. Pour moi, la valeur de l’humain, c’est justement pour les choses simples, les 80 % des tâches courantes. C’est là où tu veux avoir une approche manuelle.
+Une position courante considère que la valeur ajoutée de l’humain réside dans la gestion des tâches simples et fréquentes, qui représentent une large part des besoins documentaires. Ce type de contenu se prête bien à une approche manuelle, orientée qualité et contextualisation.
 
-Beaucoup de gens arrivent sur des projets et disent : “OK c’est super, mais maintenant, comment je fais pour faire un LangChain fork, me connecter à la Lune, et écrire ça en COBOL ?” Là tu te dis : c’est super spécifique. C’est peut-être justement là que l’IA pourrait aider — pour des cas extrêmes, où toi, humain, tu n’as pas le temps d’écrire tout ça.
+Cependant, certains estiment que l’IA pourrait être particulièrement utile pour traiter des cas très spécifiques ou avancés, difficiles à documenter de manière exhaustive. Par exemple, répondre à des demandes atypiques telles que la création d’un fork de LangChain dans un langage peu courant, ou des intégrations techniques rares, pourrait relever d’un usage pertinent de l’intelligence artificielle.
 
-
-Oui, mais dans la pratique, tu auras plus d’hallucinations sur ces choses complexes et pointues. Alors que pour des choses plus simples, tu as plein d’exemples, de tests, etc., donc c’est plus fiable.
+Néanmoins, dans la pratique, les systèmes d’IA présentent un risque accru d’hallucinations lorsqu’ils sont confrontés à des sujets complexes ou mal documentés. À l’inverse, les contenus plus simples bénéficient de nombreuses sources d’exemples et de tests, ce qui renforce la fiabilité des réponses générées par l’IA dans ces contextes.
 
 ### L'IA et le style
 
-Je m’intéresse à l’utilisation de l’IA pour écrire des articles, des documents, etc. Pour moi, le processus doit être piloté par l’humain de bout en bout. Dès le départ, je donne un outline, les points clés, et l’IA génère un texte à partir de ça. Ensuite, je passe par une grosse phase de review.
+L’utilisation de l’intelligence artificielle pour la rédaction d’articles ou de documents techniques peut s’inscrire dans un processus entièrement piloté par un humain. Ce processus commence par la définition d’un plan ou d’un ensemble de points clés, à partir desquels l’IA génère un texte initial. Cette étape est suivie d’une phase de relecture approfondie, visant à corriger le style, à éviter les erreurs, et à vérifier la cohérence sur le fond.
 
-Rien que cette phase de relecture prend du temps : le style est trop fluffy, je veux éviter les erreurs, et sur des sujets techniques, il y a toujours un risque d’hallucination — que ce soit ChatGPT, Gemini, Claude… tous hallucinent parfois. Donc, tu gagnes du temps, mais il faut enrichir et vérifier derrière.
+La phase de révision reste essentielle. Le style généré par l’IA est souvent trop vague ou artificiel. De plus, dans les contenus techniques, le risque d’hallucination est non négligeable, quelle que soit la plateforme utilisée (ChatGPT, Gemini, Claude, etc.). Bien que l’IA fasse gagner du temps sur certaines étapes, une vérification humaine est indispensable pour garantir la qualité finale du contenu.
+
+Des retours d'expérience indiquent que, même en fournissant à l’IA un historique de publications personnelles pour l’adapter à un style donné, le texte produit peut rester éloigné du ton souhaité. Le résultat nécessite alors des réécritures importantes, notamment pour corriger des tournures trop longues ou imprécises, et pour supprimer des ajouts non souhaités, parfois inexistants dans les sources d’origine.
 
 
-C’est rigolo, j’ai vécu ça. J’ai lu une doc, j’ai pris des notes, c’est ma façon d’absorber. Puis je me suis dit : “Tiens, je vais en faire un blog.” Alors j’ai utilisé une IA générative. Je lui ai donné le lien vers mes précédents blogs, et lui ai dit que je voulais une description, suivie de mes opinions, comme dans mes notes.
+### L'IA et les hallucinations ou l'enrichissement
 
-Elle a généré un texte, mais le style… c’était pas le mien. Il y avait des phrases très longues et creuses. J’ai dû réécrire certaines parties, vérifier d’autres où je me suis dit “attends, j’ai dit ça moi ?” — je suis retourné voir mes notes : non, je ne l’avais pas dit.
+L’intelligence artificielle peut parfois "enrichir" un contenu en suggérant des éléments qui n’avaient pas été envisagés initialement. Par exemple, lors de la préparation d’un article sur les API ou les workflows, l’IA peut proposer une liste de points à aborder, dont certains peuvent offrir un angle nouveau ou pertinent. Cela peut s’avérer utile dans la phase exploratoire de l’écriture.
 
-### L'IA et les hallucinations ou l'enrichissemnt
-
-Oui, parfois l’IA “enrichit” — et ça peut être intéressant. Une fois, je voulais écrire un article sur les API ou les workflows, je savais quels points aborder. J’ai demandé à l’IA ce que je devrais mettre dans un tel article. Elle m’a proposé une liste, dont un point auquel je n’avais pas pensé. Ça peut t’aider dans la phase exploratoire.
-
-Selon où tu en es dans ton écriture — exploration, structuration, rédaction — tu peux utiliser l’IA de manière différente. Mais ce n’est jamais une bonne idée de dire simplement : “Écris-moi un article sur ça et publie.” Ça ne marche pas.
-
+L’usage de l’IA varie en fonction de l’étape du processus rédactionnel : exploration, structuration ou rédaction. À chaque phase, elle peut jouer un rôle différent. Toutefois, déléguer entièrement la rédaction à l’IA, sans intervention humaine, n’est pas recommandé. Une approche consistant à lui demander de produire un article complet prêt à publier se révèle généralement inefficace.
 
 ### Une approche structurée autour de l'IA
 
-J’ai un collègue à Londres qui a fait un outil intéressant pour générer des articles avec l’IA. Tu commences par lui dire :
+Un exemple d’outil développé en interne propose une méthode encadrée pour générer des articles avec l’aide de l’IA. L’utilisateur commence par fournir :
 
-- Le sujet
-- La cible (le public visé)
-- Les points clés à aborder
+- Le sujet de l’article
+- Le public cible
+- Les points clés à traiter
 
-Ensuite, l’IA te renvoie des questions liées au sujet. Et c’est toi qui remplis les réponses pour chaque section. Ensuite, elle assemble tout pour générer le contenu structuré. Cette approche intermédiaire est vraiment intéressante.
+L’IA génère alors une série de questions en lien avec le sujet. L’auteur y répond manuellement, section par section. Une fois les réponses saisies, l’outil assemble l’ensemble pour produire un contenu structuré. Cette approche intermédiaire permet de combiner expertise humaine et assistance automatisée, tout en gardant le contrôle sur le fond.
 
-On discutait aussi du style. Les IA peuvent adapter le ton selon la population cible (par exemple, un enfant de 11 ans), mais pour imiter un style personnel à partir de plusieurs exemples, même Gemini avec long contexte a encore des limites.
+Concernant le style, les IA peuvent adapter leur ton à un public spécifique (par exemple un enfant de 11 ans), mais reproduire un style personnel à partir de plusieurs exemples reste limité, même avec des modèles dotés de long contexte comme Gemini.
 
-Ce qui marche mieux, c’est de lui donner une structure très claire : “Commence par ça, ensuite parle de ça…” ou une approche type thèse/antithèse/synthèse. Là, ça suit bien. Mais le style reste souvent un peu empoulé, un peu “fluffy”.
-
+Les meilleurs résultats sont obtenus lorsque l’IA reçoit une structure explicite à suivre : par exemple une progression en étapes claires ou une méthode argumentative de type thèse/antithèse/synthèse. Dans ces cas, la cohérence est satisfaisante, mais le style reste souvent trop formel ou vague.
 
 ### Une autre vision de la documentation
 
-Aujourd’hui, on peut se dire : doc = moteur de recherche. Mais demain, doc = chatbot entraîné sur le contenu, qui permet de naviguer, poser des questions, et obtenir des réponses précises. Ce sera probablement plus efficace que ce qu’on a aujourd’hui.
+Actuellement, la documentation est souvent conçue comme un contenu destiné à être consulté via un moteur de recherche. Toutefois, une évolution se dessine vers un modèle où la documentation devient une interface conversationnelle.
+
+L’idée est d’utiliser un agent conversationnel, entraîné sur le corpus documentaire, capable de répondre à des questions, de guider la navigation et de fournir des réponses précises et contextualisées. Ce type d’approche pourrait offrir une expérience plus efficace et plus accessible que les méthodes actuelles.
 
