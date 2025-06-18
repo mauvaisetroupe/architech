@@ -1,4 +1,6 @@
-# C'est quoi Diátaxis ?
+# Diataxis, la méthode de documentation
+
+## C'est quoi Diátaxis ?
 
 Vous pouvez aller sur diataxis.fr pour voir la documentation.
 
@@ -27,7 +29,7 @@ Notamment, ce que j’ai trouvé le plus utile, c’est que cette approche te po
 
 Ils ont aussi un outil qu’ils appellent le compas, qui permet de situer une information par rapport aux types de documents. C’est assez malin.
 
-# Les Tutoriels : Apprendre par la Pratique
+### Les Tutoriels : Apprendre par la Pratique
 
 En fait, dans Diátaxis, il y a deux dimensions.
 
@@ -76,7 +78,7 @@ en testant une API, en enchaînant des choses.
 Des questions vont émerger naturellement,  
 et les réponses viendront plus tard, dans les autres types de documentation.
 
-# Les Guides Pratiques : Comment Faire (how-to guides)
+### Les Guides Pratiques : Comment Faire (how-to guides)
 
 Le deuxième type, c’est les how-to guides.  
 Là, on est dans l’action, mais à la différence des tutoriels, il s’agit d’appliquer une connaissance précise à une tâche concrète.
@@ -118,7 +120,7 @@ L’important, c’est que tout soit orienté vers la réalisation d’une tâch
 On donne juste le minimum pour que la personne puisse atteindre son objectif :  
 par exemple, déployer une application qui se connecte à une base de données.
 
-# Référence
+### Référence
 
 La troisième catégorie, c’est la documentation de référence.  
 C’est probablement la plus évidente, car on en retrouve souvent dans les projets, notamment en développement.
@@ -152,7 +154,7 @@ Donc ce n’est pas un tutoriel.
 Mais ce n’est pas forcément de la référence non plus, car ça décrit un concept.  
 Ce serait plutôt de l’explication, dans la logique Diátaxis.
 
-# Explication (explanation)
+### Explication (explanation)
 
 Le quatrième cadran, c’est celui des *explanations* — et c’est, pour certains, le type de documentation le plus apprécié.
 
@@ -190,7 +192,7 @@ Donc pour le *chat memory* :
 - *Référence* : “Méthodes de la classe `ChatMemory`”
 - *Explanation* : “Pourquoi la mémoire est essentielle dans une application conversationnelle”
 
-# Les frontières parfois floues
+## Les frontières parfois floues
 
 Emmanuel : Et du coup, le moment où — alors mettons que l’API soit composable — le moment où tu dis : "Voilà, il y a le concept de *chat memory*, et voilà comment tu l’intègres, comment tu choisis la taille de la fenêtre", etc., c’est où, ça ?
 
@@ -221,18 +223,8 @@ Ce côté *intime* et *opérationnel* de l’API — l’ordre des appels, les c
 
 
 
+## Évolution de la Documentation Technique (en particulier Javadoc)
 
-
-
-
-
-
-
-
-
-# Évolution de la Documentation Technique (en particulier Javadoc)
-
-Le côté intime et concret de la manipulation de cette classe, dans l'ordre dans lequel tu appelles telle ou telle méthode, des fois, moi je le verrais bien quand même dans la Javadoc, tout en haut de la classe, tu vois. Et ça devrait donc s'afficher dans cette documentation de référence-là, ce quatrième cadre.
 
 Techniquement, c'est possible, il y a ceux qui le font, oui, oui. Mais j'avoue que ce n'est pas une norme. C'est souvent plus une exception. On doit pouvoir faire ça au niveau du package aussi pour CEF. On peut faire, ils ont simplifié de façon l'inclusion, parce qu'il faut avouer que la grosse limitation pour la Javadoc, particulièrement, c'est que c'est quand même super relou d'écrire du code dans de la Javadoc. Enfin, c'est en termes de maintenance, etc. Jusqu'à présent, c'était comme ça, mais il y a eu des évolutions à ce niveau.
 
@@ -251,7 +243,7 @@ En gros, eux, ils ont donc là... on est dans des explications, là, on est d'ac
 
 Exactement, exactement. Ils n'ont que des explications et du coup, ils ont structuré différemment. Du coup, effectivement, bah c'est que tu disais ça assez tôt.
 
-# Flexible Mind
+## Flexible Mind
 
 C'est, et d'ailleurs, le site est assez clair là-dessus : c'est que, bon, ben, c'est OK de se lancer et de ne pas adopter ça de manière extrêmement stricte. Du coup, vous allez peut-être vous influencer beaucoup par ça pour simplifier des questionnements philosophiques trop compliqués pour certaines personnes dans l'équipe, et aider à la clarté et à minimiser la redondance. Par contre, ne tombez pas dans... euh, bah c'est comme tout. Ce qui est intéressant avec les ADR (Architectural Decision Records), c'est qu'on se rappelle le contexte et les raisons pour lesquelles les décisions ont été prises. Et surtout, si vous avez oublié pourquoi vous avez embrassé ce framework-là et que vous l'appliquez à la lettre, c'est un problème. 
 
@@ -260,7 +252,7 @@ Prenez quand même du recul là-dessus. Ça doit être une aide et pas un carcan
 En fait, il y a un premier carcan où vous ne savez pas comment structurer votre documentation. Le deuxième, c'est que c'est trop limité. Voilà. Après, je n'ai pas vu d'exemples. Il y a des gens qui parlaient du fait que tout ne rentrait pas forcément dans les cases. Bah, c'est OK aussi d'ouvrir. Tu avais des exemples de ça ou des choses qui ne rentraient pas dans les cases ? Je n'ai pas vraiment trouvé ça.
 
 
-# Types de Documentation et Exemples Pratiques
+## Types de Documentation et Exemples Pratiques
 
 Par contre, dans TheGoodDocsProject, j'ai vu qu'il y avait pas mal de templates différents. Ils ont des... alors je te lis :  
 - API Quickstart  
@@ -295,7 +287,7 @@ Il faut aussi voir qu'il y a des choses un petit peu orthogonales, c'est-à-dire
 Je ne sais plus si j'avais un autre point, je sais plus ce que c'était.  
 Ouais, ah, juste, en attendant que tu trouves ça, est-ce qu’il y a des gens là qui ont des commentaires ou des questions ? Sur, euh... enfin, des gens qui nous écoutent, là, qui ont des questions qui pourraient nous faire rebondir ? On peut voir ça, d’ailleurs, si tu sais, je ne sais pas où, une mailing list ou un Discord ou je ne sais quoi, et tu vas voir quelles sont les questions qui reviennent le plus souvent. Donc des petites questions, ça peut être simplement des FAQ. Mais après, sinon, ça peut être... ah ouais, non, attends, ils sont tout le temps en train de... comment configurer la base de données ? Ah, ok.
 
-# Outils et Frameworks de Documentation
+## Outils et Frameworks de Documentation
 
 C'est de manière incrémentale qu'on va pouvoir rajouter ces différents types de documentation. Et c'est là où, bah, il va falloir faire un petit peu attention à ce que c'est. Du coup, ah, là, c'est plus un "How to". Donc les explications, je les garderai ailleurs. 
 
@@ -309,4 +301,144 @@ Ce que je fais, par exemple, sur LongChain4J, c'est qu'il y a souvent encore ple
 
 Et ce blog post, bon, je l'ai réadapté un petit peu et j'en ai fait un tutoriel qui explique finalement comment utiliser telle chose. Et après, je vois : "Bon, là, ça, j'ai pas besoin de l'expliquer, parce que pour moi, c'est dans les explications." Ah oui, la Chat Memory. Bon, bah, c'est expliqué ailleurs, ce concept-là, et je peux pointer vers.  
 
-Alors, je ne sais plus où est-ce qu'on les... si on doit publier la Javadoc. Fais gaffe, d'ailleurs, elle doit être quelque part. Et bon, c'est vrai que je n'ai pas pointé vers la Javadoc, mais on peut... C'est marrant, je ne regarde plus jamais les Javadoc, quoi.
+Alors, je ne sais plus où est-ce qu'on les... si on doit publier la Javadoc. Fais gaffe, d'ailleurs, elle doit être quelque part. Et bon, c'est vrai que je n'ai pas pointé vers la Javadoc, mais on peut... C'est marrant, je ne regarde plus jamais les Javadoc, quoi. Je passe par mon IDE
+
+### Maven
+
+Là, il parlait de framework d'agrégation de documentation. Il y en a un que je n’aimais pas du tout, je crois que c’est Maven justement, qui générait un site entier, un site statique : le site Maven.
+
+Et pour le coup, c’était un peu trop rigide. Il y avait plein de choses qui ne me servaient pas. C’est le problème de la standardisation. Ça proposait un cadre de base avec des rapports, des informations statiques sur le projet, l’équipe, plus des informations dynamiques. Toute la partie "explanation" que tu pouvais mettre en libre dans ton projet.
+
+C’est sûr que c’était très cadré. Aujourd’hui, c’est d’ailleurs beaucoup moins utilisé. Je pense que tu vas sur le site et tu te demandes dans quelle année tu es. C’est fou.
+
+Après, l’avantage, c’est que quand j’avais switché à l’époque, j’étais attiré par la partie "site". Donc c’était il y a 20 ans, mais c’était révolutionnaire. Se dire qu’en faisant rien — à l’époque c’était une commande Maven — tu avais un site web qui te centralisait la Javadoc, les rapports, tout, sans effort. Tu cliquais, et c’était fait.
+
+Tu avais quand même migré le système de build vers Maven. Tu l'avais migré vers Maven et déjà à l’époque, ce n’était pas génial. Mais bon, je suis d’accord.
+
+---
+
+### GitHub
+
+Bruce dit un truc qu’il aime bien mais qui n’est pas très souvent présent sur les sites, c’est justement le bouton *feedback*. Il y en a même qui sont éditables, qu’on peut corriger directement dans GitHub.
+
+Vous avez déjà été dans les projets qui avaient ces systèmes et où vous receviez les changements via pull request ? 
+
+Par exemple, la documentation de LangChain4J est dans GitHub, donc c’est une pull request comme une autre, à part qu’elle touche à la documentation.
+
+Pour Groovy c’est pareil. La documentation, c’est une pull request.
+
+Vous avez vu quelles utilisations de Diátaxis ?
+
+Google, par exemple. Je ne sais pas s’ils le suivent formellement, mais je pense qu’ils appliquent ce découpage depuis longtemps. Pour moi, ça suit assez bien le format en quatre parties de Diátaxis.
+
+Diátaxis, c’est une généralisation de bonnes pratiques qu’on a vues sur différentes plateformes, projets, SDK, etc.
+
+Moi, ça me parle parce que j’ai vu ça dans différents projets ou entreprises. Ça fait sens de regrouper et séparer les types de documentation comme ça.
+
+---
+
+### Les outils
+
+Sans trop diverger, les plateformes runtime de documentation dans les projets open source ou en entreprise, vous avez vu quoi ?
+
+Là, on parle du contenu, et c’est clairement le gros avantage de Diátaxis. Mais il faut aussi écrire la doc et la publier sur quelque chose. Vous avez vu quoi comme usages ?
+
+Moi, de base, je vois :
+1. Les wikis : Confluence, etc.
+2. Des trucs plus statiques, en Markdown : Skidoc, Docusaurus, GitBook, ce genre de projets.
+
+D’autres exemples ? Docusaurus, c’est ce qu’utilise LangChain4J.
+
+Je vois aussi Notion. Plein de petits projets publient leur documentation là-dessus. C’est comme un wiki, en gros. Je pense que ça rejoint ce que tu disais, même si Notion ne se définit pas comme un wiki, ça fonctionne pareil au final.
+
+Il y a Antora aussi, qui revient de temps en temps. Il utilise Asciidoctor. J’avoue que j’aime bien, mais il y a un truc un peu cheap dans le template et l’approche.
+
+Sur Quarkus, on faisait du custom : on générait tout en AsciiDoc et Markdown, puis le site statique agrégait tout selon l’approche qu’on voulait.
+
+Chez CloudBees, la documentation sur cloudbees.com était en Antora. On personnalisait l’organisation avec des menus à gauche, au centre, etc. Même la feuille de style CSS permettait de reconnaître immédiatement l’outil utilisé, car c’est souvent la même.
+
+J’aime bien le non structuré, parce que quand tu passes à un autre outil, tu n’as pas à gérer un export. Il y avait des trucs trop spécifiques à chaque plateforme. Mais oui, c’est plus de travail, donc je comprends. C’est mieux à long terme.
+
+Je vois surtout des problèmes avec les wikis ou plateformes similaires. C’est très compliqué à maintenir à cause de problèmes de propriété, de processus de review absents. C’est compliqué d’avoir une documentation de qualité dans le temps.
+
+Maintenir de la documentation prend du temps, demande des ressources. Ça ne se fait pas tout seul. Et encore moins se maintenir tout seul. Comme pour le code, la dette s’accumule. Sur les wikis, c’est beaucoup d’efforts.
+
+---
+
+### Outils *as code*
+
+L’avantage d’avoir la documentation dans le code, c’est qu’on peut être très proche du code, surtout si c’est dans le même dépôt. Et même si ce n’est pas le cas, on peut appliquer les mêmes pratiques de codification.
+
+Mais c’est moins accessible pour des auteurs plus classiques, qui ne sont pas développeurs.
+
+Ce qui a vraiment été une plaie : sur Hibernate, le site web était un wiki, à l’époque où c’était très en vogue. On se faisait régulièrement vandaliser. Évidemment, certaines pages critiques n’étaient modifiables que par peu de personnes, mais il y avait toujours quelqu’un qui écrivait n’importe quoi quelque part, donc il fallait entretenir.
+
+Il y avait aussi des systèmes avec commentaires sur chaque page. Tu avais des liens vers tout et n’importe quoi. C’était censé protéger la documentation, mais ça rajoutait plein de choses inutiles dans les commentaires.
+
+Créer une *issue* ou une *pull request*, c’est intéressant parce que ça permet de découpler la contribution du contenu. Tu as la contribution, mais sans toucher directement à la doc.
+
+Il faut que ça ne soit pas un frein à la contribution. Ce que j’aime bien, comme tu l’as dit, c’est quand il y a le bouton "Edit on GitHub". Là, c’est directement au bon endroit, tu as l’éditeur, tu changes et en un ou deux clics, tu fais la pull request.
+
+Il faut simplifier au maximum si on veut que les gens contribuent à la documentation. Et si elle est modifiable, il faut la rendre open source. Là, c’est intéressant.
+
+Google Cloud, par exemple : tu peux envoyer du feedback, mais tu ne peux pas proposer directement une modification à la documentation.
+
+
+## L’impact de l’IA sur la documentation
+
+### L'IA pour la documentation simple
+
+Il n’y a pas une IA qui reçoit les infos et qui hop… bah non. Mais c’est pas mal comme ouverture du débat. Chez nous, il y a pas mal de personnes qui commencent à réfléchir à l’utilisation de l’IA pour différentes choses — y compris pour la documentation.
+
+Si tu donnes tes tests unitaires et ton code à Gemini, ChatGPT ou un autre, il est capable d’écrire un tutoriel qui est pas mal, qui suit bien le code, pour des premiers guides, pour t’aider à démarrer. Pour du contenu simple, ça peut être très utile. Je ne dis pas que les IA ne peuvent pas faire des choses avancées, mais disons que ça aide à défricher ou à écrire les premières pages du contenu.
+
+Mon N+3 est assez fan de cette idée : que chez les développeurs advocates, on puisse se concentrer sur les niveaux L200 et L300 (dans la classification classique de complexité), et utiliser l’IA pour produire du L100, les trucs simples, où on n’a pas forcément une grosse valeur ajoutée.
+
+Il y a donc des réflexions intéressantes en cours, pas uniquement chez Google, mais aussi ailleurs.
+
+### L'IA pour la documentation plus complexe et spécifique
+
+C’est marrant, j’aurais pensé l’inverse. Pour moi, la valeur de l’humain, c’est justement pour les choses simples, les 80 % des tâches courantes. C’est là où tu veux avoir une approche manuelle.
+
+Beaucoup de gens arrivent sur des projets et disent : “OK c’est super, mais maintenant, comment je fais pour faire un LangChain fork, me connecter à la Lune, et écrire ça en COBOL ?” Là tu te dis : c’est super spécifique. C’est peut-être justement là que l’IA pourrait aider — pour des cas extrêmes, où toi, humain, tu n’as pas le temps d’écrire tout ça.
+
+
+Oui, mais dans la pratique, tu auras plus d’hallucinations sur ces choses complexes et pointues. Alors que pour des choses plus simples, tu as plein d’exemples, de tests, etc., donc c’est plus fiable.
+
+### L'IA et le style
+
+Je m’intéresse à l’utilisation de l’IA pour écrire des articles, des documents, etc. Pour moi, le processus doit être piloté par l’humain de bout en bout. Dès le départ, je donne un outline, les points clés, et l’IA génère un texte à partir de ça. Ensuite, je passe par une grosse phase de review.
+
+Rien que cette phase de relecture prend du temps : le style est trop fluffy, je veux éviter les erreurs, et sur des sujets techniques, il y a toujours un risque d’hallucination — que ce soit ChatGPT, Gemini, Claude… tous hallucinent parfois. Donc, tu gagnes du temps, mais il faut enrichir et vérifier derrière.
+
+
+C’est rigolo, j’ai vécu ça. J’ai lu une doc, j’ai pris des notes, c’est ma façon d’absorber. Puis je me suis dit : “Tiens, je vais en faire un blog.” Alors j’ai utilisé une IA générative. Je lui ai donné le lien vers mes précédents blogs, et lui ai dit que je voulais une description, suivie de mes opinions, comme dans mes notes.
+
+Elle a généré un texte, mais le style… c’était pas le mien. Il y avait des phrases très longues et creuses. J’ai dû réécrire certaines parties, vérifier d’autres où je me suis dit “attends, j’ai dit ça moi ?” — je suis retourné voir mes notes : non, je ne l’avais pas dit.
+
+### L'IA et les hallucinations ou l'enrichissemnt
+
+Oui, parfois l’IA “enrichit” — et ça peut être intéressant. Une fois, je voulais écrire un article sur les API ou les workflows, je savais quels points aborder. J’ai demandé à l’IA ce que je devrais mettre dans un tel article. Elle m’a proposé une liste, dont un point auquel je n’avais pas pensé. Ça peut t’aider dans la phase exploratoire.
+
+Selon où tu en es dans ton écriture — exploration, structuration, rédaction — tu peux utiliser l’IA de manière différente. Mais ce n’est jamais une bonne idée de dire simplement : “Écris-moi un article sur ça et publie.” Ça ne marche pas.
+
+
+### Une approche structurée autour de l'IA
+
+J’ai un collègue à Londres qui a fait un outil intéressant pour générer des articles avec l’IA. Tu commences par lui dire :
+
+- Le sujet
+- La cible (le public visé)
+- Les points clés à aborder
+
+Ensuite, l’IA te renvoie des questions liées au sujet. Et c’est toi qui remplis les réponses pour chaque section. Ensuite, elle assemble tout pour générer le contenu structuré. Cette approche intermédiaire est vraiment intéressante.
+
+On discutait aussi du style. Les IA peuvent adapter le ton selon la population cible (par exemple, un enfant de 11 ans), mais pour imiter un style personnel à partir de plusieurs exemples, même Gemini avec long contexte a encore des limites.
+
+Ce qui marche mieux, c’est de lui donner une structure très claire : “Commence par ça, ensuite parle de ça…” ou une approche type thèse/antithèse/synthèse. Là, ça suit bien. Mais le style reste souvent un peu empoulé, un peu “fluffy”.
+
+
+### Une autre vision de la documentation
+
+Aujourd’hui, on peut se dire : doc = moteur de recherche. Mais demain, doc = chatbot entraîné sur le contenu, qui permet de naviguer, poser des questions, et obtenir des réponses précises. Ce sera probablement plus efficace que ce qu’on a aujourd’hui.
+
