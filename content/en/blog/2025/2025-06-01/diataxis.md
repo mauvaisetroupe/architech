@@ -8,6 +8,8 @@ draft: false
 
 Dans cette vidéo enregistrée le 19 décembre 2024, Emmanuel Bernard, Guillaume Laforge et Arnaud Héritier échangent autour de **Diátaxis**, une approche structurée pour organiser efficacement la documentation technique.   Ils partagent leurs points de vue, leurs usages concrets, et leur compréhension du modèle.
 
+![les castcodeurs](/blog/2025/2025-06-01/image-1.png)
+
 La discussion s'élargit ensuite aux **plateformes de documentation** et à l'**impact de l'intelligence artificielle** sur la manière dont nous concevons, maintenons et consommons la documentation aujourd'hui.
 
 [Voir la vidéo sur YouTube](https://www.youtube.com/watch?v=3RXAu0hHLbU)
@@ -18,50 +20,37 @@ Il est possible de consulter la documentation sur [diataxis.fr](http://diataxis.
 
 Diátaxis n'est pas une méthode sur la façon d'écrire au sein de la documentation, mais plutôt sur la manière de structurer la documentation en quatre types de contenus :
 - Les tutoriels
-- Les guides (ou guides pratiques, aussi appelés "how-to guides")
-- Les explications
-- La référence
+- Les guides pratiques (ou "how-to guides")
+- Les explications (ou "explanation")
+- Les références
 
-Les tutoriels et les guides sont généralement bien compris.  
-Les explications, en revanche, peuvent être un type de document moins souvent formalisé dans une documentation de projet.  
-Quant à la référence, elle correspond à un ouvrage technique classique listant tous les détails nécessaires.
+Au départ, le concept de Diátaxis peut sembler restrictif, car une structure trop rigide peut donner l'impression de devenir une règle absolue. Cependant, l'objectif principal reste d'avoir une documentation claire, compréhensible et utile, permettant d'aider les utilisateurs à accomplir leurs tâches efficacement.
 
-Au départ, le concept de Diátaxis peut sembler restrictif, car une structure trop rigide peut donner l'impression de devenir une règle absolue.
-
-Cependant, l'objectif principal reste d'avoir une documentation claire, compréhensible et utile, permettant d'aider les utilisateurs à accomplir leurs tâches efficacement.
-
-Ce qui est intéressant dans cette approche, c'est qu'elle incite à réfléchir sur ce qu'il ne faut **pas inclure dans chaque type de document**.  
-Cela aide à définir où placer une information en fonction de son objectif, en choisissant le type de document le plus adapté.
+> Ce qui est intéressant dans cette approche, c'est qu'elle incite à réfléchir sur ce qu'il faut inclure mais plus encore ce qu'il ne faut **pas inclure dans chaque type de document**. Cela aide à définir où placer une information en fonction de son objectif, en choisissant le type de document le plus adapté.
 
 ## Le Compas Diátaxis
 
-Diátaxis propose un outil appelé le [compas](https://diataxis.fr/compass/), permettant de situer une information par rapport aux différents types de documents. Cet outil s'avère particulièrement utile.
+Diátaxis propose un outil appelé le [compas](https://diataxis.fr/compass/), permettant de situer une information par rapport aux différents types de documents. C'est le coeur de Diátaxis.
 
 ![alt text](/blog/2025/2025-06-01/image.png)
 
-Dans le cadre de Diátaxis, deux dimensions sont à prendre en compte.
-- Est-ce que l'objectif est d'acquérir des connaissances, ou d'appliquer des connaissances ?  Cela oppose l'acquisition à l'application.
-- Est-ce que l'objectif est de réaliser une action, ou est-ce qu'il s'agit de ce que Diátaxis appelle la cognition ?  Cela pourrait être résumé par "compréhension", bien que cela soit un sous-ensemble de la cognition, et ne vise pas une action immédiate.
+Dans le cadre de Diátaxis, [deux dimensions](https://diataxis.fr/foundations/) sont à prendre en compte.
+- Est-ce que l'objectif est d'acquérir des connaissances, ou d'appliquer des connaissances ?  Cela oppose l'**acquisition**  à l'**application** (le site de Diátaxis parle de *being “at study”* et de *being “at work”*)
+- Est-ce que l'objectif est de réaliser une **action**, ou est-ce qu'il s'agit de ce que Diátaxis appelle la **cognition** ?  Cela pourrait être résumé par "compréhension", bien que cela soit un sous-ensemble de la cognition, et ne vise pas une action immédiate.
 
 ### Les Tutoriels : Apprendre par la Pratique
 
-Le premier cadran correspond aux tutoriels.  
 Les tutoriels ont pour but :  
 - D'acquérir des connaissances,  
 - Par l'action – en réalisant les étapes du tutoriel.
 
-Une analogie souvent utilisée pour expliquer cette approche est celle de l'enfant qui apprend à cuisiner.  
-Il découpe des ingrédients, teste différentes étapes.  
-L'objectif n'est pas d'obtenir un plat parfait, mais de lui permettre d'explorer, d'expérimenter, de comprendre les gestes et les quantités. Si le résultat final n'est pas réussi, ce n'est pas un problème.
+Une analogie souvent utilisée pour expliquer cette approche est celle de [l'enfant qui apprend à cuisiner](https://diataxis.fr/tutorials/#applied-to-food-and-cooking).  
+Il découpe des ingrédients, teste différentes étapes. L'objectif n'est pas d'obtenir un plat parfait, mais de lui permettre d'explorer, d'expérimenter, de comprendre les gestes et les quantités. Si le résultat final n'est pas réussi, ce n'est pas un problème.
 
-C'est exactement ce principe que l'on retrouve dans les tutoriels.
+Écrire un bon tutoriel peut s'avérer difficile. Il est important de structurer les étapes de manière claire, d'assurer une sensation de réussite pour l'utilisateur, tout en évitant de simplifier à l'extrême.
 
-Écrire un bon tutoriel peut s'avérer difficile. 
-Il est important de structurer les étapes de manière claire, d'assurer une sensation de réussite pour l'utilisateur, tout en évitant de simplifier à l'extrême.
-
-Il est tentant d'ajouter des explications théoriques, comme par exemple le contexte de la persistance avec JPA, mais cela peut vite devenir trop lourd et théorique.
-
-Diátaxis recommande de ne pas inclure ce type de contenu dans un tutoriel.  
+> Il est tentant d'ajouter des explications théoriques, comme par exemple le contexte de la persistance avec JPA, mais cela peut vite devenir trop lourd et théorique.
+> Diátaxis recommande de ne pas inclure ce type de contenu dans un tutoriel.  
 L'objectif est de se concentrer sur l'expérience pratique, d'encourager l'utilisateur à explorer et à interagir directement avec la technologie.
 
 L'apprentissage se fait par l'expérimentation, en testant des APIs, en enchaînant des actions concrètes.  
@@ -70,65 +59,38 @@ Des questions surgiront naturellement et trouveront leurs réponses dans d'autre
 
 ### Les Guides Pratiques : Comment Faire (how-to guides)
 
-Le deuxième type de contenu selon Diátaxis est celui des guides pratiques, ou *how-to guides*.  
-Ici, il s’agit toujours d’action, mais contrairement aux tutoriels, l’objectif est d’appliquer une connaissance précise à une tâche concrète.
+Il s’agit toujours d’action, mais contrairement aux tutoriels, l’objectif est d’appliquer une connaissance précise à une tâche concrète. Ce type de document va droit au but. Il indique précisément ce qu’il faut faire, et si besoin, oriente vers d’autres documents pour les explications de fond. L’objectif est d’éviter de surcharger l’utilisateur avec des détails théoriques. Il faut rester concentré sur la tâche à accomplir.
 
 Ces guides s’adressent à des personnes qui connaissent déjà les grandes lignes de la technologie. 
 
-Inutile de réexpliquer ce qu’est JPA ou de présenter le contexte général. La question est simple : comment se connecter à une base Oracle ? C’est une tâche spécifique, clairement définie.
+> Inutile de réexpliquer ce qu’est JPA ou de présenter le contexte général. La question est simple : comment se connecter à une base Oracle ? C’est une tâche spécifique, clairement définie. Un bon guide pratique se concentre sur une action ciblée, à l’inverse, d'une question comme « comment créer une application web ? » qui serait trop large. 
 
-À l’inverse, une question comme « comment créer une application web ? » serait trop large. Un bon guide pratique se concentre sur une action ciblée.
+La liste des *how-to guides* permet d’avoir un aperçu clair des fonctionnalités concrètes d'un framework C’est une manière très efficace de cartographier les usages réels, sans entrer dans la théorie.
 
-Dans l’écosystème React, par exemple, la liste des *how-to guides* permet d’avoir un aperçu clair des fonctionnalités concrètes du framework. C’est une manière très efficace de cartographier les usages réels, sans entrer dans la théorie.
+Cette approche permet de bien distinguer les différentes préoccupations des utilisateurs. Un guide pratique sert à résoudre un problème concret : comment se connecter à une base de données, comment déployer sur un serveur, etc.
 
-Ce type de document va droit au but.  
-Il indique précisément ce qu’il faut faire, et si besoin, oriente vers d’autres documents pour les explications de fond.
-
-L’objectif est d’éviter de surcharger l’utilisateur avec des détails théoriques.  
-Il faut rester concentré sur la tâche à accomplir.
-
-Cette approche permet aussi de bien distinguer les différentes préoccupations.  
-Un guide pratique sert à résoudre un problème concret : comment se connecter à une base de données, comment déployer sur un serveur, etc.
-
-Il est fréquent de confondre tutoriel et guide pratique. Pourtant, ils ont des fonctions différentes :
-- Le tutoriel suit une progression d’apprentissage, souvent plus narrative, qui peut aborder plusieurs sujets dans une logique de découverte. 
-- Le guide pratique, lui, se concentre sur une seule tâche, sans digression ni explication superflue.
-
-Même si un *how-to guide* mobilise différents éléments du système – un peu d’API, un peu de configuration – cela n’a rien d’anormal.  
-L’essentiel est que tout converge vers la réalisation d’une tâche concrète.  
 Le contenu doit fournir juste ce qu’il faut pour atteindre l’objectif, par exemple : déployer une application connectée à une base de données.
 
+> Il est fréquent de confondre tutoriel et guide pratique. Pourtant, ils ont des fonctions différentes :
+> - Le tutoriel suit une progression d’apprentissage, souvent plus narrative, qui peut aborder plusieurs sujets dans une logique de découverte. 
+> - Le guide pratique, lui, se concentre sur une seule tâche, sans digression ni explication superflue.
+ 
 ### Référence
 
-La troisième catégorie définie par Diátaxis est la documentation de référence.  
 C’est sans doute la forme la plus courante dans les projets, notamment en développement.
 
-Cependant, ce que l’on appelle souvent “guide de référence” dépasse parfois ce que Diátaxis entend par documentation de référence.
-
-Dans le modèle Diátaxis, la référence désigne un manuel strictement factuel.  
+Cependant, ce que l’on appelle souvent “guide de référence” dépasse parfois ce que Diátaxis entend par documentation de référence. Dans le modèle Diátaxis, la référence désigne un manuel strictement factuel.  
 Il s’agit d’une liste exhaustive des éléments disponibles, présentés sans explication ni contexte d’usage.
 
 Pour reprendre une analogie : si un projet était une voiture, la documentation de référence serait la liste complète des pièces, accompagnée de leurs spécifications techniques. C’est une documentation orientée information, purement descriptive.
 
-Un exemple typique : la Javadoc.  
-Elle fournit une vue détaillée des classes, des méthodes, des champs, sans explication sur le « pourquoi » ou le « comment » de leur utilisation.  
-Autre exemple : un fichier OpenAPI (ou Swagger), qui dresse la liste des routes, méthodes, paramètres, schémas de données, etc.
+Un exemple typique est la Javadoc. Elle fournit une vue détaillée des classes, des méthodes, des champs, sans explication sur le « pourquoi » ou le « comment » de leur utilisation.  Autre exemple : un fichier OpenAPI (ou Swagger), qui dresse la liste des routes, méthodes, paramètres, schémas de données, etc.
 
 L’objectif est de proposer une source fiable pour rechercher rapidement une méthode, une classe, une option de configuration, ou tout autre élément technique.
 
-Un exemple intéressant se trouve dans la documentation de LangChain4j.  
-Il existe une section intitulée “tutorial”, consacrée à la "chat memory" ([voir ici](https://docs.langchain4j.dev/tutorials/chat-memory)). À première vue, on s’attend à y trouver un tutoriel pratique, avec une progression pas à pas. Mais ce n’est pas le cas. Ce contenu décrit plutôt ce que c’est, les options disponibles, les comportements attendus :  éviction de mémoire, persistance, types de messages pris en charge, etc. Il ne s’agit donc pas d’un tutoriel. Mais ce n’est pas non plus de la référence au sens strict, car le contenu explique un concept. Dans la logique Diátaxis, ce type de documentation relèverait plutôt de l’explication.
-
-
-
 ### Explication (explanation)
 
-Le quatrième cadran du modèle Diátaxis est celui des *explanations*.  
-Pour beaucoup, c’est même le type de documentation le plus enrichissant.
-
-Ce type de contenu prend du recul.  
-Il ne cherche pas à résoudre un problème ni à guider une action immédiate, mais à favoriser la **compréhension**.  
-Il aide à saisir les choix d’architecture, les concepts fondamentaux, la philosophie du projet.
+Ce type de contenu prend du recul. Il ne cherche pas à résoudre un problème ni à guider une action immédiate, mais à favoriser la **compréhension**.  Il aide à saisir les choix d’architecture, les concepts fondamentaux, la philosophie du projet.
 
 Les *explanations* permettent d’acquérir des connaissances, sans nécessairement passer à l’action. Elles peuvent inclure des descriptions de l’architecture, des contraintes techniques, des modèles mentaux, ou encore des justifications de décisions.
 
@@ -137,32 +99,25 @@ Quelques exemples de questions typiques abordées dans cette catégorie :
 - Quels sont les concepts clés à maîtriser ?
 - Comment les différentes parties du système interagissent-elles entre elles ?
 
-La page d’accueil d’un projet fait souvent partie des *explanations*, notamment lorsqu’elle introduit les objectifs, le positionnement, et les grandes idées à connaître avant de se plonger dans les détails.
+La **page d’accueil** d’un projet fait souvent partie des *explanations*, notamment lorsqu’elle introduit les objectifs, le positionnement, et les grandes idées à connaître avant de se plonger dans les détails.
 
-Certaines pages plus approfondies peuvent aussi relever de cette catégorie.  
-Par exemple, une page sur la “chat memory” peut servir d’explication si elle présente les différents types de mémoire disponibles, leurs logiques respectives, les raisons de leur existence, ou les cas d’usage auxquels elles s’appliquent.
+Même si chaque type de documentation a un rôle bien distinct, une *explanation* peut tout à fait inclure des liens vers un *how-to guide*, pour illustrer une application concrète du concept, ou verts une entrée dans la *référence*, pour accéder aux détails d’implémentation.
 
-Même si chaque type de documentation a un rôle bien distinct, une *explanation* peut tout à fait inclure des liens vers :
-- un *how-to guide*, pour illustrer une application concrète du concept,
-- une entrée dans la *référence*, pour accéder aux détails d’implémentation.
+## Les frontières parfois floues
 
-Le modèle Diátaxis aide ainsi à faire le lien entre le type de question et le type de contenu :
-- Une question **“Pourquoi ?”** → mène à une *explanation*  
-- Une question **“Comment faire ?”** → mène à un *how-to guide*  
-- Une question **“Qu’est-ce que c’est ? / Quelles méthodes sont disponibles ?”** → mène à la *référence*  
-- Une volonté **d’apprendre par la pratique** → mène à un *tutoriel*
+> Le modèle Diátaxis aide ainsi à faire le lien entre le type de question et le type de contenu :
+> - Une question **“Pourquoi ?”** → mène à une *explanation*  
+> - Une question **“Comment faire ?”** → mène à un *how-to guide*  
+> - Une question **“Qu’est-ce que c’est ? / Quelles méthodes sont disponibles ?”** → mène à la *référence*  
+> - Une volonté **d’apprendre par la pratique** → mène à un *tutoriel*
 
-Prenons à nouveau l’exemple de la “chat memory” :
+Prenons l’exemple de la “chat memory” de LanChain4j:
 - **Tutoriel** : « Créer un chatbot avec mémoire de contexte »
 - **How-to guide** : « Configurer la mémoire pour conserver les 10 derniers messages »
 - **Référence** : « Méthodes de la classe `ChatMemory` »
 - **Explanation** : « Pourquoi la mémoire est essentielle dans une application conversationnelle »
 
-## Les frontières parfois floues
-
-Il arrive que la séparation entre les types de documentation soit subtile.
-
-Par exemple, quand on explique comment intégrer une `ChatMemory` dans une application :  
+Il arrive que la séparation entre les types de documentation soit subtile. Par exemple, quand on explique comment intégrer une `ChatMemory` dans une application :  
 - Est-ce qu’on est en train de **faire une tâche concrète** (how-to) ?
 - Est-ce qu’on est en train de **expliquer un concept** (explanation) ?
 - Est-ce qu’on montre **tout un flux complet** (tutoriel) ?
@@ -195,25 +150,16 @@ Chaque type de doc a son rôle :
 Il est utile de faire des liens entre ces types, mais sans tout mélanger dans le contenu lui-même.
 
 
-## Évolution de la Documentation Technique (en particulier Javadoc)
+## Évolution de la Documentation Technique (ex. Javadoc)
 
+La Javadoc, bien que centrée sur la référence, gagne à inclure des exemples de code courts. Ceux-ci doivent renvoyer vers des *how-to* ou *tutoriels* pour plus de contexte.
 
-Dans la documentation de référence (comme la Javadoc), des exemples de code peuvent être précieux. Même si ce n’est pas leur rôle principal, ils aident à clarifier l’usage.
+Inclure du code directement est possible (niveau classe ou package, ex. CEF), mais peu courant. Des évolutions récentes (Markdown dans la javadoc) facilitent cette intégration. Idéalement, on pourrait importer du code (ex. tests) pour améliorer maintenabilité et lisibilité.
 
-Ces exemples doivent toutefois rester concis, et pointer vers :
-- des *how-to* pour des cas d’usage concrets,
-- ou des *tutoriels* pour une mise en pratique plus complète.
+La doc Groovy est "exécutable" : les exemples viennent de tests unitaires, donc toujours à jour. Cette approche, bien que puissante, dépasse le cadre classique des docs (réf, guide, tuto, how-to) et pose la question de l’organisation du code dans la doc.
 
-L’enjeu est de ne pas perdre l’utilisateur : il faut que chaque type de document garde sa promesse, et que la navigation entre eux soit fluide et logique.
-Techniquement, il est possible d'inclure du code dans la documentation, et bien que certains le fassent, cela reste plus l'exception que la norme. Cette possibilité est également envisageable au niveau du package, comme pour CEF. Des améliorations ont été apportées pour simplifier l’inclusion de code, car la principale limitation de la Javadoc réside dans la difficulté de maintenir et d'écrire du code directement dans celle-ci. 
+Le nouveau format Javadoc permet désormais de pointer vers des extraits précis de code source.
 
-Il y a eu des évolutions récentes à ce sujet, notamment avec l'introduction de la notation Markdown et l’utilisation de slash. Toutefois, idéalement, il serait utile de pouvoir importer du code directement dans la Javadoc, comme des codes de test ou d'autres éléments, pour améliorer sa maintenabilité et sa lisibilité dans le contexte de certaines technologies.
-
-Un exemple intéressant est la documentation de Groovy, que l’on pourrait qualifier de "doc exécutable". Dans cette approche, tous les exemples de code présents dans la documentation sont extraits de tests unitaires. Ce qui est bénéfique avec cette méthode, c'est que la documentation reste toujours à jour, car le code inclus est testé à chaque mise à jour de la version de la documentation. Cela garantit que le code fonctionne réellement au moment de la publication de la doc.
-
-Bien que cette approche soit pertinente, elle s'éloigne quelque peu des quatre types de documentation mentionnés précédemment.
-
-Cela soulève la question de l’intégration et de l'organisation du code au sein de la documentation. Par exemple, le nouveau format de Javadoc permet de pointer vers des morceaux spécifiques de code.
 
 ## Diataxis n'utilise pas Diataxis !
 
@@ -236,7 +182,7 @@ Il est important de noter que tout ne s’adapte pas nécessairement aux cases p
 
 ## Types de Documentation et Exemples Pratiques
 
-Dans *TheGoodDocsProject*, plusieurs modèles de documentation sont proposés, parmi lesquels :
+Diátaxis s'adapte. On peut créer des types de documents suupplémentaire dans le compas. Dans [TheGoodDocsProject](https://www.thegooddocsproject.dev/), plusieurs modèles de documentation sont proposés, parmi lesquels :
 
 - API Quickstart  
 - API Reference  
@@ -245,16 +191,19 @@ Dans *TheGoodDocsProject*, plusieurs modèles de documentation sont proposés, p
 - Change Log  
 - Concept  
 - Contributing Guide  
+- ReadMe
 
-Par exemple, la section "Concept" contient des explications, tandis que le "Contributing Guide" peut être vu comme un *How-to guide* ou une autre forme de documentation, selon le contexte. Les FAQ, quant à elles, peuvent être considérées comme des "fireside How-to" ou être classées différemment, selon la nature des questions abordées.
+Le "**Concept**" contient des explications, tandis que le "Contributing Guide" peut être vu comme un *How-to guide* ou une autre forme de documentation, selon le contexte. 
 
-Les *How-to guides* sont généralement associés à des projets, des classes, des librairies ou des SDK. Cependant, un *Contributing Guide* se distingue par son orientation méta-informatique sur la contribution au projet, et ne correspond pas nécessairement à un *How-to guide* traditionnel.
+Les **FAQ**, quant à elles, peuvent être considérées comme des "fireside How-to" ou être classées différemment, selon la nature des questions abordées.
 
-Il existe également un projet appelé *TheGoodProjects.dev* qui fournit des modèles de documentation. Ce projet propose des templates pour des éléments comme le *readme*, la liste des membres d’une équipe, etc. Ces ressources sont complémentaires à celles de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet, à l'exception des tutoriels, où des approches guidées sont recommandées pour accompagner l'utilisateur vers le succès.
+Un "**Quick Start**" est une sous-catégorie de tutoriel qui est plus courte et plus ciblée. Dans la documentation de Google Cloud, un "Quick Start" est généralement suivi de guides plus détaillés. Les tutoriels sont parfois regroupés dans un portail distinct pour permettre à l’utilisateur de les retrouver facilement.
 
-La cohérence et la consistance sont des valeurs importantes dans la documentation. Des exemples de bonnes pratiques peuvent être observés dans la documentation de projets tels que Groovy, LangChain, Forge, ainsi que dans la documentation de Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide. Par exemple, un "Quick Start" est un *How-to guide* rapide, mais il peut également être vu comme un tutoriel, car il guide l’utilisateur à travers plusieurs étapes, comme la configuration d’une base de données ou le déploiement d’un container.
+Certains templates de *TheGoodProjects.dev* sont complémentaires à celles de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet (*readme*, la liste des membres d’une équipe, etc.)
 
-Un "Quick Start" est une sous-catégorie de tutoriel qui est plus courte et plus ciblée. Dans la documentation de Google Cloud, un "Quick Start" est généralement suivi de guides plus détaillés. Les tutoriels sont parfois regroupés dans un portail distinct pour permettre à l’utilisateur de les retrouver facilement.
+La cohérence et la consistance sont des valeurs importantes dans la documentation. Des exemples de bonnes pratiques peuvent être observés dans la documentation de projets tels que Groovy, LangChain, Forge, ainsi que dans la documentation de Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide.
+
+
 
 Il est également crucial de considérer la manière dont les utilisateurs interagissent avec la documentation, notamment comment ils la recherchent et la naviguent. Cela relève davantage de l'expérience utilisateur (UX), un aspect qui n'est pas nécessairement couvert par Diátaxis mais qui peut être intégré à travers des bonnes pratiques.
 
@@ -296,7 +245,7 @@ L'intégration de la documentation directement dans le code permet de maintenir 
 
 Certains projets, comme Hibernate, utilisaient des wikis où la documentation était régulièrement vandalisée. Bien que certaines pages critiques soient modifiables uniquement par un nombre restreint de personnes, le système de commentaires et les liens vers d'autres pages ajoutaient des éléments inutiles.
 
-L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "Edit on GitHub", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
+L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "**Edit on GitHub**", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
 
 Pour garantir une participation active, la documentation doit être modifiable et accessible en open source.
 
