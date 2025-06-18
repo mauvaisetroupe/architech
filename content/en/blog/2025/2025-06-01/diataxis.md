@@ -33,9 +33,11 @@ Cependant, l'objectif principal reste d'avoir une documentation claire, compréh
 Ce qui est intéressant dans cette approche, c'est qu'elle incite à réfléchir sur ce qu'il ne faut **pas inclure dans chaque type de document**.  
 Cela aide à définir où placer une information en fonction de son objectif, en choisissant le type de document le plus adapté.
 
-Ils proposent également un outil appelé le "compas", permettant de situer une information par rapport aux différents types de documents. Cet outil s'avère particulièrement utile.
+## Le Compas Diátaxis
 
-### Les deux axes pour catégoriser la documentation
+Diátaxis propose un outil appelé le [compas](https://diataxis.fr/compass/), permettant de situer une information par rapport aux différents types de documents. Cet outil s'avère particulièrement utile.
+
+![alt text](/blog/2025/2025-06-01/image.png)
 
 Dans le cadre de Diátaxis, deux dimensions sont à prendre en compte.
 - Est-ce que l'objectif est d'acquérir des connaissances, ou d'appliquer des connaissances ?  Cela oppose l'acquisition à l'application.
