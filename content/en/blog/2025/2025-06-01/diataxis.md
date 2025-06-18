@@ -168,8 +168,6 @@ Il est intéressant de noter que le site web de Diátaxis n’utilise pas le con
 Le site repose principalement sur des *explications* plutôt que des tutoriels. Ainsi, la structuration de la documentation s'en trouve différente, se concentrant davantage sur la présentation des concepts sans inclure d’approches plus pratiques comme les tutoriels ou les guides étape par étape.
 
 
-
-
 ## Flexible Mind
 
 Le site de Diátaxis est clair sur un point : il est acceptable de ne pas adopter ce modèle de manière strictement rigide. L'idée est de s'en inspirer pour simplifier des questionnements philosophiques complexes et améliorer la clarté tout en réduisant la redondance. Toutefois, il est important de ne pas tomber dans l’excès. 
@@ -180,9 +178,13 @@ L’objectif reste de prendre du recul. Le cadre proposé par Diátaxis doit êt
 
 Il est important de noter que tout ne s’adapte pas nécessairement aux cases prévues. Dans ce cas, il est acceptable d’adapter et d’ouvrir le cadre. 
 
-## Types de Documentation et Exemples Pratiques
+## Types de Documentation et templates
 
-Diátaxis s'adapte. On peut créer des types de documents suupplémentaire dans le compas. Dans [TheGoodDocsProject](https://www.thegooddocsproject.dev/), plusieurs modèles de documentation sont proposés, parmi lesquels :
+La cohérence et la consistance sont des valeurs importantes dans la documentation. Des exemples de bonnes pratiques peuvent être observés dans la documentation de projets tels que Groovy, LangChain, Forge, ainsi que dans la documentation de Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide.
+
+Diátaxis s'adapte. On peut créer des types de documents supplémentaire dans le compas, et donc des templates supplémentaires.
+
+Dans [TheGoodDocsProject](https://www.thegooddocsproject.dev/), plusieurs modèles de documentation sont proposés, parmi lesquels :
 
 - API Quickstart  
 - API Reference  
@@ -199,18 +201,7 @@ Les **FAQ**, quant à elles, peuvent être considérées comme des "fireside How
 
 Un "**Quick Start**" est une sous-catégorie de tutoriel qui est plus courte et plus ciblée. Dans la documentation de Google Cloud, un "Quick Start" est généralement suivi de guides plus détaillés. Les tutoriels sont parfois regroupés dans un portail distinct pour permettre à l’utilisateur de les retrouver facilement.
 
-Certains templates de *TheGoodProjects.dev* sont complémentaires à celles de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet (*readme*, la liste des membres d’une équipe, etc.)
-
-La cohérence et la consistance sont des valeurs importantes dans la documentation. Des exemples de bonnes pratiques peuvent être observés dans la documentation de projets tels que Groovy, LangChain, Forge, ainsi que dans la documentation de Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide.
-
-
-
-Il est également crucial de considérer la manière dont les utilisateurs interagissent avec la documentation, notamment comment ils la recherchent et la naviguent. Cela relève davantage de l'expérience utilisateur (UX), un aspect qui n'est pas nécessairement couvert par Diátaxis mais qui peut être intégré à travers des bonnes pratiques.
-
-Enfin, la possibilité de recueillir des commentaires ou des questions de la part des utilisateurs via des canaux comme une mailing list ou un Discord peut être un excellent moyen de compléter la documentation. Les FAQ peuvent en découler, ou elles peuvent évoluer à partir des questions fréquemment posées, comme celles concernant la configuration de la base de données.
-
-
-
+Certains templates sont complémentaires à celles de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet (*readme*, la liste des membres d’une équipe, etc.)
 
 ## Outils et Frameworks de Documentation
 
@@ -221,7 +212,7 @@ Maven était un framework d'agrégation de documentation qui générait un site 
 
 Aujourd'hui, l'utilisation de Maven pour ce type de génération de site est largement obsolète. Toutefois, à l'époque, il était possible de générer automatiquement un site web complet via une simple commande, centralisant la Javadoc, les rapports et d'autres informations, ce qui était une avancée significative.
 
-### Les outils actuels
+### Quelques exemples d'outils actuels
 
 Les plateformes runtime de documentation dans les projets open source ou en entreprise sont nombreuses. Il est essentiel de se concentrer sur le contenu, un des principaux avantages du modèle Diátaxis. Cependant, la rédaction de la documentation et sa publication nécessitent également des outils adaptés. Parmi les options les plus courantes, on trouve :
 
@@ -234,16 +225,17 @@ Certains projets, comme LangChain4J, utilisent Docusaurus. Sur des projets comme
 
 Chez CloudBees, la documentation du site cloudbees.com était générée avec **Antora**, avec une organisation personnalisée des menus et des styles CSS permettant d'identifier rapidement l'outil utilisé.
 
+### Les wikis
+
 Bien que des plateformes comme les wikis offrent une solution simple, elles rencontrent souvent des problèmes de maintenance liés à la propriété, à l'absence de processus de révision et à la difficulté de maintenir une documentation de qualité sur le long terme. Comme pour le code, la dette documentaire s'accumule rapidement, rendant la gestion de la documentation de plus en plus difficile.
 
-
-
-### Outils *as code* - Git pour le feedback
-
+### Outils *as code* pour plus de maitrise
 
 L'intégration de la documentation directement dans le code permet de maintenir une proximité avec ce dernier, notamment lorsqu'elle est stockée dans le même dépôt. Cette approche permet d'appliquer les mêmes pratiques de codification que pour le code, mais elle reste moins accessible aux auteurs non-développeurs.
 
 Certains projets, comme Hibernate, utilisaient des wikis où la documentation était régulièrement vandalisée. Bien que certaines pages critiques soient modifiables uniquement par un nombre restreint de personnes, le système de commentaires et les liens vers d'autres pages ajoutaient des éléments inutiles.
+
+### Git pour l'interaction et la collaboration
 
 L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "**Edit on GitHub**", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
 
@@ -254,30 +246,17 @@ Pour garantir une participation active, la documentation doit être modifiable e
 
 ### L'IA pour la documentation simple
 
-L'intelligence artificielle ne permet pas encore de générer automatiquement une documentation complète à partir d'informations brutes. Cependant, l'idée suscite un intérêt croissant dans de nombreuses équipes, notamment pour des usages ciblés autour de la documentation.
+L’intelligence artificielle ne permet pas encore de créer une documentation complète à partir d’informations brutes. Mais l’idée progresse, surtout pour des usages ciblés.
 
-Des outils comme Gemini, ChatGPT ou d'autres modèles d'IA peuvent, à partir du code et de tests unitaires, générer des tutoriels cohérents. Ces approches sont particulièrement efficaces pour produire des guides d’introduction ou des documents destinés à faciliter les premiers pas avec un projet. Pour ce type de contenu simple, l’IA peut représenter une aide précieuse.
+Des outils comme ChatGPT ou Gemini peuvent générer des tutoriels simples à partir du code et de tests. Cela fonctionne bien pour produire des guides d’introduction, utiles aux nouveaux utilisateurs.
 
-L’objectif est de déléguer la production de documentation de niveau L100 (introductif, selon une classification courante de complexité) à l’IA, afin que les équipes techniques puissent se concentrer sur des contenus plus avancés, de niveaux L200 et L300, là où leur expertise apporte une réelle valeur ajoutée.
+L’objectif : automatiser les contenus de base pour permettre aux équipes techniques de se concentrer sur des documents plus complexes, où leur expertise est essentielle.
 
-Ce type de réflexion est en cours dans plusieurs entreprises, y compris chez Google, et témoigne d’une évolution vers une collaboration entre rédacteurs techniques et outils d’IA.
+Cette approche gagne du terrain dans plusieurs entreprises, dont Google, et ouvre la voie à une collaboration entre IA et rédacteurs techniques.
 
 ### L'IA pour la documentation plus complexe et spécifique
 
-Une position courante considère que la valeur ajoutée de l’humain réside dans la gestion des tâches simples et fréquentes, qui représentent une large part des besoins documentaires. Ce type de contenu se prête bien à une approche manuelle, orientée qualité et contextualisation.
-
-Cependant, certains estiment que l’IA pourrait être particulièrement utile pour traiter des cas très spécifiques ou avancés, difficiles à documenter de manière exhaustive. Par exemple, répondre à des demandes atypiques telles que la création d’un fork de LangChain dans un langage peu courant, ou des intégrations techniques rares, pourrait relever d’un usage pertinent de l’intelligence artificielle.
-
-Néanmoins, dans la pratique, les systèmes d’IA présentent un risque accru d’hallucinations lorsqu’ils sont confrontés à des sujets complexes ou mal documentés. À l’inverse, les contenus plus simples bénéficient de nombreuses sources d’exemples et de tests, ce qui renforce la fiabilité des réponses générées par l’IA dans ces contextes.
-
-### L'IA et le style
-
-L’utilisation de l’intelligence artificielle pour la rédaction d’articles ou de documents techniques peut s’inscrire dans un processus entièrement piloté par un humain. Ce processus commence par la définition d’un plan ou d’un ensemble de points clés, à partir desquels l’IA génère un texte initial. Cette étape est suivie d’une phase de relecture approfondie, visant à corriger le style, à éviter les erreurs, et à vérifier la cohérence sur le fond.
-
-La phase de révision reste essentielle. Le style généré par l’IA est souvent trop vague ou artificiel. De plus, dans les contenus techniques, le risque d’hallucination est non négligeable, quelle que soit la plateforme utilisée (ChatGPT, Gemini, Claude, etc.). Bien que l’IA fasse gagner du temps sur certaines étapes, une vérification humaine est indispensable pour garantir la qualité finale du contenu.
-
-Des retours d'expérience indiquent que, même en fournissant à l’IA un historique de publications personnelles pour l’adapter à un style donné, le texte produit peut rester éloigné du ton souhaité. Le résultat nécessite alors des réécritures importantes, notamment pour corriger des tournures trop longues ou imprécises, et pour supprimer des ajouts non souhaités, parfois inexistants dans les sources d’origine.
-
+D’autres pensent au contraire que l’IA serait plus utile pour des cas rares ou complexes, comme créer un fork de LangChain dans un langage peu utilisé, ou gérer des intégrations techniques spécifiques. Mais en pratique, l’IA a tendance à halluciner sur ces sujets pointus, souvent mal documentés. À l’inverse, elle est plus fiable sur des contenus simples, grâce à l’abondance d’exemples et de tests disponibles.
 
 ### L'IA et les hallucinations ou l'enrichissement
 
@@ -288,7 +267,6 @@ L’usage de l’IA varie en fonction de l’étape du processus rédactionnel :
 ### Une approche structurée autour de l'IA
 
 Un exemple d’outil développé en interne propose une méthode encadrée pour générer des articles avec l’aide de l’IA. L’utilisateur commence par fournir :
-
 - Le sujet de l’article
 - Le public cible
 - Les points clés à traiter
