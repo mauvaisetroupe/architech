@@ -1,0 +1,5 @@
+Reformule moi ce texte extrait d'une vidéo youtube, pour le corriger, éviter kes répétitions dû au langage parlé, etc.
+Garde le texte en anglais
+Ce texte est le texte de la personne qui fait le meetup, je souhaiteai que tu le transforme pour ne plus avoir de "we" ni de "I"
+Je veux aussi que l'on utilise une forme moins interactive, je dois résumer ce meetup qui a eu lieu, tout en garde le présent pour le verbe
+Je fais un résumé sous forme de blog post, je n'ai pas la vidéo, donc des référenece à l' activité visuel doivent être évité
