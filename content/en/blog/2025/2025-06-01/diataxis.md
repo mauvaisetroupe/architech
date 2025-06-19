@@ -210,6 +210,8 @@ Certains templates sont complémentaires à celles de Diátaxis, qui ne couvre p
 
 Maven était un framework d'agrégation de documentation qui générait un site statique, notamment pour centraliser des rapports, des informations sur le projet, l'équipe et d'autres éléments dynamiques. Bien que cette approche ait eu un impact révolutionnaire il y a 20 ans, elle s'est avérée trop rigide pour les besoins modernes. Le site généré était très standardisé, avec des rapports et des informations souvent inutiles pour les utilisateurs.
 
+![site maven](/blog/2025/2025-06-01/image-2.png)
+
 Aujourd'hui, l'utilisation de Maven pour ce type de génération de site est largement obsolète. Toutefois, à l'époque, il était possible de générer automatiquement un site web complet via une simple commande, centralisant la Javadoc, les rapports et d'autres informations, ce qui était une avancée significative.
 
 ### Quelques exemples d'outils actuels
@@ -237,7 +239,9 @@ Certains projets, comme Hibernate, utilisaient des wikis où la documentation é
 
 ### Git pour l'interaction et la collaboration
 
-L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "**Edit on GitHub**", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
+L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "**Edit this page**", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
+
+![alt text](/blog/2025/2025-06-01/image-3.png)
 
 Pour garantir une participation active, la documentation doit être modifiable et accessible en open source.
 
@@ -246,34 +250,24 @@ Pour garantir une participation active, la documentation doit être modifiable e
 
 ### L'IA pour la documentation simple
 
-L’intelligence artificielle ne permet pas encore de créer une documentation complète à partir d’informations brutes. Mais l’idée progresse, surtout pour des usages ciblés.
-
-Des outils comme ChatGPT ou Gemini peuvent générer des tutoriels simples à partir du code et de tests. Cela fonctionne bien pour produire des guides d’introduction, utiles aux nouveaux utilisateurs.
-
-L’objectif : automatiser les contenus de base pour permettre aux équipes techniques de se concentrer sur des documents plus complexes, où leur expertise est essentielle.
-
-Cette approche gagne du terrain dans plusieurs entreprises, dont Google, et ouvre la voie à une collaboration entre IA et rédacteurs techniques.
+L’intelligence artificielle ne permet pas encore de créer une documentation complète à partir d’informations brutes, mais des progrès sont faits, notamment pour des usages ciblés. Des outils comme ChatGPT ou Gemini peuvent générer des tutoriels simples, utiles pour les débutants. L’objectif est d’automatiser les contenus de base afin de libérer du temps pour les équipes techniques, qui peuvent ainsi se concentrer sur des documents plus complexes. Cette approche se développe, notamment chez Google, et favorise une collaboration entre IA et rédacteurs techniques
 
 ### L'IA pour la documentation plus complexe et spécifique
 
-D’autres pensent au contraire que l’IA serait plus utile pour des cas rares ou complexes, comme créer un fork de LangChain dans un langage peu utilisé, ou gérer des intégrations techniques spécifiques. Mais en pratique, l’IA a tendance à halluciner sur ces sujets pointus, souvent mal documentés. À l’inverse, elle est plus fiable sur des contenus simples, grâce à l’abondance d’exemples et de tests disponibles.
+Certains voient l’IA comme utile pour des cas complexes ou rares, mais elle hallucine souvent sur ces sujets mal documentés. Elle est plus fiable sur les contenus simples, mieux couverts par des exemples et tests.
 
 ### L'IA et les hallucinations ou l'enrichissement
 
-L’intelligence artificielle peut parfois "enrichir" un contenu en suggérant des éléments qui n’avaient pas été envisagés initialement. Par exemple, lors de la préparation d’un article sur les API ou les workflows, l’IA peut proposer une liste de points à aborder, dont certains peuvent offrir un angle nouveau ou pertinent. Cela peut s’avérer utile dans la phase exploratoire de l’écriture.
-
-L’usage de l’IA varie en fonction de l’étape du processus rédactionnel : exploration, structuration ou rédaction. À chaque phase, elle peut jouer un rôle différent. Toutefois, déléguer entièrement la rédaction à l’IA, sans intervention humaine, n’est pas recommandé. Une approche consistant à lui demander de produire un article complet prêt à publier se révèle généralement inefficace.
+L’IA peut enrichir un contenu en suggérant des idées inédites, utiles en phase exploratoire, comme pour structurer un article sur les API. Son utilité varie selon les étapes du processus rédactionnel, mais lui confier entièrement la rédaction d’un article reste peu efficace sans intervention humaine.
 
 ### Une approche structurée autour de l'IA
 
-Un exemple d’outil développé en interne propose une méthode encadrée pour générer des articles avec l’aide de l’IA. L’utilisateur commence par fournir :
+Un exemple d’outil développé par un collègue de Guillaume propose une méthode encadrée pour générer des articles avec l’aide de l’IA. L’utilisateur commence par fournir :
 - Le sujet de l’article
 - Le public cible
 - Les points clés à traiter
 
 L’IA génère alors une série de questions en lien avec le sujet. L’auteur y répond manuellement, section par section. Une fois les réponses saisies, l’outil assemble l’ensemble pour produire un contenu structuré. Cette approche intermédiaire permet de combiner expertise humaine et assistance automatisée, tout en gardant le contrôle sur le fond.
-
-Concernant le style, les IA peuvent adapter leur ton à un public spécifique (par exemple un enfant de 11 ans), mais reproduire un style personnel à partir de plusieurs exemples reste limité, même avec des modèles dotés de long contexte comme Gemini.
 
 Les meilleurs résultats sont obtenus lorsque l’IA reçoit une structure explicite à suivre : par exemple une progression en étapes claires ou une méthode argumentative de type thèse/antithèse/synthèse. Dans ces cas, la cohérence est satisfaisante, mais le style reste souvent trop formel ou vague.
 
