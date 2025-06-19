@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.5 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.5">
+  <diagram name="Page-1" id="1x_L8tCsecBxA9oG1HDn">
+    <mxGraphModel dx="2184" dy="997" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-9" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;shadow=1;strokeColor=#C4C4C4;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="176" width="940" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-1" value="&lt;font style=&quot;font-size: 19px;&quot; face=&quot;architects daughter&quot;&gt;Source Control&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-family: &amp;quot;architects daughter&amp;quot;; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;markdown or asciidoc stored in Git&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="186" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-2" value="&lt;font style=&quot;font-size: 19px;&quot; face=&quot;architects daughter&quot;&gt;CI / CD&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;Documentation built and publish as HTML&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="293" y="200" width="186" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-3" value="&lt;font style=&quot;font-size: 19px;&quot; face=&quot;architects daughter&quot;&gt;Hosted Docs&lt;/font&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;Documentation built and publish as HTML&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="546" y="200" width="186" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="229" y="249.74" as="sourcePoint" />
+            <mxPoint x="289" y="249.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-5" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;sketch=1;curveFitting=1;jiggle=2;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="484" y="249.74" as="sourcePoint" />
+            <mxPoint x="544" y="249.74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-6" value="&lt;div&gt;&lt;font style=&quot;font-size: 19px;&quot; face=&quot;architects daughter&quot;&gt;Code Review&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font face=&quot;architects daughter&quot;&gt;Changes are checked by code review&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="293" y="360" width="186" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="KjEo7gl8Mg75x5mY_Du0-8" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;sketch=1;jiggle=2;curveFitting=1;strokeColor=#82b366;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fillColor=#d5e8d4;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="380" y="362" as="sourcePoint" />
+            <mxPoint x="380" y="302" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
