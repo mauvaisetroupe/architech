@@ -35,15 +35,6 @@ Local complexity refers to the internal simplicity of a component (e.g. a 100-li
 
 While small services may be simple individually, their communication adds global complexity. Message flow modeling focuses on managing this, emphasizing interaction design over internal structure.
 
-### Contexte Mapping (question in chat)
-
-Context mapping helps manage global complexity by clarifying communication between bounded contexts. Its effectiveness depends on proper use—Eric Evans’ workshop uses role-playing to teach it through hands-on learning.
-
-The conformist pattern, where one context reuses another’s domain model (e.g., an external API), is especially relevant. While convenient, it creates tight coupling—changes in one model can ripple through others, forming fragile dependency chains.
-
-This "deadlock conformist" scenario is common in large systems. Context mapping helps identify these risks and reduce unintended coupling.
-
-
 ## Modeling tools
 
 ### BPMN
