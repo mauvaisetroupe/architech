@@ -3,7 +3,7 @@ title: "Modelling Bounded Context"
 tags: [DDD, EventStorming]
 date: 2025-05-24
 categories: [English]
-draft: false
+draft: true
 ---
 
 
@@ -15,238 +15,187 @@ This blog post is a sumary of a youtube video [[Hands-on] Exploring Techniques F
 
 ### Bounded context and microservices
 
-In this session, we’ll be exploring techniques for modeling bounded contexts.
-The goal of this meetup, which will last around one to two hours, is to focus on strategic design.
+This 1–2 hour session covers modeling bounded contexts as part of strategic design.
 
-When we think about architecture and strategic design, bounded contexts often come to mind. It’s about identifying and defining clear boundaries within a system.
-Architecting a system typically involves breaking down a large, complex structure into smaller subsystems.
-Some people refer to these as microservices, others call them bounded contexts, and some consider a microservice to be a bounded context in itself.
-
-There are certainly strong opinions on this topic, and quite a few blog posts have been written about it — including a recent one by Alberto Brandolini that touches on this very subject.
+Bounded contexts define system boundaries and are often aligned with microservices. The relationship between the two is widely debated, including in a recent post by Alberto Brandolini.
 
 ### Integration of subsystems - Designing a loosely coupled architecture
 
-A topic that receives less attention is the integration of subsystems — whether they are microservices or bounded contexts — particularly during the design phase.
-While event-driven architecture is frequently discussed from a technical standpoint, it is less commonly approached as a design activity.
+Subsystem integration is often overlooked in design. Loosely coupled architectures support autonomy and safe changes, but require thoughtful communication, not just clear boundaries.
 
-Designing a loosely coupled architecture remains a widely accepted goal across the software industry. A loosely coupled system allows for isolated changes within one part of the system without impacting others, thereby supporting team autonomy.
+Commands, queries, and events shape interactions and affect coupling. Design choices—like orchestration vs. choreography—are key.
 
-Achieving such decoupling requires more than identifying appropriate boundaries; it also involves determining how the various subsystems interact and making deliberate design choices regarding their communication.
-
-Broadly speaking, there are three types of messages: commands, queries, and events. The term "message" is used here in a generic sense, not referring to a message bus.
-
-For each message type, decisions need to be made regarding its payload. Numerous factors influence these decisions, such as the type of message, its content, its naming, and its size. Each of these factors can significantly impact the level of coupling between subsystems.
-
-For example, a command involves one context instructing another to perform an action, leaving the responsibility for subsequent actions with the sender. In contrast, an event indicates that something has occurred, and it is then up to another context to listen to this event and determine the appropriate response.
-
-This distinction touches on the concept of orchestration (centralized coordination) versus choreography, where the integration design plays a critical role in the overall coupling.
-
-Although much attention is given to defining boundaries, integration design, particularly in terms of how subsystems communicate, is often overlooked.
-
-There are many tools available, but none have yet become standardized. While there has been much discussion on this topic, particularly in a GitHub issue thread, there is still no clear consensus.
-
-A simple technique called message flow modeling will be introduced later. On the GitHub project for this technique, a lengthy discussion took place regarding how to display the flow of commands and events across different contexts. Many opinions were shared, and this conversation ultimately led to the organization of this meetup to review various techniques and evaluate their trade-offs.
-
-The goal is to begin shaping best practices for system design. For instance, when faced with a specific situation, event storming might be the most appropriate technique for defining boundaries and illustrating communication between bounded contexts.
+We’ll explore message flow modeling to visualize these interactions and discuss emerging best practices like event storming.
 
 ### global and local complexity
 
-Another concept worth mentioning, as noted in the meetup description, is the distinction between global and local complexity, introduced by Vladik Kononov.
+As noted by Vladik Kononov, distinguishing between local and global complexity helps clarify system design discussions.
 
-While the terms may be familiar, their specific naming can help clarify these concepts and facilitate their discussion.
+Local complexity refers to the internal simplicity of a component (e.g. a 100-line microservice). Global complexity arises from the interactions between many such components—introducing challenges like network boundaries, versioning, and backward compatibility.
 
-Local complexity refers to situations where something is inherently simple. For instance, a microservice with 100 lines of code is considered simple due to the limited amount of code. Although it's possible to introduce significant issues within such a small codebase, a smaller microservice (100 lines) is likely to have less local complexity compared to a much larger one (10,000 lines).
+While small services may be simple individually, their communication adds global complexity. Message flow modeling focuses on managing this, emphasizing interaction design over internal structure.
 
-However, the challenge arises when there are multiple small microservices. While each individual service may be simple, the overall system becomes more complex in terms of how these services interact with each other. The flow of messages between microservices introduces new complexities, particularly around network boundaries and public contracts. In a monolithic codebase, changes can be made atomically, but with separate codebases that are deployed independently, modifying the interface of one service can break the other, introducing concerns about backward compatibility and versioning.
+### Contexte Mapping (question in chat)
 
-Thus, the key distinction is between local and global complexity. In the context of message flow modeling or bounded context integration, the focus is on managing global complexity — the complexity that arises between bounded contexts, particularly in terms of communication patterns, rather than the infrastructure itself.
+Context mapping helps manage global complexity by clarifying communication between bounded contexts. Its effectiveness depends on proper use—Eric Evans’ workshop uses role-playing to teach it through hands-on learning.
 
-## Contexte Mapping (question in chat)
+The conformist pattern, where one context reuses another’s domain model (e.g., an external API), is especially relevant. While convenient, it creates tight coupling—changes in one model can ripple through others, forming fragile dependency chains.
 
-Context mapping is a useful technique for addressing global complexity and defining communication patterns between bounded contexts. However, its effectiveness depends on how well it is applied — and in many cases, it is not used properly. One lesser-known but effective way to learn it is through Eric Evans’ workshop, where context mapping is practiced using role-playing within a fictional organization, helping participants internalize the patterns through experiential learning.
+This "deadlock conformist" scenario is common in large systems. Context mapping helps identify these risks and reduce unintended coupling.
 
-Among the patterns in context mapping, the conformist pattern is particularly relevant to global complexity. This pattern involves one context reusing the domain model of another, often due to the high cost of translating between models. For example, a system might directly reuse an external API model, such as Facebook’s marketing API. While initially convenient, this approach can result in strong coupling: when the external model changes, all dependent contexts may be forced to adapt. Over time, this can lead to a chain of conformists, where multiple contexts depend on each other’s models, creating a fragile system of dependencies.
-
-This phenomenon — sometimes referred to as the deadlock conformist pattern — is common in large enterprises. Identifying and visualizing such chains through context mapping can help anticipate risks and reduce unintended coupling.
 
 ## Modeling tools
 
 ### BPMN
 
-BPMN is a tool for visualizing workflows, though its effectiveness can vary depending on how it is used. There are two common approaches to BPMN: one where the tool attempts to replace developers by embedding all logic within the BPMN system, and another where BPMN is used to define workflows while keeping the logic within separate microservices. The latter approach allows microservices to call the BPMN system at appropriate stages, helping visualize the process without disrupting the code base. However, the boundaries between BPMN and message bus systems are beginning to blur, which raises questions about the best way to integrate them for system orchestration.
+BPMN is useful for visualizing workflows, but its value depends on how it's applied. One approach embeds all logic within BPMN, aiming to replace developers. A better alternative keeps logic in microservices, using BPMN to map workflows and calling it as needed.
 
-![bpmn collaboration](/blog/2025/2025-05-24/image-2.png)
+As BPMN and message bus systems converge, it raises important questions about their roles in orchestration and integration
 
 ![BPMN collaboration](/blog/2025/2025-05-24/image-6.png)
 
-Tools, like BPMN, evolve over time, and staying open-minded to this evolution is crucial. Even if a tool doesn’t meet current needs, future updates may address limitations. The widespread use of BPMN suggests its value, with potential innovations emerging from the community. Additionally, as remote work increases, BPMN tools might be adapting to become more suitable for distributed teams. Who knows—one day, the BPMN community might develop a tool or approach that even surpasses event storming in some contexts.
+Tools like BPMN evolve, and staying open to their growth is important. While it may not meet all current needs, ongoing community innovation—especially for remote collaboration—could enhance its value. In time, BPMN might even rival techniques like event storming in certain contexts.
 
 ### event storming
 
-Event Storming is valued for its flexibility, explicitness, and collaborative nature, with a low barrier to entry. It allows teams to work together on a holistic view of the system. However, it requires a skilled facilitator to manage potential chaos, as sessions can sometimes veer off track. Additionally, while Event Storming is highly effective for certain domains, it requires a user journey or story to be viable. For instance, modeling a system like adaptive cruise control, which reacts to specific events rather than following a strict linear progression, can be difficult to capture fully in Event Storming without a clear narrative.
+Event Storming is a flexible, collaborative tool with low entry barriers, great for building a shared system understanding. However, it needs a skilled facilitator to stay focused. It's most effective when a clear user journey exists; domains without linear narratives—like adaptive cruise control—can be harder to model.
 
 ![event storming](/blog/2025/2025-05-24/image.png)
 
-The diagram’s use of the label "query"—colored green like a read model—raises ambiguity about its intent. This highlights a common challenge in event storming: while colors and labels (e.g., orange for events, green for read models) guide understanding, they aren’t strict rules. Variations in naming—such as "context," "external system," or "system"—reflect the method's flexibility but can lead to confusion, especially for newcomers.
+The use of "query" in the diagram, colored like a read model, introduces ambiguity. Event Storming's flexibility with labels and colors (e.g., orange for events, green for read models) can guide understanding but may cause confusion, especially for newcomers due to variations in naming (e.g., "context," "external system").
 
 ### UML
 
-UML, particularly sequence diagrams, is a widely known tool that clearly captures important system information, reducing misinterpretation. While it may not have the flexibility of Event Storming, it offers precision in representing system interactions. Unlike Event Storming, where ambiguity can arise regarding parallel or sequential events, UML sequence diagrams provide a clear structure for understanding event flows and interactions within a system.
+UML, especially sequence diagrams, offers precise system interaction modeling, reducing misinterpretation. While less flexible than Event Storming, it provides clarity in event flow and system interactions, avoiding ambiguity about parallel or sequential events.
 
 ![uml sequence diagram](/blog/2025/2025-05-24/image-1.png)
 
 
 ### Domain Message Flow Modelling
 
-Domain Message Flow Modelling, introduced by Nick Tune in 2020, provides a visual method for representing the flow of messages—commands, events, and queries—within a bounded context architecture. While bounded contexts define system boundaries, clear message interactions between them are equally critical for designing loosely-coupled systems.
+Introduced by Nick Tune in 2020, Domain Message Flow Modeling visually represents the flow of commands, events, and queries within a bounded context. While boundaries define systems, clear message interactions are key to designing loosely coupled architectures.
 
-A Domain Message Flow Diagram illustrates how messages move between actors, bounded contexts, and external systems within a given scenario. Two modeling styles exist: simple and advanced.
+Domain Message Flow Diagrams show how messages move between actors, bounded contexts, and external systems, with two modeling styles: simple and advanced.
 
 
 #### Domain Message Flow Modelling - Simple version
 
 ![Domain message flow modelling (simple)](/blog/2025/2025-05-24/image-3.png)
 
-The simple version minimizes complexity by treating all messages uniformly, without distinguishing between commands, events, or queries. It is especially effective for teaching or early-stage modeling, where the focus is on directional message flow rather than message type.
+The simple version treats all messages equally, without distinguishing between commands, events, or queries. It’s useful for teaching or early-stage modeling, focusing on directional message flow rather than message types.
 
 #### Domain Message Flow Modelling - Advanced version
 
 ![Domain message flow modelling (advanced)](/blog/2025/2025-05-24/image-4.png)
 
-The advanced version introduces distinct notations and color coding for each message type. This format supports pattern recognition for experienced practitioners, making it easier to spot anti-patterns or unintended relationships—such as events incorrectly implying direct communication between contexts. Events are visually decoupled from commands to emphasize their broadcast nature and optional consumption.
 
-Overall, the model evolves in complexity with user expertise, balancing clarity with expressiveness depending on the scenario and audience.
+
+The advanced version uses distinct notations and color coding for each message type, helping experienced practitioners recognize patterns and avoid anti-patterns. Events are decoupled from commands to highlight their broadcast nature.
+
+As users gain expertise, the model evolves, balancing clarity and expressiveness based on the scenario and audience.
 
 ### Event modeling
 
-Event modeling is a structured approach to visualizing message flows (commands, queries, events) in a system, focusing on user experience (UX) over user interface (UI). It builds on event storming, providing more detail for implementation.
-
 ![Event Modelling](/blog/2025/2025-05-24/image-7.png)
 
+Event modeling visualizes message flows (commands, queries, events) with a focus on UX over UI, adding detail to event storming for implementation. 
 
-Key Points:
-- Complexity: The use of swim lanes and various elements can be overwhelming but becomes easier with experience, especially for those familiar with event storming.
-- UI vs. UX: Focuses on backend logic flexibility, ensuring it’s not tightly coupled to UI changes.
-- Detail & Scope: Closer to implementation, event modeling drives development by focusing on data transfer and the structure of messages.
-- Event Storming Integration: Event modeling complements event storming by adding detailed structures to the high-level event flows.
-- Event Sourcing & CQRS: Event modeling naturally leads to these concepts but may not fit every use case.
-- Collaboration: Less collaborative than event storming, as its structured nature limits group adaptability, especially for representing parallel processes.
+It can be complex at first but becomes easier with experience. Unlike event storming, which is highly collaborative, event modeling is more structured and less adaptable, especially for parallel processes. It drives development by focusing on data transfer and message structure and often leads to event sourcing and CQRS. 
 
-Event modeling is great for detailed system insights and guiding implementation, but it’s more structured and less collaborative than event storming. It’s ideal for teams needing clarity and practical design.
+Event modeling strikes a balance between the flexibility of event storming and the structure of UML.
 
-It's kind of in between the two :  a bit less structure than UML but a bit more structure than event  storming
+### Service Blueprints
 
-### Service Blueprints: Bridging Service Design and Domain-Driven Design
+Bridging Service Design and Domain-Driven Design.
 
 ![Service Blueprint](/blog/2025/2025-05-24/image-8.png)
 
-The concept of a service blueprint is discussed, with an emphasis on its flow and structure. Currently, there is exploration into how a service blueprint can be used, particularly in contrast to the concept of bounded contexts. The discussion highlights that service blueprints offer a more high-level view compared to bounded contexts, which are more focused on implementation details.
+The concept of a service blueprint is explored in contrast to bounded contexts. Service blueprints provide a high-level view of end-to-end services, focusing on user experience and solving broader problems. In comparison, bounded contexts are more technical, focusing on implementation details. For example, an online shopping service’s blueprint spans multiple bounded contexts, each representing different actions.
 
-Service blueprints are often seen as end-to-end services, not confined to specific technical aspects. For example, when applied to an online shopping service, the blueprint can span multiple bounded contexts, each of which might represent different actions in the process. However, there is a distinction to be made: while bounded contexts are more related to the technical implementation, service blueprints reflect the broader user experience and the problem being solved.
+While service blueprints align with strategic, enterprise-level perspectives, they can still be drilled down to detailed levels. A future meetup could explore the connection between domain-driven design and service design, using service blueprints to bridge the two, similar to Susan Kaiser’s talk at DDD Europe that linked Wardley mapping to bounded contexts and service design.
 
-The service blueprint appears to be more aligned with strategic, enterprise-level perspectives, addressing product and portfolio levels, rather than delving into specific technical implementation. Nevertheless, it is suggested that it should still be possible to drill down to more detailed levels within this framework.
+### Canvas
 
-A potential future meetup could explore the connection between domain-driven design and service design, using the service blueprint as a means to bridge the gap between these two fields. This idea is reminiscent of a talk given by Susan Kaiser at DDD Europe, which connected Wardley mapping to bounded contexts and service design. This presentation was well-received, offering a wealth of insights into how these concepts can be integrated.
+![Bounded context canvas](/blog/2025/2025-05-24/image-5.png)
+
+In big-picture discovery, the outcome is often unclear, but when modeling bounded contexts, the results are more defined and achievable.
+
+A workshop could focus on creating a bounded context canvas, aiming to identify all commands, queries, and events related to a specific context, both incoming and outgoing. If multiple contexts are involved, the scope could expand to include canvases for each.
+
+To design the workshop, start with what’s needed for the goal. For example, if an event storming session has already identified context boundaries, use that as the starting point. Define the necessary notation (e.g., bounded context, commands, queries, events), then focus on use cases like accepting payments or creating new credit cards. The goal is to map the flow of messages at a high level of abstraction.
 
 
 ## Feedbacks and questions
 
 ### Structure vs Chaos
 
-Message flow diagrams require manual layout of contexts and messages, which can be cognitively demanding. Unlike UML sequence diagrams—where layout is automated and strictly structured—this approach offers more flexibility but also introduces complexity. The freeform nature of message flow modelling allows designers to emphasize coupling and architectural patterns that might remain hidden in rigid, structured diagrams.
+Message flow diagrams require manual layout of contexts and messages, offering flexibility but adding complexity compared to the automated structure of UML sequence diagrams. This freeform approach highlights architectural patterns, such as coupling, that rigid diagrams may obscure. While more challenging initially, message flow modeling reveals deeper system behaviors over time.
 
-One observed insight is that message flow modelling, while harder to approach initially, can reveal deeper system behaviors over time. In contrast to event storming, which starts directly with events, message flow diagrams demand more deliberate effort to establish conceptual clarity.
+A key heuristic is to maintain openness and avoid premature structure, as unstructured approaches can uncover insights hidden by more rigid methods. For example, recognizing excessive commands or queries may reveal architectural anti-patterns, such as tight coupling or a query-driven architecture, typical of distributed monoliths, where failures in one service can collapse the entire system.
 
-A key heuristic mentioned is the value of maintaining openness and avoiding premature structure. Chaotic or unstructured approaches can generate insights that structured methods may suppress. For instance, recognizing repeated command patterns or identifying an overreliance on queries may point to architectural anti-patterns.
-
-UML diagrams, by virtue of their structured format, can obscure such insights. Message flow diagrams, however, make it easier to spot an excessive number of commands or queries, which can reveal unintended tight coupling between components. A high volume of queries often indicates a query-driven architecture—a typical trait of a distributed monolith—where runtime coupling introduces fragility. If one service fails in such a query chain, the entire system may collapse.
 
 
 ### Balancing Structure and Complexity
 
-Structuring a diagram can offer valuable feedback when it reveals difficulties in organizing the model, which may reflect deeper system issues. However, not all complexity is meaningful. Some effort spent on structuring may simply introduce accidental complexity without delivering additional insight.
+Structuring a diagram can highlight system issues, but not all complexity is meaningful. Over-structuring may introduce accidental complexity without adding insight.
 
-Ultimately, the choice between structured or freeform modeling techniques depends on the goals of the session. Flexibility supports discovery, while structure provides clarity—but at the potential cost of hiding design flaws.
+The choice between structured and freeform modeling depends on session goals—flexibility aids discovery, while structure provides clarity, though it may obscure design flaws.
+
 
 ### System vs Bounded Context
 
 #### What is external
 
-The distinction between a system and a bounded context in Domain-Driven Design (DDD) often leads to some confusion. A bounded context refers to a conceptual boundary around a model and a shared language, while a system typically includes both bounded contexts and external elements that support the operation of a domain.
+In Domain-Driven Design (DDD), a bounded context defines a conceptual boundary around a model and shared language, while a system includes bounded contexts and external elements that support a domain. A website, for example, can have multiple bounded contexts (e.g., user authentication, shopping cart, product catalog) within the same system.
 
-In some cases, such as a website, it is possible to have several bounded contexts within a single system. For example, the website might have distinct areas, such as a user authentication context, a shopping cart context, or a product catalog context. Each of these could be modeled as separate bounded contexts, even though they all belong to the same system (the website).
+Simply put, a system is anything that’s not a bounded context. A website, often not considered a bounded context, serves as a user-facing front-end, exposing the domain but not handling complex business logic, which is managed in back-end services or microservices.
 
-In simpler terms, a system is anything that is not a bounded context. A website, for instance, is often not considered a bounded context in the DDD sense, as it typically serves as a user-facing front-end without embedding core business logic. Its primary role is to expose the domain to users without handling complex domain rules, which are typically managed in back-end services or microservices.
-
-Thus, a system could be thought of as an application or external system, where the term is used more loosely to describe things like a website or mobile app.
 
 #### Simplicity vs Precision: Balancing Notation
 
-The conversation then shifts to the trade-off between simplicity and precision in modeling. The more notation added to a diagram, the more complex the model becomes, as there are more concepts to understand. However, simplifying the model too much may lead to ambiguity, as in the case where a "system" could mean many different things.
-
-It becomes clear that adding more notation might initially seem complex but could result in a more precise and clearer understanding of the system. In contrast, a simple model might look cleaner but may lack the necessary detail to fully convey the design intent. This ties back to the idea that the value of notation is emergent—use what’s needed when it’s needed, starting simple and expanding from there.
+The discussion shifts to the trade-off between simplicity and precision in modeling. Adding more notation increases complexity but can provide greater clarity and precision, while overly simplifying a model may introduce ambiguity. The key is to use notation as needed, starting simple and expanding to add necessary detail, ensuring the model effectively conveys the design intent.
 
 #### Flexibility, Structure, and Purpose of Notation
-
 Three key principles emerge from the discussion:
-1. Simplicity vs Precision: The balance between fewer concepts for simplicity and more for precision.
-2. Structure vs Flexibility: The choice between a structured approach (like UML) and the flexibility of more freeform models (like message flow diagrams). The more flexible the notation, the more it can adapt to the problem at hand, but it may be harder to communicate.
-3. Design Tool vs Documentation Tool: Whether the tool is primarily for design or documentation influences how much flexibility is needed. For design purposes, flexibility is crucial to accommodate new and evolving ideas. For documentation, consistency and structure may take precedence to ensure clarity and understanding across teams.
+1.  Simplicity vs Precision: Balancing simplicity with enough detail for precision.
+2. Structure vs Flexibility: Deciding between structured approaches (like UML) and flexible models (like message flow diagrams), where flexibility adapts to problems but may complicate communication.
+3. Design Tool vs Documentation Tool: For design, flexibility is vital to accommodate evolving ideas; for documentation, structure and consistency are prioritized for clarity.
 
-In summary, the design of a model should balance flexibility with clarity, adapting to the needs of the problem while maintaining a level of consistency for communication.
-
-## Canvas
-
-When working on a big picture discovery, the outcome is often somewhat blurry. The direction or end result may not be clear from the start. However, if the goal is to model bounded contexts, the outcomes become more defined and achievable.
-
-
-![Bounded context canvas](/blog/2025/2025-05-24/image-5.png)
-
-In such cases, the workshop could focus on creating a **bounded context canvas**. The objective may be to identify all commands, queries, and events related to a specific bounded context—both those that come into the context and those that leave it. This is a clear, attainable goal for the workshop. Alternatively, if multiple bounded contexts are involved, the scope might expand to creating canvases for each of them.
-
-To design a workshop with this objective, it's essential to determine what is needed for the desired outcome. For instance, if an event storming workshop has already been conducted and bounded context boundaries have been identified, that could serve as the starting point for this exercise. At that point, the notation for the workshop must be defined. This could include symbols for the bounded context, commands, queries, and events.
-
-The process would then involve considering the use cases—what actions the bounded context is responsible for. For example, tasks like accepting payments, rejecting payments, or allowing the user to create a new credit card would be modeled. The focus is on identifying and mapping the flow of all commands, queries, and events that enter or exit the bounded context, staying at a high level of abstraction.
+In summary, model design should balance flexibility and clarity, adapting to the problem while maintaining consistency for communication.
 
 ### Adjusting the Level of Detail
 
-In some cases, more detail might be necessary. If there’s uncertainty whether a particular action should be modeled as an event or a command, it might be helpful to dive deeper into the internal workings of the bounded context. For example, the inclusion of a process manager may be under consideration, and before finalizing its interface, understanding its internal processes could be essential.
+In some cases, more detail is needed, especially when uncertain whether to model an action as an event or command. Exploring the internal workings of the bounded context, such as considering a process manager, can help clarify decisions.
 
-The level of detail and the notation used will evolve as the workshop progresses. Early on, a defined set of notations is followed with little flexibility. As participants become more advanced with the tools, however, the approach becomes more adaptive. The right level of detail and the appropriate notations must be chosen as the workshop unfolds, making the process more dynamic and less predictable.
+The level of detail and notation evolves during the workshop. Initially, a defined set of notations is used with little flexibility, but as participants gain experience, the approach becomes more adaptive. The appropriate level of detail and notation will emerge dynamically as the workshop progresses.
 
 ### Creativity and Adaptation at Advanced Levels
 
-The most exciting part of this process often comes when participants reach the advanced level. At this stage, the tools become flexible, allowing for more creativity. Rather than strictly following predefined methods, the goal is to adapt and tailor the tools to the specific needs of the context. This adaptability makes the process of designing bounded contexts both challenging and rewarding.
+The most exciting part comes when participants reach the advanced level, where the tools become flexible, allowing for creativity. Instead of strictly following predefined methods, the goal is to adapt the tools to the context's specific needs, making the process both challenging and rewarding.
 
 ### Choosing Between Wardley Mapping and Event Storming
 
-Deciding when to use Wardley mapping or event storming depends on the context and goals of the company. Event storming is detailed, focusing on system events, while Wardley mapping provides a high-level strategic overview of the business landscape.
+Choosing between Wardley mapping and event storming depends on the company’s context and goals. Event storming delves into system events, while Wardley mapping provides a strategic overview of the business landscape.
 
-Starting with tools like Wardley mapping or the business model canvas can help clarify the company’s goals, services, and dependencies, setting the stage for more detailed work. If these initial sessions are successful, event storming can be used to dive deeper into specific challenges.
+Starting with tools like Wardley mapping or the business model canvas helps clarify goals, services, and dependencies, paving the way for detailed work. If successful, event storming can explore specific challenges.
 
-While event storming uncovers numerous issues, it can be overwhelming to prioritize them. This is where Wardley mapping is helpful, offering a strategic view to focus on key business initiatives.
+Event storming can uncover many issues, but prioritizing them can be difficult. Here, Wardley mapping helps focus on key business initiatives. Both techniques operate at different levels, with Wardley mapping offering a broad view and event storming diving into granular details. The choice depends on whether the goal is to gather specifics or define strategic priorities.
 
-Both techniques operate at different levels of abstraction, with Wardley mapping applicable to entire organizations or specific systems, and event storming scalable from big-picture to granular analysis. The choice of which to start with depends on whether the goal is to gather details or define strategic priorities.
 
 ### Story Mapping Technique: Problem vs. Solution Space
 
-User story mapping helps organize tasks around user journeys but mainly addresses the problem space, focusing on what users do. It lacks the broader context and flexibility needed to explore solutions.
-
-Event storming, on the other hand, captures both problem and solution spaces by modeling events and interactions. It provides a more complete view of user and business processes, making it better for designing solutions.
+User story mapping organizes tasks around user journeys, focusing on the problem space, but lacks the broader context to explore solutions. Event storming captures both problem and solution spaces by modeling events and interactions, offering a more complete view of user and business processes.
 
 In short:
-Story mapping is task-focused and problem-oriented;
-Event storming is event-driven and solution-inclusive
+- Story mapping is task-focused and problem-oriented;
+- Event storming is event-driven and solution-inclusive.
 
-
+---
 
 
 ## Event Storming Workshop: Adaptive Cruise Control
 
 In this workshop, we explored a practical example using **event storming** to model the behavior of an *Adaptive Cruise Control (ACC)* system in vehicles. Here's a cleaned-up walkthrough of the early stages of our session.
-
----
-
 ### Scenario description
 
 #### Introduction and Roles
