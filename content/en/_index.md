@@ -51,19 +51,13 @@ Find me on  LinkedIn
 {{% /blocks/feature %}}
 
 
+{{% blocks/feature  title="Welcome on ArchiTech.lu" url="./about" %}}
+ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy). Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> - Env : {{< environment >}}
+{{% /blocks/feature %}}
+
 {{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/mauvaisetroupe" %}}
 Find me on github
 {{% /blocks/feature %}}
-
-
-{{% blocks/feature icon="fab fa-twitter" title="Follow me on Twitter!" url="https://twitter.com/mauvaisetroupe" %}}
-For announcement of latest features etc.
-{{% /blocks/feature %}}
-
-
-
-ArchiTech.lu is a site build with [Hugo](https://gohugo.io/) and [Docsy](https://github.com/google/docsy). Photo de <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> sur <a href="https://unsplash.com/fr/photos/iar-afB0QQw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> - Env : {{< environment >}}
-{.text-center .fs-6}
 
 
 {{% /blocks/section %}}
