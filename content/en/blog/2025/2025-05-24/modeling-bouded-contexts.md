@@ -133,20 +133,18 @@ Structuring a diagram can highlight system issues, but not all complexity is mea
 The choice between structured and freeform modeling depends on session goals—flexibility aids discovery, while structure provides clarity, though it may obscure design flaws.
 
 
-### System vs Bounded Context
-
-#### What is external
+### External System vs Bounded Context
 
 In Domain-Driven Design (DDD), a bounded context defines a conceptual boundary around a model and shared language, while a system includes bounded contexts and external elements that support a domain. A website, for example, can have multiple bounded contexts (e.g., user authentication, shopping cart, product catalog) within the same system.
 
 Simply put, a system is anything that’s not a bounded context. A website, often not considered a bounded context, serves as a user-facing front-end, exposing the domain but not handling complex business logic, which is managed in back-end services or microservices.
 
 
-#### Simplicity vs Precision: Balancing Notation
+### Simplicity vs Precision: Balancing Notation
 
 The discussion shifts to the trade-off between simplicity and precision in modeling. Adding more notation increases complexity but can provide greater clarity and precision, while overly simplifying a model may introduce ambiguity. The key is to use notation as needed, starting simple and expanding to add necessary detail, ensuring the model effectively conveys the design intent.
 
-#### Flexibility, Structure, and Purpose of Notation
+### Flexibility, Structure, and Purpose of Notation
 Three key principles emerge from the discussion:
 1.  Simplicity vs Precision: Balancing simplicity with enough detail for precision.
 2. Structure vs Flexibility: Deciding between structured approaches (like UML) and flexible models (like message flow diagrams), where flexibility adapts to problems but may complicate communication.
@@ -163,15 +161,6 @@ The level of detail and notation evolves during the workshop. Initially, a defin
 ### Creativity and Adaptation at Advanced Levels
 
 The most exciting part comes when participants reach the advanced level, where the tools become flexible, allowing for creativity. Instead of strictly following predefined methods, the goal is to adapt the tools to the context's specific needs, making the process both challenging and rewarding.
-
-### Choosing Between Wardley Mapping and Event Storming
-
-Choosing between Wardley mapping and event storming depends on the company’s context and goals. Event storming delves into system events, while Wardley mapping provides a strategic overview of the business landscape.
-
-Starting with tools like Wardley mapping or the business model canvas helps clarify goals, services, and dependencies, paving the way for detailed work. If successful, event storming can explore specific challenges.
-
-Event storming can uncover many issues, but prioritizing them can be difficult. Here, Wardley mapping helps focus on key business initiatives. Both techniques operate at different levels, with Wardley mapping offering a broad view and event storming diving into granular details. The choice depends on whether the goal is to gather specifics or define strategic priorities.
-
 
 ### Story Mapping Technique: Problem vs. Solution Space
 
