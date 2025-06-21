@@ -8,7 +8,7 @@ draft: false
 
 Dans cette vidéo enregistrée le 19 décembre 2024, Emmanuel Bernard, Guillaume Laforge et Arnaud Héritier échangent autour de **Diátaxis**, une approche structurée pour organiser efficacement la documentation technique.   Ils partagent leurs points de vue, leurs usages concrets, et leur compréhension du modèle.
 
-![les castcodeurs](/blog/2025/2025-06-01/image-1.png)
+![les castcodeurs](image-1.png)
 
 La discussion s'élargit ensuite aux **plateformes de documentation** et à l'**impact de l'intelligence artificielle** sur la manière dont nous concevons, maintenons et consommons la documentation aujourd'hui.
 
@@ -32,7 +32,7 @@ Au départ, le concept de Diátaxis peut sembler restrictif, car une structure t
 
 Diátaxis propose un outil appelé le [compas](https://diataxis.fr/compass/), permettant de situer une information par rapport aux différents types de documents. C'est le coeur de Diátaxis.
 
-![alt text](/blog/2025/2025-06-01/image.png)
+![alt text](image.png)
 
 Dans le cadre de Diátaxis, [deux dimensions](https://diataxis.fr/foundations/) sont à prendre en compte.
 
@@ -227,7 +227,7 @@ Les plateformes runtime de documentation dans les projets open source ou en entr
 
 Maven était un framework d'agrégation de documentation qui générait un site statique, notamment pour centraliser des rapports, des informations sur le projet, l'équipe et d'autres éléments dynamiques. Bien que cette approche ait eu un impact révolutionnaire il y a 20 ans, elle s'est avérée trop rigide pour les besoins modernes. Le site généré était très standardisé, avec des rapports et des informations souvent inutiles pour les utilisateurs.
 
-![site maven](/blog/2025/2025-06-01/image-2.png)
+![site maven](image-2.png)
 
 Aujourd'hui, l'utilisation de Maven pour ce type de génération de site est largement obsolète. Toutefois, à l'époque, il était possible de générer automatiquement un site web complet via une simple commande, centralisant la Javadoc, les rapports et d'autres informations, ce qui était une avancée significative.
 
@@ -256,7 +256,7 @@ Certains projets, comme Hibernate, utilisaient des wikis où la documentation é
 
 Contrairement aux wikis, les outils *as-code* permettre d'avoir plus de maitrise sur sa documentation et son cycle de vie. Ils permettent aussi de mieux maitriser l'évolution (c'est facile de comparer deux version de markdown, c'est du texte)
 
-![doc-as-code](/blog/2025/2025-06-01/image-4.png)
+![doc-as-code](image-4.png)
 
 
 L'intégration de la documentation directement dans le code permet de maintenir une proximité avec ce dernier, notamment lorsqu'elle est stockée dans le même dépôt. Cette approche permet d'appliquer les mêmes pratiques de codification que pour le code, mais elle reste moins accessible aux auteurs non-développeurs.
@@ -265,7 +265,7 @@ L'intégration de la documentation directement dans le code permet de maintenir 
 
 L'utilisation de systèmes de contribution via des *issues* ou des *pull requests* permet de séparer la contribution au contenu sans altérer directement la documentation. Il est essentiel que ces processus ne deviennent pas des obstacles pour les contributeurs. Une bonne pratique consiste à proposer un bouton "**Edit this page**", qui permet de modifier la documentation directement via un éditeur et de soumettre la modification en un ou deux clics.
 
-![alt text](/blog/2025/2025-06-01/image-3.png)
+![alt text](image-3.png)
 
 Pour garantir une participation active, la documentation doit être modifiable et accessible en open source.
 
