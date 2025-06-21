@@ -187,9 +187,14 @@ Il est important de noter que tout ne s’adapte pas nécessairement aux cases p
 
 ## Les templates
 
-La cohérence et la consistance sont des valeurs importantes dans la documentation. Des exemples de bonnes pratiques peuvent être observés dans la documentation de projets tels que Groovy, LangChain, Forge, ainsi que dans la documentation de Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide.
+### Structurer le contenu 
+Diátaxis nous parle parce qu’il propose un ensemble de bonnes pratiques. Ce type de catégorisation ou de structuration se retrouve souvent sur de nombreuses plateformes et projets. Mais il ne s'agit que de catégoriser l'information. Mais il dit trè peu de chose sur le contenu d'un document.
 
-Diátaxis s'adapte. On peut créer des types de documents supplémentaire dans le compas, et donc des templates supplémentaires.
+Or, la cohérence et la consistance sont des valeurs importantes dans la documentation. C'est là qu'interviennent les templates. On retrouve ces templates dans de projets tels que Groovy ou LangChain, ou encore chez Google Cloud. Ces documentations suivent des formats codifiés, avec des templates pour chaque type de guide.
+
+### TheGoodDocsProject
+
+Or, on l'a vu, Diátaxis s'adapte. On peut donc créer des types de documents supplémentaire dans le compas (des sous-catégories), et donc des templates supplémentaires.
 
 Dans [TheGoodDocsProject](https://www.thegooddocsproject.dev/), plusieurs modèles de documentation sont proposés, parmi lesquels:
 
@@ -202,13 +207,17 @@ Dans [TheGoodDocsProject](https://www.thegooddocsproject.dev/), plusieurs modèl
 - Contributing Guide  
 - ReadMe
 
+#### Les templates qui entrent dans Diátaxis...
+
 Le "**Concept**" contient des explications, tandis que le "Contributing Guide" peut être vu comme un *How-to guide* ou une autre forme de documentation, selon le contexte. 
 
 Les **FAQ**, quant à elles, peuvent être considérées comme des "fireside How-to" ou être classées différemment, selon la nature des questions abordées.
 
 Un "**Quick Start**" est une sous-catégorie de tutoriel qui est plus courte et plus ciblée. Dans la documentation de Google Cloud, un "Quick Start" est généralement suivi de guides plus détaillés. Les tutoriels sont parfois regroupés dans un portail distinct pour permettre à l’utilisateur de les retrouver facilement.
 
-Certains templates sont complémentaires à celles de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet (*readme*, la liste des membres d’une équipe, etc.)
+#### ... et les autres
+
+Certains templates sont complémentaires à ceux de Diátaxis, qui ne couvre pas nécessairement la manière de structurer certains éléments internes du projet ou de l'équipe (les *Contributing Guide*, la liste des membres d’une équipe, etc.)
 
 ## Outils et Frameworks
 
