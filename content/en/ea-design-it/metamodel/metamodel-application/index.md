@@ -19,7 +19,7 @@ With this definition, an application describes the software used in a company fr
 
 In a bank for example, an Application could be the web banking. Customers use the web banking as their main bank application. 
 
-> <img src="../png/application-listing.png">
+> <img src="application-listing.png">
 
 
 ## Application Component - Teminology 
@@ -41,7 +41,7 @@ An application is composed of Application Component. This is usually modeled wit
 > - An application component is defined as a modular, deployable, and replaceable part of a software system that encapsulates its behavior and data and exposes these through a set of interfaces.
 
 
-![landscape archimate](../jpg/applications.jpg)
+![landscape archimate](applications.jpg)
 
 ## What's next ?
 

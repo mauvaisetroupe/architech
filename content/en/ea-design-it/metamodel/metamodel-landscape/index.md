@@ -25,11 +25,11 @@ A landscape is essentially a collection of [Applications](../metamodel-applicati
 
 In a more extensive perspective,  a landscape can be considered as the sum of all functional flows within a functional domain. Put differently, Landscape consolidates and integrates all the interactions, applications, and functional flows, offering a comprehensive overview that encompasses and includes all interactions and processes occurring within the landscape.
 
-![landscape](../png/landscape.png)
+![landscape](landscape.png)
 
 In this example, Landscape in composed of 2 Functional Flows :  **GEN.001** and <mark style="background-color: yellow"><b>GEN.002</b></mark>.
 
-![landscape as set of flows](../png/landscape-flows.png)
+![landscape as set of flows](landscape-flows.png)
 
 > **NEXT** : If you want to continue to dicover the metamodel, see what is a [Functional Flow](../metamodel-functional-flow/).
 
@@ -46,7 +46,7 @@ An application landscape is typically an **Application Cooperation Viewpoint**.
 > - Application Components
 > - Flow Relationship 
 
-![landscape archimate](../jpg/landscape.jpg)
+![landscape archimate](landscape.jpg)
 
 ### Static or dynamic ?
 

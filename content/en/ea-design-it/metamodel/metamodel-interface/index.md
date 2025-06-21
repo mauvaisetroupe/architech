@@ -29,7 +29,7 @@ trough two different Interfaces:
  - an REST API between Security Master File and Trading Platform
  - etc.
 
-![interface view](../png/interfaces.png)
+![interface view](interfaces.png)
 
 ## Mapping with Archimate specification
 
@@ -43,7 +43,7 @@ As explained in [this article](https://bizzdesign.com/blog/practical-archimate-v
 
 With the opiniated choice described above (an interface is a pipeline between a source, a target for a specific protocol - or technology interface), we are clearly in the second option.
 
-![interfaces by technology interface](../jpg/interfaces.jpg)
+![interfaces by technology interface](interfaces.jpg)
 
 Information concerning frequency, format and other mentioned in option one are stored at [Data Flow](../metamodel-data-flow/) level.
 

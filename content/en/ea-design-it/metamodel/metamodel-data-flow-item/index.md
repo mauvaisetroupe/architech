@@ -24,7 +24,7 @@ Data flow (topic /EVT/CUSTOMER) is used by two Data Flow Item (typically Kafka E
  - A DataFlowItem (typically Kafka Event) EVT/CUSTOMER/CORE for Customer name, birth date...
  - A DataFlowItem (typically Kafka Event) EVT/CUSTOMER/ADDRESS for Customer address
 
-![Data Flows items](../png/dataflow3.png)
+![Data Flows items](dataflow3.png)
 
 
 ## Mapping with Archimate specification
@@ -33,4 +33,4 @@ Data flow (topic /EVT/CUSTOMER) is used by two Data Flow Item (typically Kafka E
 > - A Data Flow Item is modeled with a Archimate Data Object.
 > - There is an aggregation or composition relationship between Dat Flow and Data Flow Items
 
-![Data Flow](../jpg/data-flow-item.jpg)
+![Data Flow](data-flow-item.jpg)

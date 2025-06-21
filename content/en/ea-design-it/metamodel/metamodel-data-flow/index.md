@@ -30,11 +30,11 @@ Interfaces :
  - TRAD.006, an Event synchronization between Core Banking Sysetm and Trading Platform
  - TRAD.007, a Batch file synchronization between Core Banking Sysetm and an Account Microservice
  
-![Flow Interface](../png/dataflow1.png)
+![Flow Interface](dataflow1.png)
 
 Interface TRAD.006 is implemented with a DataFlowItem (typically a topic in a streaming platform like Kafka or others) : /EVT/CUSTOMER
  
-![Interface and its Data Flows](../png/dataflow2.png)
+![Interface and its Data Flows](dataflow2.png)
 
 ## Mapping with Archimate specification
 
@@ -46,4 +46,4 @@ A Data Flow is modeled with a Archimate **Data Object.**
 
 Data Flow could appear on **Application Cooperation Viewpoint** :
 
-![Data Flow](../jpg/data-flow.jpg)
+![Data Flow](data-flow.jpg)
