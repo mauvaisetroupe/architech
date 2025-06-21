@@ -118,57 +118,33 @@ To design the workshop, start with what’s needed for the goal. For example, if
 
 ## Feedbacks and questions
 
-### Structure vs Chaos
+### Structure vs. Chaos
 
-Message flow diagrams require manual layout of contexts and messages, offering flexibility but adding complexity compared to the automated structure of UML sequence diagrams. This freeform approach highlights architectural patterns, such as coupling, that rigid diagrams may obscure. While more challenging initially, message flow modeling reveals deeper system behaviors over time.
+Message flow diagrams require manual layout—flexible but more complex than UML. This freeform approach reveals deeper system behaviors (e.g. coupling) that rigid models might hide. Avoid premature structure; it can obscure key insights like architectural anti-patterns (e.g. distributed monoliths).
 
-A key heuristic is to maintain openness and avoid premature structure, as unstructured approaches can uncover insights hidden by more rigid methods. For example, recognizing excessive commands or queries may reveal architectural anti-patterns, such as tight coupling or a query-driven architecture, typical of distributed monoliths, where failures in one service can collapse the entire system.
+### Structure vs. Complexity
 
+Structure helps expose issues, but too much may add noise. Choose structure or flexibility based on goals: discovery favors flexibility; clarity favors structure.
 
+### System vs. Bounded Context (DDD)
 
-### Balancing Structure and Complexity
+A bounded context defines domain boundaries and language. A system includes multiple bounded contexts plus external parts. Example: A website spans several bounded contexts (auth, cart, catalog) but isn't itself one—it exposes the domain, not its logic.
 
-Structuring a diagram can highlight system issues, but not all complexity is meaningful. Over-structuring may introduce accidental complexity without adding insight.
+### Simplicity vs. Precision
 
-The choice between structured and freeform modeling depends on session goals—flexibility aids discovery, while structure provides clarity, though it may obscure design flaws.
+More notation = more clarity *and* complexity. Start simple; add detail only when needed. Strike a balance so the model communicates clearly.
 
+### Notation: Purpose & Balance
 
-### External System vs Bounded Context
+Three guiding tensions:
 
-In Domain-Driven Design (DDD), a bounded context defines a conceptual boundary around a model and shared language, while a system includes bounded contexts and external elements that support a domain. A website, for example, can have multiple bounded contexts (e.g., user authentication, shopping cart, product catalog) within the same system.
+1. **Simplicity vs. Precision** – Enough detail to be clear, not cluttered.
+2. **Structure vs. Flexibility** – Choose based on whether you're designing or documenting.
+3. **Design vs. Documentation** – Flexibility for design, consistency for documentation.
 
-Simply put, a system is anything that’s not a bounded context. A website, often not considered a bounded context, serves as a user-facing front-end, exposing the domain but not handling complex business logic, which is managed in back-end services or microservices.
+### Level of Detail
 
-
-### Simplicity vs Precision: Balancing Notation
-
-The discussion shifts to the trade-off between simplicity and precision in modeling. Adding more notation increases complexity but can provide greater clarity and precision, while overly simplifying a model may introduce ambiguity. The key is to use notation as needed, starting simple and expanding to add necessary detail, ensuring the model effectively conveys the design intent.
-
-### Flexibility, Structure, and Purpose of Notation
-Three key principles emerge from the discussion:
-1.  Simplicity vs Precision: Balancing simplicity with enough detail for precision.
-2. Structure vs Flexibility: Deciding between structured approaches (like UML) and flexible models (like message flow diagrams), where flexibility adapts to problems but may complicate communication.
-3. Design Tool vs Documentation Tool: For design, flexibility is vital to accommodate evolving ideas; for documentation, structure and consistency are prioritized for clarity.
-
-In summary, model design should balance flexibility and clarity, adapting to the problem while maintaining consistency for communication.
-
-### Adjusting the Level of Detail
-
-In some cases, more detail is needed, especially when uncertain whether to model an action as an event or command. Exploring the internal workings of the bounded context, such as considering a process manager, can help clarify decisions.
-
-The level of detail and notation evolves during the workshop. Initially, a defined set of notations is used with little flexibility, but as participants gain experience, the approach becomes more adaptive. The appropriate level of detail and notation will emerge dynamically as the workshop progresses.
-
-### Creativity and Adaptation at Advanced Levels
-
-The most exciting part comes when participants reach the advanced level, where the tools become flexible, allowing for creativity. Instead of strictly following predefined methods, the goal is to adapt the tools to the context's specific needs, making the process both challenging and rewarding.
-
-### Story Mapping Technique: Problem vs. Solution Space
-
-User story mapping organizes tasks around user journeys, focusing on the problem space, but lacks the broader context to explore solutions. Event storming captures both problem and solution spaces by modeling events and interactions, offering a more complete view of user and business processes.
-
-In short:
-- Story mapping is task-focused and problem-oriented;
-- Event storming is event-driven and solution-inclusive.
+Model depth should evolve. Early: limited notation. Later: refine as understanding grows (e.g. distinguish events vs. commands, introduce process managers).
 
 ---
 
