@@ -11,15 +11,18 @@ RUN ARCH=$(dpkg --print-architecture) && \
     && rm /tmp/hugo.deb \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install Dart Sass manually
+# Install Dart Sass manually (compatible with amd64/x64 and arm64)
 RUN ARCH=$(dpkg --print-architecture) && \
-    curl -L https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-${ARCH}.tar.gz \
+    if [ "$ARCH" = "amd64" ]; then ARCH="x64"; fi && \
+    if [ "$ARCH" = "arm64" ]; then ARCH="arm64"; fi && \
+    curl -fL https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-${ARCH}.tar.gz \
     -o dart-sass.tar.gz && \
     tar -xzf dart-sass.tar.gz -C /opt && \
     ln -s /opt/dart-sass/sass /usr/local/bin/sass && \
+    chmod +x /usr/local/bin/sass && \
     rm dart-sass.tar.gz
 
-    
+
 # Install Asciidoc
 RUN apt-get update && apt-get install -y asciidoc && rm -rf /var/lib/apt/lists/*
 
@@ -27,7 +30,7 @@ RUN apt-get update && apt-get install -y asciidoc && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y ruby ruby-dev build-essential && \
     gem install asciidoctor && \
     rm -rf /var/lib/apt/lists/*
-    
+
     
 # Set working directory
 WORKDIR /workspace
