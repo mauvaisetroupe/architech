@@ -19,6 +19,16 @@ RUN ARCH=$(dpkg --print-architecture) && \
     ln -s /opt/dart-sass/sass /usr/local/bin/sass && \
     rm dart-sass.tar.gz
 
+    
+# Install Asciidoc
+RUN apt-get update && apt-get install -y asciidoc && rm -rf /var/lib/apt/lists/*
+
+# Install Ruby and Asciidoctor (required for Hugo's AsciiDoc rendering)
+RUN apt-get update && apt-get install -y ruby ruby-dev build-essential && \
+    gem install asciidoctor && \
+    rm -rf /var/lib/apt/lists/*
+    
+    
 # Set working directory
 WORKDIR /workspace
 
