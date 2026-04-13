@@ -50,3 +50,26 @@ jobs:
           local-dir: ./public/
           server-dir: ./architech/
           # delete-destination: true
+
+      - name: Archive Sync State and Commit
+        run: |
+          TIMESTAMP=$(date +'%Y-%m-%d_%Hh%M')
+          FILENAME="architect-${TIMESTAMP}-ftp-deploy-sync-state.json"
+          
+          mkdir -p ftp-synchro
+          
+          # On vérifie d'abord dans la racine, puis dans ./public/
+          if [ -f .ftp-deploy-sync-state.json ]; then
+            cp .ftp-deploy-sync-state.json ftp-synchro/$FILENAME
+          elif [ -f ./public/.ftp-deploy-sync-state.json ]; then
+            cp ./public/.ftp-deploy-sync-state.json ftp-synchro/$FILENAME
+          else
+            echo "Erreur: Fichier de synchronisation introuvable !"
+            exit 1
+          fi
+          
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add ftp-synchro/
+          git commit -m "chore: archive sync state $FILENAME [skip ci]"
+          git push
