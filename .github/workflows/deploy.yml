@@ -2,36 +2,51 @@ name: Deploy Hugo to OVH
 on:
   push:
     branches:
-      - main 
+      - main
       - master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1. Checkout du repo
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          submodules: recursive # Important si tu utilises des thèmes en submodules
+          submodules: recursive
           fetch-depth: 0
 
+      # 2. Installer Node (REQUIS pour Docsy)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. Installer les dépendances frontend (PostCSS, etc.)
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Installer Hugo (version stable recommandée)
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
-          extended: true # Nécessaire pour la plupart des thèmes Hugo (SASS/SCSS)
+          extended: true
 
+      # 5. Build du site
       - name: Build Site
+        env:
+          HUGO_ENV: production
         run: hugo --minify
 
-      - name: Sync to OVH (Delta Only)
+      # 6. Déploiement FTP vers OVH
+      - name: Deploy to OVH (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
-          # CHANGE LE CHEMIN CI-DESSOUS POUR CHAQUE SITE
           server-dir: ./architech/
-          # Optionnel : supprime les fichiers sur OVH qui n'existent plus localement
           # delete-destination: true
