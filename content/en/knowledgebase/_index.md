@@ -2,7 +2,8 @@
 title: Knowledge Base
 weight: 10
 menu: {main: {weight: 45, name: "Doc"}}
-type: "docs"
+cascade:
+    type: "docs"
 ---
 
 
